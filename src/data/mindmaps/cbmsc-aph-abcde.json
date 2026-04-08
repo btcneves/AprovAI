@@ -1,0 +1,115 @@
+{
+  "id": "cbmsc-aph-abcde",
+  "title": "APH / ABCDE",
+  "summary": "Sequência de avaliação primária para atendimento inicial com foco em ameaças imediatas à vida.",
+  "nodes": [
+    {
+      "id": "cbmsc-aph-abcde-a-airway",
+      "label": "A - Airway",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-aph-abcde-a-airway-via-aerea-pervia",
+          "label": "Via aérea pérvia",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-aph-abcde-a-airway-protecao-cervical",
+          "label": "Proteção cervical",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-aph-abcde-b-breathing",
+      "label": "B - Breathing",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-aph-abcde-b-breathing-expansao-toracica",
+          "label": "Expansão torácica",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-aph-abcde-b-breathing-ventilacao-eficaz",
+          "label": "Ventilação eficaz",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-aph-abcde-c-circulation",
+      "label": "C - Circulation",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-aph-abcde-c-circulation-pulso-e-perfusao",
+          "label": "Pulso e perfusão",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-aph-abcde-c-circulation-controle-de-hemorragia",
+          "label": "Controle de hemorragia",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-aph-abcde-d-e",
+      "label": "D/E",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-aph-abcde-d-e-avaliacao-neurologica-rapida",
+          "label": "Avaliação neurológica rápida",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-aph-abcde-d-e-exposicao-com-prevencao-de-hipotermia",
+          "label": "Exposição com prevenção de hipotermia",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "A prioriza via aérea com proteção cervical quando necessário.",
+    "C inclui controle de hemorragia exsanguinante."
+  ],
+  "commonMistakes": [
+    "Inverter sequência sem justificativa clínica.",
+    "Pular reavaliação após intervenção."
+  ],
+  "terms": [
+    "A - Airway",
+    "Via aérea pérvia",
+    "Proteção cervical",
+    "B - Breathing",
+    "Expansão torácica",
+    "Ventilação eficaz",
+    "C - Circulation",
+    "Pulso e perfusão",
+    "Controle de hemorragia",
+    "D/E",
+    "Avaliação neurológica rápida",
+    "Exposição com prevenção de hipotermia"
+  ],
+  "sources": [
+    {
+      "manualId": "combate-incendio-estrutural-manual",
+      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
+      "category": "Combate a Incêndio Estrutural",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.397Z"
+    },
+    {
+      "manualId": "atendimento-basico-emergencias-manual",
+      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
+      "category": "Atendimento Pré-Hospitalar",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.398Z"
+    }
+  ]
+}

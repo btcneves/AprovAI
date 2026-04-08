@@ -1,1 +1,22 @@
-[]
+[
+  {
+    "id": "combate-incendio-estrutural-manual",
+    "title": "Manual de Combate a Incêndio Estrutural (fallback)",
+    "category": "Combate a Incêndio Estrutural",
+    "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+    "fileUrl": "",
+    "extension": "pdf",
+    "collectedAt": "2026-04-08T14:40:11.397Z",
+    "status": "unavailable"
+  },
+  {
+    "id": "atendimento-basico-emergencias-manual",
+    "title": "Manual de Atendimento Básico a Emergências (fallback)",
+    "category": "Atendimento Pré-Hospitalar",
+    "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+    "fileUrl": "",
+    "extension": "pdf",
+    "collectedAt": "2026-04-08T14:40:11.398Z",
+    "status": "unavailable"
+  }
+]

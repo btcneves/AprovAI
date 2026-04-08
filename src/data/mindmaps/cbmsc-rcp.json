@@ -1,0 +1,101 @@
+{
+  "id": "cbmsc-rcp",
+  "title": "RCP",
+  "summary": "Suporte básico em parada cardiorrespiratória exige compressões de alta qualidade e mínima interrupção.",
+  "nodes": [
+    {
+      "id": "cbmsc-rcp-cadeia-de-sobrevivencia",
+      "label": "Cadeia de sobrevivência",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-rcp-cadeia-de-sobrevivencia-reconhecimento-precoce",
+          "label": "Reconhecimento precoce",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-rcp-cadeia-de-sobrevivencia-rcp-imediata",
+          "label": "RCP imediata",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-rcp-cadeia-de-sobrevivencia-dea",
+          "label": "DEA",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-rcp-compressoes",
+      "label": "Compressões",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-rcp-compressoes-profundidade-adequada",
+          "label": "Profundidade adequada",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-rcp-compressoes-retorno-completo-do-torax",
+          "label": "Retorno completo do tórax",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-rcp-ventilacao",
+      "label": "Ventilação",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-rcp-ventilacao-relacao-30-2-sem-via-avancada",
+          "label": "Relação 30:2 sem via avançada",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-rcp-ventilacao-evitar-hiperventilacao",
+          "label": "Evitar hiperventilação",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "Frequência alvo de 100-120 compressões/min em adulto.",
+    "Desfibrilação precoce aumenta chance de ROSC."
+  ],
+  "commonMistakes": [
+    "Interrupções longas para checagens desnecessárias.",
+    "Ventilações excessivas."
+  ],
+  "terms": [
+    "Cadeia de sobrevivência",
+    "Reconhecimento precoce",
+    "RCP imediata",
+    "DEA",
+    "Compressões",
+    "Profundidade adequada",
+    "Retorno completo do tórax",
+    "Ventilação",
+    "Relação 30:2 sem via avançada",
+    "Evitar hiperventilação"
+  ],
+  "sources": [
+    {
+      "manualId": "combate-incendio-estrutural-manual",
+      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
+      "category": "Combate a Incêndio Estrutural",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.397Z"
+    },
+    {
+      "manualId": "atendimento-basico-emergencias-manual",
+      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
+      "category": "Atendimento Pré-Hospitalar",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.398Z"
+    }
+  ]
+}

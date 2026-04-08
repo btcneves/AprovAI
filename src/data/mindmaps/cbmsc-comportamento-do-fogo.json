@@ -1,0 +1,113 @@
+{
+  "id": "cbmsc-comportamento-do-fogo",
+  "title": "Comportamento do fogo",
+  "summary": "Fenômenos térmicos e dinâmica de fumaça orientam leitura de risco e tomada de decisão.",
+  "nodes": [
+    {
+      "id": "cbmsc-comportamento-do-fogo-transferencia-de-calor",
+      "label": "Transferência de calor",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-comportamento-do-fogo-transferencia-de-calor-conducao",
+          "label": "Condução",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-transferencia-de-calor-conveccao",
+          "label": "Convecção",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-transferencia-de-calor-radiacao",
+          "label": "Radiação",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-comportamento-do-fogo-fenomenos-criticos",
+      "label": "Fenômenos críticos",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-comportamento-do-fogo-fenomenos-criticos-flashover",
+          "label": "Flashover",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-fenomenos-criticos-backdraft",
+          "label": "Backdraft",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-comportamento-do-fogo-leitura-de-fumaca",
+      "label": "Leitura de fumaça",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-comportamento-do-fogo-leitura-de-fumaca-volume",
+          "label": "Volume",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-leitura-de-fumaca-velocidade",
+          "label": "Velocidade",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-leitura-de-fumaca-cor",
+          "label": "Cor",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-leitura-de-fumaca-densidade",
+          "label": "Densidade",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "Flashover é transição rápida para combustão generalizada.",
+    "Backdraft depende de ambiente confinado e ventilação súbita."
+  ],
+  "commonMistakes": [
+    "Ignorar estratificação térmica no avanço.",
+    "Abrir ventilação sem linha carregada."
+  ],
+  "terms": [
+    "Transferência de calor",
+    "Condução",
+    "Convecção",
+    "Radiação",
+    "Fenômenos críticos",
+    "Flashover",
+    "Backdraft",
+    "Leitura de fumaça",
+    "Volume",
+    "Velocidade",
+    "Cor",
+    "Densidade"
+  ],
+  "sources": [
+    {
+      "manualId": "combate-incendio-estrutural-manual",
+      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
+      "category": "Combate a Incêndio Estrutural",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.397Z"
+    },
+    {
+      "manualId": "atendimento-basico-emergencias-manual",
+      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
+      "category": "Atendimento Pré-Hospitalar",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.398Z"
+    }
+  ]
+}

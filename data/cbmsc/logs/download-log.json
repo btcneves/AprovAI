@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-04-08T14:40:34.046Z",
+  "downloaded": 0,
+  "total": 2,
+  "logEntries": [
+    {
+      "manualId": "combate-incendio-estrutural-manual",
+      "status": "skipped",
+      "reason": "missing_file_url"
+    },
+    {
+      "manualId": "atendimento-basico-emergencias-manual",
+      "status": "skipped",
+      "reason": "missing_file_url"
+    }
+  ]
+}

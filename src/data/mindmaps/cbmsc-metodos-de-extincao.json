@@ -1,0 +1,115 @@
+{
+  "id": "cbmsc-metodos-de-extincao",
+  "title": "Métodos de extinção",
+  "summary": "Resfriamento, abafamento, isolamento e quebra de reação em cadeia compõem os métodos-base.",
+  "nodes": [
+    {
+      "id": "cbmsc-metodos-de-extincao-resfriamento",
+      "label": "Resfriamento",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-metodos-de-extincao-resfriamento-retira-calor",
+          "label": "Retira calor",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-metodos-de-extincao-resfriamento-agua-em-padrao-adequado",
+          "label": "Água em padrão adequado",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-metodos-de-extincao-abafamento",
+      "label": "Abafamento",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-metodos-de-extincao-abafamento-reduz-comburente",
+          "label": "Reduz comburente",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-metodos-de-extincao-abafamento-espuma-e-cobertores",
+          "label": "Espuma e cobertores",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-metodos-de-extincao-isolamento",
+      "label": "Isolamento",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-metodos-de-extincao-isolamento-interrompe-suprimento-de-combustivel",
+          "label": "Interrompe suprimento de combustível",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-metodos-de-extincao-isolamento-fechamento-de-valvulas",
+          "label": "Fechamento de válvulas",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-metodos-de-extincao-quebra-em-cadeia",
+      "label": "Quebra em cadeia",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-metodos-de-extincao-quebra-em-cadeia-interfere-reacao-quimica",
+          "label": "Interfere reação química",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-metodos-de-extincao-quebra-em-cadeia-pqs-e-agentes-halogenados-permitidos",
+          "label": "PQS e agentes halogenados permitidos",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "Abafamento reduz concentração de oxigênio.",
+    "Isolamento remove combustível disponível."
+  ],
+  "commonMistakes": [
+    "Usar método único sem avaliar classe do incêndio.",
+    "Ventilar antes de coordenar ataque."
+  ],
+  "terms": [
+    "Resfriamento",
+    "Retira calor",
+    "Água em padrão adequado",
+    "Abafamento",
+    "Reduz comburente",
+    "Espuma e cobertores",
+    "Isolamento",
+    "Interrompe suprimento de combustível",
+    "Fechamento de válvulas",
+    "Quebra em cadeia",
+    "Interfere reação química",
+    "PQS e agentes halogenados permitidos"
+  ],
+  "sources": [
+    {
+      "manualId": "combate-incendio-estrutural-manual",
+      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
+      "category": "Combate a Incêndio Estrutural",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.397Z"
+    },
+    {
+      "manualId": "atendimento-basico-emergencias-manual",
+      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
+      "category": "Atendimento Pré-Hospitalar",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.398Z"
+    }
+  ]
+}

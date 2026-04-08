@@ -1,0 +1,13 @@
+{
+  "generatedAt": "2026-04-08T14:40:33.370Z",
+  "onlineCollected": 0,
+  "finalCount": 2,
+  "usedFallback": true,
+  "logs": [
+    {
+      "step": "fallback",
+      "level": "warn",
+      "message": "Coleta online indisponível ou sem resultados. Mantendo índice anterior/fallback para não interromper pipeline."
+    }
+  ]
+}

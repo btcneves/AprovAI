@@ -1,0 +1,101 @@
+{
+  "id": "cbmsc-produtos-perigosos",
+  "title": "Produtos perigosos",
+  "summary": "Identificação e isolamento inicial reduzem risco em eventos com substâncias perigosas.",
+  "nodes": [
+    {
+      "id": "cbmsc-produtos-perigosos-identificacao",
+      "label": "Identificação",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-produtos-perigosos-identificacao-numero-onu",
+          "label": "Número ONU",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-produtos-perigosos-identificacao-classe-subclasse-de-risco",
+          "label": "Classe/subclasse de risco",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-produtos-perigosos-acoes-iniciais",
+      "label": "Ações iniciais",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-produtos-perigosos-acoes-iniciais-isolamento",
+          "label": "Isolamento",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-produtos-perigosos-acoes-iniciais-evacuacao",
+          "label": "Evacuação",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-produtos-perigosos-acoes-iniciais-acionamento-especializado",
+          "label": "Acionamento especializado",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-produtos-perigosos-seguranca-da-equipe",
+      "label": "Segurança da equipe",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-produtos-perigosos-seguranca-da-equipe-epi-adequado",
+          "label": "EPI adequado",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-produtos-perigosos-seguranca-da-equipe-monitoramento-de-contaminacao",
+          "label": "Monitoramento de contaminação",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "Reconhecimento por ONU, rótulo de risco e painéis de segurança.",
+    "Zonas quente, morna e fria devem ser delimitadas."
+  ],
+  "commonMistakes": [
+    "Acessar zona quente sem EPI químico compatível.",
+    "Desconsiderar direção do vento."
+  ],
+  "terms": [
+    "Identificação",
+    "Número ONU",
+    "Classe/subclasse de risco",
+    "Ações iniciais",
+    "Isolamento",
+    "Evacuação",
+    "Acionamento especializado",
+    "Segurança da equipe",
+    "EPI adequado",
+    "Monitoramento de contaminação"
+  ],
+  "sources": [
+    {
+      "manualId": "combate-incendio-estrutural-manual",
+      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
+      "category": "Combate a Incêndio Estrutural",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.397Z"
+    },
+    {
+      "manualId": "atendimento-basico-emergencias-manual",
+      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
+      "category": "Atendimento Pré-Hospitalar",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.398Z"
+    }
+  ]
+}

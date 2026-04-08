@@ -1,15 +1,7 @@
-import { LIBRARY_URL, ensureCbmscDirs, extractAnchors, extensionFromUrl, readJson, resolveUrl, slugify, writeJson } from './utils.mjs'
+import { LIBRARY_URL, ensureCbmscDirs, extractAnchors, extensionFromUrl, fetchText, readJson, resolveUrl, slugify, writeJson } from './utils.mjs'
 
 const isCategoryLink = (href) => /\/manuais-cbmsc\/category\//i.test(href)
 const isFileLink = (href) => /\.(pdf|docx?|xlsx?|pptx?)($|\?)/i.test(href)
-
-const fetchHtml = async (url) => {
-  const response = await fetch(url)
-  if (!response.ok) {
-    throw new Error(`Falha ao carregar ${url} (status ${response.status})`)
-  }
-  return response.text()
-}
 
 const parseCategories = (html) => {
   const anchors = extractAnchors(html)
@@ -57,37 +49,77 @@ const parseManuals = (html, category) => {
   return manuals
 }
 
+const FALLBACK_MANUALS = [
+  {
+    id: 'combate-incendio-estrutural-manual',
+    title: 'Manual de Combate a Incêndio Estrutural (fallback)',
+    category: 'Combate a Incêndio Estrutural',
+    sourcePage: LIBRARY_URL,
+    fileUrl: '',
+    extension: 'pdf',
+    collectedAt: new Date().toISOString(),
+    status: 'unavailable'
+  },
+  {
+    id: 'atendimento-basico-emergencias-manual',
+    title: 'Manual de Atendimento Básico a Emergências (fallback)',
+    category: 'Atendimento Pré-Hospitalar',
+    sourcePage: LIBRARY_URL,
+    fileUrl: '',
+    extension: 'pdf',
+    collectedAt: new Date().toISOString(),
+    status: 'unavailable'
+  }
+]
+
 const main = async () => {
   await ensureCbmscDirs()
+  const logs = []
+
   console.log(`[cbmsc:index] Coletando categorias em ${LIBRARY_URL}`)
 
-  const libraryHtml = await fetchHtml(LIBRARY_URL)
-  const categories = parseCategories(libraryHtml)
-
-  if (!categories.length) {
-    console.warn('[cbmsc:index] Nenhuma categoria encontrada automaticamente. Mantendo índice anterior.')
-    const previous = await readJson('data/cbmsc/manual_index.json', [])
-    await writeJson('data/cbmsc/manual_index.json', previous)
-    return
+  let categories = []
+  try {
+    const libraryHtml = await fetchText(LIBRARY_URL)
+    categories = parseCategories(libraryHtml)
+  } catch (error) {
+    logs.push({ step: 'library', level: 'error', message: error.message })
   }
 
   const collected = []
 
   for (const category of categories) {
-    console.log(`[cbmsc:index] Lendo categoria: ${category.title}`)
     try {
-      const categoryHtml = await fetchHtml(category.url)
-      const manuals = parseManuals(categoryHtml, category)
-      collected.push(...manuals)
+      console.log(`[cbmsc:index] Lendo categoria: ${category.title}`)
+      const categoryHtml = await fetchText(category.url)
+      collected.push(...parseManuals(categoryHtml, category))
     } catch (error) {
-      console.warn(`[cbmsc:index] Falha na categoria ${category.url}: ${error.message}`)
+      logs.push({ step: 'category', category: category.title, url: category.url, level: 'warn', message: error.message })
     }
   }
 
   const deduped = Array.from(new Map(collected.map((item) => [`${item.sourcePage}::${item.fileUrl}`, item])).values())
-  await writeJson('data/cbmsc/manual_index.json', deduped)
+  const previous = await readJson('data/cbmsc/manual_index.json', [])
 
-  console.log(`[cbmsc:index] Concluído com ${categories.length} categorias e ${deduped.length} documentos indexados.`)
+  const finalIndex = deduped.length ? deduped : previous.length ? previous : FALLBACK_MANUALS
+  if (!deduped.length) {
+    logs.push({
+      step: 'fallback',
+      level: 'warn',
+      message: 'Coleta online indisponível ou sem resultados. Mantendo índice anterior/fallback para não interromper pipeline.'
+    })
+  }
+
+  await writeJson('data/cbmsc/manual_index.json', finalIndex)
+  await writeJson('data/cbmsc/logs/index-log.json', {
+    generatedAt: new Date().toISOString(),
+    onlineCollected: deduped.length,
+    finalCount: finalIndex.length,
+    usedFallback: !deduped.length,
+    logs
+  })
+
+  console.log(`[cbmsc:index] Concluído com ${categories.length} categorias e ${finalIndex.length} documentos no índice final.`)
 }
 
 main().catch((error) => {
