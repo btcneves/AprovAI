@@ -43,6 +43,8 @@ export type MindMapNode = {
   summary?: string
   examHighlights?: string[]
   commonMistakes?: string[]
+  criticalDifferences?: string[]
+  traps?: string[]
   sources?: Array<{
     manualId: string
     manualTitle?: string

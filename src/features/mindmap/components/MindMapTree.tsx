@@ -1,12 +1,25 @@
 import React, { useMemo, useState } from 'react'
 import type { MindMapNode } from '@/domain/types'
 
+type NodeStatus = 'forte' | 'atencao' | 'fraco' | 'sem-dados'
+
 type Props = {
   nodes: MindMapNode[]
   onOpenTopic: (nodeId: string) => void
+  onTrainNode: (nodeId: string) => void
+  onToggleReviewed: (nodeId: string) => void
+  reviewedNodeIds: Set<string>
+  performanceByNode: Map<string, NodeStatus>
 }
 
-export const MindMapTree = ({ nodes, onOpenTopic }: Props) => {
+const statusLabel: Record<NodeStatus, string> = {
+  forte: '🟢 forte',
+  atencao: '🟡 atenção',
+  fraco: '🔴 fraco',
+  'sem-dados': '⚪ sem dados'
+}
+
+export const MindMapTree = ({ nodes, onOpenTopic, onTrainNode, onToggleReviewed, reviewedNodeIds, performanceByNode }: Props) => {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
   const [query, setQuery] = useState('')
 
@@ -16,10 +29,10 @@ export const MindMapTree = ({ nodes, onOpenTopic }: Props) => {
   const matches = (node: MindMapNode) =>
     [node.title, node.descriptionShort, ...node.tags].join(' ').toLowerCase().includes(query.toLowerCase())
 
-  const hasMatchInChildren = (node: MindMapNode) =>
+  const hasMatchInChildren = (node: MindMapNode): boolean =>
     node.childrenIds.some((id) => {
       const child = nodeMap.get(id)
-      return child ? matches(child) : false
+      return child ? matches(child) || hasMatchInChildren(child) : false
     })
 
   const renderNode = (node: MindMapNode, depth: number): React.JSX.Element | null => {
@@ -27,21 +40,26 @@ export const MindMapTree = ({ nodes, onOpenTopic }: Props) => {
       return null
     }
     const isExpanded = expanded[node.id] ?? true
+    const status = performanceByNode.get(node.id) ?? 'sem-dados'
+    const reviewed = reviewedNodeIds.has(node.id)
+
     return (
-      <div key={node.id} style={{ marginLeft: depth * 14 }} className="tree-node">
+      <div key={node.id} style={{ marginLeft: depth * 14 }} className={`tree-node ${status}`}>
         <button className="tree-title" onClick={() => setExpanded((prev) => ({ ...prev, [node.id]: !isExpanded }))}>
           {isExpanded ? '▾' : '▸'} {node.title}
         </button>
-        <p>{node.descriptionShort}</p>
+        {isExpanded ? <p>{node.summary ?? node.descriptionShort}</p> : null}
+        <div className="tree-badges">
+          <small className="status-badge">{statusLabel[status]}</small>
+          {node.examHighlights?.length ? <small>🔥 {node.examHighlights[0]}</small> : null}
+        </div>
         <div className="tree-actions">
           <button onClick={() => onOpenTopic(node.id)}>Revisar tema</button>
-          <small>{node.editalReference}</small>
-          {node.examHighlights?.length ? <small>🔥 {node.examHighlights.length} pontos de prova</small> : null}
-          {node.commonMistakes?.length ? <small>⚠️ {node.commonMistakes.length} erros comuns</small> : null}
+          <button onClick={() => onTrainNode(node.id)}>Treinar este tema</button>
+          <button className={reviewed ? 'reviewed' : ''} onClick={() => onToggleReviewed(node.id)}>
+            {reviewed ? 'Revisado ✓' : 'Marcar revisado'}
+          </button>
         </div>
-        {isExpanded
-          ? node.childrenIds.map((id) => nodeMap.get(id)).filter(Boolean).map((child) => renderNode(child!, depth + 1))
-          : null}
       </div>
     )
   }

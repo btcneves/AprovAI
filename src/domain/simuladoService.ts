@@ -4,10 +4,11 @@ import type { Difficulty, Question, SimuladoAnswer, SimuladoAttempt } from './ty
 const HISTORY_KEY = 'imarui_simulados'
 const BLOCK_WINDOW = 5
 
-export type StudyMode = 'full' | 'weak-topics' | 'subtopic' | 'difficulty' | 'recent-wrong'
+export type StudyMode = 'full' | 'weak-topics' | 'topic' | 'subtopic' | 'difficulty' | 'recent-wrong'
 
 export type BuildSimuladoOptions = {
   mode?: StudyMode
+  topic?: string
   subtopic?: string
   difficulty?: Difficulty
   questionCount?: number
@@ -111,6 +112,10 @@ const pickSpecific = (pool: Question[], count: number, blockedIds: Set<string>, 
 const buildStudyPool = (attempts: SimuladoAttempt[], options: BuildSimuladoOptions): Question[] => {
   const mode = options.mode ?? 'full'
   const questionMap = new Map(activeQuestions.map((question) => [question.id, question]))
+
+  if (mode === 'topic' && options.topic) {
+    return activeQuestions.filter((question) => question.topic === options.topic)
+  }
 
   if (mode === 'subtopic' && options.subtopic) {
     return activeQuestions.filter((question) => question.subtopic === options.subtopic)

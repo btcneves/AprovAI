@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { Question, SimuladoAttempt } from '@/domain/types'
-import { buildErrorFollowUp, resolveMindMapNodeByTheme } from '@/domain/analyticsService'
+import { buildErrorFollowUp } from '@/domain/analyticsService'
 import { useAppState } from '@/app/AppStateContext'
 
 type Props = {
@@ -45,7 +45,7 @@ export const ResultPanel = ({ attempt, questions }: Props) => {
 
           const selectedText = question.alternatives.find((alternative) => alternative.id === answer.selectedAlternativeId)?.text
           const correctText = question.alternatives.find((alternative) => alternative.id === question.correctAlternativeId)?.text
-          const mapNode = resolveMindMapNodeByTheme(question.topic)
+          const mapNode = question.relatedMindMapNodeId
 
           return (
             <article key={question.id} className="wrong-item">
@@ -64,7 +64,7 @@ export const ResultPanel = ({ attempt, questions }: Props) => {
               <ul>{question.whyOthersAreWrong.map((reason) => <li key={reason}>{reason}</li>)}</ul>
               <p><strong>Ação:</strong> revisar mapa mental do tema e refazer treino focado.</p>
               <div className="actions-row" style={{ justifyContent: 'flex-start' }}>
-                <Link to={`/simulado`}>Iniciar treino focado agora</Link>
+                <Link to={`/simulado?mode=subtopic&topic=${encodeURIComponent(question.topic)}&subtopic=${encodeURIComponent(question.subtopic ?? '')}`}>Iniciar treino focado agora</Link>
                 {mapNode ? <Link to={`/mapas?focus=${mapNode}`}>Abrir mapa mental relacionado</Link> : null}
               </div>
             </article>
