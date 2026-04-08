@@ -1,143 +1,135 @@
 {
   "id": "cbmsc-seguranca-operacional",
   "title": "Segurança operacional",
-  "summary": "Resumo derivado de seções oficiais do CBMSC sobre gestão de risco e comando.",
+  "summary": "Gestão Operacional: Gestão de risco e comando. Revisão em tópicos curtos para estudo rápido.",
   "nodes": [
     {
       "id": "cbmsc-seguranca-operacional-n1",
-      "label": "153 CORPO DE BOMBEIROS MILITAR DE SANTA CATARIN RECAPITULANDO O CBMSC constitui uma respos",
+      "label": "APH / ABCDE",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-seguranca-operacional-n1-a",
-          "label": "153 CORPO DE BOMBEIROS MILITAR DE SANTA CATARIN RECAPITULANDO O CBMSC constitui uma resposta a acidentes com p",
+          "label": "comando de incidentes",
           "type": "child"
         },
         {
           "id": "cbmsc-seguranca-operacional-n1-b",
-          "label": "Páginas 153-153",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-seguranca-operacional-n2",
-      "label": "79 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA dio, esteja em contato com qualquer materi",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-seguranca-operacional-n2-a",
-          "label": "79 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA dio, esteja em contato com qualquer material potencialmente en",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-seguranca-operacional-n2-b",
-          "label": "Páginas 477-477",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-seguranca-operacional-n3",
-      "label": "80 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA que o Comandante possa garantir o acesso d",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-seguranca-operacional-n3-a",
-          "label": "80 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA que o Comandante possa garantir o acesso do socorrista com rap",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-seguranca-operacional-n3-b",
-          "label": "Páginas 478-478",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-seguranca-operacional-n4",
-      "label": "271 Corpo de Bombeiros Militar de Santa Catarina CORPO DE BOMBEIROS MILITAR DE SANTA CATAR",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-seguranca-operacional-n4-a",
-          "label": "271 Corpo de Bombeiros Militar de Santa Catarina CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA CORPO DE BOMBEIR",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-seguranca-operacional-n4-b",
-          "label": "Páginas 840-840",
+          "label": "Controle de hemorragia com compressão direta imediata.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "153 CORPO DE BOMBEIROS MILITAR DE SANTA CATARIN RECAPITULANDO O CBMSC constitui uma resposta a acidentes com produtos perigosos realizada em",
-    "79 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA dio, esteja em contato com qualquer material potencialmente energizado. • Ordenar aos curios",
-    "80 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA que o Comandante possa garantir o acesso do socorrista com rapidez e segurança. Contudo, é i",
-    "271 Corpo de Bombeiros Militar de Santa Catarina CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA CORPO DE BOMBEIROS MILITAR DO DISTRITO FEDERAL"
+    "comando de incidentes",
+    "Controle de hemorragia com compressão direta imediata."
   ],
   "commonMistakes": [
-    "Confundir conceitos centrais de segurança operacional.",
-    "Responder por prática informal sem aderência ao manual oficial."
+    "Confundir conceitos de segurança operacional.",
+    "Ignorar sequência operacional prevista em manual."
   ],
   "terms": [
     "segurança operacional",
     "comando de incidentes",
     "par",
     "zona de risco",
-    "corpo",
-    "bombeiros",
-    "militar",
-    "santa",
-    "catarin",
-    "recapitulando",
-    "catarina",
-    "esteja",
-    "comandante",
-    "distrito"
+    "abcde",
+    "airway",
+    "breathing",
+    "circulation",
+    "exposição",
+    "tópicos",
+    "hemorragia",
+    "torniquete",
+    "compressão direta",
+    "choque hipovolêmico",
+    "casos",
+    "trauma",
+    "imobilização",
+    "cinemática",
+    "coluna"
   ],
   "sources": [
     {
-      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos",
-      "manualTitle": "MANUAL DE CAPACITAÇÃO EM EMERGÊNCIAS COM PRODUTOS PERIGOSOS",
-      "sectionId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos-sec-92945b47",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=777:manual-de-capacitacao-em-emergencias-com-produtos-perigosos",
-      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "153 CORPO DE BOMBEIROS MILITAR DE SANTA CATARIN RECAPITULANDO O CBMSC constitui uma resposta a acidentes com produtos perigosos realizada em 4 níveis de atendimento: operacional, gerencial, especialista e o comando de incidente. Cada nível tem suas atribuições",
-      "pageStart": 153,
-      "pageEnd": 153
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Suporte Básico a Vida 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 12,
+      "pageEnd": 12
     },
     {
-      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
-      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
-      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-0346bad7",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
-      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "79 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA dio, esteja em contato com qualquer material potencialmente energizado. • Ordenar aos curiosos e ao pessoal de emergên- cia não essencial que abandonem a zona de risco. • Orientar os ocupantes do veículo acidenta",
-      "pageStart": 477,
-      "pageEnd": 477
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022",
+      "manualTitle": "APH - Tópicos Introdutórios: Atendimento Pré-Hospitalar no CBMSC 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=900:aph-ti-atendimento-pre-hospitalar-no-cbmsc-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 30,
+      "pageEnd": 30
     },
     {
-      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
-      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
-      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-7b00b8cc",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
-      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "80 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA que o Comandante possa garantir o acesso do socorrista com rapidez e segurança. Contudo, é importante citar que existem duas formas de estabilização: primária e secundária. A estabilização primária pode ser defin",
-      "pageStart": 478,
-      "pageEnd": 478
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 75,
+      "pageEnd": 75
     },
     {
-      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
-      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
-      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-778146cc",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
-      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "271 Corpo de Bombeiros Militar de Santa Catarina CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA CORPO DE BOMBEIROS MILITAR DO DISTRITO FEDERAL. Manual de Sistema de Comando de Incidentes. CORPO DE BOMBEIROS MILITAR DO ESTADO DE GOIÁS. 09: das Atividades de Salva",
-      "pageStart": 840,
-      "pageEnd": 840
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Suporte Básico a Vida 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 9,
+      "pageEnd": 9
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 118,
+      "pageEnd": 118
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 11,
+      "pageEnd": 11
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-b65f1def",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 43,
+      "pageEnd": 43
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-10e40126",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 49,
+      "pageEnd": 49
     }
   ]
 }

@@ -1,86 +1,27 @@
 {
   "id": "cbmsc-rcp",
   "title": "RCP",
-  "summary": "Resumo derivado de seções oficiais do CBMSC sobre parada cardiorrespiratória.",
+  "summary": "APH: Parada cardiorrespiratória. Revisão em tópicos curtos para estudo rápido.",
   "nodes": [
     {
-      "id": "cbmsc-rcp-n1",
-      "label": "53 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À ",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-rcp-n1-a",
-          "label": "53 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA ciente pode apr",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-rcp-n1-b",
-          "label": "Páginas 53-53",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-rcp-n2",
-      "label": "56 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À ",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-rcp-n2-a",
-          "label": "56 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA pérvia (sem obs",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-rcp-n2-b",
-          "label": "Páginas 56-56",
-          "type": "child"
-        }
-      ]
-    },
-    {
       "id": "cbmsc-rcp-n3",
-      "label": "81 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente",
+      "label": "APH / ABCDE",
       "type": "main",
       "children": [
-        {
-          "id": "cbmsc-rcp-n3-a",
-          "label": "81 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescen",
-          "type": "child"
-        },
         {
           "id": "cbmsc-rcp-n3-b",
-          "label": "Páginas 81-81",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-rcp-n4",
-      "label": "82 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-rcp-n4-a",
-          "label": "82 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescen",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-rcp-n4-b",
-          "label": "Páginas 188-188",
+          "label": "Controle de hemorragia com compressão direta imediata.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "53 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA ciente pode apresentar sequelas irreversíveis",
-    "56 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA pérvia (sem obstrução), ocorre a ventilação p",
-    "81 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescentes Crianças (1 ano de idade à",
-    "82 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescentes Crianças (1 ano de idade à"
+    "Controle de hemorragia com compressão direta imediata."
   ],
   "commonMistakes": [
-    "Confundir conceitos centrais de rcp.",
-    "Responder por prática informal sem aderência ao manual oficial."
+    "Confundir conceitos de rcp.",
+    "Ignorar sequência operacional prevista em manual."
   ],
   "terms": [
     "rcp",
@@ -88,18 +29,21 @@
     "desfibrilação",
     "dea",
     "cadeia de sobrevivência",
-    "corpo",
-    "bombeiros",
-    "militar",
-    "santa",
-    "catarina",
     "tópicos",
     "resumo",
     "componentes",
     "alta",
     "qualidade",
     "profissionais",
-    "componente"
+    "componente",
+    "hemorragia",
+    "torniquete",
+    "compressão direta",
+    "abcde",
+    "airway",
+    "breathing",
+    "circulation",
+    "exposição"
   ],
   "sources": [
     {
@@ -108,7 +52,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-90a9ec98",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "53 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA ciente pode apresentar sequelas irreversíveis ou, inclusive, morte cerebral. Apesar dos avanços recentes, menos de 40% dos adultos recebem ressuscitação cardiopulmon",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
       "pageStart": 53,
       "pageEnd": 53
     },
@@ -118,7 +62,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-61b5b954",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "56 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA pérvia (sem obstrução), ocorre a ventilação passiva (entrada de ar) durante as compressões torácicas. COMPRESSÕES TORÁCICAS Você deve estar se perguntando: como devo",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
       "pageStart": 56,
       "pageEnd": 56
     },
@@ -128,7 +72,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-ea6f8871",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=745:atendimento-pre-hospitalar-cfsd-2018",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "81 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescentes Crianças (1 ano de idade à puberdade) Bebês (menos de 1 ano de idade, excluindo recém-nascidos) Segurança do local Verifique se o local é seguro p",
+      "excerpt": "81 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescentes Crianças (1 ano de idade à puberdade) Bebês (menos de 1 ano de idade, excluindo recém-nascidos) Segurança ",
       "pageStart": 81,
       "pageEnd": 81
     },
@@ -138,9 +82,49 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-df2ba215",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "82 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescentes Crianças (1 ano de idade à puberdade) Bebês (menos de 1 ano de idade, excluindo recém-nascidos) Segurança do local Verifique se o local é seguro p",
+      "excerpt": "82 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescentes Crianças (1 ano de idade à puberdade) Bebês (menos de 1 ano de idade, excluindo recém-nascidos) Segurança ",
       "pageStart": 188,
       "pageEnd": 188
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
+      "pageStart": 118,
+      "pageEnd": 118
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
+      "pageStart": 11,
+      "pageEnd": 11
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-b65f1def",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
+      "pageStart": 43,
+      "pageEnd": 43
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-10e40126",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
+      "pageStart": 49,
+      "pageEnd": 49
     }
   ]
 }

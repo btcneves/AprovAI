@@ -1,86 +1,33 @@
 {
   "id": "cbmsc-aph-abcde",
   "title": "APH / ABCDE",
-  "summary": "Resumo derivado de seções oficiais do CBMSC sobre avaliação primária.",
+  "summary": "APH: Avaliação primária. Revisão em tópicos curtos para estudo rápido.",
   "nodes": [
     {
       "id": "cbmsc-aph-abcde-n1",
-      "label": "12 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À ",
+      "label": "APH / ABCDE",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-aph-abcde-n1-a",
-          "label": "12 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA lucioná-las, qu",
+          "label": "comando de incidentes",
           "type": "child"
         },
         {
           "id": "cbmsc-aph-abcde-n1-b",
-          "label": "Páginas 12-12",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-aph-abcde-n2",
-      "label": "30 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: ATENDIMENTO PRÉ-H",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-aph-abcde-n2-a",
-          "label": "30 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: ATENDIMENTO PRÉ-HOSPITALAR NO CBMSC A",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-aph-abcde-n2-b",
-          "label": "Páginas 30-30",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-aph-abcde-n3",
-      "label": "75 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUM",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-aph-abcde-n3-a",
-          "label": "75 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS Nestes casos,",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-aph-abcde-n3-b",
-          "label": "Páginas 75-75",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-aph-abcde-n4",
-      "label": "9 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À V",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-aph-abcde-n4-a",
-          "label": "9 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA Já no trauma abe",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-aph-abcde-n4-b",
-          "label": "Páginas 9-9",
+          "label": "Controle de hemorragia com compressão direta imediata.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "12 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA lucioná-las, quais sejam o controle de hemorr",
-    "30 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: ATENDIMENTO PRÉ-HOSPITALAR NO CBMSC Assim, o socorrista deve ser en",
-    "75 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS Nestes casos, a via aérea é muito vulneráve",
-    "9 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA Já no trauma aberto , as lesões são produzi - "
+    "comando de incidentes",
+    "Controle de hemorragia com compressão direta imediata."
   ],
   "commonMistakes": [
-    "Confundir conceitos centrais de aph / abcde.",
-    "Responder por prática informal sem aderência ao manual oficial."
+    "Confundir conceitos de aph / abcde.",
+    "Ignorar sequência operacional prevista em manual."
   ],
   "terms": [
     "abcde",
@@ -88,12 +35,20 @@
     "breathing",
     "circulation",
     "exposição",
-    "corpo",
-    "bombeiros",
-    "militar",
-    "santa",
-    "catarina",
-    "tópicos"
+    "tópicos",
+    "hemorragia",
+    "torniquete",
+    "compressão direta",
+    "choque hipovolêmico",
+    "casos",
+    "segurança operacional",
+    "comando de incidentes",
+    "par",
+    "zona de risco",
+    "trauma",
+    "imobilização",
+    "cinemática",
+    "coluna"
   ],
   "sources": [
     {
@@ -102,7 +57,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "12 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA lucioná-las, quais sejam o controle de hemorragias externas graves, a manutenção da permeabilidade das vias aéreas, o controle adequado da ventilação e da oxigenação",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
       "pageStart": 12,
       "pageEnd": 12
     },
@@ -112,7 +67,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=900:aph-ti-atendimento-pre-hospitalar-no-cbmsc-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "30 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: ATENDIMENTO PRÉ-HOSPITALAR NO CBMSC Assim, o socorrista deve ser encaminhado de imediato para o hospital de referência da cidade onde atua e/ou entre em contato com a vigilância epidemiol",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
       "pageStart": 30,
       "pageEnd": 30
     },
@@ -122,7 +77,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "75 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS Nestes casos, a via aérea é muito vulnerável à obstrução pela exposição ao calor, devendo-se ficar atento aos sinais e sintomas indicativos de ina- lação de fumaça",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
       "pageStart": 75,
       "pageEnd": 75
     },
@@ -132,9 +87,49 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "9 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA Já no trauma aberto , as lesões são produzi - das pelo rompimento ou pela separação dos te - cidos, ocorrendo uma perda de continuidade da superfície cutânea, ou seja",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
       "pageStart": 9,
       "pageEnd": 9
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 118,
+      "pageEnd": 118
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 11,
+      "pageEnd": 11
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-b65f1def",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 43,
+      "pageEnd": 43
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-10e40126",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "pageStart": 49,
+      "pageEnd": 49
     }
   ]
 }

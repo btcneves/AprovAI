@@ -1,5 +1,6 @@
 {
-  "generatedAt": "2026-04-08T17:13:50.996Z",
+  "generatedAt": "2026-04-08T19:10:49.838Z",
+  "sourceMode": "fallback-existing-mindmaps",
   "maps": [
     "src/data/mindmaps/cbmsc-classes-de-incendio.json",
     "src/data/mindmaps/cbmsc-metodos-de-extincao.json",

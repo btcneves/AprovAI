@@ -1,86 +1,39 @@
 {
   "id": "cbmsc-salvamento-em-altura",
   "title": "Salvamento em altura",
-  "summary": "Resumo derivado de seções oficiais do CBMSC sobre técnicas verticais.",
+  "summary": "Salvamento: Técnicas verticais. Revisão em tópicos curtos para estudo rápido.",
   "nodes": [
     {
       "id": "cbmsc-salvamento-em-altura-n1",
-      "label": "34 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 1.",
+      "label": "Técnicas verticais",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-salvamento-em-altura-n1-a",
-          "label": "34 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 1. Fundamentos da segurança Fonte: CBMSC Lição II - Pri",
+          "label": "Foco: altura",
           "type": "child"
         },
         {
           "id": "cbmsc-salvamento-em-altura-n1-b",
-          "label": "Páginas 603-604",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-salvamento-em-altura-n2",
-      "label": "37 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Segurança: é aquele que faz a pr",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-salvamento-em-altura-n2-a",
-          "label": "37 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Segurança: é aquele que faz a prote- ção do resgatis",
+          "label": "Foco: corda",
           "type": "child"
         },
         {
-          "id": "cbmsc-salvamento-em-altura-n2-b",
-          "label": "Páginas 606-606",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-salvamento-em-altura-n3",
-      "label": "40 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 8.",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-salvamento-em-altura-n3-a",
-          "label": "40 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 8. Modelo de histórico Fonte: CBMSC • Jamais utilizar c",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-salvamento-em-altura-n3-b",
-          "label": "Páginas 609-609",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-salvamento-em-altura-n4",
-      "label": "43 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13.",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-salvamento-em-altura-n4-a",
-          "label": "43 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13. Exemplo de linha de segurança Fonte: CBMSC Figura 1",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-salvamento-em-altura-n4-b",
-          "label": "Páginas 612-612",
+          "id": "cbmsc-salvamento-em-altura-n1-c",
+          "label": "Foco: ancoragem",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "34 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 1. Fundamentos da segurança Fonte: CBMSC Lição II - Princípios de segurança 35 CORPO ",
-    "37 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Segurança: é aquele que faz a prote- ção do resgatista que estiver escalan- do ou ",
-    "40 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 8. Modelo de histórico Fonte: CBMSC • Jamais utilizar cabos de salvamento para cor- t",
-    "43 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13. Exemplo de linha de segurança Fonte: CBMSC Figura 14. Montagem de linha de segura"
+    "Foco: altura",
+    "Foco: corda",
+    "Foco: ancoragem"
   ],
   "commonMistakes": [
-    "Confundir conceitos centrais de salvamento em altura.",
-    "Responder por prática informal sem aderência ao manual oficial."
+    "Confundir conceitos de salvamento em altura.",
+    "Ignorar sequência operacional prevista em manual."
   ],
   "terms": [
     "altura",
@@ -88,22 +41,70 @@
     "ancoragem",
     "rapel",
     "ascensão",
-    "corpo",
-    "bombeiros",
-    "militar",
-    "santa",
-    "catarina",
-    "figura",
-    "glossário"
+    "salvamento aquático",
+    "afogamento",
+    "praia",
+    "corrente de retorno",
+    "esperar",
+    "compêndio",
+    "turma",
+    "aspirantes",
+    "estilo",
+    "australiano",
+    "instrução",
+    "avaliação",
+    "condições",
+    "após",
+    "observação"
   ],
   "sources": [
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-70d92952",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
+      "pageStart": 50,
+      "pageEnd": 50
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014",
+      "manualTitle": "COMPÊNDIO DE TURMA - ASPIRANTES 2014",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014-sec-e6541f4b",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=781:compendio-de-turma-aspirantes-2014",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "171 Compêndio de Turma – Aspirantes 201 4 ESTILO AUSTRALIANO – INSTRUÇÃO COM PRANCHAS A Academia de Bombeiro Militar proporcionou nas últimas semanas aos cadetes do 4ºCFO, sob a supervisão e orientação do 2º Ten BM Frega",
+      "pageStart": 171,
+      "pageEnd": 171
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-e006c92f",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "1.1 Avaliação das condições do mar Após a observação das condições gerais do ambiente aquático e o reconhecimento dos perigos, o guarda vidas deve sinalizar o local e seus pontos críticos, tais como Para isto faz-se uso,",
+      "pageStart": 1296,
+      "pageEnd": 1302
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-611b52d7",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "7.1 A importância da atividade de salvamento aquático O guarda-vidas não está nas praias somente para salvar vidas, mas principalmente para guardá-las, atuando continuamente na prevenção, evitando que o banhista seja arr",
+      "pageStart": 1385,
+      "pageEnd": 1385
+    },
     {
       "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
       "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-af217067",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "34 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 1. Fundamentos da segurança Fonte: CBMSC Lição II - Princípios de segurança 35 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FATOR DE QUEDA Fator de queda é o valor numérico resultan- te da relação entre a ",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
       "pageStart": 603,
       "pageEnd": 604
     },
@@ -113,7 +114,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-d907a1cf",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "37 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Segurança: é aquele que faz a prote- ção do resgatista que estiver escalan- do ou rapelando, cuidando para que este não caia, tensionando o cabo e, conseqüentemente, travando o equi- pamento de frenagem",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
       "pageStart": 606,
       "pageEnd": 606
     },
@@ -123,7 +124,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-87318f38",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "40 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 8. Modelo de histórico Fonte: CBMSC • Jamais utilizar cabos de salvamento para cor- tes de árvore, para reboque de carros, ou qual- quer outro uso senão aquele para o qual o cabo foi destinado. Da mesma fo",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
       "pageStart": 609,
       "pageEnd": 609
     },
@@ -133,7 +134,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-993bb80e",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "43 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13. Exemplo de linha de segurança Fonte: CBMSC Figura 14. Montagem de linha de seguraça Fonte: CBPMESP (2006). ANCORAGEM – LINHA DE SEGURANÇA Qualquer que seja a operação que o resgatista irá realizar em a",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
       "pageStart": 612,
       "pageEnd": 612
     }

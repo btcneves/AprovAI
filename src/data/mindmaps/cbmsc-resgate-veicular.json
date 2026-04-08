@@ -1,100 +1,61 @@
 {
   "id": "cbmsc-resgate-veicular",
   "title": "Resgate veicular",
-  "summary": "Resumo derivado de seções oficiais do CBMSC sobre desencarceramento e estabilização.",
+  "summary": "Salvamento: Desencarceramento e estabilização. Revisão em tópicos curtos para estudo rápido.",
   "nodes": [
     {
       "id": "cbmsc-resgate-veicular-n1",
-      "label": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de ",
+      "label": "Resgate veicular",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-resgate-veicular-n1-a",
-          "label": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exi",
+          "label": "desencarceramento",
           "type": "child"
         },
         {
           "id": "cbmsc-resgate-veicular-n1-b",
-          "label": "Páginas 490-490",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-resgate-veicular-n2",
-      "label": "94 CORPO DE BOMBEIROS M ILITAR DE SANTA CATARINA Ferramentas e equipamentos para resgate v",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-resgate-veicular-n2-a",
-          "label": "94 CORPO DE BOMBEIROS M ILITAR DE SANTA CATARINA Ferramentas e equipamentos para resgate veicular FERRAMENTAS ",
+          "label": "comando de incidentes",
           "type": "child"
         },
         {
-          "id": "cbmsc-resgate-veicular-n2-b",
-          "label": "Páginas 94-94",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-resgate-veicular-n3",
-      "label": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de ",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-resgate-veicular-n3-a",
-          "label": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exi",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-resgate-veicular-n3-b",
-          "label": "Páginas 92-92",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-resgate-veicular-n4",
-      "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu Além ",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-resgate-veicular-n4-a",
-          "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu Além de tornar algumas da",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-resgate-veicular-n4-b",
-          "label": "Páginas 16-16",
+          "id": "cbmsc-resgate-veicular-n1-c",
+          "label": "FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exige, atualmente, muito mais do ",
-    "94 CORPO DE BOMBEIROS M ILITAR DE SANTA CATARINA Ferramentas e equipamentos para resgate veicular FERRAMENTAS E EQUIPAMENTOS A atividade de ",
-    "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exige, atualmente, muito mais do ",
-    "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu Além de tornar algumas das medidas anteriores inócuas, "
+    "desencarceramento",
+    "comando de incidentes",
+    "FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são"
   ],
   "commonMistakes": [
-    "Confundir conceitos centrais de resgate veicular.",
-    "Responder por prática informal sem aderência ao manual oficial."
+    "Confundir conceitos de resgate veicular.",
+    "Ignorar sequência operacional prevista em manual."
   ],
   "terms": [
     "resgate veicular",
     "desencarceramento",
     "estabilização",
     "ferramenta hidráulica",
-    "corpo",
-    "bombeiros",
-    "militar",
-    "santa",
-    "catarina",
     "ferramentas",
     "ilitar",
-    "tópicos"
+    "tópicos",
+    "segurança operacional",
+    "comando de incidentes",
+    "par",
+    "zona de risco",
+    "catarin",
+    "recapitulando",
+    "esteja",
+    "comandante",
+    "abcde",
+    "airway",
+    "breathing",
+    "circulation",
+    "exposição"
   ],
   "sources": [
     {
@@ -103,7 +64,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-a2de5b60",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exige, atualmente, muito mais do que simples ferramentas e equipamen- tos utilizados no passado, por vezes, de forma empírica. A evolução tecnológica da ",
+      "excerpt": "Foco: resgate veicular. Foco: desencarceramento. Foco: estabilização. desencarceramento.. desencarceramento.. comando de incidentes... FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária",
       "pageStart": 490,
       "pageEnd": 490
     },
@@ -113,7 +74,7 @@
       "sectionId": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-1-edicao-sec-9f5e33b1",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/102-salvamento-busca-resgate?download=780:manual-de-capacitacao-em-resgate-veicular-1-edicao",
       "category": "Salvamento, Busca & Resgate",
-      "excerpt": "94 CORPO DE BOMBEIROS M ILITAR DE SANTA CATARINA Ferramentas e equipamentos para resgate veicular FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exige, atualmente, muito mais do que simples ferramentas e equipamen- tos utilizados no passado, por ve",
+      "excerpt": "Foco: resgate veicular. Foco: desencarceramento. Foco: estabilização. desencarceramento.. desencarceramento.. comando de incidentes... FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária",
       "pageStart": 94,
       "pageEnd": 94
     },
@@ -123,7 +84,7 @@
       "sectionId": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao-sec-17728edc",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/102-salvamento-busca-resgate?download=779:manual-de-capacitacao-em-resgate-veicular",
       "category": "Salvamento, Busca & Resgate",
-      "excerpt": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exige, atualmente, muito mais do que simples ferramentas e equipamen- tos utilizados no passado, por vezes, de forma empírica. A evolução tecnológica da ",
+      "excerpt": "Foco: resgate veicular. Foco: desencarceramento. Foco: estabilização. desencarceramento.. desencarceramento.. comando de incidentes... FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária",
       "pageStart": 92,
       "pageEnd": 92
     },
@@ -133,9 +94,49 @@
       "sectionId": "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos-sec-1bc0e491",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=741:topicos-especiais-incendio-em-veiculos",
       "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu Além de tornar algumas das medidas anteriores inócuas, um veículo em chamas se movimentando gera riscos exponenciais, podendo causar atropelamentos e colisões, além de espalha",
+      "excerpt": "Foco: resgate veicular. Foco: desencarceramento. Foco: estabilização. desencarceramento.. desencarceramento.. comando de incidentes... FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária",
       "pageStart": 16,
       "pageEnd": 16
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-7b00b8cc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "Foco: resgate veicular. Foco: desencarceramento. Foco: estabilização. desencarceramento.. desencarceramento.. comando de incidentes... FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária",
+      "pageStart": 478,
+      "pageEnd": 478
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM EMERGÊNCIAS COM PRODUTOS PERIGOSOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos-sec-92945b47",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=777:manual-de-capacitacao-em-emergencias-com-produtos-perigosos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "Foco: segurança operacional. Foco: comando de incidentes. Foco: par. desencarceramento.. comando de incidentes.. FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são difíceis.... des",
+      "pageStart": 153,
+      "pageEnd": 153
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-0346bad7",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "Foco: segurança operacional. Foco: comando de incidentes. Foco: par. desencarceramento.. comando de incidentes.. FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são difíceis.... des",
+      "pageStart": 477,
+      "pageEnd": 477
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-778146cc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "Foco: segurança operacional. Foco: comando de incidentes. Foco: par. desencarceramento.. comando de incidentes.. FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são difíceis.... des",
+      "pageStart": 840,
+      "pageEnd": 840
     }
   ]
 }

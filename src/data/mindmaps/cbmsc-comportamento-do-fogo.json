@@ -1,86 +1,27 @@
 {
   "id": "cbmsc-comportamento-do-fogo",
   "title": "Comportamento do fogo",
-  "summary": "Resumo derivado de seções oficiais do CBMSC sobre fenômenos e leitura de fumaça.",
+  "summary": "Incêndio: Fenômenos e leitura de fumaça. Revisão em tópicos curtos para estudo rápido.",
   "nodes": [
     {
       "id": "cbmsc-comportamento-do-fogo-n1",
-      "label": "1.2 IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resu",
+      "label": "Comportamento do fogo",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-comportamento-do-fogo-n1-a",
-          "label": "1.2 IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resultantes da queima, e",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-comportamento-do-fogo-n1-b",
-          "label": "Páginas 58-59",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-comportamento-do-fogo-n2",
-      "label": "1 FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) s",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-comportamento-do-fogo-n2-a",
-          "label": "1 FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são difíceis de tradu",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-comportamento-do-fogo-n2-b",
-          "label": "Páginas 57-57",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-comportamento-do-fogo-n3",
-      "label": "2.1 VISUALIZAÇÃO DO FOCO DO INCÊNDIO Uma ventilação adequada retirará do ambiente os produ",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-comportamento-do-fogo-n3-a",
-          "label": "2.1 VISUALIZAÇÃO DO FOCO DO INCÊNDIO Uma ventilação adequada retirará do ambiente os produtos da combustão que",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-comportamento-do-fogo-n3-b",
-          "label": "Páginas 158-159",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-comportamento-do-fogo-n4",
-      "label": "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Saiba mais Para saber mais sobre a teoria ",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-comportamento-do-fogo-n4-a",
-          "label": "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Saiba mais Para saber mais sobre a teoria geral do fogo consul",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-comportamento-do-fogo-n4-b",
-          "label": "Páginas 20-20",
+          "label": "– FLASHOVER É um momento em que os gases combustíveis resultantes da queima",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "1.2 IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resultantes da queima, em virtude da elevação da tempe",
-    "1 FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são difíceis de traduzir para a língua portuguesa c",
-    "2.1 VISUALIZAÇÃO DO FOCO DO INCÊNDIO Uma ventilação adequada retirará do ambiente os produtos da combustão que impedem a visualização, permi",
-    "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Saiba mais Para saber mais sobre a teoria geral do fogo consulte o material “Tópicos introdu"
+    "– FLASHOVER É um momento em que os gases combustíveis resultantes da queima"
   ],
   "commonMistakes": [
-    "Confundir conceitos centrais de comportamento do fogo.",
-    "Responder por prática informal sem aderência ao manual oficial."
+    "Confundir conceitos de comportamento do fogo.",
+    "Ignorar sequência operacional prevista em manual."
   ],
   "terms": [
     "flashover",
@@ -102,9 +43,7 @@
     "visualização",
     "foco",
     "incêndio",
-    "ventilação",
-    "adequada",
-    "retirará"
+    "ventilação"
   ],
   "sources": [
     {
@@ -113,7 +52,7 @@
       "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-83952d47",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=755:curso-de-formacao-de-combate-a-incendios",
       "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "1.2 IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resultantes da queima, em virtude da elevação da temperatura do ambiente, entram em ignição simultaneamente, com efeitos similares aos de uma explosão. Sua ocorrência general",
+      "excerpt": "1.2 IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resultantes da queima, em virtude da elevação da temperatura do ambiente, entram em ignição simultaneamente, com efeitos similares aos",
       "pageStart": 58,
       "pageEnd": 59
     },
@@ -123,7 +62,7 @@
       "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-853d101e",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=755:curso-de-formacao-de-combate-a-incendios",
       "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "1 FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são difíceis de traduzir para a língua portuguesa com a fidelidade conceitual necessária, ainda não temos nenhuma publicação científica que forneça uma tradução padronizad",
+      "excerpt": "1 FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são difíceis de traduzir para a língua portuguesa com a fidelidade conceitual necessária, ainda não temos nenhuma publicação cientí",
       "pageStart": 57,
       "pageEnd": 57
     },
@@ -133,7 +72,7 @@
       "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-c7930192",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=755:curso-de-formacao-de-combate-a-incendios",
       "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "2.1 VISUALIZAÇÃO DO FOCO DO INCÊNDIO Uma ventilação adequada retirará do ambiente os produtos da combustão que impedem a visualização, permitindo que o bombeiro tenha uma boa visão do foco do incêndio, e assim, atingindo-o diretamente evite desperdícios de esf",
+      "excerpt": "2.1 VISUALIZAÇÃO DO FOCO DO INCÊNDIO Uma ventilação adequada retirará do ambiente os produtos da combustão que impedem a visualização, permitindo que o bombeiro tenha uma boa visão do foco do incêndio, e assim, atingindo",
       "pageStart": 158,
       "pageEnd": 159
     },
@@ -143,9 +82,49 @@
       "sectionId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-59d68342",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=754:manual-de-capacitacao-em-combate-a-incendio-estrutural",
       "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Saiba mais Para saber mais sobre a teoria geral do fogo consulte o material “Tópicos introdutórios em Ciências do Fogo”, disponível no site da Biblioteca do CEBMSC. Figura 4 - Flashover Fonte: ABC BOMBEIROS BILBA",
+      "excerpt": "Foco: flashover. Foco: backdraft. Foco: fumaça. IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resultantes da.... – FLASHOVER É um momento em que os gases combustíveis resultantes da qu",
       "pageStart": 20,
       "pageEnd": 20
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: flashover. Foco: backdraft. Foco: fumaça. IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resultantes da.... – FLASHOVER É um momento em que os gases combustíveis resultantes da qu",
+      "pageStart": 75,
+      "pageEnd": 75
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "manualTitle": "CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, em : CURSO DE ATENDIMENT",
+      "pageStart": 13,
+      "pageEnd": 14
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM COMBATE A INCÊNDIO ESTRUTURAL",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-a1af9389",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=754:manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "Foco: flashover. Foco: backdraft. Foco: fumaça. IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resultantes da.... – FLASHOVER É um momento em que os gases combustíveis resultantes da qu",
+      "pageStart": 16,
+      "pageEnd": 16
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-7f1f49f2",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "Foco: flashover. Foco: backdraft. Foco: fumaça. IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resultantes da.... – FLASHOVER É um momento em que os gases combustíveis resultantes da qu",
+      "pageStart": 861,
+      "pageEnd": 861
     }
   ]
 }

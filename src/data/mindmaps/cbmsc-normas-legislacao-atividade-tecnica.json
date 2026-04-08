@@ -1,89 +1,48 @@
 {
   "id": "cbmsc-normas-legislacao-atividade-tecnica",
   "title": "Normas / legislação / atividade técnica",
-  "summary": "Resumo derivado de seções oficiais do CBMSC sobre base normativa cbmsc.",
+  "summary": "Normas e Legislação: Base normativa CBMSC. Revisão em tópicos curtos para estudo rápido.",
   "nodes": [
     {
       "id": "cbmsc-normas-legislacao-atividade-tecnica-n1",
-      "label": "3.6 FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores crític",
+      "label": "Normas / legislação / atividade técnica",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-normas-legislacao-atividade-tecnica-n1-a",
-          "label": "3.6 FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso (FCS) ",
+          "label": "FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso...",
           "type": "child"
         },
         {
-          "id": "cbmsc-normas-legislacao-atividade-tecnica-n1-b",
-          "label": "Páginas 25-27",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-normas-legislacao-atividade-tecnica-n2",
-      "label": "10 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica n",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-normas-legislacao-atividade-tecnica-n2-a",
-          "label": "10 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC rança contra",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-normas-legislacao-atividade-tecnica-n2-b",
-          "label": "Páginas 1251-1251",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-normas-legislacao-atividade-tecnica-n3",
-      "label": "SEÇÃO DE ATIVIDADE TÉCNICA (SAT) A SAT tem como função primordial supervisio- nar se as no",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-normas-legislacao-atividade-tecnica-n3-a",
-          "label": "SEÇÃO DE ATIVIDADE TÉCNICA (SAT) A SAT tem como função primordial supervisio- nar se as normas provenientes da",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-normas-legislacao-atividade-tecnica-n3-b",
-          "label": "Páginas 1253-1253",
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n1-c",
+          "label": "CTB e IG - -BM aparecem recorrentemente em provas",
           "type": "child"
         }
       ]
     },
     {
       "id": "cbmsc-normas-legislacao-atividade-tecnica-n4",
-      "label": "18 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica n",
+      "label": "Normas e legislação básica",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-normas-legislacao-atividade-tecnica-n4-a",
-          "label": "18 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC Aqui podemos",
-          "type": "child"
-        },
-        {
           "id": "cbmsc-normas-legislacao-atividade-tecnica-n4-b",
-          "label": "Páginas 1259-1259",
+          "label": "Cumprimento de POP e ICS reduz erro operacional",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "3.6 FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso (FCS) é aquela que diz que “são pres",
-    "10 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC rança contra incêndio em edificações, cont",
-    "SEÇÃO DE ATIVIDADE TÉCNICA (SAT) A SAT tem como função primordial supervisio- nar se as normas provenientes da DAT e Comando Geral são cumpr",
-    "18 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC Aqui podemos entender como responsável téc"
+    "FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso...",
+    "CTB e IG - -BM aparecem recorrentemente em provas",
+    "Cumprimento de POP e ICS reduz erro operacional"
   ],
   "commonMistakes": [
-    "Confundir conceitos centrais de normas / legislação / atividade técnica.",
-    "Responder por prática informal sem aderência ao manual oficial."
+    "Confundir conceitos de normas / legislação / atividade técnica.",
+    "Ignorar sequência operacional prevista em manual."
   ],
   "terms": [
-    "ig",
     "norma",
     "legislação",
     "atividade técnica",
@@ -94,17 +53,16 @@
     "corporativos",
     "definição",
     "clássica",
-    "corpo",
-    "bombeiros",
-    "militar",
-    "santa",
-    "catarina",
     "tópicos",
     "seção",
     "atividade",
     "técnica",
-    "função",
-    "primordial"
+    "Legislação federal",
+    "CTB",
+    "Normas de APH correlatas",
+    "Normas CBMSC",
+    "IG 10-03-BM",
+    "Manuais operacionais"
   ],
   "sources": [
     {
@@ -113,7 +71,7 @@
       "sectionId": "gestao-ensino-lideranca-saude-do-bombeiro-organizacao-e-administracao-de-bombeiro-sec-b4951640",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/103-gestao-ensino-lideranca-saude-do-bombeiro?download=775:organizacao-e-administracao-de-bombeiro",
       "category": "Gestão, Ensino, Liderança & Saúde do Bombeiro",
-      "excerpt": "3.6 FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso (FCS) é aquela que diz que “são pressupostos essenciais para o alcance dos objetivos que contribuem para o sucesso do empreendimento”. FCS são os fundamento",
+      "excerpt": "3.6 FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso (FCS) é aquela que diz que “são pressupostos essenciais para o alcance dos objetivos que contribuem para o sucesso d",
       "pageStart": 25,
       "pageEnd": 27
     },
@@ -123,7 +81,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-559f859a",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "10 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC rança contra incêndio em edificações, contra si- nistros em áreas de risco e de armazenagem, de manipulação e transporte de produtos perigo- sos, acompanhar e fis",
+      "excerpt": "CTB e IG 10-03-BM aparecem recorrentemente em provas... Cumprimento de POP e ICS reduz erro operacional.. FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso.... CTB e IG 1",
       "pageStart": 1251,
       "pageEnd": 1251
     },
@@ -133,7 +91,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-6df2e742",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "SEÇÃO DE ATIVIDADE TÉCNICA (SAT) A SAT tem como função primordial supervisio- nar se as normas provenientes da DAT e Comando Geral são cumpridas pelas edificações instaladas em suas jurisdições. Essa conferência é realizada, de modo geral, nas três etapas de r",
+      "excerpt": "SEÇÃO DE ATIVIDADE TÉCNICA (SAT) A SAT tem como função primordial supervisio- nar se as normas provenientes da DAT e Comando Geral são cumpridas pelas edificações instaladas em suas jurisdições. Essa conferência é realiz",
       "pageStart": 1253,
       "pageEnd": 1253
     },
@@ -143,9 +101,45 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-3064f988",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "18 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC Aqui podemos entender como responsável téc- nico um engenheiro ou arquiteto legalmente habi- litado e com registro no respectivo conselho de classe regional - Con",
+      "excerpt": "CTB e IG 10-03-BM aparecem recorrentemente em provas... Cumprimento de POP e ICS reduz erro operacional.. FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso.... CTB e IG 1",
       "pageStart": 1259,
       "pageEnd": 1259
+    },
+    {
+      "manualId": "combate-incendio-estrutural-manual",
+      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
+      "sectionId": "cbmsc-normas-e-legislacao-basica-fallback-sec-1",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "category": "Combate a Incêndio Estrutural",
+      "excerpt": "CTB e IG 10-03-BM aparecem recorrentemente em provas.. Cumprimento de POP e ICS reduz erro operacional.. CTB e IG 10-03-BM aparecem recorrentemente em provas... Cumprimento de POP e ICS reduz erro operacional.. FATORES C"
+    },
+    {
+      "manualId": "atendimento-basico-emergencias-manual",
+      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
+      "sectionId": "cbmsc-normas-e-legislacao-basica-fallback-sec-2",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "category": "Atendimento Pré-Hospitalar",
+      "excerpt": "CTB e IG 10-03-BM aparecem recorrentemente em provas.. Cumprimento de POP e ICS reduz erro operacional.. CTB e IG 10-03-BM aparecem recorrentemente em provas... Cumprimento de POP e ICS reduz erro operacional.. FATORES C"
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Suporte Básico a Vida 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "CTB e IG 10-03-BM aparecem recorrentemente em provas... Cumprimento de POP e ICS reduz erro operacional.. FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso.... CTB e IG 1",
+      "pageStart": 12,
+      "pageEnd": 12
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022",
+      "manualTitle": "APH - Tópicos Introdutórios: Atendimento Pré-Hospitalar no CBMSC 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=900:aph-ti-atendimento-pre-hospitalar-no-cbmsc-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "CTB e IG 10-03-BM aparecem recorrentemente em provas... Cumprimento de POP e ICS reduz erro operacional.. FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso.... CTB e IG 1",
+      "pageStart": 30,
+      "pageEnd": 30
     }
   ]
 }
