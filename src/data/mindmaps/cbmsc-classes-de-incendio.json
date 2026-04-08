@@ -1,86 +1,64 @@
 {
   "id": "cbmsc-classes-de-incendio",
   "title": "Classes de incêndio",
-  "summary": "Resumo derivado de seções oficiais do CBMSC sobre classificação e agentes extintores.",
+  "summary": "Incêndio: Classificação e agentes extintores. Revisão em tópicos curtos para estudo rápido.",
   "nodes": [
     {
       "id": "cbmsc-classes-de-incendio-n1",
-      "label": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Ch",
+      "label": "Classes de incêndio",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-classes-de-incendio-n1-a",
-          "label": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fuma",
+          "label": "Produtos da combustão: gases, chama, calor e fumaça.",
           "type": "child"
         },
         {
           "id": "cbmsc-classes-de-incendio-n1-b",
-          "label": "Páginas 13-14",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-classes-de-incendio-n2",
-      "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância c",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-classes-de-incendio-n2-a",
-          "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitan",
+          "label": "Gases da combustão",
           "type": "child"
         },
         {
-          "id": "cbmsc-classes-de-incendio-n2-b",
-          "label": "Páginas 16-16",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-classes-de-incendio-n3",
-      "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância c",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-classes-de-incendio-n3-a",
-          "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitan",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-classes-de-incendio-n3-b",
-          "label": "Páginas 861-861",
+          "id": "cbmsc-classes-de-incendio-n1-c",
+          "label": "Fumaça",
           "type": "child"
         }
       ]
     },
     {
       "id": "cbmsc-classes-de-incendio-n4",
-      "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância c",
+      "label": "Extintores",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-classes-de-incendio-n4-a",
-          "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitan",
+          "label": "Classe C: material e agente extintor compatível.",
           "type": "child"
         },
         {
           "id": "cbmsc-classes-de-incendio-n4-b",
-          "label": "Páginas 487-487",
+          "label": "Usar agentes extintores não condutores em materiais energizados.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-classes-de-incendio-n4-c",
+          "label": "Produtos da combu",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incê",
-    "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos ",
-    "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos ",
-    "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos "
+    "Produtos da combustão: gases, chama, calor e fumaça.",
+    "Gases da combustão",
+    "Fumaça",
+    "Classe C: material e agente extintor compatível.",
+    "Usar agentes extintores não condutores em materiais energizados.",
+    "Produtos da combu"
   ],
   "commonMistakes": [
-    "Confundir conceitos centrais de classes de incêndio.",
-    "Responder por prática informal sem aderência ao manual oficial."
+    "Confundir conceitos de classes de incêndio.",
+    "Ignorar sequência operacional prevista em manual."
   ],
   "terms": [
     "classe a",
@@ -95,12 +73,14 @@
     "quatro",
     "categorias",
     "gases",
-    "corpo",
-    "bombeiros",
-    "militar",
-    "santa",
-    "catarina",
-    "glossário"
+    "glossário",
+    "extintor",
+    "pqs",
+    "co2",
+    "espuma",
+    "água pressurizada",
+    "utilização",
+    "combate"
   ],
   "sources": [
     {
@@ -109,7 +89,7 @@
       "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
       "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, em : CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS 13",
+      "excerpt": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, em : CURSO DE ATENDIMENT",
       "pageStart": 13,
       "pageEnd": 14
     },
@@ -119,7 +99,7 @@
       "sectionId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-a1af9389",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=754:manual-de-capacitacao-em-combate-a-incendio-estrutural",
       "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos elementos essenciais do fogo, fa- zendo assim cessar a combustão. Assista ao vídeo Para saber mais sobre a química do fo",
+      "excerpt": "Foco: classe a. Foco: classe b. Foco: classe c. Produtos da combustão Se classificam em quatro categorias :. Gases da combustão. Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, e",
       "pageStart": 16,
       "pageEnd": 16
     },
@@ -129,7 +109,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-7f1f49f2",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos elementos essenciais do fogo, fa- zendo assim cessar a combustão. Assista ao vídeo Para saber mais sobre a química do fo",
+      "excerpt": "Foco: classe a. Foco: classe b. Foco: classe c. Produtos da combustão Se classificam em quatro categorias :. Gases da combustão. Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, e",
       "pageStart": 861,
       "pageEnd": 861
     },
@@ -139,9 +119,49 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-f7065879",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=783:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos elementos essenciais do fogo, fa- zendo assim cessar a combustão. Assista ao vídeo Para saber mais sobre a química do fo",
+      "excerpt": "Foco: classe a. Foco: classe b. Foco: classe c. Produtos da combustão Se classificam em quatro categorias :. Gases da combustão. Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, e",
       "pageStart": 487,
       "pageEnd": 487
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM COMBATE A INCÊNDIO ESTRUTURAL",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-e4a98d18",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=754:manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "Foco: classe a. Foco: classe b. Foco: classe c. Produtos da combustão Se classificam em quatro categorias :. Gases da combustão. Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, e",
+      "pageStart": 29,
+      "pageEnd": 29
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-ee1139ac",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "Foco: classe a. Foco: classe b. Foco: classe c. Produtos da combustão Se classificam em quatro categorias :. Gases da combustão. Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, e",
+      "pageStart": 74,
+      "pageEnd": 74
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
+      "manualTitle": "CURSO DE FORMAÇÃO DE COMBATE A INCÊNDIOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-893e893b",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=755:curso-de-formacao-de-combate-a-incendios",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "3 COMBATE A INCÊNDIO “CLASSE C” 3.1 MATERIAIS ENERGIZADOS Este tipo de incêndio pode ser extinto após o corte da energia elétrica, tornando-se classe “A” ou “B”. Deve-se utilizar agentes extintores não condutores, como P",
+      "pageStart": 153,
+      "pageEnd": 153
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos",
+      "manualTitle": "TÓPICOS ESPECIAIS: INCÊNDIO EM VEÍCULOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos-sec-22893ce2",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=741:topicos-especiais-incendio-em-veiculos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "Foco: classe a. Foco: classe b. Foco: classe c. Produtos da combustão Se classificam em quatro categorias :. Gases da combustão. Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, e",
+      "pageStart": 21,
+      "pageEnd": 21
     }
   ]
 }

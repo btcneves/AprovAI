@@ -1,86 +1,39 @@
 {
   "id": "cbmsc-produtos-perigosos",
   "title": "Produtos perigosos",
-  "summary": "Resumo derivado de seções oficiais do CBMSC sobre reconhecimento e isolamento.",
+  "summary": "Produtos Perigosos: Reconhecimento e isolamento. Revisão em tópicos curtos para estudo rápido.",
   "nodes": [
     {
       "id": "cbmsc-produtos-perigosos-n1",
-      "label": "Seção Branca: informações e orientações gerais 2.",
+      "label": "Métodos de extinção",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-produtos-perigosos-n1-a",
-          "label": "Seção Branca: informações e orientações gerais 2. Seção Amarela: produtos perigosos em ordem numérica e cresce",
+          "label": "informações e orientações gerais",
           "type": "child"
         },
         {
           "id": "cbmsc-produtos-perigosos-n1-b",
-          "label": "Páginas 1118-1120",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-produtos-perigosos-n2",
-      "label": "2.4 Acidente com Produto Perigoso Evento repentino e não desejado, onde a liberação de sub",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-produtos-perigosos-n2-a",
-          "label": "2.4 Acidente com Produto Perigoso Evento repentino e não desejado, onde a liberação de substâncias químicas pe",
+          "label": "produtos perigosos em ordem numérica e crescente",
           "type": "child"
         },
         {
-          "id": "cbmsc-produtos-perigosos-n2-b",
-          "label": "Páginas 20-22",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-produtos-perigosos-n3",
-      "label": "1 O sistema de classificação da ONU Devido ao crescente número de acidentes envolvendo pro",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-produtos-perigosos-n3-a",
-          "label": "1 O sistema de classificação da ONU Devido ao crescente número de acidentes envolvendo produtos perigosos e à ",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-produtos-perigosos-n3-b",
-          "label": "Páginas 29-29",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-produtos-perigosos-n4",
-      "label": "2.2 Painel de Segurança É um retângulo de cor laranja com duas numerações na cor preta, na",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-produtos-perigosos-n4-a",
-          "label": "2.2 Painel de Segurança É um retângulo de cor laranja com duas numerações na cor preta, na parte superior, o n",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-produtos-perigosos-n4-b",
-          "label": "Páginas 51-52",
+          "id": "cbmsc-produtos-perigosos-n1-c",
+          "label": "produtos em ordem alfabética",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "Seção Branca: informações e orientações gerais 2. Seção Amarela: produtos perigosos em ordem numérica e crescente 3. Seção Azul: produtos em",
-    "2.4 Acidente com Produto Perigoso Evento repentino e não desejado, onde a liberação de substâncias químicas perigosas em forma de incêndio, ",
-    "1 O sistema de classificação da ONU Devido ao crescente número de acidentes envolvendo produtos perigosos e à falta de padronização dos mesm",
-    "2.2 Painel de Segurança É um retângulo de cor laranja com duas numerações na cor preta, na parte superior, o número de identificação do risc"
+    "informações e orientações gerais",
+    "produtos perigosos em ordem numérica e crescente",
+    "produtos em ordem alfabética"
   ],
   "commonMistakes": [
-    "Confundir conceitos centrais de produtos perigosos.",
-    "Responder por prática informal sem aderência ao manual oficial."
+    "Confundir conceitos de produtos perigosos.",
+    "Ignorar sequência operacional prevista em manual."
   ],
   "terms": [
     "onu",
@@ -88,32 +41,70 @@
     "zona quente",
     "isolamento",
     "epi químico",
+    "resfriamento",
+    "abafamento",
+    "reacao em cadeia",
+    "retirada",
+    "produtos",
+    "combustão",
+    "classificam",
+    "quatro",
+    "categorias",
+    "gases",
     "seção",
     "branca",
     "informações",
     "orientações",
-    "gerais",
-    "amarela",
-    "acidente",
-    "produto",
-    "perigoso",
-    "evento",
-    "repentino",
-    "desejado",
-    "sistema",
-    "classificação",
-    "devido",
-    "crescente",
-    "número"
+    "gerais"
   ],
   "sources": [
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-58214283",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "informações e orientações gerais 2.. produtos perigosos em ordem numérica e crescente 3.. produtos em ordem alfabética 4.. informações e orientações gerais 2... produtos perigosos em ordem numérica e crescente 3... produ",
+      "pageStart": 68,
+      "pageEnd": 68
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-907eafa5",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "informações e orientações gerais 2.. produtos perigosos em ordem numérica e crescente 3.. produtos em ordem alfabética 4.. informações e orientações gerais 2... produtos perigosos em ordem numérica e crescente 3... produ",
+      "pageStart": 69,
+      "pageEnd": 69
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-49881a22",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "informações e orientações gerais 2.. produtos perigosos em ordem numérica e crescente 3.. produtos em ordem alfabética 4.. informações e orientações gerais 2... produtos perigosos em ordem numérica e crescente 3... produ",
+      "pageStart": 71,
+      "pageEnd": 71
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "manualTitle": "CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, em : CURSO DE ATENDIMENT",
+      "pageStart": 13,
+      "pageEnd": 14
+    },
     {
       "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
       "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-f243c4c6",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "Seção Branca: informações e orientações gerais 2. Seção Amarela: produtos perigosos em ordem numérica e crescente 3. Seção Azul: produtos em ordem alfabética 4. Seção Alaranjada: relação com 62 guias de emergências com recomendações de segurança 5. Seção Verde",
+      "excerpt": "Seção Branca: informações e orientações gerais 2. Seção Amarela: produtos perigosos em ordem numérica e crescente 3. Seção Azul: produtos em ordem alfabética 4. Seção Alaranjada: relação com 62 guias de emergências com r",
       "pageStart": 1118,
       "pageEnd": 1120
     },
@@ -123,7 +114,7 @@
       "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-695026c4",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
       "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "2.4 Acidente com Produto Perigoso Evento repentino e não desejado, onde a liberação de substâncias químicas perigosas em forma de incêndio, explosão, derrame ou vazamento, que pode causar danos as pessoas, propriedades ou ao meio ambiente. 2.5 Emergências com ",
+      "excerpt": "2.4 Acidente com Produto Perigoso Evento repentino e não desejado, onde a liberação de substâncias químicas perigosas em forma de incêndio, explosão, derrame ou vazamento, que pode causar danos as pessoas, propriedades o",
       "pageStart": 20,
       "pageEnd": 22
     },
@@ -133,7 +124,7 @@
       "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-0c894f81",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
       "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "1 O sistema de classificação da ONU Devido ao crescente número de acidentes envolvendo produtos perigosos e à falta de padronização dos mesmos, a Organização das Nações Unidas (ONU) atribuiu a cada produto perigoso um número de quatro algarismos, conhecido com",
+      "excerpt": "1 O sistema de classificação da ONU Devido ao crescente número de acidentes envolvendo produtos perigosos e à falta de padronização dos mesmos, a Organização das Nações Unidas (ONU) atribuiu a cada produto perigoso um nú",
       "pageStart": 29,
       "pageEnd": 29
     },
@@ -143,7 +134,7 @@
       "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-735afeae",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
       "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "2.2 Painel de Segurança É um retângulo de cor laranja com duas numerações na cor preta, na parte superior, o número de identificação do risco do produto químico e na parte inferior o número da ONU, que identifica qual é o produto transportado. O número da ONU ",
+      "excerpt": "2.2 Painel de Segurança É um retângulo de cor laranja com duas numerações na cor preta, na parte superior, o número de identificação do risco do produto químico e na parte inferior o número da ONU, que identifica qual é ",
       "pageStart": 51,
       "pageEnd": 52
     }

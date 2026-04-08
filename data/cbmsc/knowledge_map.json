@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-04-08T17:13:52.013Z",
-  "source": "manuals-parsed",
-  "manualCount": 68,
-  "sectionCount": 6633,
+  "generatedAt": "2026-04-08T19:10:49.846Z",
+  "source": "fallback-existing-mindmaps",
+  "manualCount": 20,
+  "sectionCount": 119,
   "themes": [
     {
       "theme": "Incêndio",
@@ -13,8 +13,9 @@
         "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020",
-        "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-ciencias-do-fogo",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios"
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
+        "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos"
       ],
       "sectionIds": [
         "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
@@ -22,15 +23,15 @@
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-7f1f49f2",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-f7065879",
         "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-e4a98d18",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-78af9beb",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-d415adec",
-        "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-ciencias-do-fogo-sec-fb0e68cc",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-907e18d3",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-1e91ff45",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-9e1928f5",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-a085ffc8",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-08e7542a",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-b0b4a8e2"
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-ee1139ac",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-893e893b",
+        "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos-sec-22893ce2",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-ee1139ac",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-893e893b",
+        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-e4a98d18",
+        "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos-sec-22893ce2",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
+        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-a1af9389"
       ],
       "dependencies": [],
       "keywords": [
@@ -49,24 +50,23 @@
       "manualIds": [
         "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
         "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural"
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020"
       ],
       "sectionIds": [
         "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-58214283",
         "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-907eafa5",
         "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-49881a22",
         "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-907e18d3",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-1e91ff45",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-9e1928f5",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-8ca958a1",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-0201742f",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-7eaf898b",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-2ba47de6",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-5b8cc536",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-726d32f4",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-74ec37bb"
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-f243c4c6",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-695026c4",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-0c894f81",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-735afeae",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-f243c4c6",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-695026c4",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-0c894f81",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-735afeae",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-58214283",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-907eafa5"
       ],
       "dependencies": [
         "Classes de incêndio"
@@ -85,24 +85,27 @@
       "manualIds": [
         "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
         "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020"
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias"
       ],
       "sectionIds": [
         "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-83952d47",
         "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-853d101e",
         "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-c7930192",
         "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-59d68342",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-74ec37bb",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-c6cd3484",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-109ff57c",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-dc568e05",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-04a6e319",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-daea70ba",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-6ff45fb4",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-2e27efba",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-33201e35",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-e9ba2737"
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
+        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-a1af9389",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-7f1f49f2",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
+        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-a1af9389",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-7f1f49f2",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-f7065879",
+        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-e4a98d18",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-ee1139ac"
       ],
       "dependencies": [
         "Métodos de extinção"
@@ -120,30 +123,29 @@
       "subtheme": "Tipos, uso e limitações",
       "priority": "media",
       "manualIds": [
-        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
         "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
-        "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos",
-        "incendios-produtos-perigosos-defesa-civil-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-2018",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020",
-        "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-revisada-2021"
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
+        "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos"
       ],
       "sectionIds": [
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
+        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-a1af9389",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-7f1f49f2",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-f7065879",
+        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-e4a98d18",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-ee1139ac",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-893e893b",
+        "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos-sec-22893ce2",
         "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-ee1139ac",
         "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-893e893b",
         "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-e4a98d18",
         "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos-sec-22893ce2",
-        "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos-sec-63838b90",
-        "incendios-produtos-perigosos-defesa-civil-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-2018-sec-8d2c4e5f",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-78af9beb",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-0a5277f1",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-c22b9e76",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-d415adec",
-        "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-revisada-2021-sec-ae0fe3ee",
-        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-907eafa5",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-1c2acbe4",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-907e18d3"
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
+        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-a1af9389"
       ],
       "dependencies": [
         "Classes de incêndio"
@@ -164,7 +166,6 @@
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018",
         "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias"
       ],
       "sectionIds": [
@@ -172,16 +173,16 @@
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-30323c9b",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-0ec66df0",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-61b5b954",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-acc1dfdb",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-d7f61b55",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-1c130874",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-f6f0b242",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-060ca04d",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-5586d2f9",
-        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-857de1a2"
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-b65f1def",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-10e40126",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32"
       ],
       "dependencies": [],
       "keywords": [
@@ -200,24 +201,25 @@
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
         "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022"
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022"
       ],
       "sectionIds": [
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-90a9ec98",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-61b5b954",
         "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-ea6f8871",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-df2ba215",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-b28f0ce6",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-261014a2",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-eadeed70",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-d30a771d",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-5db1219f",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-663d725d",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-bf4cc923",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-8134bf3e",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-8b320b8e",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-5f8537a0"
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-b65f1def",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-10e40126",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32"
       ],
       "dependencies": [
         "APH / ABCDE"
@@ -238,25 +240,23 @@
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018",
-        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020"
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias"
       ],
       "sectionIds": [
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-2f01d7d3",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-a2c334dd",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-9f76d0c7",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-ed6f0486",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-6fb77f45",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-effb2141",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a63cbf0f",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-54934f66",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-9cd719a5",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-fcac5d62",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-cfb632c2",
-        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-b4e7a4cf",
-        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-84d5dd97",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-8657e428"
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32"
       ],
       "dependencies": [
         "APH / ABCDE"
@@ -274,26 +274,26 @@
       "subtheme": "Controle de sangramento",
       "priority": "media",
       "manualIds": [
-        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018"
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias"
       ],
       "sectionIds": [
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
         "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-b65f1def",
         "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-10e40126",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-b8a4ac0c",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-32240089",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-f4a431bb",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-0f8407b0",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-56deaf48",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-d020df6c",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a5b909d5",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-5a98b186",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-50f67092",
-        "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-c0e51110"
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32"
       ],
       "dependencies": [
         "APH / ABCDE"
@@ -310,25 +310,25 @@
       "subtheme": "Reconhecimento e isolamento",
       "priority": "media",
       "manualIds": [
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
         "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos"
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020"
       ],
       "sectionIds": [
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-58214283",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-907eafa5",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-49881a22",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-f243c4c6",
         "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-695026c4",
         "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-0c894f81",
         "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-735afeae",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-6b91bffd",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-06ab56d7",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-90346744",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-33b2972e",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-24b00112",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-5227f463",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-ad865426",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-50bc6849",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos-sec-24250338",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos-sec-b40de48b"
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-f243c4c6",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-695026c4",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-0c894f81",
+        "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-735afeae",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-58214283",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-907eafa5"
       ],
       "dependencies": [],
       "keywords": [
@@ -344,23 +344,24 @@
       "subtheme": "Técnicas verticais",
       "priority": "media",
       "manualIds": [
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020"
       ],
       "sectionIds": [
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-70d92952",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014-sec-e6541f4b",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-e006c92f",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-611b52d7",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-af217067",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-d907a1cf",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-87318f38",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-993bb80e",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-a181ca82",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-3aeeaa2b",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-39ed58f2",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-cca29029",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-bd1f5791",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-58baae6b",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-3fea507a",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-e8fce71c",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-18702218",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-8ce83393"
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-af217067",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-d907a1cf",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-87318f38",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-993bb80e",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-70d92952"
       ],
       "dependencies": [
         "Segurança operacional"
@@ -380,25 +381,22 @@
       "manualIds": [
         "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
-        "salvamento-busca-resgate-curso-de-salvamento-com-moto-aquatica",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas"
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020"
       ],
       "sectionIds": [
         "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-70d92952",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014-sec-e6541f4b",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-e006c92f",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-611b52d7",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-6cd6fa28",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-626f1651",
-        "salvamento-busca-resgate-curso-de-salvamento-com-moto-aquatica-sec-c41e9721",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas-sec-0ee57993",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas-sec-7a72c172",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas-sec-469248f3",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas-sec-ba9ec3e0",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas-sec-79986666",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas-sec-f4b47ca1",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas-sec-596e50d8"
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-af217067",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-d907a1cf",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-87318f38",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-993bb80e",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-af217067",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-d907a1cf",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-87318f38",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-993bb80e",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-70d92952"
       ],
       "dependencies": [
         "Segurança operacional"
@@ -419,23 +417,27 @@
         "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-1-edicao",
         "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao",
         "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014"
+        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias"
       ],
       "sectionIds": [
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-a2de5b60",
         "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-1-edicao-sec-9f5e33b1",
         "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao-sec-17728edc",
         "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos-sec-1bc0e491",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014-sec-eeab63a9",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-b1ca3b9a",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-954e70b3",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-c5fb20ec",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-a79f901f",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-adc7ae33",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-fa2b35b1",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-8709349b",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-da1d9387",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-6cffdfc5"
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-7b00b8cc",
+        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos-sec-92945b47",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-0346bad7",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-778146cc",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32"
       ],
       "dependencies": [
         "Segurança operacional"
@@ -456,27 +458,18 @@
         "salvamento-busca-resgate-busca-terrestre-manual-do-aluno-curso-de-formacao-de-soldados",
         "salvamento-busca-resgate-manual-de-capacitacao-em-busca-terrestre",
         "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
-        "gestao-ensino-lideranca-saude-do-bombeiro-guias-operacionais-forma-e-conteudo-como-fazer",
-        "gestao-ensino-lideranca-saude-do-bombeiro-manual-do-participante-curso-de-tecnicas-de-ensino-cte",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
-        "incendios-produtos-perigosos-defesa-civil-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-2018"
+        "combate-incendio-estrutural-manual",
+        "atendimento-basico-emergencias-manual"
       ],
       "sectionIds": [
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-e011e946",
         "salvamento-busca-resgate-busca-terrestre-manual-do-aluno-curso-de-formacao-de-soldados-sec-bd973a9e",
         "salvamento-busca-resgate-manual-de-capacitacao-em-busca-terrestre-sec-1b1bcc0a",
         "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-d4481919",
-        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-53136737",
-        "gestao-ensino-lideranca-saude-do-bombeiro-guias-operacionais-forma-e-conteudo-como-fazer-sec-d1aab06d",
-        "gestao-ensino-lideranca-saude-do-bombeiro-manual-do-participante-curso-de-tecnicas-de-ensino-cte-sec-e3233c0c",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-2e525435",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-161729b8",
-        "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-f770e065",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-4cad1c84",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-e3de754f",
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-02cf8bd9",
-        "incendios-produtos-perigosos-defesa-civil-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-2018-sec-a5036bb0"
+        "cbmsc-salvamento-busca-resgate-fallback-sec-1",
+        "cbmsc-salvamento-busca-resgate-fallback-sec-2",
+        "cbmsc-salvamento-busca-resgate-fallback-sec-1",
+        "cbmsc-salvamento-busca-resgate-fallback-sec-2"
       ],
       "dependencies": [
         "Segurança operacional"
@@ -493,28 +486,26 @@
       "subtheme": "Gestão de risco e comando",
       "priority": "media",
       "manualIds": [
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
-        "salvamento-busca-resgate-curso-de-capacitacao-em-salvamento-em-altura-2012",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-1-edicao",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022"
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias"
       ],
       "sectionIds": [
-        "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos-sec-92945b47",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-0346bad7",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-7b00b8cc",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-778146cc",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-e9974038",
-        "salvamento-busca-resgate-curso-de-capacitacao-em-salvamento-em-altura-2012-sec-c10a017a",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-1-edicao-sec-cd469961",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao-sec-3a9ee155",
-        "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao-sec-6c164723",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-8ec67f31",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-b98014ac",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-587b1a54",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-fc9fcbd5",
-        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-e41bd69c"
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-b65f1def",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-10e40126",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32"
       ],
       "dependencies": [],
       "keywords": [
@@ -531,23 +522,29 @@
       "manualIds": [
         "gestao-ensino-lideranca-saude-do-bombeiro-organizacao-e-administracao-de-bombeiro",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020"
+        "combate-incendio-estrutural-manual",
+        "atendimento-basico-emergencias-manual",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022",
+        "salvamento-busca-resgate-busca-terrestre-manual-do-aluno-curso-de-formacao-de-soldados",
+        "salvamento-busca-resgate-manual-de-capacitacao-em-busca-terrestre",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias"
       ],
       "sectionIds": [
         "gestao-ensino-lideranca-saude-do-bombeiro-organizacao-e-administracao-de-bombeiro-sec-b4951640",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-559f859a",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-6df2e742",
         "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-3064f988",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-461d1143",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-d7783c52",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-2a0e6f88",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-4f132c79",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-07393a2f",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-2cefdbc4",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-9f415008",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-2cf0daaf",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-03d35d31",
-        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-7d7c71aa"
+        "cbmsc-normas-e-legislacao-basica-fallback-sec-1",
+        "cbmsc-normas-e-legislacao-basica-fallback-sec-2",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
+        "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
+        "cbmsc-normas-e-legislacao-basica-fallback-sec-1",
+        "cbmsc-normas-e-legislacao-basica-fallback-sec-2",
+        "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-e011e946",
+        "salvamento-busca-resgate-busca-terrestre-manual-do-aluno-curso-de-formacao-de-soldados-sec-bd973a9e",
+        "salvamento-busca-resgate-manual-de-capacitacao-em-busca-terrestre-sec-1b1bcc0a",
+        "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-d4481919"
       ],
       "dependencies": [],
       "keywords": [

@@ -1,105 +1,61 @@
 {
   "id": "cbmsc-metodos-de-extincao",
   "title": "Métodos de extinção",
-  "summary": "Resumo derivado de seções oficiais do CBMSC sobre resfriamento, abafamento e isolamento.",
+  "summary": "Incêndio: Resfriamento, abafamento e isolamento. Revisão em tópicos curtos para estudo rápido.",
   "nodes": [
     {
       "id": "cbmsc-metodos-de-extincao-n1",
-      "label": "68 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13 - Materiais combustíveis sólidos",
+      "label": "Métodos de extinção",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-metodos-de-extincao-n1-a",
-          "label": "68 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13 - Materiais combustíveis sólidos Fonte: CBMSC • Incê",
+          "label": "informações e orientações gerais",
           "type": "child"
         },
         {
           "id": "cbmsc-metodos-de-extincao-n1-b",
-          "label": "Páginas 68-68",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-metodos-de-extincao-n2",
-      "label": "69 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 16 - Metais combustíveis pirofórico",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-metodos-de-extincao-n2-a",
-          "label": "69 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 16 - Metais combustíveis pirofóricos Fonte: CBMSC AGENT",
+          "label": "produtos perigosos em ordem numérica e crescente",
           "type": "child"
         },
         {
-          "id": "cbmsc-metodos-de-extincao-n2-b",
-          "label": "Páginas 69-69",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-metodos-de-extincao-n3",
-      "label": "71 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • Retirada do material: é o modo mais sim ",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-metodos-de-extincao-n3-a",
-          "label": "71 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • Retirada do material: é o modo mais sim - ples de se extingu",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-metodos-de-extincao-n3-b",
-          "label": "Páginas 71-71",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-metodos-de-extincao-n4",
-      "label": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Ch",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-metodos-de-extincao-n4-a",
-          "label": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fuma",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-metodos-de-extincao-n4-b",
-          "label": "Páginas 13-14",
+          "id": "cbmsc-metodos-de-extincao-n1-c",
+          "label": "produtos em ordem alfabética",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "68 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13 - Materiais combustíveis sólidos Fonte: CBMSC • Incêndio Classe “B”: incêndio envo",
-    "69 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 16 - Metais combustíveis pirofóricos Fonte: CBMSC AGENTES EXTINTORES Agentes extintor",
-    "71 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • Retirada do material: é o modo mais sim - ples de se extinguir um incêndio. Baseia-se simp",
-    "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incê"
+    "informações e orientações gerais",
+    "produtos perigosos em ordem numérica e crescente",
+    "produtos em ordem alfabética"
   ],
   "commonMistakes": [
-    "Confundir conceitos centrais de métodos de extinção.",
-    "Responder por prática informal sem aderência ao manual oficial."
+    "Confundir conceitos de métodos de extinção.",
+    "Ignorar sequência operacional prevista em manual."
   ],
   "terms": [
     "resfriamento",
     "abafamento",
     "isolamento",
     "reacao em cadeia",
-    "corpo",
-    "bombeiros",
-    "militar",
-    "santa",
-    "catarina",
-    "figura",
     "retirada",
     "produtos",
     "combustão",
     "classificam",
     "quatro",
     "categorias",
-    "gases"
+    "gases",
+    "onu",
+    "produto perigoso",
+    "zona quente",
+    "epi químico",
+    "seção",
+    "branca",
+    "informações",
+    "orientações",
+    "gerais"
   ],
   "sources": [
     {
@@ -108,7 +64,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-58214283",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "68 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13 - Materiais combustíveis sólidos Fonte: CBMSC • Incêndio Classe “B”: incêndio envolvendo líquidos inflamáveis, graxas e gases combustí - veis. Caracteriza-se por não deixar resíduos e queimar apenas na ",
+      "excerpt": "informações e orientações gerais 2.. produtos perigosos em ordem numérica e crescente 3.. produtos em ordem alfabética 4.. informações e orientações gerais 2... produtos perigosos em ordem numérica e crescente 3... produ",
       "pageStart": 68,
       "pageEnd": 68
     },
@@ -118,7 +74,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-907eafa5",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "69 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 16 - Metais combustíveis pirofóricos Fonte: CBMSC AGENTES EXTINTORES Agentes extintores são todas as substâncias capazes de eliminar um ou mais elementos essen - ciais do fogo. Atualmente encontramos os se",
+      "excerpt": "informações e orientações gerais 2.. produtos perigosos em ordem numérica e crescente 3.. produtos em ordem alfabética 4.. informações e orientações gerais 2... produtos perigosos em ordem numérica e crescente 3... produ",
       "pageStart": 69,
       "pageEnd": 69
     },
@@ -128,7 +84,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-49881a22",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "71 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • Retirada do material: é o modo mais sim - ples de se extinguir um incêndio. Baseia-se simplesmente na retirada do material combus - tível ainda não atingido, da área de propaga - ção do fogo, interrompendo a al",
+      "excerpt": "informações e orientações gerais 2.. produtos perigosos em ordem numérica e crescente 3.. produtos em ordem alfabética 4.. informações e orientações gerais 2... produtos perigosos em ordem numérica e crescente 3... produ",
       "pageStart": 71,
       "pageEnd": 71
     },
@@ -138,9 +94,49 @@
       "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
       "category": "Incêndios, Produtos Perigosos & Defesa Civil",
-      "excerpt": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, em : CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS 13",
+      "excerpt": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, em : CURSO DE ATENDIMENT",
       "pageStart": 13,
       "pageEnd": 14
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-f243c4c6",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "Seção Branca: informações e orientações gerais 2. Seção Amarela: produtos perigosos em ordem numérica e crescente 3. Seção Azul: produtos em ordem alfabética 4. Seção Alaranjada: relação com 62 guias de emergências com r",
+      "pageStart": 1118,
+      "pageEnd": 1120
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "manualTitle": "CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-695026c4",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "2.4 Acidente com Produto Perigoso Evento repentino e não desejado, onde a liberação de substâncias químicas perigosas em forma de incêndio, explosão, derrame ou vazamento, que pode causar danos as pessoas, propriedades o",
+      "pageStart": 20,
+      "pageEnd": 22
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "manualTitle": "CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-0c894f81",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "1 O sistema de classificação da ONU Devido ao crescente número de acidentes envolvendo produtos perigosos e à falta de padronização dos mesmos, a Organização das Nações Unidas (ONU) atribuiu a cada produto perigoso um nú",
+      "pageStart": 29,
+      "pageEnd": 29
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "manualTitle": "CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-735afeae",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "2.2 Painel de Segurança É um retângulo de cor laranja com duas numerações na cor preta, na parte superior, o número de identificação do risco do produto químico e na parte inferior o número da ONU, que identifica qual é ",
+      "pageStart": 51,
+      "pageEnd": 52
     }
   ]
 }

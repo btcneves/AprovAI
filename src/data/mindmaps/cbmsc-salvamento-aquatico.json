@@ -1,97 +1,45 @@
 {
   "id": "cbmsc-salvamento-aquatico",
   "title": "Salvamento aquático",
-  "summary": "Resumo derivado de seções oficiais do CBMSC sobre guarda-vidas e abordagem.",
+  "summary": "Salvamento: Guarda-vidas e abordagem. Revisão em tópicos curtos para estudo rápido.",
   "nodes": [
     {
       "id": "cbmsc-salvamento-aquatico-n1",
-      "label": "50 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Se esperar demais poderá ser tarde.",
+      "label": "Guarda-vidas e abordagem",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-salvamento-aquatico-n1-a",
-          "label": "50 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Se esperar demais poderá ser tarde. Ao perceber que alguém est",
+          "label": "Foco: salvamento aquático",
           "type": "child"
         },
         {
           "id": "cbmsc-salvamento-aquatico-n1-b",
-          "label": "Páginas 50-50",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-salvamento-aquatico-n2",
-      "label": "171 Compêndio de Turma – Aspirantes 201 4 ESTILO AUSTRALIANO – INSTRUÇÃO COM PRANCHAS A Ac",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-salvamento-aquatico-n2-a",
-          "label": "171 Compêndio de Turma – Aspirantes 201 4 ESTILO AUSTRALIANO – INSTRUÇÃO COM PRANCHAS A Academia de Bombeiro M",
+          "label": "Foco: afogamento",
           "type": "child"
         },
         {
-          "id": "cbmsc-salvamento-aquatico-n2-b",
-          "label": "Páginas 171-171",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-salvamento-aquatico-n3",
-      "label": "1.1 Avaliação das condições do mar Após a observação das condições gerais do ambiente aquá",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-salvamento-aquatico-n3-a",
-          "label": "1.1 Avaliação das condições do mar Após a observação das condições gerais do ambiente aquático e o reconhecime",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-salvamento-aquatico-n3-b",
-          "label": "Páginas 1296-1302",
-          "type": "child"
-        }
-      ]
-    },
-    {
-      "id": "cbmsc-salvamento-aquatico-n4",
-      "label": "7.1 A importância da atividade de salvamento aquático O guarda-vidas não está nas praias s",
-      "type": "main",
-      "children": [
-        {
-          "id": "cbmsc-salvamento-aquatico-n4-a",
-          "label": "7.1 A importância da atividade de salvamento aquático O guarda-vidas não está nas praias somente para salvar v",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-salvamento-aquatico-n4-b",
-          "label": "Páginas 1385-1385",
+          "id": "cbmsc-salvamento-aquatico-n1-c",
+          "label": "Foco: praia",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "50 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Se esperar demais poderá ser tarde. Ao perceber que alguém está se afogando, evite fazer o s",
-    "171 Compêndio de Turma – Aspirantes 201 4 ESTILO AUSTRALIANO – INSTRUÇÃO COM PRANCHAS A Academia de Bombeiro Militar proporcionou nas última",
-    "1.1 Avaliação das condições do mar Após a observação das condições gerais do ambiente aquático e o reconhecimento dos perigos, o guarda vida",
-    "7.1 A importância da atividade de salvamento aquático O guarda-vidas não está nas praias somente para salvar vidas, mas principalmente para "
+    "Foco: salvamento aquático",
+    "Foco: afogamento",
+    "Foco: praia"
   ],
   "commonMistakes": [
-    "Confundir conceitos centrais de salvamento aquático.",
-    "Responder por prática informal sem aderência ao manual oficial."
+    "Confundir conceitos de salvamento aquático.",
+    "Ignorar sequência operacional prevista em manual."
   ],
   "terms": [
     "salvamento aquático",
     "afogamento",
     "praia",
     "corrente de retorno",
-    "corpo",
-    "bombeiros",
-    "militar",
-    "santa",
-    "catarina",
     "esperar",
     "compêndio",
     "turma",
@@ -103,8 +51,11 @@
     "condições",
     "após",
     "observação",
-    "gerais",
-    "ambiente"
+    "altura",
+    "corda",
+    "ancoragem",
+    "rapel",
+    "ascensão"
   ],
   "sources": [
     {
@@ -113,7 +64,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-70d92952",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "50 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Se esperar demais poderá ser tarde. Ao perceber que alguém está se afogando, evite fazer o salvamento corpo a corpo, princi - palmente se não for habilitado para tal. Nesse caso jogue uma corda ou um objeto flutu",
+      "excerpt": "Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
       "pageStart": 50,
       "pageEnd": 50
     },
@@ -123,7 +74,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014-sec-e6541f4b",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=781:compendio-de-turma-aspirantes-2014",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "171 Compêndio de Turma – Aspirantes 201 4 ESTILO AUSTRALIANO – INSTRUÇÃO COM PRANCHAS A Academia de Bombeiro Militar proporcionou nas últimas semanas aos cadetes do 4ºCFO, sob a supervisão e orientação do 2º Ten BM Fregapani, testar um novo conceito em prancha",
+      "excerpt": "171 Compêndio de Turma – Aspirantes 201 4 ESTILO AUSTRALIANO – INSTRUÇÃO COM PRANCHAS A Academia de Bombeiro Militar proporcionou nas últimas semanas aos cadetes do 4ºCFO, sob a supervisão e orientação do 2º Ten BM Frega",
       "pageStart": 171,
       "pageEnd": 171
     },
@@ -133,7 +84,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-e006c92f",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "1.1 Avaliação das condições do mar Após a observação das condições gerais do ambiente aquático e o reconhecimento dos perigos, o guarda vidas deve sinalizar o local e seus pontos críticos, tais como Para isto faz-se uso, principalmente, de bandeiras e placas. ",
+      "excerpt": "1.1 Avaliação das condições do mar Após a observação das condições gerais do ambiente aquático e o reconhecimento dos perigos, o guarda vidas deve sinalizar o local e seus pontos críticos, tais como Para isto faz-se uso,",
       "pageStart": 1296,
       "pageEnd": 1302
     },
@@ -143,9 +94,49 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-611b52d7",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "7.1 A importância da atividade de salvamento aquático O guarda-vidas não está nas praias somente para salvar vidas, mas principalmente para guardá-las, atuando continuamente na prevenção, evitando que o banhista seja arrastado pela corrente de retorno. Muitas ",
+      "excerpt": "7.1 A importância da atividade de salvamento aquático O guarda-vidas não está nas praias somente para salvar vidas, mas principalmente para guardá-las, atuando continuamente na prevenção, evitando que o banhista seja arr",
       "pageStart": 1385,
       "pageEnd": 1385
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-af217067",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
+      "pageStart": 603,
+      "pageEnd": 604
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-d907a1cf",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
+      "pageStart": 606,
+      "pageEnd": 606
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-87318f38",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
+      "pageStart": 609,
+      "pageEnd": 609
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-993bb80e",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
+      "pageStart": 612,
+      "pageEnd": 612
     }
   ]
 }
