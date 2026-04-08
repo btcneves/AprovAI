@@ -5,6 +5,7 @@ import { useAppState } from '@/app/AppStateContext'
 import { activeQuestions } from '@/data/questionBank/questions'
 import { mindMapNodes } from '@/data/content/mindMapNodes'
 import { buildNodeAccuracy, buildNodeErrorFrequency, enrichMindMapNode, inferPerformanceStatus } from '@/domain/mindmapPedagogy'
+import { isCriticalNode, isNeglectedNode, rankNodeRecommendations } from '@/domain/nodeLearningService'
 import { MindMapTree } from '@/features/mindmap/components/MindMapTree'
 
 const REVIEWED_STORAGE_KEY = 'aprovai_map_reviewed_nodes'
@@ -20,7 +21,7 @@ const loadReviewed = (): Set<string> => {
 }
 
 export const MapasPage = () => {
-  const { attempts } = useAppState()
+  const { attempts, nodeLearningById, registerNodeReview, registerNodeView } = useAppState()
   const navigate = useNavigate()
   const [params] = useSearchParams()
   const focusNodeId = params.get('focus')
@@ -61,19 +62,28 @@ export const MapasPage = () => {
     return selectedNode.childrenIds.map((id) => nodes.find((node) => node.id === id)?.title).filter(Boolean) as string[]
   }, [nodes, selectedNode])
 
-  const weakNodes = useMemo(
-    () => enrichedNodes.filter((node) => performanceByNode.get(node.id) === 'fraco').slice(0, 5),
-    [enrichedNodes, performanceByNode]
-  )
+  const recommendedNodes = useMemo(() => {
+    const entries = enrichedNodes.map((node) => nodeLearningById[node.id]).filter(Boolean)
+    return rankNodeRecommendations(entries).slice(0, 5)
+  }, [enrichedNodes, nodeLearningById])
 
   const handleToggleReviewed = (nodeId: string) => {
     setReviewedNodes((prev) => {
       const next = new Set(prev)
+      const becameReviewed = !next.has(nodeId)
       if (next.has(nodeId)) next.delete(nodeId)
       else next.add(nodeId)
+      if (becameReviewed) {
+        registerNodeReview(nodeId)
+      }
       localStorage.setItem(REVIEWED_STORAGE_KEY, JSON.stringify([...next]))
       return next
     })
+  }
+
+  const handleOpenTopic = (nodeId: string) => {
+    registerNodeView(nodeId)
+    setSelectedNodeId(nodeId)
   }
 
   const handleTrainNode = (nodeId: string) => {
@@ -88,31 +98,36 @@ export const MapasPage = () => {
     navigate(`/simulado?${query.toString()}`)
   }
 
+  const selectedNodeLearning = selectedNode ? nodeLearningById[selectedNode.id] : undefined
+
   return (
     <div className="grid-2">
       <Card title="Mapa mental">
         <MindMapTree
           nodes={enrichedNodes}
-          onOpenTopic={setSelectedNodeId}
+          onOpenTopic={handleOpenTopic}
           onTrainNode={handleTrainNode}
           onToggleReviewed={handleToggleReviewed}
           reviewedNodeIds={reviewedNodes}
           performanceByNode={performanceByNode}
+          nodeLearningById={nodeLearningById}
         />
       </Card>
       <Card title="Revisão guiada de prova">
-        {weakNodes.length ? (
+        {recommendedNodes.length ? (
           <>
-            <p><strong>Temas fracos detectados</strong></p>
+            <p><strong>Recomendados para foco imediato</strong></p>
             <ul>
-              {weakNodes.map((node) => (
-                <li key={node.id}>
-                  <button className="link-button" onClick={() => setSelectedNodeId(node.id)}>{node.title}</button>
+              {recommendedNodes.map((node) => (
+                <li key={node.nodeId}>
+                  <button className="link-button" onClick={() => handleOpenTopic(node.nodeId)}>
+                    {enrichedNodes.find((item) => item.id === node.nodeId)?.title ?? node.nodeId}
+                  </button>
                 </li>
               ))}
             </ul>
           </>
-        ) : <p>Sem temas fracos no momento. Continue revisando por ciclos.</p>}
+        ) : <p>Sem recomendações no momento. Continue revisando por ciclos.</p>}
 
         {selectedNode ? (
           <>
@@ -128,6 +143,29 @@ export const MapasPage = () => {
             </div>
             <p><strong>Referência no edital:</strong> {selectedNode.editalReference}</p>
             <p><strong>Status de desempenho:</strong> {performanceByNode.get(selectedNode.id) ?? 'sem-dados'}</p>
+            <p>
+              <strong>Evolução do nó:</strong>{' '}
+              {selectedNodeLearning
+                ? `views ${selectedNodeLearning.viewCount} · revisões ${selectedNodeLearning.reviewCount} · acurácia ${selectedNodeLearning.accuracyRate}% · tendência ${selectedNodeLearning.trend}`
+                : 'sem histórico ainda'}
+            </p>
+            <p>
+              <strong>Sinais do nó:</strong>{' '}
+              {isCriticalNode(selectedNodeLearning) ? '⚠️ crítico por erros recentes' : 'sem criticidade recente'} ·{' '}
+              {isNeglectedNode(selectedNodeLearning) ? '🕒 negligenciado (sem revisão recente)' : 'revisão em dia'}
+            </p>
+            {selectedNodeLearning?.history?.length ? (
+              <>
+                <p><strong>Histórico resumido (últimas sessões)</strong></p>
+                <ul>
+                  {selectedNodeLearning.history.slice(-4).reverse().map((entry) => (
+                    <li key={`${selectedNode.id}-${entry.at}`}>
+                      {new Date(entry.at).toLocaleString('pt-BR')} · {entry.accuracyRate}% acerto
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
 
             <p><strong>O que mais cai</strong></p>
             <ul>{selectedNode.examHighlights.map((item) => <li key={item}>{item}</li>)}</ul>

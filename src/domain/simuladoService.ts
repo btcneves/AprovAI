@@ -1,5 +1,6 @@
 import { activeQuestions } from '@/data/questionBank/questions'
 import type { Difficulty, Question, SimuladoAnswer, SimuladoAttempt } from './types'
+import { loadNodeLearning, rankNodeRecommendations } from './nodeLearningService'
 
 const HISTORY_KEY = 'imarui_simulados'
 const BLOCK_WINDOW = 5
@@ -133,6 +134,13 @@ const buildStudyPool = (attempts: SimuladoAttempt[], options: BuildSimuladoOptio
   }
 
   if (mode === 'weak-topics') {
+    const nodeLearning = loadNodeLearning()
+    const recommendedNodes = rankNodeRecommendations(Object.values(nodeLearning)).slice(0, 5).map((entry) => entry.nodeId)
+
+    if (recommendedNodes.length) {
+      return activeQuestions.filter((question) => recommendedNodes.includes(question.relatedMindMapNodeId))
+    }
+
     const wrongBySubtopic = new Map<string, number>()
     for (const attempt of attempts) {
       for (const answer of attempt.answers.filter((item) => !item.isCorrect)) {
