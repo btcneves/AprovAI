@@ -1,42 +1,95 @@
-# Pipeline de Ingestão CBMSC (Primeira Entrega Funcional)
+# Pipeline de ingestão CBMSC (estado atual)
 
 ## Objetivo
-Estabelecer o fluxo reutilizável de atualização de conteúdo com base na biblioteca oficial do CBMSC.
+
+Atualizar a base documental CBMSC e gerar artefatos consumidos pelo app:
+
+- mapas mentais gerados (`src/data/mindmaps/cbmsc-*.json`);
+- banco de questões derivadas (`src/data/questions/cbmscQuestions.ts`);
+- índices de rastreabilidade (`data/cbmsc/manual_index.json`, `data/cbmsc/knowledge_map.json`).
 
 ## Etapas implementadas
-1. **Indexação** (`npm run cbmsc:index`)
-   - Acessa a página principal da biblioteca CBMSC.
-   - Descobre links de categorias automaticamente.
-   - Percorre cada categoria e coleta links de documentos (PDF/DOC/DOCX/XLS/XLSX/PPT/PPTX).
-   - Salva saída em `data/cbmsc/manual_index.json`.
 
-2. **Download inicial** (`npm run cbmsc:download`)
-   - Lê o índice e baixa os arquivos para `data/cbmsc/raw/`.
-   - Evita baixar novamente arquivos já existentes.
+## 1) Indexação — `npm run cbmsc:index`
 
-3. **Parse inicial (stub funcional)** (`npm run cbmsc:parse`)
-   - Converte cada arquivo bruto em documento JSON base em `data/cbmsc/parsed/`.
-   - Estrutura já compatível com `CBMSCManualDocument`.
+- Coleta categorias e itens da biblioteca CBMSC.
+- Resolve URLs de download diretas e por página de detalhe.
+- Deduplica resultados.
+- Mantém fallback quando coleta online falha (não interrompe pipeline).
+- Saídas:
+  - `data/cbmsc/manual_index.json`
+  - `data/cbmsc/logs/index-log.json`
 
-4. **Normalização inicial** (`npm run cbmsc:normalize`)
-   - Limpa espaços e padroniza `keywords`.
-   - Gera saída em `data/cbmsc/normalized/`.
+## 2) Download — `npm run cbmsc:download`
 
-5. **Geração de índices auxiliares**
-   - `npm run cbmsc:generate-mindmaps`
-   - `npm run cbmsc:generate-questions`
+- Lê `manual_index.json`.
+- Baixa arquivos para `data/cbmsc/raw/`.
+- Reaproveita cache local (não baixa novamente arquivo já existente).
+- Saída de auditoria: `data/cbmsc/logs/download-log.json`.
 
-6. **Validação estrutural mínima** (`npm run cbmsc:validate`)
-   - Confere arquivos obrigatórios da primeira entrega.
+## 3) Parse de PDF real — `npm run cbmsc:parse`
 
-## Estrutura de diretórios
-- `data/cbmsc/raw/`
-- `data/cbmsc/parsed/`
-- `data/cbmsc/normalized/`
+- Usa `pdfjs-dist` para extrair texto por página.
+- Constrói seções técnicas com heurística de heading/blocos.
+- Calcula indicadores de qualidade textual por documento (`lowTextPages`, média de chars, `requiresOcrReview`).
+- Inclui `sourceRefs` com páginas e trechos por seção.
+- Saídas:
+  - `data/cbmsc/parsed/*.json`
+  - `data/cbmsc/logs/parse-log.json`
+
+> Observação: arquivos não-PDF são ignorados no parse atual (`status: skipped`, `unsupported_extension`).
+
+## 4) Normalização — `npm run cbmsc:normalize`
+
+- Normaliza whitespace e keywords em cada seção.
+- Gera cópia normalizada com `normalizedAt`.
+- Saída: `data/cbmsc/normalized/*.json`.
+
+## 5) Geração de mapas — `npm run cbmsc:generate-mindmaps`
+
+- Cruza tópicos-alvo com seções normalizadas por score de palavras-chave.
+- Gera mapas em JSON para uso direto no app.
+- Atualiza `knowledge_map.json` com dependências, temas e seções relacionadas.
+- Saídas:
+  - `src/data/mindmaps/cbmsc-*.json`
+  - `src/data/mindmaps/generated-index.json`
+  - `data/cbmsc/knowledge_map.json`
+
+## 6) Geração de questões — `npm run cbmsc:generate-questions`
+
+- Cruza tópicos-alvo com seções normalizadas.
+- Gera questões com:
+  - tema/subtema;
+  - dificuldade (`easy|medium|hard`);
+  - tipo de questão;
+  - trecho de suporte e `sourceRefs`.
+- Saídas:
+  - `src/data/questions/cbmscQuestions.ts`
+  - `src/data/questions/generated-index.json`
+
+## 7) Validação mínima — `npm run cbmsc:validate`
+
+Valida presença de arquivos canônicos mínimos:
+
 - `data/cbmsc/manual_index.json`
 - `data/cbmsc/knowledge_map.json`
+- `src/data/mindmaps/classes-incendio.json`
+- `src/data/questions/cbmscQuestions.ts`
 
-## Próximo incremento técnico
-- Substituir parser stub por extração real de PDF com preservação de seções/páginas.
-- Relacionar seções normalizadas com temas em `knowledge_map.json`.
-- Enriquecer `sourceRefs` com `manualId` e `sectionId` definitivos.
+## Execução completa recomendada
+
+```bash
+npm run cbmsc:index
+npm run cbmsc:download
+npm run cbmsc:parse
+npm run cbmsc:normalize
+npm run cbmsc:generate-mindmaps
+npm run cbmsc:generate-questions
+npm run cbmsc:validate
+```
+
+## Limitações conhecidas
+
+- Parse atual cobre PDF; extensões DOC/XLS/PPT não são parseadas.
+- A validação atual é estrutural (presença de arquivos), não valida qualidade pedagógica.
+- Heurísticas de seção/score por keywords ainda podem exigir revisão manual de resultados.
