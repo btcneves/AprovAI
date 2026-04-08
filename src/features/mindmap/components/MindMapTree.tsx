@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import type { MindMapNode } from '@/domain/types'
+import { isCriticalNode, isNeglectedNode, type NodeLearningMap } from '@/domain/nodeLearningService'
 
 type NodeStatus = 'forte' | 'atencao' | 'fraco' | 'sem-dados'
 
@@ -10,6 +11,7 @@ type Props = {
   onToggleReviewed: (nodeId: string) => void
   reviewedNodeIds: Set<string>
   performanceByNode: Map<string, NodeStatus>
+  nodeLearningById: NodeLearningMap
 }
 
 const statusLabel: Record<NodeStatus, string> = {
@@ -19,7 +21,15 @@ const statusLabel: Record<NodeStatus, string> = {
   'sem-dados': '⚪ sem dados'
 }
 
-export const MindMapTree = ({ nodes, onOpenTopic, onTrainNode, onToggleReviewed, reviewedNodeIds, performanceByNode }: Props) => {
+export const MindMapTree = ({
+  nodes,
+  onOpenTopic,
+  onTrainNode,
+  onToggleReviewed,
+  reviewedNodeIds,
+  performanceByNode,
+  nodeLearningById
+}: Props) => {
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
   const [query, setQuery] = useState('')
 
@@ -42,15 +52,22 @@ export const MindMapTree = ({ nodes, onOpenTopic, onTrainNode, onToggleReviewed,
     const isExpanded = expanded[node.id] ?? true
     const status = performanceByNode.get(node.id) ?? 'sem-dados'
     const reviewed = reviewedNodeIds.has(node.id)
+    const learning = nodeLearningById[node.id]
+    const critical = isCriticalNode(learning)
+    const neglected = isNeglectedNode(learning)
 
     return (
-      <div key={node.id} style={{ marginLeft: depth * 14 }} className={`tree-node ${status}`}>
+      <div key={node.id} style={{ marginLeft: depth * 14 }} className={`tree-node ${status} ${critical ? 'critical' : ''} ${neglected ? 'neglected' : ''}`}>
         <button className="tree-title" onClick={() => setExpanded((prev) => ({ ...prev, [node.id]: !isExpanded }))}>
           {isExpanded ? '▾' : '▸'} {node.title}
         </button>
         {isExpanded ? <p>{node.summary ?? node.descriptionShort}</p> : null}
         <div className="tree-badges">
           <small className="status-badge">{statusLabel[status]}</small>
+          {learning ? <small className="status-badge">📈 {learning.trend}</small> : null}
+          {learning ? <small className="status-badge">🎯 {learning.accuracyRate}%</small> : null}
+          {critical ? <small className="status-badge">⚠️ crítico</small> : null}
+          {neglected ? <small className="status-badge">🕒 negligenciado</small> : null}
           {node.examHighlights?.length ? <small>🔥 {node.examHighlights[0]}</small> : null}
         </div>
         <div className="tree-actions">
