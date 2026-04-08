@@ -1,0 +1,148 @@
+{
+  "id": "cbmsc-extintores",
+  "title": "Extintores",
+  "summary": "Resumo derivado de seções oficiais do CBMSC sobre tipos, uso e limitações.",
+  "nodes": [
+    {
+      "id": "cbmsc-extintores-n1",
+      "label": "74 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA UTILIZAÇÃO DO SISTEMA HIDRÁULICO PREVENTIV",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-extintores-n1-a",
+          "label": "74 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA UTILIZAÇÃO DO SISTEMA HIDRÁULICO PREVENTIVO (SHP) A utilização",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-extintores-n1-b",
+          "label": "Páginas 74-74",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-extintores-n2",
+      "label": "3 COMBATE A INCÊNDIO “CLASSE C” 3.1 MATERIAIS ENERGIZADOS Este tipo de incêndio pode ser e",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-extintores-n2-a",
+          "label": "3 COMBATE A INCÊNDIO “CLASSE C” 3.1 MATERIAIS ENERGIZADOS Este tipo de incêndio pode ser extinto após o corte ",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-extintores-n2-b",
+          "label": "Páginas 153-153",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-extintores-n3",
+      "label": "29 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Classificação dos extintores Fo",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-extintores-n3-a",
+          "label": "29 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Classificação dos extintores Fonte: CBMSC CLASSIFIC",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-extintores-n3-b",
+          "label": "Páginas 29-29",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-extintores-n4",
+      "label": "21 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu També",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-extintores-n4-a",
+          "label": "21 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu Também pode ser necessári",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-extintores-n4-b",
+          "label": "Páginas 21-21",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "74 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA UTILIZAÇÃO DO SISTEMA HIDRÁULICO PREVENTIVO (SHP) A utilização desse sistema não apresenta u",
+    "3 COMBATE A INCÊNDIO “CLASSE C” 3.1 MATERIAIS ENERGIZADOS Este tipo de incêndio pode ser extinto após o corte da energia elétrica, tornando-",
+    "29 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Classificação dos extintores Fonte: CBMSC CLASSIFICAÇÃO DOS EXTINTORES Os extinto",
+    "21 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu Também pode ser necessário evitar a propagação para out"
+  ],
+  "commonMistakes": [
+    "Confundir conceitos centrais de extintores.",
+    "Responder por prática informal sem aderência ao manual oficial."
+  ],
+  "terms": [
+    "extintor",
+    "pqs",
+    "co2",
+    "espuma",
+    "água pressurizada",
+    "corpo",
+    "bombeiros",
+    "militar",
+    "santa",
+    "catarina",
+    "utilização",
+    "combate",
+    "incêndio",
+    "classe",
+    "materiais",
+    "energizados",
+    "este",
+    "figura",
+    "tópicos"
+  ],
+  "sources": [
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-ee1139ac",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "74 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA UTILIZAÇÃO DO SISTEMA HIDRÁULICO PREVENTIVO (SHP) A utilização desse sistema não apresenta um grau de dificuldade mais avançado do que o uso de extintores, para utilizá-lo basta lançar as man - gueiras, conectar ",
+      "pageStart": 74,
+      "pageEnd": 74
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
+      "manualTitle": "CURSO DE FORMAÇÃO DE COMBATE A INCÊNDIOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-893e893b",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=755:curso-de-formacao-de-combate-a-incendios",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "3 COMBATE A INCÊNDIO “CLASSE C” 3.1 MATERIAIS ENERGIZADOS Este tipo de incêndio pode ser extinto após o corte da energia elétrica, tornando-se classe “A” ou “B”. Deve-se utilizar agentes extintores não condutores, como PQS, CO 2 e Halon. Não se deve utilizar e",
+      "pageStart": 153,
+      "pageEnd": 153
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM COMBATE A INCÊNDIO ESTRUTURAL",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-e4a98d18",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=754:manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "29 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Classificação dos extintores Fonte: CBMSC CLASSIFICAÇÃO DOS EXTINTORES Os extintores são classificados de acordo com as classes de incêndio. • Extintor classe A: seu agente extintor é a água pressuriza",
+      "pageStart": 29,
+      "pageEnd": 29
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos",
+      "manualTitle": "TÓPICOS ESPECIAIS: INCÊNDIO EM VEÍCULOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos-sec-22893ce2",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=741:topicos-especiais-incendio-em-veiculos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "21 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu Também pode ser necessário evitar a propagação para outros bens, que podem ser salvos das chamas, o que traria uma situação prioritária se comparado ao veículo já destruído pe",
+      "pageStart": 21,
+      "pageEnd": 21
+    }
+  ]
+}

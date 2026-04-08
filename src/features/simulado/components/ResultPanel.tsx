@@ -35,6 +35,13 @@ export const ResultPanel = ({ attempt, questions }: Props) => {
               <p>Marcada: {answer.selectedAlternativeId ?? 'Não respondida'}</p>
               <p>Correta: {question.correctAlternativeId}</p>
               <p>Explicação: {question.explanation}</p>
+              {question.sourceRefs?.[0] ? (
+                <p>
+                  Fonte: manual <strong>{question.sourceRefs[0].manualId ?? 'n/d'}</strong>
+                  {question.sourceRefs[0].sectionId ? ` | seção ${question.sourceRefs[0].sectionId}` : ''}
+                  {question.sourceRefs[0].pageStart ? ` | p. ${question.sourceRefs[0].pageStart}${question.sourceRefs[0].pageEnd && question.sourceRefs[0].pageEnd !== question.sourceRefs[0].pageStart ? `-${question.sourceRefs[0].pageEnd}` : ''}` : ''}
+                </p>
+              ) : null}
               <ul>{question.whyOthersAreWrong.map((reason) => <li key={reason}>{reason}</li>)}</ul>
               <Link to={`/mapas?focus=${question.relatedMindMapNodeId}`}>Revisar no mapa mental</Link>
             </div>

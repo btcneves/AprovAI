@@ -1,115 +1,147 @@
 {
   "id": "cbmsc-classes-de-incendio",
   "title": "Classes de incêndio",
-  "summary": "Classificação por tipo de combustível orienta agente extintor e estratégia operacional.",
+  "summary": "Resumo derivado de seções oficiais do CBMSC sobre classificação e agentes extintores.",
   "nodes": [
     {
-      "id": "cbmsc-classes-de-incendio-classe-a",
-      "label": "Classe A",
+      "id": "cbmsc-classes-de-incendio-n1",
+      "label": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Ch",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-classes-de-incendio-classe-a-materiais-solidos-comuns",
-          "label": "Materiais sólidos comuns",
+          "id": "cbmsc-classes-de-incendio-n1-a",
+          "label": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fuma",
           "type": "child"
         },
         {
-          "id": "cbmsc-classes-de-incendio-classe-a-agente-prioritario-agua-nebulizada",
-          "label": "Agente prioritário: água nebulizada",
+          "id": "cbmsc-classes-de-incendio-n1-b",
+          "label": "Páginas 13-14",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-classes-de-incendio-classe-b",
-      "label": "Classe B",
+      "id": "cbmsc-classes-de-incendio-n2",
+      "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância c",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-classes-de-incendio-classe-b-liquidos-inflamaveis",
-          "label": "Líquidos inflamáveis",
+          "id": "cbmsc-classes-de-incendio-n2-a",
+          "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitan",
           "type": "child"
         },
         {
-          "id": "cbmsc-classes-de-incendio-classe-b-espuma-e-abafamento",
-          "label": "Espuma e abafamento",
+          "id": "cbmsc-classes-de-incendio-n2-b",
+          "label": "Páginas 16-16",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-classes-de-incendio-classe-c",
-      "label": "Classe C",
+      "id": "cbmsc-classes-de-incendio-n3",
+      "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância c",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-classes-de-incendio-classe-c-equipamento-energizado",
-          "label": "Equipamento energizado",
+          "id": "cbmsc-classes-de-incendio-n3-a",
+          "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitan",
           "type": "child"
         },
         {
-          "id": "cbmsc-classes-de-incendio-classe-c-desenergizar-antes-do-ataque-final",
-          "label": "Desenergizar antes do ataque final",
+          "id": "cbmsc-classes-de-incendio-n3-b",
+          "label": "Páginas 861-861",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-classes-de-incendio-classe-d-k",
-      "label": "Classe D/K",
+      "id": "cbmsc-classes-de-incendio-n4",
+      "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância c",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-classes-de-incendio-classe-d-k-metais-piroforicos-e-oleos-de-cozinha",
-          "label": "Metais pirofóricos e óleos de cozinha",
+          "id": "cbmsc-classes-de-incendio-n4-a",
+          "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitan",
           "type": "child"
         },
         {
-          "id": "cbmsc-classes-de-incendio-classe-d-k-agentes-especiais",
-          "label": "Agentes especiais",
+          "id": "cbmsc-classes-de-incendio-n4-b",
+          "label": "Páginas 487-487",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "Classe K envolve óleos e gorduras de cozinha, exige agente saponificante.",
-    "Classe D não deve receber água em metais reativos."
+    "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incê",
+    "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos ",
+    "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos ",
+    "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos "
   ],
   "commonMistakes": [
-    "Confundir classe C com método de extinção.",
-    "Aplicar água em incêndio classe B com líquido inflamável."
+    "Confundir conceitos centrais de classes de incêndio.",
+    "Responder por prática informal sem aderência ao manual oficial."
   ],
   "terms": [
-    "Classe A",
-    "Materiais sólidos comuns",
-    "Agente prioritário: água nebulizada",
-    "Classe B",
-    "Líquidos inflamáveis",
-    "Espuma e abafamento",
-    "Classe C",
-    "Equipamento energizado",
-    "Desenergizar antes do ataque final",
-    "Classe D/K",
-    "Metais pirofóricos e óleos de cozinha",
-    "Agentes especiais"
+    "classe a",
+    "classe b",
+    "classe c",
+    "classe d",
+    "classe k",
+    "agente extintor",
+    "produtos",
+    "combustão",
+    "classificam",
+    "quatro",
+    "categorias",
+    "gases",
+    "corpo",
+    "bombeiros",
+    "militar",
+    "santa",
+    "catarina",
+    "glossário"
   ],
   "sources": [
     {
-      "manualId": "combate-incendio-estrutural-manual",
-      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
-      "category": "Combate a Incêndio Estrutural",
-      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "collectedAt": "2026-04-08T14:40:11.397Z"
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "manualTitle": "CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, em : CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS 13",
+      "pageStart": 13,
+      "pageEnd": 14
     },
     {
-      "manualId": "atendimento-basico-emergencias-manual",
-      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
-      "category": "Atendimento Pré-Hospitalar",
-      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "collectedAt": "2026-04-08T14:40:11.398Z"
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM COMBATE A INCÊNDIO ESTRUTURAL",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-a1af9389",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=754:manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos elementos essenciais do fogo, fa- zendo assim cessar a combustão. Assista ao vídeo Para saber mais sobre a química do fo",
+      "pageStart": 16,
+      "pageEnd": 16
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-7f1f49f2",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos elementos essenciais do fogo, fa- zendo assim cessar a combustão. Assista ao vídeo Para saber mais sobre a química do fo",
+      "pageStart": 861,
+      "pageEnd": 861
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFS 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020-sec-f7065879",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=783:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Agente extintor é a substância capaz de agir limitando ou inibindo um ou mais dos elementos essenciais do fogo, fa- zendo assim cessar a combustão. Assista ao vídeo Para saber mais sobre a química do fo",
+      "pageStart": 487,
+      "pageEnd": 487
     }
   ]
 }

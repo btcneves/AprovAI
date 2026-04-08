@@ -1,101 +1,146 @@
 {
   "id": "cbmsc-rcp",
   "title": "RCP",
-  "summary": "Suporte básico em parada cardiorrespiratória exige compressões de alta qualidade e mínima interrupção.",
+  "summary": "Resumo derivado de seções oficiais do CBMSC sobre parada cardiorrespiratória.",
   "nodes": [
     {
-      "id": "cbmsc-rcp-cadeia-de-sobrevivencia",
-      "label": "Cadeia de sobrevivência",
+      "id": "cbmsc-rcp-n1",
+      "label": "53 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À ",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-rcp-cadeia-de-sobrevivencia-reconhecimento-precoce",
-          "label": "Reconhecimento precoce",
+          "id": "cbmsc-rcp-n1-a",
+          "label": "53 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA ciente pode apr",
           "type": "child"
         },
         {
-          "id": "cbmsc-rcp-cadeia-de-sobrevivencia-rcp-imediata",
-          "label": "RCP imediata",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-rcp-cadeia-de-sobrevivencia-dea",
-          "label": "DEA",
+          "id": "cbmsc-rcp-n1-b",
+          "label": "Páginas 53-53",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-rcp-compressoes",
-      "label": "Compressões",
+      "id": "cbmsc-rcp-n2",
+      "label": "56 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À ",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-rcp-compressoes-profundidade-adequada",
-          "label": "Profundidade adequada",
+          "id": "cbmsc-rcp-n2-a",
+          "label": "56 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA pérvia (sem obs",
           "type": "child"
         },
         {
-          "id": "cbmsc-rcp-compressoes-retorno-completo-do-torax",
-          "label": "Retorno completo do tórax",
+          "id": "cbmsc-rcp-n2-b",
+          "label": "Páginas 56-56",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-rcp-ventilacao",
-      "label": "Ventilação",
+      "id": "cbmsc-rcp-n3",
+      "label": "81 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-rcp-ventilacao-relacao-30-2-sem-via-avancada",
-          "label": "Relação 30:2 sem via avançada",
+          "id": "cbmsc-rcp-n3-a",
+          "label": "81 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescen",
           "type": "child"
         },
         {
-          "id": "cbmsc-rcp-ventilacao-evitar-hiperventilacao",
-          "label": "Evitar hiperventilação",
+          "id": "cbmsc-rcp-n3-b",
+          "label": "Páginas 81-81",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-rcp-n4",
+      "label": "82 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-rcp-n4-a",
+          "label": "82 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescen",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-rcp-n4-b",
+          "label": "Páginas 188-188",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "Frequência alvo de 100-120 compressões/min em adulto.",
-    "Desfibrilação precoce aumenta chance de ROSC."
+    "53 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA ciente pode apresentar sequelas irreversíveis",
+    "56 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA pérvia (sem obstrução), ocorre a ventilação p",
+    "81 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescentes Crianças (1 ano de idade à",
+    "82 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescentes Crianças (1 ano de idade à"
   ],
   "commonMistakes": [
-    "Interrupções longas para checagens desnecessárias.",
-    "Ventilações excessivas."
+    "Confundir conceitos centrais de rcp.",
+    "Responder por prática informal sem aderência ao manual oficial."
   ],
   "terms": [
-    "Cadeia de sobrevivência",
-    "Reconhecimento precoce",
-    "RCP imediata",
-    "DEA",
-    "Compressões",
-    "Profundidade adequada",
-    "Retorno completo do tórax",
-    "Ventilação",
-    "Relação 30:2 sem via avançada",
-    "Evitar hiperventilação"
+    "rcp",
+    "compressão",
+    "desfibrilação",
+    "dea",
+    "cadeia de sobrevivência",
+    "corpo",
+    "bombeiros",
+    "militar",
+    "santa",
+    "catarina",
+    "tópicos",
+    "resumo",
+    "componentes",
+    "alta",
+    "qualidade",
+    "profissionais",
+    "componente"
   ],
   "sources": [
     {
-      "manualId": "combate-incendio-estrutural-manual",
-      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
-      "category": "Combate a Incêndio Estrutural",
-      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "collectedAt": "2026-04-08T14:40:11.397Z"
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Suporte Básico a Vida 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-90a9ec98",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "53 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA ciente pode apresentar sequelas irreversíveis ou, inclusive, morte cerebral. Apesar dos avanços recentes, menos de 40% dos adultos recebem ressuscitação cardiopulmon",
+      "pageStart": 53,
+      "pageEnd": 53
     },
     {
-      "manualId": "atendimento-basico-emergencias-manual",
-      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
-      "category": "Atendimento Pré-Hospitalar",
-      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "collectedAt": "2026-04-08T14:40:11.398Z"
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Suporte Básico a Vida 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-61b5b954",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "56 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: SUPORTE BÁSICO À VIDA pérvia (sem obstrução), ocorre a ventilação passiva (entrada de ar) durante as compressões torácicas. COMPRESSÕES TORÁCICAS Você deve estar se perguntando: como devo",
+      "pageStart": 56,
+      "pageEnd": 56
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018",
+      "manualTitle": "ATENDIMENTO PRÉ-HOSPITALAR CFSd 2018",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018-sec-ea6f8871",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=745:atendimento-pre-hospitalar-cfsd-2018",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "81 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescentes Crianças (1 ano de idade à puberdade) Bebês (menos de 1 ano de idade, excluindo recém-nascidos) Segurança do local Verifique se o local é seguro p",
+      "pageStart": 81,
+      "pageEnd": 81
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-df2ba215",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "82 Resumo dos componentes de um RCP de alta qualidade para profissionais do SBV Componente Adultos e adolescentes Crianças (1 ano de idade à puberdade) Bebês (menos de 1 ano de idade, excluindo recém-nascidos) Segurança do local Verifique se o local é seguro p",
+      "pageStart": 188,
+      "pageEnd": 188
     }
   ]
 }

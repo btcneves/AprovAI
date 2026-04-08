@@ -1,7 +1,8 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import { createHash } from 'node:crypto'
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs'
-import { ensureCbmscDirs, extensionFromUrl, readJson, slugify, writeJson } from './utils.mjs'
+import { ensureCbmscDirs, readJson, slugify, writeJson } from './utils.mjs'
 
 const MIN_TEXT_PER_PAGE = 80
 
@@ -9,84 +10,85 @@ const normalizeText = (value) => value.replace(/\s+/g, ' ').trim()
 
 const splitIntoBlocks = (text) =>
   text
-    .split(/\n{2,}|(?<=[\.:;])\s{2,}/g)
+    .split(/(?<=[\.:;])\s{2,}|(?<=[\.!?])\s+(?=[A-ZÁÀÃÂÉÊÍÓÔÕÚÇ0-9])/g)
     .map((item) => normalizeText(item))
-    .filter((item) => item.length >= 30)
+    .filter((item) => item.length >= 35)
 
-const classifySectionTitle = (block) => {
-  const head = block.slice(0, 100)
-  if (/^(cap[íi]tulo|se[cç][aã]o|m[óo]dulo|unidade)\b/i.test(head)) return head
-  if (/^\d+(\.\d+)*\s+/.test(head) && head.length <= 110) return head
-  return null
+const headingPatterns = [/^(cap[íi]tulo|se[cç][aã]o|m[óo]dulo|unidade|anexo)\b/i, /^\d+(\.\d+){0,3}\s+[A-ZÁÀÃÂÉÊÍÓÔÕÚÇ]/, /^[A-ZÁÀÃÂÉÊÍÓÔÕÚÇ\s-]{8,}$/]
+
+const looksLikeHeading = (text) => {
+  const sample = text.slice(0, 120).trim()
+  return headingPatterns.some((pattern) => pattern.test(sample))
+}
+
+const extractKeywords = (text) => {
+  const stop = new Set(['para', 'como', 'quando', 'sobre', 'entre', 'pelos', 'pelas', 'com', 'sem', 'mais', 'menos', 'depois', 'antes'])
+  return Array.from(
+    new Set(
+      text
+        .toLowerCase()
+        .split(/[^\p{L}\p{N}]+/u)
+        .filter((token) => token.length >= 4 && !stop.has(token))
+    )
+  ).slice(0, 18)
+}
+
+const stableSectionId = (manualId, title, pageStart, idx) => {
+  const digest = createHash('sha1').update(`${manualId}|${title.toLowerCase()}|${pageStart}|${idx}`).digest('hex').slice(0, 8)
+  return `${manualId}-sec-${digest}`
 }
 
 const buildSectionsFromPages = (pages, manualId) => {
   const sections = []
   let current = null
 
-  const closeCurrent = () => {
+  const closeCurrent = (idx) => {
     if (!current) return
-    current.content = normalizeText(current.content)
-    current.keywords = Array.from(
-      new Set(
-        current.content
-          .toLowerCase()
-          .split(/[^\p{L}\p{N}]+/u)
-          .filter((token) => token.length >= 5)
-          .slice(0, 15)
-      )
-    )
-    sections.push(current)
+    const normalized = normalizeText(current.content)
+    if (normalized.length < 120) return
+
+    const section = {
+      ...current,
+      id: stableSectionId(manualId, current.title, current.pageStart, idx),
+      content: normalized,
+      keywords: extractKeywords(`${current.title} ${normalized}`),
+      sourceRefs: []
+    }
+
+    sections.push(section)
     current = null
   }
 
   for (const page of pages) {
     const blocks = splitIntoBlocks(page.text)
     for (const block of blocks) {
-      const maybeTitle = classifySectionTitle(block)
-      if (maybeTitle && !current) {
+      const titleCandidate = looksLikeHeading(block)
+      if (!current) {
         current = {
-          id: `${manualId}-sec-${sections.length + 1}`,
-          title: maybeTitle,
+          title: titleCandidate ? block.slice(0, 140) : `Trecho técnico ${sections.length + 1}`,
           content: '',
-          keywords: [],
           pageStart: page.pageNumber,
           pageEnd: page.pageNumber,
-          purpose: ['theory', 'review', 'question-generation', 'answer-explanation'],
-          sourceRefs: []
+          purpose: ['theory', 'review', 'mindmap', 'question-generation', 'answer-explanation']
         }
-      } else if (maybeTitle && current && current.content.length > 120) {
-        closeCurrent()
+      } else if (titleCandidate && current.content.length > 280) {
+        closeCurrent(sections.length + 1)
         current = {
-          id: `${manualId}-sec-${sections.length + 1}`,
-          title: maybeTitle,
+          title: block.slice(0, 140),
           content: '',
-          keywords: [],
           pageStart: page.pageNumber,
           pageEnd: page.pageNumber,
-          purpose: ['theory', 'review', 'question-generation', 'answer-explanation'],
-          sourceRefs: []
-        }
-      } else if (!current) {
-        current = {
-          id: `${manualId}-sec-${sections.length + 1}`,
-          title: `Trecho ${sections.length + 1}`,
-          content: '',
-          keywords: [],
-          pageStart: page.pageNumber,
-          pageEnd: page.pageNumber,
-          purpose: ['theory', 'review', 'question-generation'],
-          sourceRefs: []
+          purpose: ['theory', 'review', 'mindmap', 'question-generation', 'answer-explanation']
         }
       }
 
-      current.content += `${block} `
+      current.content += ` ${block}`
       current.pageEnd = page.pageNumber
     }
   }
 
-  closeCurrent()
-  return sections.filter((section) => section.content.length > 80)
+  closeCurrent(sections.length + 1)
+  return sections
 }
 
 const parsePdf = async (filePath) => {
@@ -155,7 +157,7 @@ const main = async () => {
               collectedAt: entry?.collectedAt,
               pageStart: section.pageStart,
               pageEnd: section.pageEnd,
-              excerpt: section.content.slice(0, 240)
+              excerpt: section.content.slice(0, 320)
             }
           ]
         }))

@@ -4,6 +4,15 @@ export type Difficulty = 'facil' | 'media' | 'dificil'
 
 export type AlternativeId = 'A' | 'B' | 'C' | 'D' | 'E'
 
+export type QuestionOfficialSource = {
+  manualId?: string
+  sectionId?: string
+  excerpt?: string
+  pageStart?: number
+  pageEnd?: number
+  sourceUrl?: string
+}
+
 export type Question = {
   id: string
   discipline: Discipline
@@ -21,6 +30,7 @@ export type Question = {
   tags: string[]
   relatedMindMapNodeId: string
   isActive: boolean
+  sourceRefs?: QuestionOfficialSource[]
 }
 
 export type MindMapNode = {

@@ -68,6 +68,8 @@ export type QuestionSourceRef = {
   sectionId?: string
   sourceUrl?: string
   excerpt: string
+  pageStart?: number
+  pageEnd?: number
 }
 
 export type QuestionDocument = {
@@ -79,6 +81,10 @@ export type QuestionDocument = {
   options: string[]
   correctAnswer: 'A' | 'B' | 'C' | 'D' | 'E'
   explanation: string
+  supportSnippet?: string
+  manualId?: string
+  sectionId?: string
+  pages?: { start?: number; end?: number }
   sourceRefs: QuestionSourceRef[]
   tags: string[]
   questionType: 'conceptual' | 'application' | 'scenario' | 'procedure' | 'definition' | 'comparison' | 'exception'

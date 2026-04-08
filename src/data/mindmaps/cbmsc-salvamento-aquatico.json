@@ -1,0 +1,151 @@
+{
+  "id": "cbmsc-salvamento-aquatico",
+  "title": "Salvamento aquático",
+  "summary": "Resumo derivado de seções oficiais do CBMSC sobre guarda-vidas e abordagem.",
+  "nodes": [
+    {
+      "id": "cbmsc-salvamento-aquatico-n1",
+      "label": "50 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Se esperar demais poderá ser tarde.",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-aquatico-n1-a",
+          "label": "50 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Se esperar demais poderá ser tarde. Ao perceber que alguém est",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-aquatico-n1-b",
+          "label": "Páginas 50-50",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-salvamento-aquatico-n2",
+      "label": "171 Compêndio de Turma – Aspirantes 201 4 ESTILO AUSTRALIANO – INSTRUÇÃO COM PRANCHAS A Ac",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-aquatico-n2-a",
+          "label": "171 Compêndio de Turma – Aspirantes 201 4 ESTILO AUSTRALIANO – INSTRUÇÃO COM PRANCHAS A Academia de Bombeiro M",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-aquatico-n2-b",
+          "label": "Páginas 171-171",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-salvamento-aquatico-n3",
+      "label": "1.1 Avaliação das condições do mar Após a observação das condições gerais do ambiente aquá",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-aquatico-n3-a",
+          "label": "1.1 Avaliação das condições do mar Após a observação das condições gerais do ambiente aquático e o reconhecime",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-aquatico-n3-b",
+          "label": "Páginas 1296-1302",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-salvamento-aquatico-n4",
+      "label": "7.1 A importância da atividade de salvamento aquático O guarda-vidas não está nas praias s",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-aquatico-n4-a",
+          "label": "7.1 A importância da atividade de salvamento aquático O guarda-vidas não está nas praias somente para salvar v",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-aquatico-n4-b",
+          "label": "Páginas 1385-1385",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "50 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Se esperar demais poderá ser tarde. Ao perceber que alguém está se afogando, evite fazer o s",
+    "171 Compêndio de Turma – Aspirantes 201 4 ESTILO AUSTRALIANO – INSTRUÇÃO COM PRANCHAS A Academia de Bombeiro Militar proporcionou nas última",
+    "1.1 Avaliação das condições do mar Após a observação das condições gerais do ambiente aquático e o reconhecimento dos perigos, o guarda vida",
+    "7.1 A importância da atividade de salvamento aquático O guarda-vidas não está nas praias somente para salvar vidas, mas principalmente para "
+  ],
+  "commonMistakes": [
+    "Confundir conceitos centrais de salvamento aquático.",
+    "Responder por prática informal sem aderência ao manual oficial."
+  ],
+  "terms": [
+    "salvamento aquático",
+    "afogamento",
+    "praia",
+    "corrente de retorno",
+    "corpo",
+    "bombeiros",
+    "militar",
+    "santa",
+    "catarina",
+    "esperar",
+    "compêndio",
+    "turma",
+    "aspirantes",
+    "estilo",
+    "australiano",
+    "instrução",
+    "avaliação",
+    "condições",
+    "após",
+    "observação",
+    "gerais",
+    "ambiente"
+  ],
+  "sources": [
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-70d92952",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "50 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Se esperar demais poderá ser tarde. Ao perceber que alguém está se afogando, evite fazer o salvamento corpo a corpo, princi - palmente se não for habilitado para tal. Nesse caso jogue uma corda ou um objeto flutu",
+      "pageStart": 50,
+      "pageEnd": 50
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014",
+      "manualTitle": "COMPÊNDIO DE TURMA - ASPIRANTES 2014",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014-sec-e6541f4b",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=781:compendio-de-turma-aspirantes-2014",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "171 Compêndio de Turma – Aspirantes 201 4 ESTILO AUSTRALIANO – INSTRUÇÃO COM PRANCHAS A Academia de Bombeiro Militar proporcionou nas últimas semanas aos cadetes do 4ºCFO, sob a supervisão e orientação do 2º Ten BM Fregapani, testar um novo conceito em prancha",
+      "pageStart": 171,
+      "pageEnd": 171
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-e006c92f",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "1.1 Avaliação das condições do mar Após a observação das condições gerais do ambiente aquático e o reconhecimento dos perigos, o guarda vidas deve sinalizar o local e seus pontos críticos, tais como Para isto faz-se uso, principalmente, de bandeiras e placas. ",
+      "pageStart": 1296,
+      "pageEnd": 1302
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-611b52d7",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "7.1 A importância da atividade de salvamento aquático O guarda-vidas não está nas praias somente para salvar vidas, mas principalmente para guardá-las, atuando continuamente na prevenção, evitando que o banhista seja arrastado pela corrente de retorno. Muitas ",
+      "pageStart": 1385,
+      "pageEnd": 1385
+    }
+  ]
+}

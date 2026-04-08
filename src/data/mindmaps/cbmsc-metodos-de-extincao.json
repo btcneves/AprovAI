@@ -1,115 +1,146 @@
 {
   "id": "cbmsc-metodos-de-extincao",
   "title": "Métodos de extinção",
-  "summary": "Resfriamento, abafamento, isolamento e quebra de reação em cadeia compõem os métodos-base.",
+  "summary": "Resumo derivado de seções oficiais do CBMSC sobre resfriamento, abafamento e isolamento.",
   "nodes": [
     {
-      "id": "cbmsc-metodos-de-extincao-resfriamento",
-      "label": "Resfriamento",
+      "id": "cbmsc-metodos-de-extincao-n1",
+      "label": "68 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13 - Materiais combustíveis sólidos",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-metodos-de-extincao-resfriamento-retira-calor",
-          "label": "Retira calor",
+          "id": "cbmsc-metodos-de-extincao-n1-a",
+          "label": "68 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13 - Materiais combustíveis sólidos Fonte: CBMSC • Incê",
           "type": "child"
         },
         {
-          "id": "cbmsc-metodos-de-extincao-resfriamento-agua-em-padrao-adequado",
-          "label": "Água em padrão adequado",
+          "id": "cbmsc-metodos-de-extincao-n1-b",
+          "label": "Páginas 68-68",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-metodos-de-extincao-abafamento",
-      "label": "Abafamento",
+      "id": "cbmsc-metodos-de-extincao-n2",
+      "label": "69 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 16 - Metais combustíveis pirofórico",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-metodos-de-extincao-abafamento-reduz-comburente",
-          "label": "Reduz comburente",
+          "id": "cbmsc-metodos-de-extincao-n2-a",
+          "label": "69 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 16 - Metais combustíveis pirofóricos Fonte: CBMSC AGENT",
           "type": "child"
         },
         {
-          "id": "cbmsc-metodos-de-extincao-abafamento-espuma-e-cobertores",
-          "label": "Espuma e cobertores",
+          "id": "cbmsc-metodos-de-extincao-n2-b",
+          "label": "Páginas 69-69",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-metodos-de-extincao-isolamento",
-      "label": "Isolamento",
+      "id": "cbmsc-metodos-de-extincao-n3",
+      "label": "71 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • Retirada do material: é o modo mais sim ",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-metodos-de-extincao-isolamento-interrompe-suprimento-de-combustivel",
-          "label": "Interrompe suprimento de combustível",
+          "id": "cbmsc-metodos-de-extincao-n3-a",
+          "label": "71 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • Retirada do material: é o modo mais sim - ples de se extingu",
           "type": "child"
         },
         {
-          "id": "cbmsc-metodos-de-extincao-isolamento-fechamento-de-valvulas",
-          "label": "Fechamento de válvulas",
+          "id": "cbmsc-metodos-de-extincao-n3-b",
+          "label": "Páginas 71-71",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-metodos-de-extincao-quebra-em-cadeia",
-      "label": "Quebra em cadeia",
+      "id": "cbmsc-metodos-de-extincao-n4",
+      "label": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Ch",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-metodos-de-extincao-quebra-em-cadeia-interfere-reacao-quimica",
-          "label": "Interfere reação química",
+          "id": "cbmsc-metodos-de-extincao-n4-a",
+          "label": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fuma",
           "type": "child"
         },
         {
-          "id": "cbmsc-metodos-de-extincao-quebra-em-cadeia-pqs-e-agentes-halogenados-permitidos",
-          "label": "PQS e agentes halogenados permitidos",
+          "id": "cbmsc-metodos-de-extincao-n4-b",
+          "label": "Páginas 13-14",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "Abafamento reduz concentração de oxigênio.",
-    "Isolamento remove combustível disponível."
+    "68 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13 - Materiais combustíveis sólidos Fonte: CBMSC • Incêndio Classe “B”: incêndio envo",
+    "69 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 16 - Metais combustíveis pirofóricos Fonte: CBMSC AGENTES EXTINTORES Agentes extintor",
+    "71 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • Retirada do material: é o modo mais sim - ples de se extinguir um incêndio. Baseia-se simp",
+    "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incê"
   ],
   "commonMistakes": [
-    "Usar método único sem avaliar classe do incêndio.",
-    "Ventilar antes de coordenar ataque."
+    "Confundir conceitos centrais de métodos de extinção.",
+    "Responder por prática informal sem aderência ao manual oficial."
   ],
   "terms": [
-    "Resfriamento",
-    "Retira calor",
-    "Água em padrão adequado",
-    "Abafamento",
-    "Reduz comburente",
-    "Espuma e cobertores",
-    "Isolamento",
-    "Interrompe suprimento de combustível",
-    "Fechamento de válvulas",
-    "Quebra em cadeia",
-    "Interfere reação química",
-    "PQS e agentes halogenados permitidos"
+    "resfriamento",
+    "abafamento",
+    "isolamento",
+    "reacao em cadeia",
+    "corpo",
+    "bombeiros",
+    "militar",
+    "santa",
+    "catarina",
+    "figura",
+    "retirada",
+    "produtos",
+    "combustão",
+    "classificam",
+    "quatro",
+    "categorias",
+    "gases"
   ],
   "sources": [
     {
-      "manualId": "combate-incendio-estrutural-manual",
-      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
-      "category": "Combate a Incêndio Estrutural",
-      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "collectedAt": "2026-04-08T14:40:11.397Z"
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-58214283",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "68 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13 - Materiais combustíveis sólidos Fonte: CBMSC • Incêndio Classe “B”: incêndio envolvendo líquidos inflamáveis, graxas e gases combustí - veis. Caracteriza-se por não deixar resíduos e queimar apenas na ",
+      "pageStart": 68,
+      "pageEnd": 68
     },
     {
-      "manualId": "atendimento-basico-emergencias-manual",
-      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
-      "category": "Atendimento Pré-Hospitalar",
-      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "collectedAt": "2026-04-08T14:40:11.398Z"
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-907eafa5",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "69 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 16 - Metais combustíveis pirofóricos Fonte: CBMSC AGENTES EXTINTORES Agentes extintores são todas as substâncias capazes de eliminar um ou mais elementos essen - ciais do fogo. Atualmente encontramos os se",
+      "pageStart": 69,
+      "pageEnd": 69
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-49881a22",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "71 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • Retirada do material: é o modo mais sim - ples de se extinguir um incêndio. Baseia-se simplesmente na retirada do material combus - tível ainda não atingido, da área de propaga - ção do fogo, interrompendo a al",
+      "pageStart": 71,
+      "pageEnd": 71
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "manualTitle": "CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, em : CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS 13",
+      "pageStart": 13,
+      "pageEnd": 14
     }
   ]
 }

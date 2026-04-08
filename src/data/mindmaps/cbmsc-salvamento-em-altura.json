@@ -1,0 +1,141 @@
+{
+  "id": "cbmsc-salvamento-em-altura",
+  "title": "Salvamento em altura",
+  "summary": "Resumo derivado de seções oficiais do CBMSC sobre técnicas verticais.",
+  "nodes": [
+    {
+      "id": "cbmsc-salvamento-em-altura-n1",
+      "label": "34 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 1.",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-em-altura-n1-a",
+          "label": "34 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 1. Fundamentos da segurança Fonte: CBMSC Lição II - Pri",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-em-altura-n1-b",
+          "label": "Páginas 603-604",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-salvamento-em-altura-n2",
+      "label": "37 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Segurança: é aquele que faz a pr",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-em-altura-n2-a",
+          "label": "37 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Segurança: é aquele que faz a prote- ção do resgatis",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-em-altura-n2-b",
+          "label": "Páginas 606-606",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-salvamento-em-altura-n3",
+      "label": "40 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 8.",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-em-altura-n3-a",
+          "label": "40 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 8. Modelo de histórico Fonte: CBMSC • Jamais utilizar c",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-em-altura-n3-b",
+          "label": "Páginas 609-609",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-salvamento-em-altura-n4",
+      "label": "43 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13.",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-em-altura-n4-a",
+          "label": "43 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13. Exemplo de linha de segurança Fonte: CBMSC Figura 1",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-em-altura-n4-b",
+          "label": "Páginas 612-612",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "34 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 1. Fundamentos da segurança Fonte: CBMSC Lição II - Princípios de segurança 35 CORPO ",
+    "37 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Segurança: é aquele que faz a prote- ção do resgatista que estiver escalan- do ou ",
+    "40 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 8. Modelo de histórico Fonte: CBMSC • Jamais utilizar cabos de salvamento para cor- t",
+    "43 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13. Exemplo de linha de segurança Fonte: CBMSC Figura 14. Montagem de linha de segura"
+  ],
+  "commonMistakes": [
+    "Confundir conceitos centrais de salvamento em altura.",
+    "Responder por prática informal sem aderência ao manual oficial."
+  ],
+  "terms": [
+    "altura",
+    "corda",
+    "ancoragem",
+    "rapel",
+    "ascensão",
+    "corpo",
+    "bombeiros",
+    "militar",
+    "santa",
+    "catarina",
+    "figura",
+    "glossário"
+  ],
+  "sources": [
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-af217067",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "34 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 1. Fundamentos da segurança Fonte: CBMSC Lição II - Princípios de segurança 35 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FATOR DE QUEDA Fator de queda é o valor numérico resultan- te da relação entre a ",
+      "pageStart": 603,
+      "pageEnd": 604
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-d907a1cf",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "37 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Segurança: é aquele que faz a prote- ção do resgatista que estiver escalan- do ou rapelando, cuidando para que este não caia, tensionando o cabo e, conseqüentemente, travando o equi- pamento de frenagem",
+      "pageStart": 606,
+      "pageEnd": 606
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-87318f38",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "40 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 8. Modelo de histórico Fonte: CBMSC • Jamais utilizar cabos de salvamento para cor- tes de árvore, para reboque de carros, ou qual- quer outro uso senão aquele para o qual o cabo foi destinado. Da mesma fo",
+      "pageStart": 609,
+      "pageEnd": 609
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-993bb80e",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "43 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 13. Exemplo de linha de segurança Fonte: CBMSC Figura 14. Montagem de linha de seguraça Fonte: CBPMESP (2006). ANCORAGEM – LINHA DE SEGURANÇA Qualquer que seja a operação que o resgatista irá realizar em a",
+      "pageStart": 612,
+      "pageEnd": 612
+    }
+  ]
+}
