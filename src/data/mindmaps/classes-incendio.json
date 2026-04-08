@@ -1,0 +1,55 @@
+{
+  "id": "mapa-incendio-classes",
+  "title": "Classes de Incêndio",
+  "summary": "Mapa introdutório de classes de incêndio com foco em identificação do combustível e escolha tática inicial do agente extintor.",
+  "nodes": [
+    {
+      "id": "n1",
+      "label": "Classe A",
+      "type": "main",
+      "children": [
+        { "id": "n1-1", "label": "Combustíveis sólidos", "type": "child" },
+        { "id": "n1-2", "label": "Resfriamento como técnica frequente", "type": "child" }
+      ]
+    },
+    {
+      "id": "n2",
+      "label": "Classe B",
+      "type": "main",
+      "children": [
+        { "id": "n2-1", "label": "Líquidos e gases inflamáveis", "type": "child" },
+        { "id": "n2-2", "label": "Controle de vapores e abafamento", "type": "child" }
+      ]
+    },
+    {
+      "id": "n3",
+      "label": "Classe C",
+      "type": "main",
+      "children": [
+        { "id": "n3-1", "label": "Equipamentos energizados", "type": "child" },
+        { "id": "n3-2", "label": "Priorizar segurança elétrica", "type": "child" }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "Diferença de combustível entre classes.",
+    "Relação entre classe de incêndio e método de extinção.",
+    "Cenário com energia elétrica e riscos adicionais."
+  ],
+  "commonMistakes": [
+    "Confundir incêndio em líquido inflamável com incêndio elétrico.",
+    "Escolher agente sem analisar material predominante.",
+    "Ignorar risco de reignição após supressão inicial."
+  ],
+  "terms": ["classe A", "classe B", "classe C", "abafamento", "resfriamento", "combustível"],
+  "sources": [
+    {
+      "manualId": "manual-cbmsc-combate-incendio-estrutural",
+      "manualTitle": "Manual de Capacitação em Combate a Incêndio Estrutural",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "excerpt": "Classificação do incêndio orienta técnica e agente extintor adequados.",
+      "collectedAt": "2026-04-08T00:00:00.000Z"
+    }
+  ]
+}

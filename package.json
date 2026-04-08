@@ -9,7 +9,14 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "lint": "eslint . --ext ts,tsx --max-warnings 0"
+    "lint": "eslint . --ext ts,tsx --max-warnings 0",
+    "cbmsc:index": "node scripts/cbmsc/index.mjs",
+    "cbmsc:download": "node scripts/cbmsc/download.mjs",
+    "cbmsc:parse": "node scripts/cbmsc/parse.mjs",
+    "cbmsc:normalize": "node scripts/cbmsc/normalize.mjs",
+    "cbmsc:generate-mindmaps": "node scripts/cbmsc/generate-mindmaps.mjs",
+    "cbmsc:generate-questions": "node scripts/cbmsc/generate-questions.mjs",
+    "cbmsc:validate": "node scripts/cbmsc/validate.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.10.5",

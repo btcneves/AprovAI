@@ -1,0 +1,6 @@
+{
+  "generatedAt": "2026-04-08T14:05:19.431Z",
+  "banks": [
+    "src/data/questions/cbmscQuestions.ts"
+  ]
+}

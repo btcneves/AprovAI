@@ -22,3 +22,16 @@ npm run test
 npm run lint
 npm run build
 ```
+
+
+## Pipeline CBMSC (primeira entrega)
+
+```bash
+npm run cbmsc:index
+npm run cbmsc:download
+npm run cbmsc:parse
+npm run cbmsc:normalize
+npm run cbmsc:generate-mindmaps
+npm run cbmsc:generate-questions
+npm run cbmsc:validate
+```
