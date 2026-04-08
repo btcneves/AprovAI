@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import { useAppState } from '@/app/AppStateContext'
 import { buildSimulado, evaluateSimulado, type StudyMode } from '@/domain/simuladoService'
+import { enrichAttemptWithAnalytics } from '@/domain/analyticsService'
 import type { AlternativeId, Difficulty, Question, SimuladoAttempt } from '@/domain/types'
 import { activeQuestions } from '@/data/questionBank/questions'
 import { QuestionCard } from '@/features/simulado/components/QuestionCard'
@@ -49,12 +50,17 @@ export const SimuladoPage = () => {
   const finish = () => {
     if (!questions.length) return
 
+    const now = new Date().toISOString()
     const evaluated = evaluateSimulado(questions, answers)
-    const attempt: SimuladoAttempt = {
-      id: crypto.randomUUID(),
-      createdAt: new Date().toISOString(),
-      ...evaluated
-    }
+    const attempt = enrichAttemptWithAnalytics(
+      {
+        id: crypto.randomUUID(),
+        createdAt: now,
+        timestamp: now,
+        ...evaluated
+      },
+      questions
+    )
     registerAttempt(attempt)
     setResult(attempt)
   }

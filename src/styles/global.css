@@ -33,3 +33,5 @@ button { cursor: pointer; background: #1e3a8a; color: #fff; border: 0; border-ra
   .app-shell { grid-template-columns: 1fr; }
   .grid-2, .study-config-grid { grid-template-columns: 1fr; }
 }
+
+.history-item { margin-bottom: 0.8rem; }

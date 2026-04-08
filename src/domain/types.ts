@@ -66,6 +66,20 @@ export type MindMapNode = {
   priority: 'alta' | 'media' | 'baixa'
 }
 
+
+export type ThemeSnapshot = {
+  theme: string
+  totalQuestions: number
+  correct: number
+  wrong: number
+  accuracyRate: number
+}
+
+export type WrongQuestionRef = {
+  questionId: string
+  theme: string
+  subtheme: string | null
+}
 export type SimuladoAnswer = {
   questionId: string
   selectedAlternativeId: AlternativeId | null
@@ -75,11 +89,19 @@ export type SimuladoAnswer = {
 export type SimuladoAttempt = {
   id: string
   createdAt: string
+  timestamp?: string
   questionIds: string[]
   answers: SimuladoAnswer[]
   score: number
   correctCount: number
   wrongCount: number
+  totalQuestions?: number
+  accuracyRate?: number
+  themes?: string[]
+  subthemes?: string[]
+  difficulty?: Difficulty | 'mista'
+  wrongQuestionRefs?: WrongQuestionRef[]
+  themeSnapshot?: ThemeSnapshot[]
   portugueseCorrect: number
   specificCorrect: number
   durationInSeconds?: number
