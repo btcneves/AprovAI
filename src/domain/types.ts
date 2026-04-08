@@ -29,6 +29,12 @@ export type MindMapNode = {
   discipline: Discipline
   descriptionShort: string
   descriptionDetailed: string
+  studyChecklist?: string[]
+  studyReferences?: Array<{
+    label: string
+    type: 'edital' | 'cbae' | 'manual' | 'legislacao'
+    url?: string
+  }>
   parentId: string | null
   childrenIds: string[]
   tags: string[]
