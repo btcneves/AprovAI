@@ -18,7 +18,8 @@ Implementação central: `src/domain/simuladoService.ts`.
 
 Disponível em `SimuladoPage`:
 
-- `weak-topics`: recorta 3 piores subtemas por erro histórico.
+- `weak-topics`: prioriza nós críticos/fracos do `nodeLearningService`.
+- `topic`: treino filtrado por tema.
 - `subtopic`: treino filtrado por subtema.
 - `difficulty`: treino por dificuldade específica.
 - `recent-wrong`: prioriza questões erradas nas últimas 8 tentativas.
@@ -33,18 +34,18 @@ Ao finalizar sessão:
 2. Score atual implementado: `ptCorrect * 0.2 + specificCorrect * 0.3`.
 3. `ResultPanel` mostra:
    - nota,
-   - percentuais,
+   - percentual com feedback visual,
    - comparação resposta marcada vs correta,
    - explicação,
    - trecho de apoio (`supportSnippet`) quando disponível,
    - link para mapa mental relacionado (`/mapas?focus=...`).
 4. `buildErrorFollowUp` orienta revisão focada após erros.
 
-## 3) Analytics persistente
+## 3) Analytics adaptativo com decay temporal
 
-Implementação central: `src/domain/analyticsService.ts`.
+Implementação central: `src/domain/analyticsService.ts` + `src/domain/learningMetrics.ts`.
 
-## 3.1 Enriquecimento da tentativa
+### 3.1 Enriquecimento da tentativa
 
 `enrichAttemptWithAnalytics` adiciona:
 
@@ -54,17 +55,17 @@ Implementação central: `src/domain/analyticsService.ts`.
 - `themeSnapshot` com total/certos/erros/taxa por tema;
 - `accuracyRate` e `totalQuestions`.
 
-## 3.2 Análise temporal
+### 3.2 Análise temporal
 
-`buildTemporalAnalysis` calcula métricas por janela:
+`buildTemporalAnalysis` calcula métricas por janela (7, 14 e 30 dias) com **peso temporal**:
 
-- 7 dias;
-- 14 dias;
-- 30 dias.
+- evento recente (hoje) ≈ peso 1.0;
+- evento de ~7 dias ≈ peso 0.5;
+- evento de ~30 dias ou mais ≈ peso 0.1.
 
-Por tema: taxa média, frequência de erro, número de tentativas e tendência (`melhorando|piorando|estavel`).
+Por tema: taxa média ponderada, frequência de erro ponderada, número de tentativas e tendência (`melhorando|piorando|estavel`).
 
-## 3.3 Recomendações adaptativas
+### 3.3 Recomendações adaptativas
 
 `buildRecommendations` gera até 6 recomendações priorizadas:
 
@@ -73,19 +74,42 @@ Por tema: taxa média, frequência de erro, número de tentativas e tendência (
 - `undertrained`
 - `recent-errors-review`
 
-`DashboardPage` apresenta recomendações com prioridade (`Pxx`).
+`DashboardPage` apresenta recomendações por prioridade (`Pxx`).
 
-## 4) Persistência
+## 4) Persistência robusta (versionamento + migração)
 
-Persistência de histórico de estudo:
+### 4.1 Envelope versionado
 
-- chave: `imarui_simulados`;
-- mecanismo: `localStorage` via `src/lib/storage.ts`;
-- acesso por `loadAttempts`/`saveAttempt` (`historyService`).
+Todos os domínios críticos usam envelope:
 
-Ao carregar app, tentativas antigas são hidratadas (`hydrateAttempt`) para manter compatibilidade com registros sem campos novos.
+```json
+{
+  "version": 1,
+  "data": { "...": "..." }
+}
+```
 
-## 5) Limitações atuais
+### 4.2 Migração e integridade
+
+Implementado em `src/lib/storage.ts`:
+
+- `getVersioned` com validação (`isValid`);
+- migração automática de legado (`migrate[0]` para formato antigo sem envelope);
+- fallback seguro para estrutura mínima quando houver dado inválido/corrompido.
+
+Aplicações atuais:
+
+- histórico de tentativas (`historyService` → `imarui_simulados`);
+- progresso por nó (`nodeLearningService` → `aprovai_node_learning_v1`);
+- nós revisados em mapas (`MapasPage` → `aprovai_map_reviewed_nodes`).
+
+## 5) Compatibilidade retroativa
+
+- Tentativas antigas sem snapshots são hidratadas via `hydrateAttempt`.
+- Stores legadas sem `version` são migradas automaticamente na leitura.
+- Dados inválidos não derrubam execução: sistema faz fallback para estrutura segura.
+
+## 6) Limitações atuais
 
 - Persistência local apenas no navegador (sem backend/sync em nuvem).
 - Não há autenticação ou múltiplos perfis de usuário.
