@@ -1,5 +1,795 @@
 {
-  "generatedAt": "2026-04-08T14:40:34.881Z",
-  "filesSeen": 0,
-  "qualityLog": []
+  "generatedAt": "2026-04-08T15:20:34.982Z",
+  "filesSeen": 69,
+  "qualityLog": [
+    {
+      "file": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022.pdf",
+      "status": "parsed",
+      "sections": 81,
+      "lowTextPages": [
+        1,
+        2,
+        95
+      ]
+    },
+    {
+      "file": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022.pdf",
+      "status": "parsed",
+      "sections": 69,
+      "lowTextPages": [
+        1,
+        2,
+        80
+      ]
+    },
+    {
+      "file": "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018.pdf",
+      "status": "parsed",
+      "sections": 245,
+      "lowTextPages": [
+        1,
+        25,
+        82,
+        226
+      ]
+    },
+    {
+      "file": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias.pdf",
+      "status": "parsed",
+      "sections": 130,
+      "lowTextPages": [
+        1,
+        149
+      ]
+    },
+    {
+      "file": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-1-introducao-aos-primeiros-socorros.pdf",
+      "status": "parsed",
+      "sections": 5,
+      "lowTextPages": [
+        13
+      ]
+    },
+    {
+      "file": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-2-orientacoes-de-seguranca-e-prevencao.pdf",
+      "status": "parsed",
+      "sections": 14,
+      "lowTextPages": [
+        31
+      ]
+    },
+    {
+      "file": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-3-avaliacao-de-cena.pdf",
+      "status": "parsed",
+      "sections": 6,
+      "lowTextPages": [
+        15
+      ]
+    },
+    {
+      "file": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-4-emergencias-respiratorias.pdf",
+      "status": "parsed",
+      "sections": 6,
+      "lowTextPages": [
+        14
+      ]
+    },
+    {
+      "file": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-5-ressuscitacao-cardiopulmonar.pdf",
+      "status": "parsed",
+      "sections": 5,
+      "lowTextPages": [
+        13
+      ]
+    },
+    {
+      "file": "atendimento-pre-hospitalar-primeiros-socorros-plano-de-instrucao-diaria-atendimento-pre-hospitalar.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        1,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28
+      ]
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-chefia-e-lideranca.pdf",
+      "status": "parsed",
+      "sections": 3,
+      "lowTextPages": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-etica-e-cidadania.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": []
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-gerenciamento-de-estresse-bm.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        4,
+        20,
+        35,
+        37
+      ]
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-gerenciamento-de-estresse-manual-do-aluno-cfsd-2018.pdf",
+      "status": "parsed",
+      "sections": 9,
+      "lowTextPages": [
+        1,
+        2,
+        3,
+        6,
+        18,
+        31
+      ]
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-guia-de-producao-de-material-didatico-no-cbmsc.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        1,
+        30
+      ]
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-guia-para-gerencia-e-docencia-no-ambiente-virtual-de-aprendizagem-do-corpo-de-bombeiros-militar-de-santa-catarina.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        7,
+        8,
+        53
+      ]
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-guias-operacionais-forma-e-conteudo-como-fazer.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": []
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-informatica-aplicada-ao-cbmsc-manual-do-aluno-cfsd-2018.pdf",
+      "status": "parsed",
+      "sections": 22,
+      "lowTextPages": [
+        1,
+        2,
+        6,
+        10,
+        11,
+        16,
+        23,
+        24,
+        25,
+        37,
+        49,
+        50,
+        64,
+        70,
+        76,
+        80,
+        85,
+        91,
+        94
+      ]
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-manual-de-capacitacao-em-ambiente-virtual-de-aprendizagem-moodle.pdf",
+      "status": "parsed",
+      "sections": 69,
+      "lowTextPages": [
+        1,
+        83
+      ]
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-manual-do-participante-curso-de-atendente-de-central-de-emergencia.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-manual-do-participante-curso-de-tecnicas-de-ensino-cte.pdf",
+      "status": "parsed",
+      "sections": 12,
+      "lowTextPages": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-material-do-aluno-educacao-fisica-militar-efm.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "gestao-ensino-lideranca-saude-do-bombeiro-organizacao-e-administracao-de-bombeiro.pdf",
+      "status": "parsed",
+      "sections": 14,
+      "lowTextPages": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos.pdf",
+      "status": "parsed",
+      "sections": 31,
+      "lowTextPages": []
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": []
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-introducao-a-investigacao-de-incendio.pdf",
+      "status": "parsed",
+      "sections": 2,
+      "lowTextPages": [
+        1,
+        2,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural.pdf",
+      "status": "parsed",
+      "sections": 150,
+      "lowTextPages": [
+        1,
+        177
+      ]
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-florestal.pdf",
+      "status": "parsed",
+      "sections": 77,
+      "lowTextPages": [
+        1
+      ]
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos.pdf",
+      "status": "parsed",
+      "sections": 137,
+      "lowTextPages": [
+        1,
+        159
+      ]
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-manual-de-defesa-civil-dcv-para-a-formacao-do-soldado-do-cbmsc.pdf",
+      "status": "parsed",
+      "sections": 9,
+      "lowTextPages": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-nocoes-em-incendios-florestais-guia-do-aluno.pdf",
+      "status": "parsed",
+      "sections": 63,
+      "lowTextPages": [
+        1
+      ]
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-normas-de-seguranca-contra-incendios-instrucao-normativa-in-001-dat-cbmsc-da-atividade-tecnica.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": []
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-topicos-avancados-comando-de-operacoes-em-combate-a-incendio-estrutural.pdf",
+      "status": "parsed",
+      "sections": 19,
+      "lowTextPages": [
+        26
+      ]
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos.pdf",
+      "status": "parsed",
+      "sections": 52,
+      "lowTextPages": [
+        1,
+        2,
+        61
+      ]
+    },
+    {
+      "file": "incendios-produtos-perigosos-defesa-civil-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-2018.pdf",
+      "status": "parsed",
+      "sections": 53,
+      "lowTextPages": [
+        1
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014.pdf",
+      "status": "parsed",
+      "sections": 181,
+      "lowTextPages": [
+        49,
+        74,
+        91,
+        94,
+        100,
+        132
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2015.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        1,
+        2,
+        21,
+        42,
+        57,
+        62,
+        63,
+        78,
+        98,
+        107,
+        109,
+        115,
+        123,
+        124,
+        125,
+        130,
+        134,
+        138,
+        145,
+        151
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020.pdf",
+      "status": "parsed",
+      "sections": 1042,
+      "lowTextPages": [
+        1,
+        4,
+        5,
+        6,
+        13,
+        105,
+        106,
+        107,
+        131,
+        171,
+        189,
+        333,
+        398,
+        399,
+        568,
+        569,
+        570,
+        571,
+        585,
+        844,
+        845,
+        846,
+        1022,
+        1023,
+        1087,
+        1129,
+        1180,
+        1181,
+        1243,
+        1279,
+        1280,
+        1281,
+        1295,
+        1334,
+        1470,
+        1482,
+        1483,
+        1493,
+        1501,
+        1517,
+        1556,
+        1571,
+        1572,
+        1579,
+        1589,
+        1623,
+        1645,
+        1664,
+        1675,
+        1676,
+        1697,
+        1710,
+        1717,
+        1720,
+        1728,
+        1729,
+        1730,
+        1803
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020.pdf",
+      "status": "parsed",
+      "sections": 657,
+      "lowTextPages": [
+        4,
+        5,
+        6,
+        79,
+        80,
+        104,
+        144,
+        162,
+        306,
+        371,
+        372,
+        434,
+        470,
+        471,
+        472,
+        648,
+        649,
+        651,
+        655,
+        659,
+        749,
+        750,
+        751,
+        752,
+        783,
+        791,
+        807,
+        846,
+        861,
+        862,
+        929,
+        930,
+        1041,
+        1042,
+        1049,
+        1059,
+        1093,
+        1115,
+        1134,
+        1145,
+        1146,
+        1167,
+        1180,
+        1187,
+        1190,
+        1198
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-curso-para-condutores-de-veiculos-de-emergencia-2021.pdf",
+      "status": "parsed",
+      "sections": 23,
+      "lowTextPages": [
+        1,
+        9,
+        25,
+        45,
+        54
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-direito-aplicado-a-atividade-bombeiro-militar-curso-de-formacao-de-soldados-2018.pdf",
+      "status": "parsed",
+      "sections": 12,
+      "lowTextPages": [
+        1
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-direito-militar-e-processual-militar-curso-de-formacao-de-soldados-2018.pdf",
+      "status": "parsed",
+      "sections": 12,
+      "lowTextPages": [
+        1
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-dtz-nr-26-exeucucao-e-fiscalizacao-da-atividade-tecnica-pelo-cbmsc.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": []
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-equipamentos-motomecanizados-curso-de-formacao-de-soldados-2018.pdf",
+      "status": "parsed",
+      "sections": 6,
+      "lowTextPages": [
+        1,
+        2,
+        82,
+        104
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-legislacao-e-regulamentos-manual-do-aluno-cfsd-2019.pdf",
+      "status": "parsed",
+      "sections": 31,
+      "lowTextPages": [
+        1,
+        6,
+        8,
+        18,
+        52,
+        74,
+        93,
+        104,
+        105,
+        126,
+        139,
+        146,
+        149
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-manual-de-flamula.pdf",
+      "status": "parsed",
+      "sections": 24,
+      "lowTextPages": [
+        2,
+        4,
+        8,
+        48,
+        49
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-manual-de-ordem-unida-cfsd.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        1,
+        2,
+        62,
+        64
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-manual-de-sistema-de-comando-de-operacoes-sco-para-a-formacao-do-soldado-do-cbmsc.pdf",
+      "status": "parsed",
+      "sections": 2,
+      "lowTextPages": [
+        1,
+        2,
+        36
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-normas-de-seguranca-contra-incendios-instrucao-normativa-in-005-dat-cbmsc-edificacoes-existentes.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": []
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-procedimentos-administrativos-manual-do-aluno-cfsd-2019.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        1,
+        2
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-atividade-tecnica-no-corpo-de-bombeiros-militar-de-santa-catarina.pdf",
+      "status": "parsed",
+      "sections": 29,
+      "lowTextPages": [
+        2,
+        38
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-ciencias-do-fogo.pdf",
+      "status": "parsed",
+      "sections": 46,
+      "lowTextPages": [
+        1,
+        53
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-nocoes-de-radiocomunicacao-no-cbmsc.pdf",
+      "status": "parsed",
+      "sections": 9,
+      "lowTextPages": [
+        1,
+        17
+      ]
+    },
+    {
+      "file": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-revisada-2021.pdf",
+      "status": "parsed",
+      "sections": 52,
+      "lowTextPages": [
+        1
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-busca-terrestre-manual-do-aluno-curso-de-formacao-de-soldados.pdf",
+      "status": "parsed",
+      "sections": 4,
+      "lowTextPages": [
+        1,
+        84
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-captura-e-manejo-de-insetos.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        1,
+        2,
+        19
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-curso-de-capacitacao-em-salvamento-em-altura-2012.pdf",
+      "status": "parsed",
+      "sections": 247,
+      "lowTextPages": [
+        1,
+        2,
+        13,
+        271
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-curso-de-salvamento-com-moto-aquatica-csm.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        12,
+        13,
+        14,
+        19,
+        20,
+        22,
+        24
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-curso-de-salvamento-com-moto-aquatica.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": []
+    },
+    {
+      "file": "salvamento-busca-resgate-manuais-tecnicos-curso-de-salvamento-em-altura-csalt.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": []
+    },
+    {
+      "file": "salvamento-busca-resgate-manual-de-capacitacao-em-busca-terrestre.pdf",
+      "status": "parsed",
+      "sections": 83,
+      "lowTextPages": [
+        1,
+        2,
+        9,
+        101
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-1-edicao.pdf",
+      "status": "parsed",
+      "sections": 120,
+      "lowTextPages": [
+        1,
+        2,
+        141
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao.pdf",
+      "status": "parsed",
+      "sections": 148,
+      "lowTextPages": [
+        1,
+        170
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas.pdf",
+      "status": "parsed",
+      "sections": 175,
+      "lowTextPages": [
+        210
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-manual-do-curso-de-busca-e-resgate-em-inundacoes-e-enxurradas-cbrie.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        1
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-nocoes-de-espaco-confinado-cfsd-2018.pdf",
+      "status": "parsed",
+      "sections": 2,
+      "lowTextPages": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-plano-de-instrucao-diaria-salvamento-em-altura.pdf",
+      "status": "parsed",
+      "sections": 1,
+      "lowTextPages": [
+        1,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-salvamento-aquatico-e-coordenacao-de-praia.pdf",
+      "status": "parsed",
+      "sections": 2,
+      "lowTextPages": [
+        1,
+        7,
+        30
+      ]
+    },
+    {
+      "file": "salvamento-busca-resgate-topicos-avancados-coordenacao-de-praia-e-gestao-do-servico-de-salvamento-aquatico.pdf",
+      "status": "parsed",
+      "sections": 19,
+      "lowTextPages": [
+        29
+      ]
+    }
+  ]
 }
