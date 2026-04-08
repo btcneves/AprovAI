@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import type { Question, SimuladoAttempt } from '@/domain/types'
+import { buildErrorFollowUp, resolveMindMapNodeByTheme } from '@/domain/analyticsService'
+import { useAppState } from '@/app/AppStateContext'
 
 type Props = {
   attempt: SimuladoAttempt
@@ -7,9 +9,11 @@ type Props = {
 }
 
 export const ResultPanel = ({ attempt, questions }: Props) => {
+  const { attempts } = useAppState()
   const questionMap = new Map(questions.map((question) => [question.id, question]))
   const wrongAnswers = attempt.answers.filter((answer) => !answer.isCorrect)
   const percentual = ((attempt.correctCount / questions.length) * 100).toFixed(1)
+  const followUp = buildErrorFollowUp(attempts, attempt)
 
   return (
     <div className="result-grid">
@@ -23,6 +27,16 @@ export const ResultPanel = ({ attempt, questions }: Props) => {
       </section>
 
       <section className="card">
+        <h3>Fechamento do loop pós-erro</h3>
+        <p>{followUp.message}</p>
+        <ul>
+          {followUp.improvements.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="card">
         <h3>Revisão pós-simulado</h3>
         {wrongAnswers.length === 0 ? <p>Excelente! Você acertou todas.</p> : null}
         {wrongAnswers.map((answer) => {
@@ -31,6 +45,7 @@ export const ResultPanel = ({ attempt, questions }: Props) => {
 
           const selectedText = question.alternatives.find((alternative) => alternative.id === answer.selectedAlternativeId)?.text
           const correctText = question.alternatives.find((alternative) => alternative.id === question.correctAlternativeId)?.text
+          const mapNode = resolveMindMapNodeByTheme(question.topic)
 
           return (
             <article key={question.id} className="wrong-item">
@@ -47,7 +62,11 @@ export const ResultPanel = ({ attempt, questions }: Props) => {
               ) : null}
               {question.supportSnippet ? <p><strong>Trecho de apoio:</strong> {question.supportSnippet}</p> : null}
               <ul>{question.whyOthersAreWrong.map((reason) => <li key={reason}>{reason}</li>)}</ul>
-              <Link to={`/mapas?focus=${question.relatedMindMapNodeId}`}>Abrir mapa mental relacionado ao tema</Link>
+              <p><strong>Ação:</strong> revisar mapa mental do tema e refazer treino focado.</p>
+              <div className="actions-row" style={{ justifyContent: 'flex-start' }}>
+                <Link to={`/simulado`}>Iniciar treino focado agora</Link>
+                {mapNode ? <Link to={`/mapas?focus=${mapNode}`}>Abrir mapa mental relacionado</Link> : null}
+              </div>
             </article>
           )
         })}

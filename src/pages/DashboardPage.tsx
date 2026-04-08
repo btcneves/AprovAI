@@ -1,6 +1,7 @@
 import { Card } from '@/components/ui/Card'
 import { activeQuestions } from '@/data/questionBank/questions'
 import { useAppState } from '@/app/AppStateContext'
+import { buildRecommendations, buildTemporalAnalysis } from '@/domain/analyticsService'
 
 export const DashboardPage = () => {
   const { attempts } = useAppState()
@@ -12,7 +13,6 @@ export const DashboardPage = () => {
   const overallRate = totalAnswers ? Math.round((totalCorrect / totalAnswers) * 100) : 0
 
   const topicStats = new Map<string, { total: number; correct: number }>()
-  const difficultyStats = new Map<string, { total: number; correct: number }>()
   const trainCount = new Map<string, number>()
   const wrongCount = new Map<string, number>()
 
@@ -27,11 +27,6 @@ export const DashboardPage = () => {
       if (answer.isCorrect) topic.correct += 1
       topicStats.set(topicKey, topic)
 
-      const difficulty = difficultyStats.get(question.difficulty) ?? { total: 0, correct: 0 }
-      difficulty.total += 1
-      if (answer.isCorrect) difficulty.correct += 1
-      difficultyStats.set(question.difficulty, difficulty)
-
       trainCount.set(topicKey, (trainCount.get(topicKey) ?? 0) + 1)
       if (!answer.isCorrect) wrongCount.set(topicKey, (wrongCount.get(topicKey) ?? 0) + 1)
     }
@@ -40,6 +35,11 @@ export const DashboardPage = () => {
   const mostWrong = [...wrongCount.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3)
   const mostTrained = [...trainCount.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3)
   const weakestTopic = mostWrong[0]?.[0]
+
+  const analysis7 = buildTemporalAnalysis(attempts, 7)
+  const analysis14 = buildTemporalAnalysis(attempts, 14)
+  const analysis30 = buildTemporalAnalysis(attempts, 30)
+  const recommendations = buildRecommendations(attempts)
 
   return (
     <div className="grid-2">
@@ -56,17 +56,37 @@ export const DashboardPage = () => {
             <p>Data: {new Date(last.createdAt).toLocaleString('pt-BR')}</p>
             <p>Nota: {last.score.toFixed(2)}</p>
             <p>Acertos: {last.correctCount}</p>
+            <p>Taxa da sessão: {Math.round((last.accuracyRate ?? 0) * 100)}%</p>
           </>
         ) : (
           <p>Ainda não há tentativas registradas.</p>
         )}
       </Card>
 
-      <Card title="Taxa por tema">
+      <Card title="Recomendações adaptativas (prioridade por impacto)">
+        {recommendations.length === 0 ? <p>Realize sessões para liberar recomendações.</p> : null}
         <ul>
-          {[...topicStats.entries()].slice(0, 8).map(([topic, stat]) => (
-            <li key={topic}>{topic}: {Math.round((stat.correct / stat.total) * 100)}% ({stat.correct}/{stat.total})</li>
+          {recommendations.map((item) => (
+            <li key={item.id}>
+              <strong>[P{item.priority}] {item.title}</strong> — {item.description}
+            </li>
           ))}
+        </ul>
+      </Card>
+
+      <Card title="Evolução por tema (7/14/30 dias)">
+        {analysis30.themes.length === 0 ? <p>Sem dados suficientes para análise temporal.</p> : null}
+        <ul>
+          {analysis30.themes.slice(0, 6).map((themeData) => {
+            const rate7 = analysis7.themes.find((item) => item.theme === themeData.theme)?.avgAccuracyRate ?? 0
+            const rate14 = analysis14.themes.find((item) => item.theme === themeData.theme)?.avgAccuracyRate ?? 0
+            const rate30 = analysis30.themes.find((item) => item.theme === themeData.theme)?.avgAccuracyRate ?? 0
+            return (
+              <li key={themeData.theme}>
+                <strong>{themeData.theme}</strong>: 7d {Math.round(rate7 * 100)}% · 14d {Math.round(rate14 * 100)}% · 30d {Math.round(rate30 * 100)}% · tendência {themeData.trend}
+              </li>
+            )
+          })}
         </ul>
       </Card>
 
@@ -75,10 +95,12 @@ export const DashboardPage = () => {
         <ul>{mostWrong.map(([topic, count]) => <li key={topic}>{topic}: {count} erros</li>)}</ul>
         <p><strong>Assuntos mais treinados</strong></p>
         <ul>{mostTrained.map(([topic, count]) => <li key={topic}>{topic}: {count} questões</li>)}</ul>
-        <p><strong>Progresso por dificuldade</strong></p>
+      </Card>
+
+      <Card title="Taxa por tema">
         <ul>
-          {[...difficultyStats.entries()].map(([difficulty, stat]) => (
-            <li key={difficulty}>{difficulty}: {Math.round((stat.correct / stat.total) * 100)}%</li>
+          {[...topicStats.entries()].slice(0, 8).map(([topic, stat]) => (
+            <li key={topic}>{topic}: {Math.round((stat.correct / stat.total) * 100)}% ({stat.correct}/{stat.total})</li>
           ))}
         </ul>
       </Card>
