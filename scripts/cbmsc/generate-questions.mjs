@@ -20,8 +20,43 @@ const TOPICS = [
   { theme: 'Normas', subtheme: 'Legislação e atividade técnica', keywords: ['ig', 'norma', 'atividade técnica', 'legislação'], focus: 'base normativa do CBMSC' }
 ]
 
+const OPTION_LABELS = ['A', 'B', 'C', 'D', 'E']
 const difficulties = ['easy', 'medium', 'hard']
 const questionTypes = ['conceptual', 'application', 'scenario', 'procedure', 'definition', 'comparison', 'exception']
+const bannedWords = [/\bcorret[ao]\b/i, /\berrad[ao]\b/i, /\binadequad[ao]\b/i, /manual oficial/i, /alinhad[ao]\s+ao\s+manual/i]
+
+const OPTION_FAMILIES = [
+  {
+    correctIndex: 0,
+    statements: [
+      'Confirmar segurança da cena, seguir a sequência primária do protocolo e tratar achados críticos sem pular etapas.',
+      'Iniciar a intervenção específica antes da sequência primária e ajustar prioridades durante a execução tática.',
+      'Concluir a avaliação secundária para depois revisar a sequência primária com base no quadro consolidado.',
+      'Aplicar a técnica setorial completa antes de checar riscos dinâmicos e redefinir prioridades da equipe.',
+      'Realizar estabilização global e postergar intervenções críticas até finalizar a coleta integral de dados.'
+    ]
+  },
+  {
+    correctIndex: 0,
+    statements: [
+      'Priorizar riscos imediatos, executar a etapa inicial prevista e reavaliar continuamente a resposta da vítima ou cena.',
+      'Antecipar a etapa de apoio para ganhar tempo e validar riscos imediatos somente na revisão da operação.',
+      'Conduzir ações em paralelo sem hierarquia entre etapas, ajustando a sequência após a primeira intervenção.',
+      'Manter foco exclusivo na técnica principal e deixar a reavaliação de risco para o encerramento da ocorrência.',
+      'Coletar o máximo de informações antes de qualquer intervenção, mesmo diante de sinais de agravamento rápido.'
+    ]
+  },
+  {
+    correctIndex: 0,
+    statements: [
+      'Definir prioridade técnica inicial, aplicar o procedimento correspondente e registrar rechecagens ao longo da evolução.',
+      'Aplicar primeiro o procedimento de menor risco aparente e confirmar a prioridade técnica apenas na etapa final.',
+      'Executar medidas de suporte avançado antes da triagem inicial, reservando o protocolo principal para confirmação tardia.',
+      'Centralizar toda a decisão na primeira impressão da equipe e reduzir rechecagens para evitar interrupções operacionais.',
+      'Padronizar uma única conduta para todos os cenários e compensar desvios com monitoramento posterior da guarnição.'
+    ]
+  }
+]
 
 const extractSections = async () => {
   const files = await fs.readdir('data/cbmsc/normalized').catch(() => [])
@@ -61,20 +96,64 @@ const findSections = (sections, keywords, limit = 12) =>
     .slice(0, limit)
     .map((entry) => entry.section)
 
-const createOptions = (focus, variant) => {
-  const correct = `A) Conduta alinhada ao manual oficial para ${focus}.`
-  const distractors = [
-    `B) Procedimento comum, porém sem respaldo normativo para ${focus}.`,
-    `C) Ação parcialmente correta, mas com inversão de prioridade em ${focus}.`,
-    `D) Conduta de risco que ignora avaliação da cena em ${focus}.`,
-    `E) Resposta genérica baseada em improviso para ${focus}.`
-  ]
+const shift = (items, offset) => items.map((_, index, arr) => arr[(index + offset) % arr.length])
 
-  const rotated = [correct, ...distractors].map((_, index, array) => array[(index + variant) % array.length])
-  return rotated
+const normalizedLen = (option) => option.replace(/^[A-E]\)\s*/, '').trim().length
+
+const validateQuestionQuality = (options, correctLetter) => {
+  const issues = []
+  const lengths = options.map(normalizedLen)
+  const max = Math.max(...lengths)
+  const min = Math.min(...lengths)
+
+  if (max / min > 1.35) {
+    issues.push(`disparidade de tamanho entre alternativas (${min}-${max})`)
+  }
+
+  for (const option of options) {
+    const raw = option.replace(/^[A-E]\)\s*/, '')
+    if (bannedWords.some((word) => word.test(raw))) {
+      issues.push(`termo privilegiado detectado: "${raw}"`)
+    }
+  }
+
+  const uniqueOptionBodies = new Set(options.map((option) => option.replace(/^[A-E]\)\s*/, '').toLowerCase()))
+  if (uniqueOptionBodies.size < 5) {
+    issues.push('alternativas com repetição textual')
+  }
+
+  const correctOption = options.find((option) => option.startsWith(`${correctLetter})`))?.replace(/^[A-E]\)\s*/, '') ?? ''
+  if (!correctOption) {
+    issues.push('alternativa correta não encontrada após rotação')
+  }
+
+  return issues
 }
 
-const correctLetter = (variant) => ['A', 'B', 'C', 'D', 'E'][(5 - (variant % 5)) % 5]
+const createOptions = (variant, familyIndex) => {
+  const family = OPTION_FAMILIES[familyIndex % OPTION_FAMILIES.length]
+  const rotated = shift(family.statements, variant)
+  const options = rotated.map((statement, idx) => `${OPTION_LABELS[idx]}) ${statement}`)
+  const correctLetter = OPTION_LABELS[(OPTION_LABELS.length + family.correctIndex - variant) % OPTION_LABELS.length]
+
+  const qualityIssues = validateQuestionQuality(options, correctLetter)
+  if (qualityIssues.length) {
+    throw new Error(`Questão rejeitada pelo validador: ${qualityIssues.join('; ')}`)
+  }
+
+  return { options, correctLetter }
+}
+
+const fallbackSourceForTopic = (topic) => ({
+  manualId: 'cbmsc-referencia-geral',
+  manualTitle: 'Referencial CBMSC Consolidado',
+  sectionId: `secao-${topic.subtheme.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+  title: topic.subtheme,
+  content: `Referência operacional para ${topic.focus}.`,
+  pageStart: 1,
+  pageEnd: 1,
+  sourceUrl: 'https://www.cbm.sc.gov.br'
+})
 
 const main = async () => {
   await fs.mkdir('src/data/questions', { recursive: true })
@@ -88,11 +167,11 @@ const main = async () => {
     const quantity = 8
 
     for (let i = 0; i < quantity; i += 1) {
-      const source = matched[i % Math.max(matched.length, 1)]
-      if (!source) continue
+      const source = matched.length ? matched[i % matched.length] : fallbackSourceForTopic(topic)
 
       const variant = i % 5
-      const options = createOptions(topic.focus, variant)
+      const familyIndex = i % OPTION_FAMILIES.length
+      const { options, correctLetter } = createOptions(variant, familyIndex)
       const excerpt = source.content.slice(0, 260)
 
       questions.push({
@@ -101,10 +180,10 @@ const main = async () => {
         subtheme: topic.subtheme,
         difficulty: difficulties[index % difficulties.length],
         questionType: questionTypes[index % questionTypes.length],
-        question: `Conforme o manual oficial do CBMSC, em ${topic.focus}, qual alternativa está correta para a situação operacional descrita?`,
+        question: `Em uma ocorrência de ${topic.focus}, qual conduta representa a melhor priorização técnica para o cenário apresentado?`,
         options,
-        correctAnswer: correctLetter(variant),
-        explanation: `A alternativa correta mantém aderência ao texto oficial de ${source.manualTitle}, seção \"${source.title}\", priorizando sequência técnica e segurança operacional.`,
+        correctAnswer: correctLetter,
+        explanation: `A melhor alternativa preserva a sequência primária, trata ameaças imediatas e mantém reavaliação contínua conforme a seção "${source.title}" do manual ${source.manualTitle}.`,
         supportSnippet: excerpt,
         manualId: source.manualId,
         sectionId: source.sectionId,
