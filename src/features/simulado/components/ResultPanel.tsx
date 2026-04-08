@@ -14,6 +14,7 @@ export const ResultPanel = ({ attempt, questions }: Props) => {
   const wrongAnswers = attempt.answers.filter((answer) => !answer.isCorrect)
   const percentual = ((attempt.correctCount / questions.length) * 100).toFixed(1)
   const followUp = buildErrorFollowUp(attempts, attempt)
+  const performanceLabel = Number(percentual) >= 80 ? 'Ótimo desempenho' : Number(percentual) >= 60 ? 'Bom, com pontos de ajuste' : 'Atenção: revisar bases críticas'
 
   return (
     <div className="result-grid">
@@ -22,7 +23,8 @@ export const ResultPanel = ({ attempt, questions }: Props) => {
         <p>Nota: <strong>{attempt.score.toFixed(2)}</strong></p>
         <p>Acertos: {attempt.correctCount}</p>
         <p>Erros: {attempt.wrongCount}</p>
-        <p>Percentual: {percentual}%</p>
+        <p>Percentual: <strong className={Number(percentual) >= 60 ? 'feedback-ok' : 'feedback-warn'}>{percentual}%</strong></p>
+        <p className={Number(percentual) >= 60 ? 'feedback-ok' : 'feedback-warn'}>{performanceLabel}</p>
         <p>Português: {attempt.portugueseCorrect} | Específicos: {attempt.specificCorrect}</p>
       </section>
 

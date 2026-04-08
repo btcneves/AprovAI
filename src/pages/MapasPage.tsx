@@ -7,17 +7,22 @@ import { mindMapNodes } from '@/data/content/mindMapNodes'
 import { buildNodeAccuracy, buildNodeErrorFrequency, enrichMindMapNode, inferPerformanceStatus } from '@/domain/mindmapPedagogy'
 import { isCriticalNode, isNeglectedNode, rankNodeRecommendations } from '@/domain/nodeLearningService'
 import { MindMapTree } from '@/features/mindmap/components/MindMapTree'
+import { storage } from '@/lib/storage'
 
 const REVIEWED_STORAGE_KEY = 'aprovai_map_reviewed_nodes'
+const REVIEWED_STORAGE_VERSION = 1
 
 const loadReviewed = (): Set<string> => {
-  const raw = localStorage.getItem(REVIEWED_STORAGE_KEY)
-  if (!raw) return new Set<string>()
-  try {
-    return new Set<string>(JSON.parse(raw))
-  } catch {
-    return new Set<string>()
-  }
+  const envelope = storage.getVersioned<string[]>(REVIEWED_STORAGE_KEY, {
+    version: REVIEWED_STORAGE_VERSION,
+    fallback: [],
+    isValid: (value): value is string[] => Array.isArray(value) && value.every((item) => typeof item === 'string'),
+    migrate: {
+      0: (legacy) => (Array.isArray(legacy) ? legacy.filter((item): item is string => typeof item === 'string') : [])
+    }
+  })
+
+  return new Set<string>(envelope.data)
 }
 
 export const MapasPage = () => {
@@ -76,7 +81,7 @@ export const MapasPage = () => {
       if (becameReviewed) {
         registerNodeReview(nodeId)
       }
-      localStorage.setItem(REVIEWED_STORAGE_KEY, JSON.stringify([...next]))
+      storage.setVersioned(REVIEWED_STORAGE_KEY, REVIEWED_STORAGE_VERSION, [...next])
       return next
     })
   }

@@ -1,5 +1,6 @@
 import { activeQuestions } from '@/data/questionBank/questions'
 import type { Question, SimuladoAttempt } from './types'
+import { calculateWeightedTrend, safeRate, weightedAverage } from './learningMetrics'
 
 export type TemporalWindowDays = 7 | 14 | 30
 
@@ -26,11 +27,11 @@ export type Recommendation = {
 
 const questionMap = new Map(activeQuestions.map((question) => [question.id, question]))
 
-const buildThemeSnapshot = (questions: Question[], answers: SimuladoAttempt['answers']) => {
+const buildThemeSnapshot = (questionById: Map<string, Question>, answers: SimuladoAttempt['answers']) => {
   const perTheme = new Map<string, { total: number; correct: number; wrong: number }>()
 
   for (const answer of answers) {
-    const question = questions.find((item) => item.id === answer.questionId)
+    const question = questionById.get(answer.questionId)
     if (!question) continue
 
     const current = perTheme.get(question.topic) ?? { total: 0, correct: 0, wrong: 0 }
@@ -45,14 +46,15 @@ const buildThemeSnapshot = (questions: Question[], answers: SimuladoAttempt['ans
     totalQuestions: stat.total,
     correct: stat.correct,
     wrong: stat.wrong,
-    accuracyRate: stat.total ? Number((stat.correct / stat.total).toFixed(4)) : 0
+    accuracyRate: Number(safeRate(stat.correct, stat.total).toFixed(4))
   }))
 }
 
 export const enrichAttemptWithAnalytics = (attempt: SimuladoAttempt, questions: Question[]): SimuladoAttempt => {
   const themes = [...new Set(questions.map((question) => question.topic))]
   const subthemes = [...new Set(questions.map((question) => question.subtopic).filter(Boolean))] as string[]
-  const themeSnapshot = buildThemeSnapshot(questions, attempt.answers)
+  const questionById = new Map(questions.map((question) => [question.id, question]))
+  const themeSnapshot = buildThemeSnapshot(questionById, attempt.answers)
 
   const difficulty = questions.length === 0
     ? 'mista'
@@ -63,7 +65,7 @@ export const enrichAttemptWithAnalytics = (attempt: SimuladoAttempt, questions: 
   const wrongQuestionRefs = attempt.answers
     .filter((answer) => !answer.isCorrect)
     .map((answer) => {
-      const question = questions.find((item) => item.id === answer.questionId)
+      const question = questionById.get(answer.questionId)
       if (!question) return null
       return {
         questionId: question.id,
@@ -76,7 +78,7 @@ export const enrichAttemptWithAnalytics = (attempt: SimuladoAttempt, questions: 
   return {
     ...attempt,
     totalQuestions: questions.length,
-    accuracyRate: questions.length ? Number((attempt.correctCount / questions.length).toFixed(4)) : 0,
+    accuracyRate: Number(safeRate(attempt.correctCount, questions.length).toFixed(4)),
     themes,
     subthemes,
     difficulty,
@@ -94,35 +96,32 @@ const inWindow = (createdAt: string, days: number) => {
 
 export const buildTemporalAnalysis = (attempts: SimuladoAttempt[], windowDays: TemporalWindowDays): TemporalAnalysis => {
   const filtered = attempts.filter((attempt) => inWindow(attempt.createdAt, windowDays))
-  const perTheme = new Map<string, Array<{ rate: number; wrongRate: number }>>()
+  const perTheme = new Map<string, Array<{ at: string; rate: number; wrongRate: number }>>()
 
   for (const attempt of filtered) {
     const snapshot = attempt.themeSnapshot ?? []
     for (const themeData of snapshot) {
       const current = perTheme.get(themeData.theme) ?? []
       current.push({
+        at: attempt.createdAt,
         rate: themeData.accuracyRate,
-        wrongRate: themeData.totalQuestions ? themeData.wrong / themeData.totalQuestions : 0
+        wrongRate: safeRate(themeData.wrong, themeData.totalQuestions)
       })
       perTheme.set(themeData.theme, current)
     }
   }
 
   const themes = [...perTheme.entries()].map(([theme, samples]) => {
-    const avgAccuracyRate = samples.reduce((sum, sample) => sum + sample.rate, 0) / samples.length
-    const errorFrequency = samples.reduce((sum, sample) => sum + sample.wrongRate, 0) / samples.length
-    const firstHalf = samples.slice(0, Math.ceil(samples.length / 2))
-    const secondHalf = samples.slice(Math.ceil(samples.length / 2))
-    const firstRate = firstHalf.length ? firstHalf.reduce((sum, sample) => sum + sample.rate, 0) / firstHalf.length : avgAccuracyRate
-    const secondRate = secondHalf.length ? secondHalf.reduce((sum, sample) => sum + sample.rate, 0) / secondHalf.length : avgAccuracyRate
-    const delta = secondRate - firstRate
+    const avgAccuracyRate = weightedAverage(samples.map((sample) => ({ at: sample.at, value: sample.rate })))
+    const errorFrequency = weightedAverage(samples.map((sample) => ({ at: sample.at, value: sample.wrongRate })))
+    const trend = calculateWeightedTrend(samples.map((sample) => ({ at: sample.at, value: sample.rate })))
 
     return {
       theme,
       avgAccuracyRate: Number(avgAccuracyRate.toFixed(4)),
       errorFrequency: Number(errorFrequency.toFixed(4)),
       attempts: samples.length,
-      trend: (delta > 0.07 ? 'melhorando' : delta < -0.07 ? 'piorando' : 'estavel') as 'melhorando' | 'piorando' | 'estavel'
+      trend
     }
   })
 
@@ -148,7 +147,7 @@ export const buildRecommendations = (attempts: SimuladoAttempt[]): Recommendatio
         type: 'weak-recent',
         priority: 100 - index * 10,
         title: `Fortalecer ${item.theme}`,
-        description: `Taxa recente de ${(item.avgAccuracyRate * 100).toFixed(0)}% nos últimos 14 dias.`
+        description: `Taxa recente ponderada de ${(item.avgAccuracyRate * 100).toFixed(0)}% nos últimos 14 dias.`
       })
     })
 
@@ -161,7 +160,7 @@ export const buildRecommendations = (attempts: SimuladoAttempt[]): Recommendatio
         type: 'falling',
         priority: 80 - index * 10,
         title: `Reagir à queda em ${item.theme}`,
-        description: 'Desempenho em queda na janela de 30 dias.'
+        description: 'Desempenho em queda na janela de 30 dias (com peso temporal).'
       })
     })
 
@@ -258,10 +257,7 @@ export const hydrateAttempt = (attempt: SimuladoAttempt): SimuladoAttempt => {
       difficulty: attempt.difficulty ?? 'mista',
       themes: attempt.themes ?? [],
       subthemes: attempt.subthemes ?? [],
-      totalQuestions: attempt.totalQuestions ?? questions.length,
-      accuracyRate: attempt.accuracyRate ?? (questions.length ? Number((attempt.correctCount / questions.length).toFixed(4)) : 0),
-      wrongQuestionRefs: attempt.wrongQuestionRefs ?? [],
-      themeSnapshot: attempt.themeSnapshot ?? []
+      wrongQuestionRefs: attempt.wrongQuestionRefs ?? []
     },
     questions
   )

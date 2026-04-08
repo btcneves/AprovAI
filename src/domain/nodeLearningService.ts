@@ -1,8 +1,10 @@
 import type { SimuladoAnswer } from './types'
 import type { Question } from './types'
 import { storage } from '@/lib/storage'
+import { calculateWeightedTrend, toPercent, weightedAverage } from './learningMetrics'
 
 const NODE_LEARNING_KEY = 'aprovai_node_learning_v1'
+const NODE_LEARNING_SCHEMA_VERSION = 1
 const DAY_IN_MS = 24 * 60 * 60 * 1000
 
 export type NodeTrend = 'melhorando' | 'piorando' | 'estavel'
@@ -27,23 +29,18 @@ export type NodeLearningStats = {
 
 export type NodeLearningMap = Record<string, NodeLearningStats>
 
-const toPercent = (value: number) => Number((value * 100).toFixed(1))
+const isRecord = (value: unknown): value is Record<string, unknown> => !!value && typeof value === 'object' && !Array.isArray(value)
 
-const calculateTrend = (history: NodeAccuracySnapshot[]): NodeTrend => {
-  if (history.length < 2) return 'estavel'
-  const recent = history.slice(-6)
-  const splitIndex = Math.max(1, Math.floor(recent.length / 2))
-  const olderSlice = recent.slice(0, splitIndex)
-  const newerSlice = recent.slice(splitIndex)
-
-  const olderAvg = olderSlice.reduce((acc, item) => acc + item.accuracyRate, 0) / olderSlice.length
-  const newerAvg = newerSlice.reduce((acc, item) => acc + item.accuracyRate, 0) / newerSlice.length
-  const delta = newerAvg - olderAvg
-
-  if (delta > 8) return 'melhorando'
-  if (delta < -8) return 'piorando'
-  return 'estavel'
+const isValidNodeStats = (value: unknown): value is NodeLearningStats => {
+  if (!isRecord(value)) return false
+  return typeof value.nodeId === 'string' && Array.isArray(value.history)
 }
+
+const isValidNodeLearningMap = (value: unknown): value is NodeLearningMap =>
+  isRecord(value) && Object.values(value).every(isValidNodeStats)
+
+const calculateTrend = (history: NodeAccuracySnapshot[]): NodeTrend =>
+  calculateWeightedTrend(history.map((item) => ({ at: item.at, value: item.accuracyRate / 100 })))
 
 const baseNodeStats = (nodeId: string): NodeLearningStats => ({
   nodeId,
@@ -59,15 +56,14 @@ const baseNodeStats = (nodeId: string): NodeLearningStats => ({
 })
 
 const withDerivedFields = (entry: NodeLearningStats): NodeLearningStats => {
-  const total = entry.correctCount + entry.errorCount
-  const accuracyRate = total ? toPercent(entry.correctCount / total) : 0
-  const history = entry.history.slice(-8)
+  const boundedHistory = entry.history.slice(-8).filter((item) => typeof item.at === 'string' && Number.isFinite(item.accuracyRate))
+  const weightedRate = weightedAverage(boundedHistory.map((item) => ({ at: item.at, value: item.accuracyRate / 100 })))
 
   return {
     ...entry,
-    accuracyRate,
-    history,
-    trend: calculateTrend(history)
+    accuracyRate: toPercent(weightedRate),
+    history: boundedHistory,
+    trend: calculateTrend(boundedHistory)
   }
 }
 
@@ -85,13 +81,20 @@ const normalizeMap = (raw: NodeLearningMap): NodeLearningMap =>
   )
 
 export const loadNodeLearning = (): NodeLearningMap => {
-  const raw = storage.get<NodeLearningMap>(NODE_LEARNING_KEY, {})
-  return normalizeMap(raw)
+  const envelope = storage.getVersioned<NodeLearningMap>(NODE_LEARNING_KEY, {
+    version: NODE_LEARNING_SCHEMA_VERSION,
+    fallback: {},
+    isValid: isValidNodeLearningMap,
+    migrate: {
+      0: (legacy) => (isRecord(legacy) ? normalizeMap(legacy as NodeLearningMap) : {})
+    }
+  })
+  return normalizeMap(envelope.data)
 }
 
 export const saveNodeLearning = (state: NodeLearningMap): NodeLearningMap => {
   const normalized = normalizeMap(state)
-  storage.set(NODE_LEARNING_KEY, normalized)
+  storage.setVersioned(NODE_LEARNING_KEY, NODE_LEARNING_SCHEMA_VERSION, normalized)
   return normalized
 }
 

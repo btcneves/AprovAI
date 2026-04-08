@@ -14,6 +14,7 @@ export const QuestionCard = ({ question, index, total, selected, onSelect }: Pro
       Questão {index + 1} de {total}
     </h3>
     <p>{question.statement}</p>
+    {selected ? <p className="selection-hint">Resposta selecionada: <strong>{selected}</strong></p> : <p className="selection-hint">Selecione uma alternativa para avançar com segurança.</p>}
     <div className="alternatives">
       {question.alternatives.map((alternative) => (
         <label key={alternative.id} className={selected === alternative.id ? 'alt selected' : 'alt'}>

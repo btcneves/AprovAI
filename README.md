@@ -13,7 +13,7 @@ Plataforma web de estudo para o Concurso Público nº 001/2026 (Bombeiro Comunit
   - nós gerados a partir de artefatos CBMSC (`src/data/mindmaps/cbmsc-*.json`).
 - **Simulado oficial 5 + 30** (Português + Específicos), com filtros anti-repetição e pontuação ponderada.
 - **Modo de estudo inteligente** (temas fracos, subtema, dificuldade, revisão de erros recentes).
-- **Analytics persistente em `localStorage`** com snapshots por tema, janelas temporais (7/14/30 dias) e recomendações adaptativas.
+- **Analytics persistente em `localStorage`** com schema versionado (`{ version, data }`), migração automática, validação de integridade, snapshots por tema, janelas temporais (7/14/30 dias) e recomendações adaptativas com decaimento temporal.
 
 ## Stack real
 
@@ -83,7 +83,7 @@ npm run preview
 - `npm run dev` — sobe ambiente local com Vite.
 - `npm run build` — compila TypeScript e gera bundle.
 - `npm run preview` — serve build localmente.
-- `npm run test` — executa suíte de testes (run único).
+- `npm run test` — executa suíte de testes (run único via Vitest).
 - `npm run test:watch` — executa testes em watch mode.
 - `npm run lint` — valida código com ESLint.
 
@@ -127,7 +127,7 @@ Após finalizar sessão, o app:
 
 1. enriquece tentativa com snapshot por tema/subtema e taxa de acerto;
 2. persiste a tentativa em `localStorage` (`imarui_simulados`);
-3. atualiza análises temporais (7, 14 e 30 dias);
+3. atualiza análises temporais (7, 14 e 30 dias) com peso maior para eventos recentes (decay temporal);
 4. produz recomendações adaptativas por prioridade:
    - fraqueza recente (`weak-recent`),
    - tendência de queda (`falling`),
@@ -139,7 +139,7 @@ Após finalizar sessão, o app:
 - Política oficial: `data/cbmsc/DERIVED_DATA_POLICY.md`.
 - O repositório **versiona artefatos finais e manifests**.
 - Artefatos intermediários (`raw`, `parsed`, `normalized`) são reproduzíveis por script e não precisam ser versionados integralmente.
-- Persistência de uso do aluno (histórico/analytics) é local no navegador via `localStorage`.
+- Persistência de uso do aluno (histórico/analytics/mapas revisados/nós de aprendizagem) é local no navegador via `localStorage` com envelope versionado e migrações seguras.
 
 ## Estrutura principal de pastas
 
