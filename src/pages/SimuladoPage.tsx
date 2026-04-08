@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { useAppState } from '@/app/AppStateContext'
 import { buildSimulado, evaluateSimulado, type StudyMode } from '@/domain/simuladoService'
 import { enrichAttemptWithAnalytics } from '@/domain/analyticsService'
@@ -9,12 +10,19 @@ import { ResultPanel } from '@/features/simulado/components/ResultPanel'
 
 export const SimuladoPage = () => {
   const { attempts, registerAttempt } = useAppState()
+  const [searchParams] = useSearchParams()
+
+  const presetMode = searchParams.get('mode') as StudyMode | null
+  const presetTopic = searchParams.get('topic') ?? ''
+  const presetSubtopic = searchParams.get('subtopic') ?? ''
+
   const [questions, setQuestions] = useState<Question[]>([])
   const [index, setIndex] = useState(0)
   const [answers, setAnswers] = useState<Record<string, AlternativeId | null>>({})
   const [result, setResult] = useState<SimuladoAttempt | null>(null)
-  const [mode, setMode] = useState<StudyMode>('full')
-  const [subtopic, setSubtopic] = useState('')
+  const [mode, setMode] = useState<StudyMode>(presetMode ?? 'full')
+  const [topic, setTopic] = useState(presetTopic)
+  const [subtopic, setSubtopic] = useState(presetSubtopic)
   const [difficulty, setDifficulty] = useState<Difficulty>('media')
 
   const progress = useMemo(() => {
@@ -22,12 +30,14 @@ export const SimuladoPage = () => {
     return questions.length ? Math.round((answered / questions.length) * 100) : 0
   }, [answers, questions.length])
 
+  const topics = useMemo(() => [...new Set(activeQuestions.map((question) => question.topic))].sort((a, b) => a.localeCompare(b)), [])
+
   const subtopics = useMemo(
     () =>
-      [...new Set(activeQuestions.map((question) => question.subtopic).filter(Boolean))]
+      [...new Set(activeQuestions.filter((question) => !topic || question.topic === topic).map((question) => question.subtopic).filter(Boolean))]
         .sort((a, b) => (a ?? '').localeCompare(b ?? ''))
         .map((value) => value as string),
-    []
+    [topic]
   )
 
   const start = () => {
@@ -37,6 +47,7 @@ export const SimuladoPage = () => {
         : buildSimulado(attempts, {
             mode,
             questionCount: 20,
+            topic: topic || undefined,
             subtopic: subtopic || undefined,
             difficulty
           })
@@ -70,17 +81,31 @@ export const SimuladoPage = () => {
       <section className="card">
         <h2>Simulado Oficial + Modo de Estudo Inteligente</h2>
         <p>Modo completo mantém a distribuição oficial: 5 Português + 30 Específicos.</p>
+        {(presetTopic || presetSubtopic) ? <p><strong>Treino sugerido pelo mapa:</strong> {presetTopic} {presetSubtopic ? `› ${presetSubtopic}` : ''}</p> : null}
         <div className="study-config-grid">
           <label>
             Modo de estudo
             <select className="input" value={mode} onChange={(event) => setMode(event.target.value as StudyMode)}>
               <option value="full">Simulado oficial completo</option>
               <option value="weak-topics">Treino focado em temas fracos</option>
+              <option value="topic">Treino por tema</option>
               <option value="subtopic">Treino por subtema</option>
               <option value="difficulty">Treino por dificuldade</option>
               <option value="recent-wrong">Revisão das erradas recentes</option>
             </select>
           </label>
+
+          {mode === 'topic' || mode === 'subtopic' ? (
+            <label>
+              Tema
+              <select className="input" value={topic} onChange={(event) => { setTopic(event.target.value); setSubtopic('') }}>
+                <option value="">Selecione um tema</option>
+                {topics.map((item) => (
+                  <option key={item} value={item}>{item}</option>
+                ))}
+              </select>
+            </label>
+          ) : null}
 
           {mode === 'subtopic' ? (
             <label>
