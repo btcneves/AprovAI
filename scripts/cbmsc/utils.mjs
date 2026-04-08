@@ -43,7 +43,15 @@ export const stripTags = (input) =>
 export const extensionFromUrl = (url) => {
   const clean = url.split('?')[0]
   const ext = path.extname(clean).toLowerCase()
-  return ext || '.html'
+  if (ext) return ext
+
+  if (/[?&]download=\d+:[^&#]+/i.test(url)) {
+    const slug = (url.match(/[?&]download=\d+:([^&#]+)/i)?.[1] || '').toLowerCase()
+    const slugExt = path.extname(slug)
+    return slugExt || '.pdf'
+  }
+
+  return '.html'
 }
 
 export const ensureCbmscDirs = async () => {

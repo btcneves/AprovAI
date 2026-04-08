@@ -162,7 +162,7 @@ const main = async () => {
       }
 
       await writeJson(`data/cbmsc/parsed/${baseName}.json`, document)
-      qualityLog.push({ file, status: 'parsed', sections: sections.length, lowTextPages })
+      qualityLog.push({ file, status: 'parsed', sections: sections.length, lowTextPages: lowQualityPages })
     } catch (error) {
       qualityLog.push({ file, status: 'failed', reason: error.message })
     }

@@ -1,13 +1,501 @@
 {
-  "generatedAt": "2026-04-08T14:40:33.370Z",
-  "onlineCollected": 0,
-  "finalCount": 2,
-  "usedFallback": true,
+  "generatedAt": "2026-04-08T15:23:19.201Z",
+  "categoriesSeen": 6,
+  "manualsSeen": 70,
+  "available": 70,
+  "onlineCollected": 70,
+  "finalCount": 70,
+  "usedFallback": false,
   "logs": [
     {
-      "step": "fallback",
+      "step": "detail-page",
       "level": "warn",
-      "message": "Coleta online indisponível ou sem resultados. Mantendo índice anterior/fallback para não interromper pipeline."
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/901",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/902",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/900",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/745",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/751",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-1-introducao-aos-primeiros-socorros",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/801",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-2-orientacoes-de-seguranca-e-prevencao",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/802",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-3-avaliacao-de-cena",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/803",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-4-emergencias-respiratorias",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/804",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-5-ressuscitacao-cardiopulmonar",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/805",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-plano-de-instrucao-diaria-atendimento-pre-hospitalar",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/807",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-chefia-e-lideranca",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/753",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-etica-e-cidadania",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/765",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-gerenciamento-de-estresse-manual-do-aluno-cfsd-2018",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/768",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-gerenciamento-de-estresse-bm",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/767",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-guia-de-producao-de-material-didatico-no-cbmsc",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/788",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-guia-para-gerencia-e-docencia-no-ambiente-virtual-de-aprendizagem-do-corpo-de-bombeiros-militar-de-santa-catarina",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/787",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-guias-operacionais-forma-e-conteudo-como-fazer",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/786",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-informatica-aplicada-ao-cbmsc-manual-do-aluno-cfsd-2018",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/770",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-manual-de-capacitacao-em-ambiente-virtual-de-aprendizagem-moodle",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/750",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-manual-do-participante-curso-de-atendente-de-central-de-emergencia",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/748",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-manual-do-participante-curso-de-tecnicas-de-ensino-cte",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/758",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-material-do-aluno-educacao-fisica-militar-efm",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/762",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-organizacao-e-administracao-de-bombeiro",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/775",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/778",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/755",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-introducao-a-investigacao-de-incendio",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/771",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/754",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-florestal",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/756",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/777",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-defesa-civil-dcv-para-a-formacao-do-soldado-do-cbmsc",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/759",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-nocoes-em-incendios-florestais-guia-do-aluno",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/769",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-normas-de-seguranca-contra-incendios-instrucao-normativa-in-001-dat-cbmsc-da-atividade-tecnica",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/789",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-topicos-avancados-comando-de-operacoes-em-combate-a-incendio-estrutural",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/743",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/741",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "incendios-produtos-perigosos-defesa-civil-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-2018",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/736",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/781",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2015",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/782",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/793",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/783",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-curso-para-condutores-de-veiculos-de-emergencia-2021",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/757",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-direito-aplicado-a-atividade-bombeiro-militar-curso-de-formacao-de-soldados-2018",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/760",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-direito-militar-e-processual-militar-curso-de-formacao-de-soldados-2018",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/761",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-dtz-nr-26-exeucucao-e-fiscalizacao-da-atividade-tecnica-pelo-cbmsc",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/785",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-equipamentos-motomecanizados-curso-de-formacao-de-soldados-2018",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/763",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-legislacao-e-regulamentos-manual-do-aluno-cfsd-2019",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/772",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-manual-de-flamula",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/766",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-manual-de-ordem-unida-cfsd",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/774",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-manual-de-sistema-de-comando-de-operacoes-sco-para-a-formacao-do-soldado-do-cbmsc",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/799",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-normas-de-seguranca-contra-incendios-instrucao-normativa-in-005-dat-cbmsc-edificacoes-existentes",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/790",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-procedimentos-administrativos-manual-do-aluno-cfsd-2019",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/776",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-atividade-tecnica-no-corpo-de-bombeiros-militar-de-santa-catarina",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/739",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-ciencias-do-fogo",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/738",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-nocoes-de-radiocomunicacao-no-cbmsc",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/737",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-revisada-2021",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/798",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-busca-terrestre-manual-do-aluno-curso-de-formacao-de-soldados",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/747",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-captura-e-manejo-de-insetos",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/749",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-curso-de-capacitacao-em-salvamento-em-altura-2012",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/794",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-curso-de-salvamento-com-moto-aquatica",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/773",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-curso-de-salvamento-com-moto-aquatica-csm",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/841",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-manuais-tecnicos-curso-de-salvamento-em-altura-csalt",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/795",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-manual-de-capacitacao-em-busca-terrestre",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/746",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-1-edicao",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/780",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/779",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/797",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-manual-do-curso-de-busca-e-resgate-em-inundacoes-e-enxurradas-cbrie",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/752",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-nocoes-de-espaco-confinado-cfsd-2018",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/764",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-plano-de-instrucao-diaria-salvamento-em-altura",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/806",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-salvamento-aquatico-e-coordenacao-de-praia",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/796",
+      "message": "Página de detalhe sem link de download detectável."
+    },
+    {
+      "step": "detail-page",
+      "level": "warn",
+      "manualId": "salvamento-busca-resgate-topicos-avancados-coordenacao-de-praia-e-gestao-do-servico-de-salvamento-aquatico",
+      "detailUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/file/742",
+      "message": "Página de detalhe sem link de download detectável."
     }
   ]
 }

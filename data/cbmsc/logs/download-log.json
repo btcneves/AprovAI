@@ -1,17 +1,426 @@
 {
-  "generatedAt": "2026-04-08T14:40:34.046Z",
-  "downloaded": 0,
-  "total": 2,
+  "generatedAt": "2026-04-08T15:14:06.459Z",
+  "downloaded": 69,
+  "total": 70,
   "logEntries": [
     {
-      "manualId": "combate-incendio-estrutural-manual",
-      "status": "skipped",
-      "reason": "missing_file_url"
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022.pdf",
+      "bytes": 25708798
     },
     {
-      "manualId": "atendimento-basico-emergencias-manual",
-      "status": "skipped",
-      "reason": "missing_file_url"
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022.pdf",
+      "bytes": 12794053
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022",
+      "status": "failed",
+      "reason": "Command failed: curl -L --silent --show-error --max-time 90 https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=900:aph-ti-atendimento-pre-hospitalar-no-cbmsc-2022\ncurl: (18) transfer closed with 2505897 bytes remaining to read\n"
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/atendimento-pre-hospitalar-primeiros-socorros-atendimento-pre-hospitalar-cfsd-2018.pdf",
+      "bytes": 10597286
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias.pdf",
+      "bytes": 26525193
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-1-introducao-aos-primeiros-socorros",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-1-introducao-aos-primeiros-socorros.pdf",
+      "bytes": 1063150
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-2-orientacoes-de-seguranca-e-prevencao",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-2-orientacoes-de-seguranca-e-prevencao.pdf",
+      "bytes": 1937455
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-3-avaliacao-de-cena",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-3-avaliacao-de-cena.pdf",
+      "bytes": 1842525
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-4-emergencias-respiratorias",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-4-emergencias-respiratorias.pdf",
+      "bytes": 2015510
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-5-ressuscitacao-cardiopulmonar",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/atendimento-pre-hospitalar-primeiros-socorros-nocoes-de-primeiros-socorros-para-profissionais-da-educacao-modulo-5-ressuscitacao-cardiopulmonar.pdf",
+      "bytes": 1535846
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-plano-de-instrucao-diaria-atendimento-pre-hospitalar",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/atendimento-pre-hospitalar-primeiros-socorros-plano-de-instrucao-diaria-atendimento-pre-hospitalar.pdf",
+      "bytes": 6113479
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-chefia-e-lideranca",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-chefia-e-lideranca.pdf",
+      "bytes": 222516
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-etica-e-cidadania",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-etica-e-cidadania.pdf",
+      "bytes": 587398
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-gerenciamento-de-estresse-manual-do-aluno-cfsd-2018",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-gerenciamento-de-estresse-manual-do-aluno-cfsd-2018.pdf",
+      "bytes": 754599
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-gerenciamento-de-estresse-bm",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-gerenciamento-de-estresse-bm.pdf",
+      "bytes": 3193405
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-guia-de-producao-de-material-didatico-no-cbmsc",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-guia-de-producao-de-material-didatico-no-cbmsc.pdf",
+      "bytes": 2900506
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-guia-para-gerencia-e-docencia-no-ambiente-virtual-de-aprendizagem-do-corpo-de-bombeiros-militar-de-santa-catarina",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-guia-para-gerencia-e-docencia-no-ambiente-virtual-de-aprendizagem-do-corpo-de-bombeiros-militar-de-santa-catarina.pdf",
+      "bytes": 5453146
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-guias-operacionais-forma-e-conteudo-como-fazer",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-guias-operacionais-forma-e-conteudo-como-fazer.pdf",
+      "bytes": 1129778
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-informatica-aplicada-ao-cbmsc-manual-do-aluno-cfsd-2018",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-informatica-aplicada-ao-cbmsc-manual-do-aluno-cfsd-2018.pdf",
+      "bytes": 7255604
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-manual-de-capacitacao-em-ambiente-virtual-de-aprendizagem-moodle",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-manual-de-capacitacao-em-ambiente-virtual-de-aprendizagem-moodle.pdf",
+      "bytes": 45125445
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-manual-do-participante-curso-de-atendente-de-central-de-emergencia",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-manual-do-participante-curso-de-atendente-de-central-de-emergencia.pdf",
+      "bytes": 28409738
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-manual-do-participante-curso-de-tecnicas-de-ensino-cte",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-manual-do-participante-curso-de-tecnicas-de-ensino-cte.pdf",
+      "bytes": 10163942
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-material-do-aluno-educacao-fisica-militar-efm",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-material-do-aluno-educacao-fisica-militar-efm.pdf",
+      "bytes": 1791217
+    },
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-organizacao-e-administracao-de-bombeiro",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/gestao-ensino-lideranca-saude-do-bombeiro-organizacao-e-administracao-de-bombeiro.pdf",
+      "bytes": 2056692
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos.pdf",
+      "bytes": 4312820
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios.pdf",
+      "bytes": 10205196
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-introducao-a-investigacao-de-incendio",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-introducao-a-investigacao-de-incendio.pdf",
+      "bytes": 1494771
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural.pdf",
+      "bytes": 24630230
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-florestal",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-florestal.pdf",
+      "bytes": 11483872
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-emergencias-com-produtos-perigosos.pdf",
+      "bytes": 20057197
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-defesa-civil-dcv-para-a-formacao-do-soldado-do-cbmsc",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-manual-de-defesa-civil-dcv-para-a-formacao-do-soldado-do-cbmsc.pdf",
+      "bytes": 7479996
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-nocoes-em-incendios-florestais-guia-do-aluno",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-nocoes-em-incendios-florestais-guia-do-aluno.pdf",
+      "bytes": 6713789
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-normas-de-seguranca-contra-incendios-instrucao-normativa-in-001-dat-cbmsc-da-atividade-tecnica",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-normas-de-seguranca-contra-incendios-instrucao-normativa-in-001-dat-cbmsc-da-atividade-tecnica.pdf",
+      "bytes": 711110
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-topicos-avancados-comando-de-operacoes-em-combate-a-incendio-estrutural",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-topicos-avancados-comando-de-operacoes-em-combate-a-incendio-estrutural.pdf",
+      "bytes": 2155454
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos.pdf",
+      "bytes": 6982657
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-2018",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/incendios-produtos-perigosos-defesa-civil-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-2018.pdf",
+      "bytes": 5874837
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2014.pdf",
+      "bytes": 13490011
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2015",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-aspirantes-2015.pdf",
+      "bytes": 13477871
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020.pdf",
+      "bytes": 75952927
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfs-2020.pdf",
+      "bytes": 66159817
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-curso-para-condutores-de-veiculos-de-emergencia-2021",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-curso-para-condutores-de-veiculos-de-emergencia-2021.pdf",
+      "bytes": 2801673
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-direito-aplicado-a-atividade-bombeiro-militar-curso-de-formacao-de-soldados-2018",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-direito-aplicado-a-atividade-bombeiro-militar-curso-de-formacao-de-soldados-2018.pdf",
+      "bytes": 2573935
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-direito-militar-e-processual-militar-curso-de-formacao-de-soldados-2018",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-direito-militar-e-processual-militar-curso-de-formacao-de-soldados-2018.pdf",
+      "bytes": 3952814
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-dtz-nr-26-exeucucao-e-fiscalizacao-da-atividade-tecnica-pelo-cbmsc",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-dtz-nr-26-exeucucao-e-fiscalizacao-da-atividade-tecnica-pelo-cbmsc.pdf",
+      "bytes": 839201
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-equipamentos-motomecanizados-curso-de-formacao-de-soldados-2018",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-equipamentos-motomecanizados-curso-de-formacao-de-soldados-2018.pdf",
+      "bytes": 33326681
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-legislacao-e-regulamentos-manual-do-aluno-cfsd-2019",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-legislacao-e-regulamentos-manual-do-aluno-cfsd-2019.pdf",
+      "bytes": 2139744
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-manual-de-flamula",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-manual-de-flamula.pdf",
+      "bytes": 894407
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-manual-de-ordem-unida-cfsd",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-manual-de-ordem-unida-cfsd.pdf",
+      "bytes": 34914732
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-manual-de-sistema-de-comando-de-operacoes-sco-para-a-formacao-do-soldado-do-cbmsc",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-manual-de-sistema-de-comando-de-operacoes-sco-para-a-formacao-do-soldado-do-cbmsc.pdf",
+      "bytes": 7202001
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-normas-de-seguranca-contra-incendios-instrucao-normativa-in-005-dat-cbmsc-edificacoes-existentes",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-normas-de-seguranca-contra-incendios-instrucao-normativa-in-005-dat-cbmsc-edificacoes-existentes.pdf",
+      "bytes": 545449
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-procedimentos-administrativos-manual-do-aluno-cfsd-2019",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-procedimentos-administrativos-manual-do-aluno-cfsd-2019.pdf",
+      "bytes": 1602493
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-atividade-tecnica-no-corpo-de-bombeiros-militar-de-santa-catarina",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-atividade-tecnica-no-corpo-de-bombeiros-militar-de-santa-catarina.pdf",
+      "bytes": 3330783
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-ciencias-do-fogo",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-ciencias-do-fogo.pdf",
+      "bytes": 5374194
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-nocoes-de-radiocomunicacao-no-cbmsc",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-nocoes-de-radiocomunicacao-no-cbmsc.pdf",
+      "bytes": 7844862
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-revisada-2021",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/normas-legislacao-atividade-tecnica-formacao-militar-topicos-introdutorios-seguranca-contra-incendio-e-panico-1-edicao-revisada-2021.pdf",
+      "bytes": 5598115
+    },
+    {
+      "manualId": "salvamento-busca-resgate-busca-terrestre-manual-do-aluno-curso-de-formacao-de-soldados",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-busca-terrestre-manual-do-aluno-curso-de-formacao-de-soldados.pdf",
+      "bytes": 4991982
+    },
+    {
+      "manualId": "salvamento-busca-resgate-captura-e-manejo-de-insetos",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-captura-e-manejo-de-insetos.pdf",
+      "bytes": 446498
+    },
+    {
+      "manualId": "salvamento-busca-resgate-curso-de-capacitacao-em-salvamento-em-altura-2012",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-curso-de-capacitacao-em-salvamento-em-altura-2012.pdf",
+      "bytes": 67741871
+    },
+    {
+      "manualId": "salvamento-busca-resgate-curso-de-salvamento-com-moto-aquatica",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-curso-de-salvamento-com-moto-aquatica.pdf",
+      "bytes": 12795811
+    },
+    {
+      "manualId": "salvamento-busca-resgate-curso-de-salvamento-com-moto-aquatica-csm",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-curso-de-salvamento-com-moto-aquatica-csm.pdf",
+      "bytes": 5971466
+    },
+    {
+      "manualId": "salvamento-busca-resgate-manuais-tecnicos-curso-de-salvamento-em-altura-csalt",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-manuais-tecnicos-curso-de-salvamento-em-altura-csalt.pdf",
+      "bytes": 6726728
+    },
+    {
+      "manualId": "salvamento-busca-resgate-manual-de-capacitacao-em-busca-terrestre",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-manual-de-capacitacao-em-busca-terrestre.pdf",
+      "bytes": 15341124
+    },
+    {
+      "manualId": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-1-edicao",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-1-edicao.pdf",
+      "bytes": 50053312
+    },
+    {
+      "manualId": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao.pdf",
+      "bytes": 23579470
+    },
+    {
+      "manualId": "salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-manual-de-capacitacao-em-salvamento-aquatico-servico-de-guarda-vidas.pdf",
+      "bytes": 27279513
+    },
+    {
+      "manualId": "salvamento-busca-resgate-manual-do-curso-de-busca-e-resgate-em-inundacoes-e-enxurradas-cbrie",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-manual-do-curso-de-busca-e-resgate-em-inundacoes-e-enxurradas-cbrie.pdf",
+      "bytes": 14806577
+    },
+    {
+      "manualId": "salvamento-busca-resgate-nocoes-de-espaco-confinado-cfsd-2018",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-nocoes-de-espaco-confinado-cfsd-2018.pdf",
+      "bytes": 2627794
+    },
+    {
+      "manualId": "salvamento-busca-resgate-plano-de-instrucao-diaria-salvamento-em-altura",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-plano-de-instrucao-diaria-salvamento-em-altura.pdf",
+      "bytes": 5010653
+    },
+    {
+      "manualId": "salvamento-busca-resgate-salvamento-aquatico-e-coordenacao-de-praia",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-salvamento-aquatico-e-coordenacao-de-praia.pdf",
+      "bytes": 4435604
+    },
+    {
+      "manualId": "salvamento-busca-resgate-topicos-avancados-coordenacao-de-praia-e-gestao-do-servico-de-salvamento-aquatico",
+      "status": "downloaded",
+      "file": "data/cbmsc/raw/salvamento-busca-resgate-topicos-avancados-coordenacao-de-praia-e-gestao-do-servico-de-salvamento-aquatico.pdf",
+      "bytes": 5871176
     }
   ]
 }
