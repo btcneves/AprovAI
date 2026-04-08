@@ -30,6 +30,7 @@ export type Question = {
   tags: string[]
   relatedMindMapNodeId: string
   isActive: boolean
+  supportSnippet?: string
   sourceRefs?: QuestionOfficialSource[]
 }
 
@@ -39,6 +40,18 @@ export type MindMapNode = {
   discipline: Discipline
   descriptionShort: string
   descriptionDetailed: string
+  summary?: string
+  examHighlights?: string[]
+  commonMistakes?: string[]
+  sources?: Array<{
+    manualId: string
+    manualTitle?: string
+    sectionId?: string
+    sourceUrl: string
+    pageStart?: number
+    pageEnd?: number
+    excerpt?: string
+  }>
   studyChecklist?: string[]
   studyReferences?: Array<{
     label: string

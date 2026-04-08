@@ -23,28 +23,32 @@ export const ResultPanel = ({ attempt, questions }: Props) => {
       </section>
 
       <section className="card">
-        <h3>Questões para revisão</h3>
+        <h3>Revisão pós-simulado</h3>
         {wrongAnswers.length === 0 ? <p>Excelente! Você acertou todas.</p> : null}
         {wrongAnswers.map((answer) => {
           const question = questionMap.get(answer.questionId)
           if (!question) return null
 
+          const selectedText = question.alternatives.find((alternative) => alternative.id === answer.selectedAlternativeId)?.text
+          const correctText = question.alternatives.find((alternative) => alternative.id === question.correctAlternativeId)?.text
+
           return (
-            <div key={question.id} className="wrong-item">
-              <p><strong>{question.statement}</strong></p>
-              <p>Marcada: {answer.selectedAlternativeId ?? 'Não respondida'}</p>
-              <p>Correta: {question.correctAlternativeId}</p>
-              <p>Explicação: {question.explanation}</p>
+            <article key={question.id} className="wrong-item">
+              <p><strong>Questão errada:</strong> {question.statement}</p>
+              <p><strong>Resposta marcada:</strong> {answer.selectedAlternativeId ?? 'Não respondida'} {selectedText ? `— ${selectedText}` : ''}</p>
+              <p><strong>Resposta correta:</strong> {question.correctAlternativeId} {correctText ? `— ${correctText}` : ''}</p>
+              <p><strong>Explicação:</strong> {question.explanation}</p>
               {question.sourceRefs?.[0] ? (
                 <p>
-                  Fonte: manual <strong>{question.sourceRefs[0].manualId ?? 'n/d'}</strong>
-                  {question.sourceRefs[0].sectionId ? ` | seção ${question.sourceRefs[0].sectionId}` : ''}
+                  <strong>Manual / Seção / Página:</strong> {question.sourceRefs[0].manualId ?? 'n/d'}
+                  {question.sourceRefs[0].sectionId ? ` | ${question.sourceRefs[0].sectionId}` : ''}
                   {question.sourceRefs[0].pageStart ? ` | p. ${question.sourceRefs[0].pageStart}${question.sourceRefs[0].pageEnd && question.sourceRefs[0].pageEnd !== question.sourceRefs[0].pageStart ? `-${question.sourceRefs[0].pageEnd}` : ''}` : ''}
                 </p>
               ) : null}
+              {question.supportSnippet ? <p><strong>Trecho de apoio:</strong> {question.supportSnippet}</p> : null}
               <ul>{question.whyOthersAreWrong.map((reason) => <li key={reason}>{reason}</li>)}</ul>
-              <Link to={`/mapas?focus=${question.relatedMindMapNodeId}`}>Revisar no mapa mental</Link>
-            </div>
+              <Link to={`/mapas?focus=${question.relatedMindMapNodeId}`}>Abrir mapa mental relacionado ao tema</Link>
+            </article>
           )
         })}
       </section>

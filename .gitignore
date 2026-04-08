@@ -3,3 +3,11 @@ dist
 *.tsbuildinfo
 vite.config.js
 vite.config.d.ts
+
+# CBMSC derivados locais (reproduzíveis)
+data/cbmsc/raw/*
+!data/cbmsc/raw/README.md
+data/cbmsc/parsed/*
+!data/cbmsc/parsed/README.md
+data/cbmsc/normalized/*
+!data/cbmsc/normalized/README.md
