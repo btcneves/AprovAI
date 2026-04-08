@@ -222,6 +222,7 @@ const toLegacyQuestion = (question: (typeof cbmscQuestions)[number]): Question =
     tags: question.tags,
     relatedMindMapNodeId: `cbmsc-${question.theme.toLowerCase().replace(/\s+/g, '-')}`,
     isActive: question.isActive,
+    supportSnippet: question.supportSnippet,
     sourceRefs: question.sourceRefs
   }
 }

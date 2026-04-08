@@ -24,24 +24,83 @@ export const MapasPage = () => {
     return selectedNode.childrenIds.map((id) => nodes.find((node) => node.id === id)?.title).filter(Boolean) as string[]
   }, [nodes, selectedNode])
 
+  const themeList = useMemo(() => {
+    const parents = nodes.filter((node) => node.parentId === 'root-especificos' || node.parentId === 'root-portugues')
+    return parents
+      .map((parent) => ({
+        theme: parent.title,
+        id: parent.id,
+        subthemes: parent.childrenIds
+          .map((id) => nodes.find((node) => node.id === id)?.title)
+          .filter(Boolean) as string[]
+      }))
+      .sort((a, b) => a.theme.localeCompare(b.theme))
+  }, [nodes])
+
   return (
     <div className="grid-2">
       <Card title="Mapa mental">
         <MindMapTree nodes={nodes} onOpenTopic={setSelectedNodeId} />
       </Card>
-      <Card title="Resumo detalhado">
+      <Card title="Navegação por tema e revisão guiada">
+        <p><strong>Temas e subtemas</strong></p>
+        <ul>
+          {themeList.map((item) => (
+            <li key={item.id}>
+              <button className="link-button" onClick={() => setSelectedNodeId(item.id)}>{item.theme}</button>
+              {item.subthemes.length ? (
+                <ul>
+                  {item.subthemes.map((subtheme) => <li key={`${item.id}-${subtheme}`}>{subtheme}</li>)}
+                </ul>
+              ) : null}
+            </li>
+          ))}
+        </ul>
+
         {selectedNode ? (
           <>
             <p>
               Foco atual: <strong>{selectedNode.title}</strong>
             </p>
-            <p>{selectedNode.descriptionDetailed}</p>
+            <p>{selectedNode.summary ?? selectedNode.descriptionDetailed}</p>
             <p>
               <strong>Referência no edital:</strong> {selectedNode.editalReference}
             </p>
             <p>
               <strong>Prioridade:</strong> {selectedNode.priority}
             </p>
+            {selectedNode.examHighlights?.length ? (
+              <>
+                <p><strong>Pontos que mais caem</strong></p>
+                <ul>
+                  {selectedNode.examHighlights.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </>
+            ) : null}
+            {selectedNode.commonMistakes?.length ? (
+              <>
+                <p><strong>Erros comuns</strong></p>
+                <ul>
+                  {selectedNode.commonMistakes.map((item) => <li key={item}>{item}</li>)}
+                </ul>
+              </>
+            ) : null}
+            {selectedNode.sources?.length ? (
+              <>
+                <p><strong>Fontes reais do manual</strong></p>
+                <ul>
+                  {selectedNode.sources.map((source) => (
+                    <li key={`${source.manualId}-${source.sectionId ?? 'n/a'}`}>
+                      {source.manualTitle ?? source.manualId}
+                      {source.sectionId ? ` | ${source.sectionId}` : ''}
+                      {source.pageStart ? ` | p. ${source.pageStart}${source.pageEnd && source.pageEnd !== source.pageStart ? `-${source.pageEnd}` : ''}` : ''}
+                      {' '}
+                      <a href={source.sourceUrl} target="_blank" rel="noreferrer">abrir</a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : null}
             {childTitles.length ? (
               <>
                 <p><strong>Subtópicos diretos</strong></p>
@@ -52,42 +111,10 @@ export const MapasPage = () => {
                 </ul>
               </>
             ) : null}
-            {selectedNode.studyChecklist?.length ? (
-              <>
-                <p><strong>Roteiro de estudo</strong></p>
-                <ul>
-                  {selectedNode.studyChecklist.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </>
-            ) : null}
-            {selectedNode.studyReferences?.length ? (
-              <>
-                <p><strong>Referências complementares</strong></p>
-                <ul>
-                  {selectedNode.studyReferences.map((reference) => (
-                    <li key={reference.label}>
-                      <span>{reference.label}</span>
-                      {reference.url ? (
-                        <>
-                          {' '}
-                          —{' '}
-                          <a href={reference.url} target="_blank" rel="noreferrer">
-                            acessar
-                          </a>
-                        </>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
-              </>
-            ) : null}
           </>
         ) : (
           <p>Selecione um tema para revisão orientada por erros de simulado.</p>
         )}
-        <p>Use a busca para localizar termos e expanda/recolha ramos conforme sua necessidade.</p>
       </Card>
     </div>
   )

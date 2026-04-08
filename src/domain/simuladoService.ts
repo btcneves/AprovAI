@@ -1,8 +1,17 @@
 import { activeQuestions } from '@/data/questionBank/questions'
-import type { Question, SimuladoAnswer, SimuladoAttempt } from './types'
+import type { Difficulty, Question, SimuladoAnswer, SimuladoAttempt } from './types'
 
 const HISTORY_KEY = 'imarui_simulados'
 const BLOCK_WINDOW = 5
+
+export type StudyMode = 'full' | 'weak-topics' | 'subtopic' | 'difficulty' | 'recent-wrong'
+
+export type BuildSimuladoOptions = {
+  mode?: StudyMode
+  subtopic?: string
+  difficulty?: Difficulty
+  questionCount?: number
+}
 
 const normalizeStatement = (statement: string): string => statement.replace(/\s*\(variação\s+\d+\)\s*$/i, '').trim()
 const canonicalKey = (question: Question): string => `${question.discipline}::${question.topic}::${question.subtopic}::${normalizeStatement(question.statement)}`
@@ -99,18 +108,87 @@ const pickSpecific = (pool: Question[], count: number, blockedIds: Set<string>, 
   throw new Error('Banco específico insuficiente para gerar simulado.')
 }
 
-export const buildSimulado = (recentAttempts: SimuladoAttempt[]): Question[] => {
-  const portuguese = activeQuestions.filter((question) => question.discipline === 'portugues')
-  const specific = activeQuestions.filter((question) => question.discipline === 'especificos')
+const buildStudyPool = (attempts: SimuladoAttempt[], options: BuildSimuladoOptions): Question[] => {
+  const mode = options.mode ?? 'full'
+  const questionMap = new Map(activeQuestions.map((question) => [question.id, question]))
 
-  if (portuguese.length < 5 || specific.length < 30) {
-    throw new Error('Banco de questões insuficiente para gerar simulado 5 + 30')
+  if (mode === 'subtopic' && options.subtopic) {
+    return activeQuestions.filter((question) => question.subtopic === options.subtopic)
   }
 
-  const blockedIds = new Set(recentAttempts.slice(-BLOCK_WINDOW).flatMap((attempt) => attempt.questionIds))
-  const freq = buildFrequencyMap(recentAttempts)
+  if (mode === 'difficulty' && options.difficulty) {
+    return activeQuestions.filter((question) => question.difficulty === options.difficulty)
+  }
 
-  const selected = [...pickPortuguese(portuguese, 5, blockedIds, freq), ...pickSpecific(specific, 30, blockedIds, freq)]
+  if (mode === 'recent-wrong') {
+    const wrongIds = attempts
+      .slice(-8)
+      .flatMap((attempt) => attempt.answers.filter((answer) => !answer.isCorrect).map((answer) => answer.questionId))
+    return wrongIds.map((id) => questionMap.get(id)).filter(Boolean) as Question[]
+  }
+
+  if (mode === 'weak-topics') {
+    const wrongBySubtopic = new Map<string, number>()
+    for (const attempt of attempts) {
+      for (const answer of attempt.answers.filter((item) => !item.isCorrect)) {
+        const question = questionMap.get(answer.questionId)
+        if (!question) continue
+        const key = `${question.topic}::${question.subtopic ?? ''}`
+        wrongBySubtopic.set(key, (wrongBySubtopic.get(key) ?? 0) + 1)
+      }
+    }
+
+    const worst = [...wrongBySubtopic.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([key]) => key)
+    if (!worst.length) return activeQuestions
+    return activeQuestions.filter((question) => worst.includes(`${question.topic}::${question.subtopic ?? ''}`))
+  }
+
+  return activeQuestions
+}
+
+const dedupeByCanonical = (pool: Question[]): Question[] => {
+  const seen = new Set<string>()
+  return pool.filter((question) => {
+    const key = canonicalKey(question)
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
+}
+
+export const buildSimulado = (recentAttempts: SimuladoAttempt[], options: BuildSimuladoOptions = {}): Question[] => {
+  const mode = options.mode ?? 'full'
+
+  if (mode === 'full') {
+    const portuguese = activeQuestions.filter((question) => question.discipline === 'portugues')
+    const specific = activeQuestions.filter((question) => question.discipline === 'especificos')
+
+    if (portuguese.length < 5 || specific.length < 30) {
+      throw new Error('Banco de questões insuficiente para gerar simulado 5 + 30')
+    }
+
+    const blockedIds = new Set(recentAttempts.slice(-BLOCK_WINDOW).flatMap((attempt) => attempt.questionIds))
+    const freq = buildFrequencyMap(recentAttempts)
+
+    const selected = [...pickPortuguese(portuguese, 5, blockedIds, freq), ...pickSpecific(specific, 30, blockedIds, freq)]
+    return shuffle(selected)
+  }
+
+  const blockedIds = new Set(recentAttempts.slice(-3).flatMap((attempt) => attempt.questionIds))
+  const freq = buildFrequencyMap(recentAttempts)
+  const requestedCount = options.questionCount ?? 20
+  const basePool = dedupeByCanonical(buildStudyPool(recentAttempts, options))
+  const rankedPool = rankPool(basePool, blockedIds, freq)
+  const fallbackPool = rankPool(basePool, new Set<string>(), freq)
+
+  const selected = [...rankedPool, ...fallbackPool]
+    .filter((question, index, array) => array.findIndex((item) => item.id === question.id) === index)
+    .slice(0, requestedCount)
+
+  if (!selected.length) {
+    throw new Error('Não foi possível montar treino com os filtros selecionados.')
+  }
+
   return shuffle(selected)
 }
 

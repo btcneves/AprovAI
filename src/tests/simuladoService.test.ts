@@ -19,6 +19,13 @@ describe('simuladoService', () => {
     expect(new Set(canonical).size).toBe(35)
   })
 
+  it('gera modo inteligente por dificuldade com 20 questões', () => {
+    const treino = buildSimulado([], { mode: 'difficulty', difficulty: 'dificil', questionCount: 20 })
+    expect(treino.length).toBeGreaterThan(0)
+    expect(treino.length).toBeLessThanOrEqual(20)
+    expect(treino.every((question) => question.difficulty === 'dificil')).toBe(true)
+  })
+
   it('avalia nota com pesos oficiais 0.2 e 0.3', () => {
     const simulado = [...activeQuestions.filter((q) => q.discipline === 'portugues').slice(0, 5), ...activeQuestions.filter((q) => q.discipline === 'especificos').slice(0, 30)]
 

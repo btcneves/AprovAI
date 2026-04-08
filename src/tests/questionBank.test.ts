@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { activeQuestions } from '@/data/questionBank/questions'
 
 describe('question bank', () => {
-  it('possui mais de 100 questões ativas e todas com 5 alternativas', () => {
-    expect(activeQuestions.length).toBeGreaterThan(100)
+  it('possui pelo menos 200 questões ativas e todas com 5 alternativas', () => {
+    expect(activeQuestions.length).toBeGreaterThanOrEqual(200)
     activeQuestions.forEach((question) => {
       expect(question.alternatives).toHaveLength(5)
       expect(question.whyOthersAreWrong.length).toBe(4)
@@ -17,5 +17,10 @@ describe('question bank', () => {
 
       expect(spread).toBeLessThanOrEqual(35)
     })
+  })
+
+  it('mantém rastreabilidade com fontes oficiais em parte relevante do banco', () => {
+    const withSources = activeQuestions.filter((question) => question.sourceRefs?.length)
+    expect(withSources.length).toBeGreaterThanOrEqual(120)
   })
 })
