@@ -1,6 +1,13 @@
 {
-  "generatedAt": "2026-04-08T14:05:18.973Z",
+  "generatedAt": "2026-04-08T14:40:36.273Z",
   "maps": [
-    "src/data/mindmaps/classes-incendio.json"
+    "src/data/mindmaps/cbmsc-classes-de-incendio.json",
+    "src/data/mindmaps/cbmsc-metodos-de-extincao.json",
+    "src/data/mindmaps/cbmsc-comportamento-do-fogo.json",
+    "src/data/mindmaps/cbmsc-aph-abcde.json",
+    "src/data/mindmaps/cbmsc-rcp.json",
+    "src/data/mindmaps/cbmsc-produtos-perigosos.json",
+    "src/data/mindmaps/cbmsc-salvamento-busca-resgate.json",
+    "src/data/mindmaps/cbmsc-normas-e-legislacao-basica.json"
   ]
 }

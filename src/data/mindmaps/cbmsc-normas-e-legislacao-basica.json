@@ -1,0 +1,95 @@
+{
+  "id": "cbmsc-normas-e-legislacao-basica",
+  "title": "Normas e legislação básica",
+  "summary": "Base normativa orienta limites operacionais, disciplina e responsabilidade da atuação CBMSC.",
+  "nodes": [
+    {
+      "id": "cbmsc-normas-e-legislacao-basica-legislacao-federal",
+      "label": "Legislação federal",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-normas-e-legislacao-basica-legislacao-federal-ctb",
+          "label": "CTB",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-e-legislacao-basica-legislacao-federal-normas-de-aph-correlatas",
+          "label": "Normas de APH correlatas",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-normas-e-legislacao-basica-normas-cbmsc",
+      "label": "Normas CBMSC",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-normas-e-legislacao-basica-normas-cbmsc-ig-10-03-bm",
+          "label": "IG 10-03-BM",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-e-legislacao-basica-normas-cbmsc-manuais-operacionais",
+          "label": "Manuais operacionais",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-normas-e-legislacao-basica-governanca-operacional",
+      "label": "Governança operacional",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-normas-e-legislacao-basica-governanca-operacional-cadeia-de-comando",
+          "label": "Cadeia de comando",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-e-legislacao-basica-governanca-operacional-responsabilidade-tecnica",
+          "label": "Responsabilidade técnica",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "CTB e IG 10-03-BM aparecem recorrentemente em provas.",
+    "Cumprimento de POP e ICS reduz erro operacional."
+  ],
+  "commonMistakes": [
+    "Confundir norma interna com lei federal.",
+    "Atuar fora de escopo institucional."
+  ],
+  "terms": [
+    "Legislação federal",
+    "CTB",
+    "Normas de APH correlatas",
+    "Normas CBMSC",
+    "IG 10-03-BM",
+    "Manuais operacionais",
+    "Governança operacional",
+    "Cadeia de comando",
+    "Responsabilidade técnica"
+  ],
+  "sources": [
+    {
+      "manualId": "combate-incendio-estrutural-manual",
+      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
+      "category": "Combate a Incêndio Estrutural",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.397Z"
+    },
+    {
+      "manualId": "atendimento-basico-emergencias-manual",
+      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
+      "category": "Atendimento Pré-Hospitalar",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.398Z"
+    }
+  ]
+}

@@ -1,4 +1,167 @@
 {
-  "generatedAt": null,
-  "themes": []
+  "generatedAt": "2026-04-08T14:40:36.276Z",
+  "themes": [
+    {
+      "theme": "Classes de incêndio",
+      "subtheme": [
+        "Classe A",
+        "Classe B",
+        "Classe C",
+        "Classe D/K"
+      ],
+      "priority": "alta",
+      "manuals": [
+        "combate-incendio-estrutural-manual",
+        "atendimento-basico-emergencias-manual"
+      ],
+      "baseSections": [
+        "Classe A",
+        "Classe B",
+        "Classe C",
+        "Classe D/K"
+      ],
+      "dependencies": []
+    },
+    {
+      "theme": "Métodos de extinção",
+      "subtheme": [
+        "Resfriamento",
+        "Abafamento",
+        "Isolamento",
+        "Quebra em cadeia"
+      ],
+      "priority": "media",
+      "manuals": [
+        "combate-incendio-estrutural-manual",
+        "atendimento-basico-emergencias-manual"
+      ],
+      "baseSections": [
+        "Resfriamento",
+        "Abafamento",
+        "Isolamento",
+        "Quebra em cadeia"
+      ],
+      "dependencies": [
+        "Classes de incêndio"
+      ]
+    },
+    {
+      "theme": "Comportamento do fogo",
+      "subtheme": [
+        "Transferência de calor",
+        "Fenômenos críticos",
+        "Leitura de fumaça"
+      ],
+      "priority": "media",
+      "manuals": [
+        "combate-incendio-estrutural-manual",
+        "atendimento-basico-emergencias-manual"
+      ],
+      "baseSections": [
+        "Transferência de calor",
+        "Fenômenos críticos",
+        "Leitura de fumaça"
+      ],
+      "dependencies": []
+    },
+    {
+      "theme": "APH / ABCDE",
+      "subtheme": [
+        "A - Airway",
+        "B - Breathing",
+        "C - Circulation",
+        "D/E"
+      ],
+      "priority": "alta",
+      "manuals": [
+        "combate-incendio-estrutural-manual",
+        "atendimento-basico-emergencias-manual"
+      ],
+      "baseSections": [
+        "A - Airway",
+        "B - Breathing",
+        "C - Circulation",
+        "D/E"
+      ],
+      "dependencies": []
+    },
+    {
+      "theme": "RCP",
+      "subtheme": [
+        "Cadeia de sobrevivência",
+        "Compressões",
+        "Ventilação"
+      ],
+      "priority": "alta",
+      "manuals": [
+        "combate-incendio-estrutural-manual",
+        "atendimento-basico-emergencias-manual"
+      ],
+      "baseSections": [
+        "Cadeia de sobrevivência",
+        "Compressões",
+        "Ventilação"
+      ],
+      "dependencies": [
+        "APH / ABCDE"
+      ]
+    },
+    {
+      "theme": "Produtos perigosos",
+      "subtheme": [
+        "Identificação",
+        "Ações iniciais",
+        "Segurança da equipe"
+      ],
+      "priority": "media",
+      "manuals": [
+        "combate-incendio-estrutural-manual",
+        "atendimento-basico-emergencias-manual"
+      ],
+      "baseSections": [
+        "Identificação",
+        "Ações iniciais",
+        "Segurança da equipe"
+      ],
+      "dependencies": []
+    },
+    {
+      "theme": "Salvamento / busca / resgate",
+      "subtheme": [
+        "Busca",
+        "Resgate",
+        "Comando"
+      ],
+      "priority": "media",
+      "manuals": [
+        "combate-incendio-estrutural-manual",
+        "atendimento-basico-emergencias-manual"
+      ],
+      "baseSections": [
+        "Busca",
+        "Resgate",
+        "Comando"
+      ],
+      "dependencies": []
+    },
+    {
+      "theme": "Normas e legislação básica",
+      "subtheme": [
+        "Legislação federal",
+        "Normas CBMSC",
+        "Governança operacional"
+      ],
+      "priority": "media",
+      "manuals": [
+        "combate-incendio-estrutural-manual",
+        "atendimento-basico-emergencias-manual"
+      ],
+      "baseSections": [
+        "Legislação federal",
+        "Normas CBMSC",
+        "Governança operacional"
+      ],
+      "dependencies": []
+    }
+  ]
 }

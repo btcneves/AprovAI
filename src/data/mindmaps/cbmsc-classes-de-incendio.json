@@ -1,0 +1,115 @@
+{
+  "id": "cbmsc-classes-de-incendio",
+  "title": "Classes de incêndio",
+  "summary": "Classificação por tipo de combustível orienta agente extintor e estratégia operacional.",
+  "nodes": [
+    {
+      "id": "cbmsc-classes-de-incendio-classe-a",
+      "label": "Classe A",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-classes-de-incendio-classe-a-materiais-solidos-comuns",
+          "label": "Materiais sólidos comuns",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-classes-de-incendio-classe-a-agente-prioritario-agua-nebulizada",
+          "label": "Agente prioritário: água nebulizada",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-classes-de-incendio-classe-b",
+      "label": "Classe B",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-classes-de-incendio-classe-b-liquidos-inflamaveis",
+          "label": "Líquidos inflamáveis",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-classes-de-incendio-classe-b-espuma-e-abafamento",
+          "label": "Espuma e abafamento",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-classes-de-incendio-classe-c",
+      "label": "Classe C",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-classes-de-incendio-classe-c-equipamento-energizado",
+          "label": "Equipamento energizado",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-classes-de-incendio-classe-c-desenergizar-antes-do-ataque-final",
+          "label": "Desenergizar antes do ataque final",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-classes-de-incendio-classe-d-k",
+      "label": "Classe D/K",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-classes-de-incendio-classe-d-k-metais-piroforicos-e-oleos-de-cozinha",
+          "label": "Metais pirofóricos e óleos de cozinha",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-classes-de-incendio-classe-d-k-agentes-especiais",
+          "label": "Agentes especiais",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "Classe K envolve óleos e gorduras de cozinha, exige agente saponificante.",
+    "Classe D não deve receber água em metais reativos."
+  ],
+  "commonMistakes": [
+    "Confundir classe C com método de extinção.",
+    "Aplicar água em incêndio classe B com líquido inflamável."
+  ],
+  "terms": [
+    "Classe A",
+    "Materiais sólidos comuns",
+    "Agente prioritário: água nebulizada",
+    "Classe B",
+    "Líquidos inflamáveis",
+    "Espuma e abafamento",
+    "Classe C",
+    "Equipamento energizado",
+    "Desenergizar antes do ataque final",
+    "Classe D/K",
+    "Metais pirofóricos e óleos de cozinha",
+    "Agentes especiais"
+  ],
+  "sources": [
+    {
+      "manualId": "combate-incendio-estrutural-manual",
+      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
+      "category": "Combate a Incêndio Estrutural",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.397Z"
+    },
+    {
+      "manualId": "atendimento-basico-emergencias-manual",
+      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
+      "category": "Atendimento Pré-Hospitalar",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.398Z"
+    }
+  ]
+}

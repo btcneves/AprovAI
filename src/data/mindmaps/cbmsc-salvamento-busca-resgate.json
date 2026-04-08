@@ -1,0 +1,95 @@
+{
+  "id": "cbmsc-salvamento-busca-resgate",
+  "title": "Salvamento / busca / resgate",
+  "summary": "Busca sistemática e extração segura priorizam vítimas e preservam a guarnição.",
+  "nodes": [
+    {
+      "id": "cbmsc-salvamento-busca-resgate-busca",
+      "label": "Busca",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-busca-resgate-busca-primaria-x-secundaria",
+          "label": "Primária x secundária",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-busca-resgate-busca-padroes-de-progressao",
+          "label": "Padrões de progressão",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-salvamento-busca-resgate-resgate",
+      "label": "Resgate",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-busca-resgate-resgate-tecnicas-de-arraste",
+          "label": "Técnicas de arraste",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-busca-resgate-resgate-protecao-de-via-aerea-da-vitima",
+          "label": "Proteção de via aérea da vítima",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-salvamento-busca-resgate-comando",
+      "label": "Comando",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-busca-resgate-comando-setorizacao",
+          "label": "Setorização",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-busca-resgate-comando-prestacao-de-contas-par",
+          "label": "Prestação de contas (PAR)",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "Marcação de ambientes evita duplicidade e áreas não varridas.",
+    "Controle de tempo/ar no ambiente hostil é obrigatório."
+  ],
+  "commonMistakes": [
+    "Perder referência de rota de saída.",
+    "Separar dupla em ambiente IDLH."
+  ],
+  "terms": [
+    "Busca",
+    "Primária x secundária",
+    "Padrões de progressão",
+    "Resgate",
+    "Técnicas de arraste",
+    "Proteção de via aérea da vítima",
+    "Comando",
+    "Setorização",
+    "Prestação de contas (PAR)"
+  ],
+  "sources": [
+    {
+      "manualId": "combate-incendio-estrutural-manual",
+      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
+      "category": "Combate a Incêndio Estrutural",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.397Z"
+    },
+    {
+      "manualId": "atendimento-basico-emergencias-manual",
+      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
+      "category": "Atendimento Pré-Hospitalar",
+      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
+      "collectedAt": "2026-04-08T14:40:11.398Z"
+    }
+  ]
+}

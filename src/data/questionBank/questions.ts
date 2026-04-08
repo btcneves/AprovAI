@@ -1,4 +1,5 @@
 import type { AlternativeId, Difficulty, Discipline, Question } from '@/domain/types'
+import { cbmscQuestions } from '@/data/questions/cbmscQuestions'
 
 type Blueprint = {
   discipline: Discipline
@@ -190,4 +191,38 @@ const materializeQuestions = (blueprints: Blueprint[], variants: number, prefix:
 
 export const questions: Question[] = [...materializeQuestions(ptBlueprints, 8, 'PT'), ...materializeQuestions(espBlueprints, 4, 'ESP')]
 
-export const activeQuestions = questions.filter((question) => question.isActive)
+const mapDifficulty = (difficulty: 'easy' | 'medium' | 'hard'): Difficulty =>
+  difficulty === 'easy' ? 'facil' : difficulty === 'medium' ? 'media' : 'dificil'
+
+const toLegacyQuestion = (question: (typeof cbmscQuestions)[number]): Question => {
+  const alternatives = question.options.map((option) => {
+    const match = option.match(/^([A-E])\)\s*(.*)$/)
+    return {
+      id: (match?.[1] ?? 'A') as AlternativeId,
+      text: match?.[2] ?? option
+    }
+  })
+
+  return {
+    id: `CBMSC-${question.id}`,
+    discipline: 'especificos',
+    area: 'Conhecimentos Específicos',
+    topic: question.theme,
+    subtopic: question.subtheme,
+    difficulty: mapDifficulty(question.difficulty),
+    sourceType: 'adaptada',
+    statement: question.question,
+    alternatives,
+    correctAlternativeId: question.correctAnswer,
+    explanation: question.explanation,
+    whyOthersAreWrong: question.options
+      .filter((option) => !option.startsWith(`${question.correctAnswer})`))
+      .map((option) => `Incorreta: ${option}`),
+    editalReference: 'CBMSC - Manuais e normas operacionais',
+    tags: question.tags,
+    relatedMindMapNodeId: `cbmsc-${question.theme.toLowerCase().replace(/\s+/g, '-')}`,
+    isActive: question.isActive
+  }
+}
+
+export const activeQuestions = [...questions, ...cbmscQuestions.map(toLegacyQuestion)].filter((question) => question.isActive)
