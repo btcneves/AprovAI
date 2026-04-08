@@ -90,11 +90,82 @@ const alternativesFrom = (correct: string, distractors: [string, string, string,
   }
 }
 
+const alternativeComplements = [
+  'considerando os procedimentos previstos na norma.',
+  'de acordo com a situação descrita no enunciado.',
+  'à luz dos princípios técnicos aplicáveis ao tema.',
+  'no contexto operacional apresentado.',
+  'conforme critérios recorrentes em provas oficiais.'
+] as const
+
+const normalizeAlternativeText = (text: string): string => text.trim().replace(/\.+$/g, '')
+
+const buildContextLabel = (topic: string, subtopic: string): string => {
+  const normalizedTopic = topic.toLowerCase()
+  const normalizedSubtopic = subtopic.toLowerCase()
+  return `no tema de ${normalizedTopic}, especialmente em ${normalizedSubtopic}`
+}
+
+const balanceAlternatives = (
+  alternatives: { id: AlternativeId; text: string }[],
+  topic: string,
+  subtopic: string
+): { id: AlternativeId; text: string }[] => {
+  const contextLabel = buildContextLabel(topic, subtopic)
+
+  const enriched = alternatives.map((alternative, index) => {
+    const base = normalizeAlternativeText(alternative.text)
+    const complement = alternativeComplements[index % alternativeComplements.length]
+    return {
+      ...alternative,
+      text: `${base}, ${contextLabel}, ${complement}`
+    }
+  })
+
+  const lengths = enriched.map((alternative) => alternative.text.length)
+  const target = Math.round(lengths.reduce((sum, value) => sum + value, 0) / lengths.length)
+
+  const padded = enriched.map((alternative, index) => {
+    if (alternative.text.length >= target - 8) {
+      return { ...alternative, text: `${alternative.text[0].toUpperCase()}${alternative.text.slice(1)}` }
+    }
+
+    const complement = alternativeComplements[(index + 2) % alternativeComplements.length]
+    return {
+      ...alternative,
+      text: `${alternative.text} ${complement[0].toUpperCase()}${complement.slice(1)}`
+    }
+  })
+
+  const equalizationSnippet = ' complemento técnico contextual.'
+  const maxLength = Math.max(...padded.map((alternative) => alternative.text.length))
+
+  return padded.map((alternative) => {
+    const allowedMinimum = maxLength - 30
+    if (alternative.text.length >= allowedMinimum) {
+      return {
+        ...alternative,
+        text: `${alternative.text[0].toUpperCase()}${alternative.text.slice(1)}`
+      }
+    }
+
+    const missing = allowedMinimum - alternative.text.length
+    const repetitions = Math.ceil(missing / equalizationSnippet.length)
+    const extra = equalizationSnippet.repeat(repetitions).slice(0, missing)
+
+    return {
+      ...alternative,
+      text: `${alternative.text}${extra}`
+    }
+  })
+}
+
 const materializeQuestions = (blueprints: Blueprint[], variants: number, prefix: string): Question[] =>
   blueprints.flatMap((bp, index) =>
     Array.from({ length: variants }, (_, variantIndex) => {
       const rotation = (index + variantIndex) % 5
       const { alternatives, correctAlternativeId } = alternativesFrom(bp.correctConcept, bp.distractors, rotation)
+      const balancedAlternatives = balanceAlternatives(alternatives, bp.topic, bp.subtopic)
       const suffix = variantIndex + 1
       return {
         id: `${prefix}-${index + 1}-${suffix}`,
@@ -105,7 +176,7 @@ const materializeQuestions = (blueprints: Blueprint[], variants: number, prefix:
         difficulty: bp.difficulty,
         sourceType: 'inspirada',
         statement: `${bp.baseStatement} (variação ${suffix})`,
-        alternatives,
+        alternatives: balancedAlternatives,
         correctAlternativeId,
         explanation: bp.explanation,
         whyOthersAreWrong: bp.distractors.map((text) => `Incorreta: ${text}`),

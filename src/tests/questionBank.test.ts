@@ -9,4 +9,13 @@ describe('question bank', () => {
       expect(question.whyOthersAreWrong.length).toBe(4)
     })
   })
+
+  it('evita discrepância de tamanho entre alternativas para reduzir acerto por padrão superficial', () => {
+    activeQuestions.forEach((question) => {
+      const lengths = question.alternatives.map((alternative) => alternative.text.length)
+      const spread = Math.max(...lengths) - Math.min(...lengths)
+
+      expect(spread).toBeLessThanOrEqual(35)
+    })
+  })
 })
