@@ -10,50 +10,49 @@ export const editalContent: ContentTopic[] = [
   {
     id: 'portugues',
     title: 'Língua Portuguesa',
-    summary: 'Interpretação, gramática, semântica, sintaxe e expressividade.',
-    reference: 'Edital 001/2026 — Conteúdo Programático de Língua Portuguesa',
+    summary: 'Conteúdo completo do Anexo I (nível médio), incluindo gramática, sintaxe, semântica, estilística e literatura brasileira.',
+    reference: 'Edital 001/2026 — Anexo I, item 1.1.1',
     children: [
-      {
-        id: 'portugues-interpretacao',
-        title: 'Interpretação e compreensão',
-        summary: 'Leitura crítica e análise de sentido textual.',
-        reference: 'Item 1.1',
-        children: [
-          { id: 'pt-analise', title: 'Análise e interpretação de texto', summary: 'Compreender tese, inferências e coesão.', reference: 'Item 1.1' },
-          { id: 'pt-vocabulario', title: 'Vocabulário', summary: 'Sentido contextual e precisão lexical.', reference: 'Item 1.1' },
-          { id: 'pt-niveis', title: 'Níveis de linguagem', summary: 'Adequação da linguagem ao contexto.', reference: 'Item 1.1' },
-          { id: 'pt-funcoes', title: 'Funções da linguagem', summary: 'Reconhecer intenção comunicativa.', reference: 'Item 1.1' }
-        ]
-      },
-      {
-        id: 'portugues-escrita', title: 'Escrita correta', summary: 'Normas de ortografia e acentuação.', reference: 'Item 1.2',
-        children: [
-          { id: 'pt-ortografia', title: 'Ortografia e nova ortografia', summary: 'Grafia conforme acordo ortográfico.', reference: 'Item 1.2' },
-          { id: 'pt-porque', title: 'Usos dos porquês', summary: 'Emprego correto das formas.', reference: 'Item 1.2' },
-          { id: 'pt-acentuacao', title: 'Acentuação e prosódia', summary: 'Regras acentuais e tonicidade.', reference: 'Item 1.2' }
-        ]
-      },
-      {
-        id: 'portugues-sintaxe', title: 'Sintaxe e estrutura da língua', summary: 'Formação de palavras, classes e relações sintáticas.', reference: 'Itens 1.3 e 1.5'
-      },
-      {
-        id: 'portugues-semantica', title: 'Relações semânticas', summary: 'Sinônimos, antônimos, homônimos e parônimos.', reference: 'Item 1.4'
-      },
-      {
-        id: 'portugues-expressividade', title: 'Expressividade', summary: 'Pontuação, vícios de linguagem, estilística e figuras.', reference: 'Item 1.6'
-      }
+      { id: 'pt-interpretacao', title: 'Análise e interpretação de texto', summary: 'Compreensão global, inferência, tese e intenção comunicativa.', reference: 'Anexo I - 1.1.1' },
+      { id: 'pt-vocabulario', title: 'Vocabulário e níveis de linguagem', summary: 'Precisão lexical, registro formal/informal e adequação ao contexto.', reference: 'Anexo I - 1.1.1' },
+      { id: 'pt-ortografia', title: 'Ortografia e nova ortografia', summary: 'Grafia oficial, acentuação gráfica, prosódia e usos dos porquês.', reference: 'Anexo I - 1.1.1' },
+      { id: 'pt-morfologia', title: 'Estrutura e formação de palavras', summary: 'Derivação, composição e classes gramaticais (emprego e flexões).', reference: 'Anexo I - 1.1.1' },
+      { id: 'pt-adjetivos', title: 'Adjetivos eruditos e pátrios', summary: 'Formação e emprego semântico em contexto formal.', reference: 'Anexo I - 1.1.1' },
+      { id: 'pt-verbal', title: 'Conjugação verbal', summary: 'Tempos, modos, vozes e correlação verbal.', reference: 'Anexo I - 1.1.1' },
+      { id: 'pt-semantica', title: 'Semântica lexical', summary: 'Sinônimos, antônimos, homônimos e parônimos.', reference: 'Anexo I - 1.1.1' },
+      { id: 'pt-sintaxe', title: 'Sintaxe normativa', summary: 'Regência verbal/nominal, crase, concordância e colocação pronominal.', reference: 'Anexo I - 1.1.1' },
+      { id: 'pt-pronomes', title: 'Emprego dos pronomes e formas de tratamento', summary: 'Pronomes pessoais, demonstrativos, relativos e tratamento formal.', reference: 'Anexo I - 1.1.1' },
+      { id: 'pt-oracoes', title: 'Termos da oração e período composto', summary: 'Termos essenciais, integrantes, acessórios, coordenadas e subordinadas.', reference: 'Anexo I - 1.1.1' },
+      { id: 'pt-estilistica', title: 'Pontuação, vícios de linguagem e estilística', summary: 'Figuras de linguagem e efeitos de sentido em textos.', reference: 'Anexo I - 1.1.1' },
+      { id: 'pt-literatura', title: 'Literatura Brasileira', summary: 'Noções gerais de escolas, autores e características principais.', reference: 'Anexo I - 1.1.1' }
     ]
   },
   {
     id: 'especificos',
     title: 'Conhecimentos Específicos',
-    summary: 'Trânsito, incêndio estrutural, emergências e serviço comunitário.',
-    reference: 'Edital 001/2026 — Conteúdo Programático de Conhecimentos Específicos',
+    summary: 'Conteúdo oficial do Anexo I para Bombeiro Comunitário: trânsito + manuais CBMSC + IG 10-03-BM.',
+    reference: 'Edital 001/2026 — Anexo I, item 1.2',
     children: [
-      { id: 'esp-transito', title: 'Trânsito e condução', summary: 'CTB, sinalização, circulação, penalidades e socorros.', reference: 'Item 2.1' },
-      { id: 'esp-incendio', title: 'Combate a incêndio estrutural', summary: 'Teoria do fogo, extinção, segurança e operações iniciais.', reference: 'Item 2.2 + Manual CBMSC' },
-      { id: 'esp-emergencias', title: 'Atendimento básico a emergências', summary: 'Avaliação da cena, ABC, trauma, transporte e suporte básico.', reference: 'Item 2.3 + Manual CBMSC' },
-      { id: 'esp-servico', title: 'Serviço comunitário no CBMSC', summary: 'Finalidade, estrutura, atribuições, limites e condutas.', reference: 'Item 2.4 + IG 10-03-BM' }
+      {
+        id: 'esp-transito',
+        title: 'Legislação de Trânsito e condução',
+        summary: 'Código de Trânsito Brasileiro, SNT, circulação, penalidades e transporte de emergência.',
+        reference: 'Anexo I - 1.2(a)',
+        children: [
+          { id: 'esp-ctb', title: 'CTB e demais legislações', summary: 'Base legal da condução de veículos e competências dos órgãos.', reference: 'Anexo I - 1.2(a)' },
+          { id: 'esp-snt', title: 'Sistema Nacional de Trânsito', summary: 'Estrutura, integração institucional e atribuições.', reference: 'Anexo I - 1.2(a)' },
+          { id: 'esp-circulacao', title: 'Normas e regras de circulação', summary: 'Preferências, ultrapassagem, parada/estacionamento e conduta segura.', reference: 'Anexo I - 1.2(a)' },
+          { id: 'esp-sinalizacao', title: 'Sinalização viária', summary: 'Sinais, marcas viárias, dispositivos e interpretação.', reference: 'Anexo I - 1.2(a)' },
+          { id: 'esp-veiculos', title: 'Veículos, licenciamento e habilitação', summary: 'Regularidade do veículo, documentação e categorias de CNH.', reference: 'Anexo I - 1.2(a)' },
+          { id: 'esp-infracoes', title: 'Deveres, proibições, infrações e penalidades', summary: 'Tipificação, medidas administrativas e recursos.', reference: 'Anexo I - 1.2(a)' },
+          { id: 'esp-defensiva', title: 'Direção defensiva e primeiros socorros', summary: 'Prevenção de sinistros e resposta inicial em ocorrências.', reference: 'Anexo I - 1.2(a)' },
+          { id: 'esp-ambiental', title: 'Meio ambiente e cidadania no trânsito', summary: 'Preservação ambiental, direitos humanos e cidadania viária.', reference: 'Anexo I - 1.2(a)' },
+          { id: 'esp-funcionamento', title: 'Funcionamento do veículo e transporte de urgência', summary: 'Noções mecânicas e condução em emergência.', reference: 'Anexo I - 1.2(a)' }
+        ]
+      },
+      { id: 'esp-cie', title: 'Manual CBMSC de Capacitação em Combate a Incêndio Estrutural (1ª edição revisada)', summary: 'Teoria do fogo, classes, agentes extintores, progressão, ventilação, comando e segurança operacional.', reference: 'Anexo I - 1.2(b)' },
+      { id: 'esp-abe', title: 'Manual CBMSC de Capacitação em Atendimento Básico a Emergências', summary: 'Avaliação da cena, ABCDE, trauma, suporte básico e transporte.', reference: 'Anexo I - 1.2(c)' },
+      { id: 'esp-ig', title: 'IG 10-03-BM — Serviço Comunitário no CBMSC', summary: 'Finalidade, organização, atribuições, limites e deveres disciplinares.', reference: 'Anexo I - 1.2(d)' }
     ]
   }
 ]

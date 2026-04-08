@@ -14,6 +14,9 @@ describe('simuladoService', () => {
 
     const uniqueIds = new Set(simulado.map((q) => q.id))
     expect(uniqueIds.size).toBe(35)
+
+    const canonical = simulado.map((q) => `${q.discipline}::${q.topic}::${q.subtopic}::${q.statement.replace(/\s*\(variação\s+\d+\)\s*$/i, '').trim()}`)
+    expect(new Set(canonical).size).toBe(35)
   })
 
   it('avalia nota com pesos oficiais 0.2 e 0.3', () => {
