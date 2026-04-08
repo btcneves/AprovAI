@@ -1,0 +1,151 @@
+{
+  "id": "cbmsc-normas-legislacao-atividade-tecnica",
+  "title": "Normas / legislação / atividade técnica",
+  "summary": "Resumo derivado de seções oficiais do CBMSC sobre base normativa cbmsc.",
+  "nodes": [
+    {
+      "id": "cbmsc-normas-legislacao-atividade-tecnica-n1",
+      "label": "3.6 FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores crític",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n1-a",
+          "label": "3.6 FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso (FCS) ",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n1-b",
+          "label": "Páginas 25-27",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-normas-legislacao-atividade-tecnica-n2",
+      "label": "10 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica n",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n2-a",
+          "label": "10 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC rança contra",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n2-b",
+          "label": "Páginas 1251-1251",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-normas-legislacao-atividade-tecnica-n3",
+      "label": "SEÇÃO DE ATIVIDADE TÉCNICA (SAT) A SAT tem como função primordial supervisio- nar se as no",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n3-a",
+          "label": "SEÇÃO DE ATIVIDADE TÉCNICA (SAT) A SAT tem como função primordial supervisio- nar se as normas provenientes da",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n3-b",
+          "label": "Páginas 1253-1253",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-normas-legislacao-atividade-tecnica-n4",
+      "label": "18 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica n",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n4-a",
+          "label": "18 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC Aqui podemos",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n4-b",
+          "label": "Páginas 1259-1259",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "3.6 FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso (FCS) é aquela que diz que “são pres",
+    "10 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC rança contra incêndio em edificações, cont",
+    "SEÇÃO DE ATIVIDADE TÉCNICA (SAT) A SAT tem como função primordial supervisio- nar se as normas provenientes da DAT e Comando Geral são cumpr",
+    "18 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC Aqui podemos entender como responsável téc"
+  ],
+  "commonMistakes": [
+    "Confundir conceitos centrais de normas / legislação / atividade técnica.",
+    "Responder por prática informal sem aderência ao manual oficial."
+  ],
+  "terms": [
+    "ig",
+    "norma",
+    "legislação",
+    "atividade técnica",
+    "responsabilidade",
+    "fatores",
+    "críticos",
+    "sucesso",
+    "corporativos",
+    "definição",
+    "clássica",
+    "corpo",
+    "bombeiros",
+    "militar",
+    "santa",
+    "catarina",
+    "tópicos",
+    "seção",
+    "atividade",
+    "técnica",
+    "função",
+    "primordial"
+  ],
+  "sources": [
+    {
+      "manualId": "gestao-ensino-lideranca-saude-do-bombeiro-organizacao-e-administracao-de-bombeiro",
+      "manualTitle": "ORGANIZAÇÃO E ADMINISTRAÇÃO DE BOMBEIRO",
+      "sectionId": "gestao-ensino-lideranca-saude-do-bombeiro-organizacao-e-administracao-de-bombeiro-sec-b4951640",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/103-gestao-ensino-lideranca-saude-do-bombeiro?download=775:organizacao-e-administracao-de-bombeiro",
+      "category": "Gestão, Ensino, Liderança & Saúde do Bombeiro",
+      "excerpt": "3.6 FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso (FCS) é aquela que diz que “são pressupostos essenciais para o alcance dos objetivos que contribuem para o sucesso do empreendimento”. FCS são os fundamento",
+      "pageStart": 25,
+      "pageEnd": 27
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-559f859a",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "10 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC rança contra incêndio em edificações, contra si- nistros em áreas de risco e de armazenagem, de manipulação e transporte de produtos perigo- sos, acompanhar e fis",
+      "pageStart": 1251,
+      "pageEnd": 1251
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-6df2e742",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "SEÇÃO DE ATIVIDADE TÉCNICA (SAT) A SAT tem como função primordial supervisio- nar se as normas provenientes da DAT e Comando Geral são cumpridas pelas edificações instaladas em suas jurisdições. Essa conferência é realizada, de modo geral, nas três etapas de r",
+      "pageStart": 1253,
+      "pageEnd": 1253
+    },
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-3064f988",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "18 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos introdutórios: atividade técnica no CBMSC Aqui podemos entender como responsável téc- nico um engenheiro ou arquiteto legalmente habi- litado e com registro no respectivo conselho de classe regional - Con",
+      "pageStart": 1259,
+      "pageEnd": 1259
+    }
+  ]
+}

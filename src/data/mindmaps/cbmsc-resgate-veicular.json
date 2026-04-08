@@ -1,0 +1,141 @@
+{
+  "id": "cbmsc-resgate-veicular",
+  "title": "Resgate veicular",
+  "summary": "Resumo derivado de seções oficiais do CBMSC sobre desencarceramento e estabilização.",
+  "nodes": [
+    {
+      "id": "cbmsc-resgate-veicular-n1",
+      "label": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de ",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-resgate-veicular-n1-a",
+          "label": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exi",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-resgate-veicular-n1-b",
+          "label": "Páginas 490-490",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-resgate-veicular-n2",
+      "label": "94 CORPO DE BOMBEIROS M ILITAR DE SANTA CATARINA Ferramentas e equipamentos para resgate v",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-resgate-veicular-n2-a",
+          "label": "94 CORPO DE BOMBEIROS M ILITAR DE SANTA CATARINA Ferramentas e equipamentos para resgate veicular FERRAMENTAS ",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-resgate-veicular-n2-b",
+          "label": "Páginas 94-94",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-resgate-veicular-n3",
+      "label": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de ",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-resgate-veicular-n3-a",
+          "label": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exi",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-resgate-veicular-n3-b",
+          "label": "Páginas 92-92",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-resgate-veicular-n4",
+      "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu Além ",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-resgate-veicular-n4-a",
+          "label": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu Além de tornar algumas da",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-resgate-veicular-n4-b",
+          "label": "Páginas 16-16",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exige, atualmente, muito mais do ",
+    "94 CORPO DE BOMBEIROS M ILITAR DE SANTA CATARINA Ferramentas e equipamentos para resgate veicular FERRAMENTAS E EQUIPAMENTOS A atividade de ",
+    "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exige, atualmente, muito mais do ",
+    "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu Além de tornar algumas das medidas anteriores inócuas, "
+  ],
+  "commonMistakes": [
+    "Confundir conceitos centrais de resgate veicular.",
+    "Responder por prática informal sem aderência ao manual oficial."
+  ],
+  "terms": [
+    "resgate veicular",
+    "desencarceramento",
+    "estabilização",
+    "ferramenta hidráulica",
+    "corpo",
+    "bombeiros",
+    "militar",
+    "santa",
+    "catarina",
+    "ferramentas",
+    "ilitar",
+    "tópicos"
+  ],
+  "sources": [
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-a2de5b60",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exige, atualmente, muito mais do que simples ferramentas e equipamen- tos utilizados no passado, por vezes, de forma empírica. A evolução tecnológica da ",
+      "pageStart": 490,
+      "pageEnd": 490
+    },
+    {
+      "manualId": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-1-edicao",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM RESGATE VEICULAR - 1ª EDIÇÃO",
+      "sectionId": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-1-edicao-sec-9f5e33b1",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/102-salvamento-busca-resgate?download=780:manual-de-capacitacao-em-resgate-veicular-1-edicao",
+      "category": "Salvamento, Busca & Resgate",
+      "excerpt": "94 CORPO DE BOMBEIROS M ILITAR DE SANTA CATARINA Ferramentas e equipamentos para resgate veicular FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exige, atualmente, muito mais do que simples ferramentas e equipamen- tos utilizados no passado, por ve",
+      "pageStart": 94,
+      "pageEnd": 94
+    },
+    {
+      "manualId": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM RESGATE VEICULAR - 2ª EDIÇÃO",
+      "sectionId": "salvamento-busca-resgate-manual-de-capacitacao-em-resgate-veicular-2-edicao-sec-17728edc",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/102-salvamento-busca-resgate?download=779:manual-de-capacitacao-em-resgate-veicular",
+      "category": "Salvamento, Busca & Resgate",
+      "excerpt": "92 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA FERRAMENTAS E EQUIPAMENTOS A atividade de resgate veicular exige, atualmente, muito mais do que simples ferramentas e equipamen- tos utilizados no passado, por vezes, de forma empírica. A evolução tecnológica da ",
+      "pageStart": 92,
+      "pageEnd": 92
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos",
+      "manualTitle": "TÓPICOS ESPECIAIS: INCÊNDIO EM VEÍCULOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-topicos-especiais-incendio-em-veiculos-sec-1bc0e491",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=741:topicos-especiais-incendio-em-veiculos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "16 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Tópicos especiais: incêndio em veícu Além de tornar algumas das medidas anteriores inócuas, um veículo em chamas se movimentando gera riscos exponenciais, podendo causar atropelamentos e colisões, além de espalha",
+      "pageStart": 16,
+      "pageEnd": 16
+    }
+  ]
+}

@@ -1,13 +1,21 @@
 {
-  "generatedAt": "2026-04-08T14:40:36.273Z",
+  "generatedAt": "2026-04-08T17:13:50.996Z",
   "maps": [
     "src/data/mindmaps/cbmsc-classes-de-incendio.json",
     "src/data/mindmaps/cbmsc-metodos-de-extincao.json",
     "src/data/mindmaps/cbmsc-comportamento-do-fogo.json",
+    "src/data/mindmaps/cbmsc-extintores.json",
     "src/data/mindmaps/cbmsc-aph-abcde.json",
     "src/data/mindmaps/cbmsc-rcp.json",
+    "src/data/mindmaps/cbmsc-trauma.json",
+    "src/data/mindmaps/cbmsc-hemorragias.json",
     "src/data/mindmaps/cbmsc-produtos-perigosos.json",
-    "src/data/mindmaps/cbmsc-salvamento-busca-resgate.json",
-    "src/data/mindmaps/cbmsc-normas-e-legislacao-basica.json"
-  ]
+    "src/data/mindmaps/cbmsc-salvamento-em-altura.json",
+    "src/data/mindmaps/cbmsc-salvamento-aquatico.json",
+    "src/data/mindmaps/cbmsc-resgate-veicular.json",
+    "src/data/mindmaps/cbmsc-busca-terrestre.json",
+    "src/data/mindmaps/cbmsc-seguranca-operacional.json",
+    "src/data/mindmaps/cbmsc-normas-legislacao-atividade-tecnica.json"
+  ],
+  "total": 15
 }

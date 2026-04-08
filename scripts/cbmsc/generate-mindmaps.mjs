@@ -10,135 +10,105 @@ const slugify = (value) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '')
 
-const mapBlueprints = [
-  {
-    title: 'Classes de incêndio',
-    summary: 'Classificação por tipo de combustível orienta agente extintor e estratégia operacional.',
-    highlights: ['Classe K envolve óleos e gorduras de cozinha, exige agente saponificante.', 'Classe D não deve receber água em metais reativos.'],
-    mistakes: ['Confundir classe C com método de extinção.', 'Aplicar água em incêndio classe B com líquido inflamável.'],
-    branches: [
-      { label: 'Classe A', children: ['Materiais sólidos comuns', 'Agente prioritário: água nebulizada'] },
-      { label: 'Classe B', children: ['Líquidos inflamáveis', 'Espuma e abafamento'] },
-      { label: 'Classe C', children: ['Equipamento energizado', 'Desenergizar antes do ataque final'] },
-      { label: 'Classe D/K', children: ['Metais pirofóricos e óleos de cozinha', 'Agentes especiais'] }
-    ]
-  },
-  {
-    title: 'Métodos de extinção',
-    summary: 'Resfriamento, abafamento, isolamento e quebra de reação em cadeia compõem os métodos-base.',
-    highlights: ['Abafamento reduz concentração de oxigênio.', 'Isolamento remove combustível disponível.'],
-    mistakes: ['Usar método único sem avaliar classe do incêndio.', 'Ventilar antes de coordenar ataque.'],
-    branches: [
-      { label: 'Resfriamento', children: ['Retira calor', 'Água em padrão adequado'] },
-      { label: 'Abafamento', children: ['Reduz comburente', 'Espuma e cobertores'] },
-      { label: 'Isolamento', children: ['Interrompe suprimento de combustível', 'Fechamento de válvulas'] },
-      { label: 'Quebra em cadeia', children: ['Interfere reação química', 'PQS e agentes halogenados permitidos'] }
-    ]
-  },
-  {
-    title: 'Comportamento do fogo',
-    summary: 'Fenômenos térmicos e dinâmica de fumaça orientam leitura de risco e tomada de decisão.',
-    highlights: ['Flashover é transição rápida para combustão generalizada.', 'Backdraft depende de ambiente confinado e ventilação súbita.'],
-    mistakes: ['Ignorar estratificação térmica no avanço.', 'Abrir ventilação sem linha carregada.'],
-    branches: [
-      { label: 'Transferência de calor', children: ['Condução', 'Convecção', 'Radiação'] },
-      { label: 'Fenômenos críticos', children: ['Flashover', 'Backdraft'] },
-      { label: 'Leitura de fumaça', children: ['Volume', 'Velocidade', 'Cor', 'Densidade'] }
-    ]
-  },
-  {
-    title: 'APH / ABCDE',
-    summary: 'Sequência de avaliação primária para atendimento inicial com foco em ameaças imediatas à vida.',
-    highlights: ['A prioriza via aérea com proteção cervical quando necessário.', 'C inclui controle de hemorragia exsanguinante.'],
-    mistakes: ['Inverter sequência sem justificativa clínica.', 'Pular reavaliação após intervenção.'],
-    branches: [
-      { label: 'A - Airway', children: ['Via aérea pérvia', 'Proteção cervical'] },
-      { label: 'B - Breathing', children: ['Expansão torácica', 'Ventilação eficaz'] },
-      { label: 'C - Circulation', children: ['Pulso e perfusão', 'Controle de hemorragia'] },
-      { label: 'D/E', children: ['Avaliação neurológica rápida', 'Exposição com prevenção de hipotermia'] }
-    ]
-  },
-  {
-    title: 'RCP',
-    summary: 'Suporte básico em parada cardiorrespiratória exige compressões de alta qualidade e mínima interrupção.',
-    highlights: ['Frequência alvo de 100-120 compressões/min em adulto.', 'Desfibrilação precoce aumenta chance de ROSC.'],
-    mistakes: ['Interrupções longas para checagens desnecessárias.', 'Ventilações excessivas.'],
-    branches: [
-      { label: 'Cadeia de sobrevivência', children: ['Reconhecimento precoce', 'RCP imediata', 'DEA'] },
-      { label: 'Compressões', children: ['Profundidade adequada', 'Retorno completo do tórax'] },
-      { label: 'Ventilação', children: ['Relação 30:2 sem via avançada', 'Evitar hiperventilação'] }
-    ]
-  },
-  {
-    title: 'Produtos perigosos',
-    summary: 'Identificação e isolamento inicial reduzem risco em eventos com substâncias perigosas.',
-    highlights: ['Reconhecimento por ONU, rótulo de risco e painéis de segurança.', 'Zonas quente, morna e fria devem ser delimitadas.'],
-    mistakes: ['Acessar zona quente sem EPI químico compatível.', 'Desconsiderar direção do vento.'],
-    branches: [
-      { label: 'Identificação', children: ['Número ONU', 'Classe/subclasse de risco'] },
-      { label: 'Ações iniciais', children: ['Isolamento', 'Evacuação', 'Acionamento especializado'] },
-      { label: 'Segurança da equipe', children: ['EPI adequado', 'Monitoramento de contaminação'] }
-    ]
-  },
-  {
-    title: 'Salvamento / busca / resgate',
-    summary: 'Busca sistemática e extração segura priorizam vítimas e preservam a guarnição.',
-    highlights: ['Marcação de ambientes evita duplicidade e áreas não varridas.', 'Controle de tempo/ar no ambiente hostil é obrigatório.'],
-    mistakes: ['Perder referência de rota de saída.', 'Separar dupla em ambiente IDLH.'],
-    branches: [
-      { label: 'Busca', children: ['Primária x secundária', 'Padrões de progressão'] },
-      { label: 'Resgate', children: ['Técnicas de arraste', 'Proteção de via aérea da vítima'] },
-      { label: 'Comando', children: ['Setorização', 'Prestação de contas (PAR)'] }
-    ]
-  },
-  {
-    title: 'Normas e legislação básica',
-    summary: 'Base normativa orienta limites operacionais, disciplina e responsabilidade da atuação CBMSC.',
-    highlights: ['CTB e IG 10-03-BM aparecem recorrentemente em provas.', 'Cumprimento de POP e ICS reduz erro operacional.'],
-    mistakes: ['Confundir norma interna com lei federal.', 'Atuar fora de escopo institucional.'],
-    branches: [
-      { label: 'Legislação federal', children: ['CTB', 'Normas de APH correlatas'] },
-      { label: 'Normas CBMSC', children: ['IG 10-03-BM', 'Manuais operacionais'] },
-      { label: 'Governança operacional', children: ['Cadeia de comando', 'Responsabilidade técnica'] }
-    ]
-  }
+const TOPICS = [
+  { title: 'Classes de incêndio', theme: 'Incêndio', subtheme: 'Classificação e agentes extintores', keywords: ['classe a', 'classe b', 'classe c', 'classe d', 'classe k', 'agente extintor'], dependencies: [] },
+  { title: 'Métodos de extinção', theme: 'Incêndio', subtheme: 'Resfriamento, abafamento e isolamento', keywords: ['resfriamento', 'abafamento', 'isolamento', 'reacao em cadeia'], dependencies: ['Classes de incêndio'] },
+  { title: 'Comportamento do fogo', theme: 'Incêndio', subtheme: 'Fenômenos e leitura de fumaça', keywords: ['flashover', 'backdraft', 'fumaça', 'convecção', 'radiação'], dependencies: ['Métodos de extinção'] },
+  { title: 'Extintores', theme: 'Incêndio', subtheme: 'Tipos, uso e limitações', keywords: ['extintor', 'pqs', 'co2', 'espuma', 'água pressurizada'], dependencies: ['Classes de incêndio'] },
+  { title: 'APH / ABCDE', theme: 'APH', subtheme: 'Avaliação primária', keywords: ['abcde', 'airway', 'breathing', 'circulation', 'exposição'], dependencies: [] },
+  { title: 'RCP', theme: 'APH', subtheme: 'Parada cardiorrespiratória', keywords: ['rcp', 'compressão', 'desfibrilação', 'dea', 'cadeia de sobrevivência'], dependencies: ['APH / ABCDE'] },
+  { title: 'Trauma', theme: 'APH', subtheme: 'Manejo do trauma e transporte', keywords: ['trauma', 'imobilização', 'cinemática', 'coluna', 'transporte'], dependencies: ['APH / ABCDE'] },
+  { title: 'Hemorragias', theme: 'APH', subtheme: 'Controle de sangramento', keywords: ['hemorragia', 'torniquete', 'compressão direta', 'choque hipovolêmico'], dependencies: ['APH / ABCDE'] },
+  { title: 'Produtos perigosos', theme: 'Produtos Perigosos', subtheme: 'Reconhecimento e isolamento', keywords: ['onu', 'produto perigoso', 'zona quente', 'isolamento', 'epi químico'], dependencies: [] },
+  { title: 'Salvamento em altura', theme: 'Salvamento', subtheme: 'Técnicas verticais', keywords: ['altura', 'corda', 'ancoragem', 'rapel', 'ascensão'], dependencies: ['Segurança operacional'] },
+  { title: 'Salvamento aquático', theme: 'Salvamento', subtheme: 'Guarda-vidas e abordagem', keywords: ['salvamento aquático', 'afogamento', 'praia', 'corrente de retorno'], dependencies: ['Segurança operacional'] },
+  { title: 'Resgate veicular', theme: 'Salvamento', subtheme: 'Desencarceramento e estabilização', keywords: ['resgate veicular', 'desencarceramento', 'estabilização', 'ferramenta hidráulica'], dependencies: ['Segurança operacional'] },
+  { title: 'Busca terrestre', theme: 'Salvamento', subtheme: 'Busca, orientação e comando', keywords: ['busca terrestre', 'varredura', 'setorização', 'ponto de encontro'], dependencies: ['Segurança operacional'] },
+  { title: 'Segurança operacional', theme: 'Gestão Operacional', subtheme: 'Gestão de risco e comando', keywords: ['segurança operacional', 'comando de incidentes', 'par', 'zona de risco'], dependencies: [] },
+  { title: 'Normas / legislação / atividade técnica', theme: 'Normas e Legislação', subtheme: 'Base normativa CBMSC', keywords: ['ig', 'norma', 'legislação', 'atividade técnica', 'responsabilidade'], dependencies: [] }
 ]
 
-const createMindMap = (blueprint, manualIndex) => {
-  const id = `cbmsc-${slugify(blueprint.title)}`
-  const nodes = blueprint.branches.map((branch) => ({
-    id: `${id}-${slugify(branch.label)}`,
-    label: branch.label,
-    type: 'main',
-    children: branch.children.map((child) => ({ id: `${id}-${slugify(branch.label)}-${slugify(child)}`, label: child, type: 'child' }))
-  }))
+const extractSections = async () => {
+  const files = await fs.readdir('data/cbmsc/normalized').catch(() => [])
+  const sections = []
 
-  const sources = manualIndex.slice(0, 4).map((manual) => ({
-    manualId: manual.id,
-    manualTitle: manual.title,
-    category: manual.category,
-    sourcePage: manual.sourcePage,
-    sourceUrl: manual.fileUrl || manual.sourcePage,
-    collectedAt: manual.collectedAt
+  for (const file of files) {
+    const doc = await readJson(path.join('data/cbmsc/normalized', file), null)
+    if (!doc?.sections?.length) continue
+
+    for (const section of doc.sections) {
+      sections.push({
+        manualId: doc.manualId,
+        manualTitle: doc.title,
+        category: doc.category,
+        sectionId: section.id,
+        title: section.title,
+        keywords: section.keywords ?? [],
+        content: section.content ?? '',
+        pageStart: section.pageStart,
+        pageEnd: section.pageEnd,
+        sourceUrl: doc.fileUrl || doc.sourceUrl,
+        excerpt: (section.content ?? '').slice(0, 260)
+      })
+    }
+  }
+
+  return sections
+}
+
+const scoreSection = (section, topicKeywords) => {
+  const haystack = `${section.title} ${(section.keywords ?? []).join(' ')} ${(section.content ?? '').slice(0, 1500)}`.toLowerCase()
+  return topicKeywords.reduce((score, keyword) => score + (haystack.includes(keyword.toLowerCase()) ? 2 : 0), 0)
+}
+
+const bestSections = (sections, topicKeywords, count = 8) =>
+  sections
+    .map((section) => ({ section, score: scoreSection(section, topicKeywords) }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score)
+    .slice(0, count)
+    .map((entry) => entry.section)
+
+const buildMindMap = (topic, matches) => {
+  const id = `cbmsc-${slugify(topic.title)}`
+  const top = matches.slice(0, 4)
+
+  const nodes = top.map((section, index) => ({
+    id: `${id}-n${index + 1}`,
+    label: section.title.slice(0, 90),
+    type: 'main',
+    children: [
+      { id: `${id}-n${index + 1}-a`, label: section.excerpt.slice(0, 110), type: 'child' },
+      { id: `${id}-n${index + 1}-b`, label: `Páginas ${section.pageStart ?? '?'}-${section.pageEnd ?? '?'}`, type: 'child' }
+    ]
   }))
 
   return {
     id,
-    title: blueprint.title,
-    summary: blueprint.summary,
+    title: topic.title,
+    summary: `Resumo derivado de seções oficiais do CBMSC sobre ${topic.subtheme.toLowerCase()}.`,
     nodes,
-    examHighlights: blueprint.highlights,
-    commonMistakes: blueprint.mistakes,
-    terms: blueprint.branches.flatMap((branch) => [branch.label, ...branch.children]),
-    sources
+    examHighlights: top.map((section) => section.excerpt.slice(0, 140)),
+    commonMistakes: [`Confundir conceitos centrais de ${topic.title.toLowerCase()}.`, 'Responder por prática informal sem aderência ao manual oficial.'],
+    terms: Array.from(new Set([...topic.keywords, ...top.flatMap((section) => section.keywords.slice(0, 6))])).slice(0, 22),
+    sources: top.map((section) => ({
+      manualId: section.manualId,
+      manualTitle: section.manualTitle,
+      sectionId: section.sectionId,
+      sourceUrl: section.sourceUrl,
+      category: section.category,
+      excerpt: section.excerpt,
+      pageStart: section.pageStart,
+      pageEnd: section.pageEnd
+    }))
   }
 }
 
 const main = async () => {
   await fs.mkdir('src/data/mindmaps', { recursive: true })
 
-  const manualIndex = await readJson('data/cbmsc/manual_index.json', [])
-  const maps = mapBlueprints.map((blueprint) => createMindMap(blueprint, manualIndex))
+  const sections = await extractSections()
+  const maps = TOPICS.map((topic) => buildMindMap(topic, bestSections(sections, topic.keywords, 10)))
 
   for (const map of maps) {
     await fs.writeFile(path.join('src/data/mindmaps', `${map.id}.json`), `${JSON.stringify(map, null, 2)}\n`, 'utf-8')
@@ -146,24 +116,32 @@ const main = async () => {
 
   await writeJson('src/data/mindmaps/generated-index.json', {
     generatedAt: new Date().toISOString(),
-    maps: maps.map((map) => `src/data/mindmaps/${map.id}.json`)
+    maps: maps.map((map) => `src/data/mindmaps/${map.id}.json`),
+    total: maps.length
   })
 
-  const knowledgeThemes = maps.map((map) => ({
-    theme: map.title,
-    subtheme: map.nodes.map((node) => node.label),
-    priority: ['classes de incêndio', 'aph / abcde', 'rcp'].includes(map.title.toLowerCase()) ? 'alta' : 'media',
-    manuals: Array.from(new Set(map.sources.map((source) => source.manualId))),
-    baseSections: map.nodes.map((node) => node.label),
-    dependencies: map.title === 'RCP' ? ['APH / ABCDE'] : map.title === 'Métodos de extinção' ? ['Classes de incêndio'] : []
-  }))
+  const knowledgeThemes = TOPICS.map((topic) => {
+    const matches = bestSections(sections, topic.keywords, 14)
+    return {
+      theme: topic.theme,
+      subtheme: topic.subtheme,
+      priority: ['Classes de incêndio', 'APH / ABCDE', 'RCP', 'Trauma'].includes(topic.title) ? 'alta' : 'media',
+      manualIds: Array.from(new Set(matches.map((item) => item.manualId))).slice(0, 12),
+      sectionIds: matches.map((item) => item.sectionId),
+      dependencies: topic.dependencies,
+      keywords: topic.keywords
+    }
+  })
 
   await writeJson('data/cbmsc/knowledge_map.json', {
     generatedAt: new Date().toISOString(),
+    source: 'manuals-parsed',
+    manualCount: new Set(sections.map((section) => section.manualId)).size,
+    sectionCount: sections.length,
     themes: knowledgeThemes
   })
 
-  console.log(`[cbmsc:generate-mindmaps] ${maps.length} mapa(s) gerado(s) e knowledge_map atualizado.`)
+  console.log(`[cbmsc:generate-mindmaps] ${maps.length} mapa(s) oficial(is) gerado(s).`)
 }
 
 main().catch((error) => {

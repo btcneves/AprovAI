@@ -221,7 +221,8 @@ const toLegacyQuestion = (question: (typeof cbmscQuestions)[number]): Question =
     editalReference: 'CBMSC - Manuais e normas operacionais',
     tags: question.tags,
     relatedMindMapNodeId: `cbmsc-${question.theme.toLowerCase().replace(/\s+/g, '-')}`,
-    isActive: question.isActive
+    isActive: question.isActive,
+    sourceRefs: question.sourceRefs
   }
 }
 

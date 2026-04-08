@@ -1,0 +1,140 @@
+{
+  "id": "cbmsc-trauma",
+  "title": "Trauma",
+  "summary": "Resumo derivado de seções oficiais do CBMSC sobre manejo do trauma e transporte.",
+  "nodes": [
+    {
+      "id": "cbmsc-trauma-n1",
+      "label": "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: ATENDIMENTO PRÉ-H",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-trauma-n1-a",
+          "label": "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: ATENDIMENTO PRÉ-HOSPITALAR NO CBMSC p",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-trauma-n1-b",
+          "label": "Páginas 20-20",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-trauma-n2",
+      "label": "24 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUM",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-trauma-n2-a",
+          "label": "24 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS Inicialmente,",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-trauma-n2-b",
+          "label": "Páginas 24-24",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-trauma-n3",
+      "label": "25 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUM",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-trauma-n3-a",
+          "label": "25 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS • Intoxicação",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-trauma-n3-b",
+          "label": "Páginas 25-25",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-trauma-n4",
+      "label": "26 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUM",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-trauma-n4-a",
+          "label": "26 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS Figura 12. Ma",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-trauma-n4-b",
+          "label": "Páginas 26-26",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: ATENDIMENTO PRÉ-HOSPITALAR NO CBMSC possuir os equipamentos médicos",
+    "24 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS Inicialmente, deixou-se de utilizar o termo",
+    "25 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS • Intoxicação: paciente com indícios de int",
+    "26 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS Figura 12. Matriz de decisão da RMC Fonte: "
+  ],
+  "commonMistakes": [
+    "Confundir conceitos centrais de trauma.",
+    "Responder por prática informal sem aderência ao manual oficial."
+  ],
+  "terms": [
+    "trauma",
+    "imobilização",
+    "cinemática",
+    "coluna",
+    "transporte",
+    "corpo",
+    "bombeiros",
+    "militar",
+    "santa",
+    "catarina",
+    "tópicos"
+  ],
+  "sources": [
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022",
+      "manualTitle": "APH - Tópicos Introdutórios: Atendimento Pré-Hospitalar no CBMSC 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-2f01d7d3",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=900:aph-ti-atendimento-pre-hospitalar-no-cbmsc-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: ATENDIMENTO PRÉ-HOSPITALAR NO CBMSC possuir os equipamentos médicos necessários ao atendimento de pacientes conforme sua gravidade (BRASIL, 2002). Analisando-se os seis tipos, percebe-se ",
+      "pageStart": 20,
+      "pageEnd": 20
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-a2c334dd",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "24 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS Inicialmente, deixou-se de utilizar o termo imobilização, dando lugar à Restrição do Movimento da Coluna (RMC), visto que as técnicas atuais apenas limitam ou redu",
+      "pageStart": 24,
+      "pageEnd": 24
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-9f76d0c7",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "25 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS • Intoxicação: paciente com indícios de intoxi- cação por álcool e/ou drogas. • Lesões distratoras : qualquer lesão excessi- vamente dolorosa que interfira na aval",
+      "pageStart": 25,
+      "pageEnd": 25
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022",
+      "manualTitle": "APH - Tópicos Introdutórios : Emergências Traumáticas 2022",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-ed6f0486",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "26 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA • TÓPICOS INTRODUTÓRIOS: EMERGÊNCIAS TRAUMÁTICAS Figura 12. Matriz de decisão da RMC Fonte: CBMSC (2021) PROTOCOLO DE RESTRIÇÃO DO MOVIMENTO DA COLUNA RESTRIÇÃO COMPLETA RESTRIÇÃO NÃO INDICADA X A B C D E RESTRIÇ",
+      "pageStart": 26,
+      "pageEnd": 26
+    }
+  ]
+}

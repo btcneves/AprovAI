@@ -1,0 +1,146 @@
+{
+  "id": "cbmsc-busca-terrestre",
+  "title": "Busca terrestre",
+  "summary": "Resumo derivado de seções oficiais do CBMSC sobre busca, orientação e comando.",
+  "nodes": [
+    {
+      "id": "cbmsc-busca-terrestre-n1",
+      "label": "91 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Processo do quadrado crescente ",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-busca-terrestre-n1-a",
+          "label": "91 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Processo do quadrado crescente Fonte: CBMSC Regras ",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-busca-terrestre-n1-b",
+          "label": "Páginas 95-95",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-busca-terrestre-n2",
+      "label": "5.4.4 Técnicas de busca: Também chamadas de processos de busca.",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-busca-terrestre-n2-a",
+          "label": "5.4.4 Técnicas de busca: Também chamadas de processos de busca. São as técnicas ou as formas como as equipes d",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-busca-terrestre-n2-b",
+          "label": "Páginas 60-61",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-busca-terrestre-n3",
+      "label": "91 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Processo do quadrado crescente ",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-busca-terrestre-n3-a",
+          "label": "91 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Processo do quadrado crescente Fonte: CBMSC Regras ",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-busca-terrestre-n3-b",
+          "label": "Páginas 91-91",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-busca-terrestre-n4",
+      "label": "77 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Ponto de encontro é local onde a",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-busca-terrestre-n4-a",
+          "label": "77 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Ponto de encontro é local onde a população, evacuada",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-busca-terrestre-n4-b",
+          "label": "Páginas 77-77",
+          "type": "child"
+        }
+      ]
+    }
+  ],
+  "examHighlights": [
+    "91 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Processo do quadrado crescente Fonte: CBMSC Regras e cuidados em deslocamentos Na",
+    "5.4.4 Técnicas de busca: Também chamadas de processos de busca. São as técnicas ou as formas como as equipes de busca terrestre deslocam-se ",
+    "91 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Processo do quadrado crescente Fonte: CBMSC Regras e cuidados em deslocamentos Na",
+    "77 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Ponto de encontro é local onde a população, evacuada do imóvel, de - verá ser conc"
+  ],
+  "commonMistakes": [
+    "Confundir conceitos centrais de busca terrestre.",
+    "Responder por prática informal sem aderência ao manual oficial."
+  ],
+  "terms": [
+    "busca terrestre",
+    "varredura",
+    "setorização",
+    "ponto de encontro",
+    "corpo",
+    "bombeiros",
+    "militar",
+    "santa",
+    "catarina",
+    "figura",
+    "técnicas",
+    "busca",
+    "também",
+    "chamadas",
+    "processos",
+    "formas",
+    "glossário"
+  ],
+  "sources": [
+    {
+      "manualId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020",
+      "manualTitle": "COMPÊNDIO DE TURMA - CFC 2020",
+      "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-e011e946",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
+      "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
+      "excerpt": "91 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Processo do quadrado crescente Fonte: CBMSC Regras e cuidados em deslocamentos Nas ações de busca terrestre necessitamos ob- servar algumas regras gerais e alguns cuidados nos deslocamentos efetuados, ",
+      "pageStart": 95,
+      "pageEnd": 95
+    },
+    {
+      "manualId": "salvamento-busca-resgate-busca-terrestre-manual-do-aluno-curso-de-formacao-de-soldados",
+      "manualTitle": "BUSCA TERRESTRE - MANUAL DO ALUNO - CURSO DE FORMAÇÃO DE SOLDADOS",
+      "sectionId": "salvamento-busca-resgate-busca-terrestre-manual-do-aluno-curso-de-formacao-de-soldados-sec-bd973a9e",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/102-salvamento-busca-resgate?download=747:busca-terrestre-manual-do-aluno-curso-de-formacao-de-soldados",
+      "category": "Salvamento, Busca & Resgate",
+      "excerpt": "5.4.4 Técnicas de busca: Também chamadas de processos de busca. São as técnicas ou as formas como as equipes de busca terrestre deslocam-se pelo terreno dentro da área de busca, com a finalidade de localizar vestígios e a pessoa perdida. Curso de Formação de S",
+      "pageStart": 60,
+      "pageEnd": 61
+    },
+    {
+      "manualId": "salvamento-busca-resgate-manual-de-capacitacao-em-busca-terrestre",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM BUSCA TERRESTRE",
+      "sectionId": "salvamento-busca-resgate-manual-de-capacitacao-em-busca-terrestre-sec-1b1bcc0a",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/102-salvamento-busca-resgate?download=746:manual-de-capacitacao-em-busca-terrestre",
+      "category": "Salvamento, Busca & Resgate",
+      "excerpt": "91 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Figura 4 - Processo do quadrado crescente Fonte: CBMSC Regras e cuidados em deslocamentos Nas ações de busca terrestre necessitamos ob- servar algumas regras gerais e alguns cuidados nos deslocamentos efetuados, ",
+      "pageStart": 91,
+      "pageEnd": 91
+    },
+    {
+      "manualId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM ATENDIMENTO BÁSICO A EMERGÊNCIAS",
+      "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-d4481919",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
+      "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
+      "excerpt": "77 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Glossário Ponto de encontro é local onde a população, evacuada do imóvel, de - verá ser concentrada aguardando até a definição da ocorrência, deve ser amplo, afastado de qualquer local de risco e não pode ser afe",
+      "pageStart": 77,
+      "pageEnd": 77
+    }
+  ]
+}

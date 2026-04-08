@@ -1,113 +1,151 @@
 {
   "id": "cbmsc-comportamento-do-fogo",
   "title": "Comportamento do fogo",
-  "summary": "Fenômenos térmicos e dinâmica de fumaça orientam leitura de risco e tomada de decisão.",
+  "summary": "Resumo derivado de seções oficiais do CBMSC sobre fenômenos e leitura de fumaça.",
   "nodes": [
     {
-      "id": "cbmsc-comportamento-do-fogo-transferencia-de-calor",
-      "label": "Transferência de calor",
+      "id": "cbmsc-comportamento-do-fogo-n1",
+      "label": "1.2 IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resu",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-comportamento-do-fogo-transferencia-de-calor-conducao",
-          "label": "Condução",
+          "id": "cbmsc-comportamento-do-fogo-n1-a",
+          "label": "1.2 IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resultantes da queima, e",
           "type": "child"
         },
         {
-          "id": "cbmsc-comportamento-do-fogo-transferencia-de-calor-conveccao",
-          "label": "Convecção",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-comportamento-do-fogo-transferencia-de-calor-radiacao",
-          "label": "Radiação",
+          "id": "cbmsc-comportamento-do-fogo-n1-b",
+          "label": "Páginas 58-59",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-comportamento-do-fogo-fenomenos-criticos",
-      "label": "Fenômenos críticos",
+      "id": "cbmsc-comportamento-do-fogo-n2",
+      "label": "1 FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) s",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-comportamento-do-fogo-fenomenos-criticos-flashover",
-          "label": "Flashover",
+          "id": "cbmsc-comportamento-do-fogo-n2-a",
+          "label": "1 FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são difíceis de tradu",
           "type": "child"
         },
         {
-          "id": "cbmsc-comportamento-do-fogo-fenomenos-criticos-backdraft",
-          "label": "Backdraft",
+          "id": "cbmsc-comportamento-do-fogo-n2-b",
+          "label": "Páginas 57-57",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-comportamento-do-fogo-leitura-de-fumaca",
-      "label": "Leitura de fumaça",
+      "id": "cbmsc-comportamento-do-fogo-n3",
+      "label": "2.1 VISUALIZAÇÃO DO FOCO DO INCÊNDIO Uma ventilação adequada retirará do ambiente os produ",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-comportamento-do-fogo-leitura-de-fumaca-volume",
-          "label": "Volume",
+          "id": "cbmsc-comportamento-do-fogo-n3-a",
+          "label": "2.1 VISUALIZAÇÃO DO FOCO DO INCÊNDIO Uma ventilação adequada retirará do ambiente os produtos da combustão que",
           "type": "child"
         },
         {
-          "id": "cbmsc-comportamento-do-fogo-leitura-de-fumaca-velocidade",
-          "label": "Velocidade",
+          "id": "cbmsc-comportamento-do-fogo-n3-b",
+          "label": "Páginas 158-159",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-comportamento-do-fogo-n4",
+      "label": "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Saiba mais Para saber mais sobre a teoria ",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-comportamento-do-fogo-n4-a",
+          "label": "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Saiba mais Para saber mais sobre a teoria geral do fogo consul",
           "type": "child"
         },
         {
-          "id": "cbmsc-comportamento-do-fogo-leitura-de-fumaca-cor",
-          "label": "Cor",
-          "type": "child"
-        },
-        {
-          "id": "cbmsc-comportamento-do-fogo-leitura-de-fumaca-densidade",
-          "label": "Densidade",
+          "id": "cbmsc-comportamento-do-fogo-n4-b",
+          "label": "Páginas 20-20",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "Flashover é transição rápida para combustão generalizada.",
-    "Backdraft depende de ambiente confinado e ventilação súbita."
+    "1.2 IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resultantes da queima, em virtude da elevação da tempe",
+    "1 FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são difíceis de traduzir para a língua portuguesa c",
+    "2.1 VISUALIZAÇÃO DO FOCO DO INCÊNDIO Uma ventilação adequada retirará do ambiente os produtos da combustão que impedem a visualização, permi",
+    "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Saiba mais Para saber mais sobre a teoria geral do fogo consulte o material “Tópicos introdu"
   ],
   "commonMistakes": [
-    "Ignorar estratificação térmica no avanço.",
-    "Abrir ventilação sem linha carregada."
+    "Confundir conceitos centrais de comportamento do fogo.",
+    "Responder por prática informal sem aderência ao manual oficial."
   ],
   "terms": [
-    "Transferência de calor",
-    "Condução",
-    "Convecção",
-    "Radiação",
-    "Fenômenos críticos",
-    "Flashover",
-    "Backdraft",
-    "Leitura de fumaça",
-    "Volume",
-    "Velocidade",
-    "Cor",
-    "Densidade"
+    "flashover",
+    "backdraft",
+    "fumaça",
+    "convecção",
+    "radiação",
+    "ignição",
+    "súbita",
+    "generalizada",
+    "momento",
+    "gases",
+    "fenômenos",
+    "incêndios",
+    "interiores",
+    "termos",
+    "utilizados",
+    "inglês",
+    "visualização",
+    "foco",
+    "incêndio",
+    "ventilação",
+    "adequada",
+    "retirará"
   ],
   "sources": [
     {
-      "manualId": "combate-incendio-estrutural-manual",
-      "manualTitle": "Manual de Combate a Incêndio Estrutural (fallback)",
-      "category": "Combate a Incêndio Estrutural",
-      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "collectedAt": "2026-04-08T14:40:11.397Z"
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
+      "manualTitle": "CURSO DE FORMAÇÃO DE COMBATE A INCÊNDIOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-83952d47",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=755:curso-de-formacao-de-combate-a-incendios",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "1.2 IGNIÇÃO SÚBITA GENERALIZADA – FLASHOVER É um momento em que os gases combustíveis resultantes da queima, em virtude da elevação da temperatura do ambiente, entram em ignição simultaneamente, com efeitos similares aos de uma explosão. Sua ocorrência general",
+      "pageStart": 58,
+      "pageEnd": 59
     },
     {
-      "manualId": "atendimento-basico-emergencias-manual",
-      "manualTitle": "Manual de Atendimento Básico a Emergências (fallback)",
-      "category": "Atendimento Pré-Hospitalar",
-      "sourcePage": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
-      "collectedAt": "2026-04-08T14:40:11.398Z"
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
+      "manualTitle": "CURSO DE FORMAÇÃO DE COMBATE A INCÊNDIOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-853d101e",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=755:curso-de-formacao-de-combate-a-incendios",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "1 FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são difíceis de traduzir para a língua portuguesa com a fidelidade conceitual necessária, ainda não temos nenhuma publicação científica que forneça uma tradução padronizad",
+      "pageStart": 57,
+      "pageEnd": 57
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios",
+      "manualTitle": "CURSO DE FORMAÇÃO DE COMBATE A INCÊNDIOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-formacao-de-combate-a-incendios-sec-c7930192",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=755:curso-de-formacao-de-combate-a-incendios",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "2.1 VISUALIZAÇÃO DO FOCO DO INCÊNDIO Uma ventilação adequada retirará do ambiente os produtos da combustão que impedem a visualização, permitindo que o bombeiro tenha uma boa visão do foco do incêndio, e assim, atingindo-o diretamente evite desperdícios de esf",
+      "pageStart": 158,
+      "pageEnd": 159
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM COMBATE A INCÊNDIO ESTRUTURAL",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-59d68342",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=754:manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "20 CORPO DE BOMBEIROS MILITAR DE SANTA CATARINA Saiba mais Para saber mais sobre a teoria geral do fogo consulte o material “Tópicos introdutórios em Ciências do Fogo”, disponível no site da Biblioteca do CEBMSC. Figura 4 - Flashover Fonte: ABC BOMBEIROS BILBA",
+      "pageStart": 20,
+      "pageEnd": 20
     }
   ]
 }
