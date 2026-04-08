@@ -4,6 +4,10 @@ import type { Question, SimuladoAnswer, SimuladoAttempt } from './types'
 const HISTORY_KEY = 'imarui_simulados'
 const BLOCK_WINDOW = 5
 
+const normalizeStatement = (statement: string): string => statement.replace(/\s*\(variação\s+\d+\)\s*$/i, '').trim()
+
+const canonicalKey = (question: Question): string => `${question.discipline}::${question.topic}::${question.subtopic}::${normalizeStatement(question.statement)}`
+
 const shuffle = <T,>(items: T[]): T[] => {
   const copy = [...items]
   for (let index = copy.length - 1; index > 0; index -= 1) {
@@ -14,13 +18,20 @@ const shuffle = <T,>(items: T[]): T[] => {
 }
 
 const pickWithAvoidance = (pool: Question[], count: number, blockedIds: Set<string>): Question[] => {
-  const available = pool.filter((question) => !blockedIds.has(question.id))
-  if (available.length >= count) {
-    return shuffle(available).slice(0, count)
+  const ordered = [...shuffle(pool.filter((question) => !blockedIds.has(question.id))), ...shuffle(pool.filter((question) => blockedIds.has(question.id)))]
+
+  const selected: Question[] = []
+  const usedKeys = new Set<string>()
+
+  for (const question of ordered) {
+    const key = canonicalKey(question)
+    if (usedKeys.has(key)) continue
+    selected.push(question)
+    usedKeys.add(key)
+    if (selected.length === count) return selected
   }
 
-  const complement = pool.filter((question) => blockedIds.has(question.id))
-  return [...shuffle(available), ...shuffle(complement)].slice(0, count)
+  throw new Error(`Banco de questões insuficiente para evitar repetição interna (${count} necessárias).`)
 }
 
 export const buildSimulado = (recentAttempts: SimuladoAttempt[]): Question[] => {
