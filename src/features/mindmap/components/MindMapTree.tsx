@@ -33,10 +33,20 @@ const themePalette = ['#2563eb', '#7c3aed', '#db2777', '#ea580c', '#0891b2', '#1
 
 const dedupe = (items: string[]) => [...new Set(items.map((item) => item.trim()).filter(Boolean))]
 
-const compact = (items: string[], max = 3, maxLen = 70) =>
+const smartTruncate = (text: string, maxLen: number) => {
+  if (text.length <= maxLen) return text
+  const sliced = text.slice(0, maxLen)
+  const lastSpace = sliced.lastIndexOf(' ')
+  if (lastSpace > Math.floor(maxLen * 0.55)) {
+    return `${sliced.slice(0, lastSpace)}…`
+  }
+  return `${sliced.trimEnd()}…`
+}
+
+const compact = (items: string[], max = 3, maxLen = 96) =>
   dedupe(items)
     .slice(0, max)
-    .map((item) => (item.length > maxLen ? `${item.slice(0, maxLen - 1)}…` : item))
+    .map((item) => smartTruncate(item, maxLen))
 
 export const MindMapTree = ({
   nodes,
@@ -133,9 +143,25 @@ export const MindMapTree = ({
       levels.set(level, existing)
     })
 
-    const maxLevel = Math.max(1, ...Array.from(levels.keys()))
-    const radiusStep = 160
-    const size = Math.max(1200, (maxLevel + 2) * radiusStep * 1.9)
+    const minRingGap = 188
+    const minNodeArc = 258
+    const baseRadius = 170
+    const levelRadius = new Map<number, number>()
+    let previousRadius = 0
+
+    Array.from(levels.entries())
+      .sort((a, b) => a[0] - b[0])
+      .forEach(([level, levelNodes]) => {
+        const count = Math.max(1, levelNodes.length)
+        const requestedByLevel = baseRadius + (level - 1) * minRingGap
+        const requestedByDensity = (count * minNodeArc) / (2 * Math.PI)
+        const radius = Math.max(requestedByLevel, requestedByDensity, previousRadius + minRingGap)
+        levelRadius.set(level, radius)
+        previousRadius = radius
+      })
+
+    const outerRadius = Math.max(...Array.from(levelRadius.values(), (value) => value))
+    const size = Math.max(1300, outerRadius * 2 + 420)
     const center = size / 2
 
     const positioned: PositionedNode[] = []
@@ -143,7 +169,7 @@ export const MindMapTree = ({
     Array.from(levels.entries())
       .sort((a, b) => a[0] - b[0])
       .forEach(([level, levelNodes]) => {
-        const radius = radiusStep * level
+        const radius = levelRadius.get(level) ?? baseRadius * level
         const count = Math.max(1, levelNodes.length)
         levelNodes.forEach((node, index) => {
           const angle = ((Math.PI * 2) / count) * index - Math.PI / 2

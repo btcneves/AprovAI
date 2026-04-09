@@ -13,6 +13,18 @@ export type QuestionOfficialSource = {
   sourceUrl?: string
 }
 
+export type DistractorAuditItem = {
+  text: string
+  type: string
+  variation: string
+  plausible: boolean
+}
+
+export type DistractorAudit = {
+  correctType: string
+  distractors: DistractorAuditItem[]
+}
+
 export type Question = {
   id: string
   discipline: Discipline
@@ -32,6 +44,7 @@ export type Question = {
   isActive: boolean
   supportSnippet?: string
   sourceRefs?: QuestionOfficialSource[]
+  distractorAudit?: DistractorAudit
 }
 
 export type MindMapNode = {

@@ -294,15 +294,18 @@ const toLegacyQuestion = (question: (typeof cbmscQuestions)[number]): Question =
     alternatives,
     correctAlternativeId: question.correctAnswer,
     explanation: question.explanation,
-    whyOthersAreWrong: question.options
-      .filter((option) => !option.startsWith(`${question.correctAnswer})`))
-      .map((option) => `Incorreta: ${option}`),
+    whyOthersAreWrong: question.distractorAudit?.distractors?.length
+      ? question.distractorAudit.distractors.map((item) => `Incorreta: ${item.text} (${item.type}; ${item.variation}).`)
+      : question.options
+          .filter((option) => !option.startsWith(`${question.correctAnswer})`))
+          .map((option) => `Incorreta: ${option}`),
     editalReference: 'CBMSC - Manuais e normas operacionais',
     tags: question.tags,
     relatedMindMapNodeId: `cbmsc-${question.theme.toLowerCase().replace(/\s+/g, '-')}`,
     isActive: question.isActive,
     supportSnippet: question.supportSnippet,
-    sourceRefs: question.sourceRefs
+    sourceRefs: question.sourceRefs,
+    distractorAudit: question.distractorAudit
   }
 }
 

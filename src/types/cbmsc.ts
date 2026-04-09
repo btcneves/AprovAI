@@ -72,6 +72,18 @@ export type QuestionSourceRef = {
   pageEnd?: number
 }
 
+export type DistractorAuditItem = {
+  text: string
+  type: string
+  variation: string
+  plausible: boolean
+}
+
+export type DistractorAudit = {
+  correctType: string
+  distractors: DistractorAuditItem[]
+}
+
 export type QuestionDocument = {
   id: string
   theme: string
@@ -88,6 +100,7 @@ export type QuestionDocument = {
   sourceRefs: QuestionSourceRef[]
   tags: string[]
   questionType: 'conceptual' | 'application' | 'scenario' | 'procedure' | 'definition' | 'comparison' | 'exception'
+  distractorAudit?: DistractorAudit
   usedCount: number
   isActive: boolean
 }
