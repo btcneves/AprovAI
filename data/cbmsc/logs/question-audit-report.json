@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-09T10:44:00.192Z",
+  "generatedAt": "2026-04-09T11:08:27.841Z",
   "questionCount": 120,
   "gabaritoDistribution": {
     "A": 24,
@@ -17,8 +17,8 @@
     "failed": 0
   },
   "correctionStats": {
-    "rejectedAttempts": 8,
-    "correctedQuestions": 6,
+    "rejectedAttempts": 22,
+    "correctedQuestions": 14,
     "approvedQuestions": 120
   },
   "themeReview": [
@@ -172,5 +172,324 @@
       "reviewed": true,
       "note": "Distratores focados em confusões técnicas recorrentes do subtema."
     }
+  ],
+  "semanticSimilarityRejectedExamples": [],
+  "approvedSemanticSamples": [
+    {
+      "questionId": "cbmsc-q-0001",
+      "subtheme": "Classes de incêndio",
+      "correct": "Classificar por combustível predominante e presença de energia elétrica, reavaliando a classe quando houver mudança de cenário.",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    },
+    {
+      "questionId": "cbmsc-q-0002",
+      "subtheme": "Classes de incêndio",
+      "correct": "Identificar a classe antes do ataque, confirmando se há metais combustíveis ou óleos de cozinha para ajustar agente e técnica.",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    },
+    {
+      "questionId": "cbmsc-q-0003",
+      "subtheme": "Classes de incêndio",
+      "correct": "Tratar a energia elétrica como fator decisivo inicial e só migrar de classe após isolamento ou desligamento confirmado.",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        }
+      ]
+    },
+    {
+      "questionId": "cbmsc-q-0004",
+      "subtheme": "Classes de incêndio",
+      "correct": "Relacionar cada foco à sua classe específica para evitar aplicação de agente incompatível no ponto crítico da ocorrência.",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    },
+    {
+      "questionId": "cbmsc-q-0005",
+      "subtheme": "Classes de incêndio",
+      "correct": "Conduzir avaliação dinâmica da classe do incêndio conforme o material envolvido e o comportamento observado das chamas.",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    },
+    {
+      "questionId": "cbmsc-q-0006",
+      "subtheme": "Classes de incêndio",
+      "correct": "Classificar por combustível predominante e presença de energia elétrica, reavaliando a classe quando houver mudança de cenário.",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    },
+    {
+      "questionId": "cbmsc-q-0007",
+      "subtheme": "Classes de incêndio",
+      "correct": "Identificar a classe antes do ataque, confirmando se há metais combustíveis ou óleos de cozinha para ajustar agente e técnica.",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    },
+    {
+      "questionId": "cbmsc-q-0008",
+      "subtheme": "Classes de incêndio",
+      "correct": "Tratar a energia elétrica como fator decisivo inicial e só migrar de classe após isolamento ou desligamento confirmado.",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        }
+      ]
+    },
+    {
+      "questionId": "cbmsc-q-0009",
+      "subtheme": "Métodos de extinção",
+      "correct": "Priorizar abafamento em vapores inflamáveis e complementar com resfriamento de superfícies expostas para evitar reignição.",
+      "distractors": [
+        {
+          "text": "Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    },
+    {
+      "questionId": "cbmsc-q-0010",
+      "subtheme": "Métodos de extinção",
+      "correct": "Priorizar abafamento em vapores inflamáveis e complementar com resfriamento de superfícies expostas para evitar reignição.",
+      "distractors": [
+        {
+          "text": "Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
+  ],
+  "generatorImprovements": [
+    "Classificação automática de distratores por tipo (conceito, ordem, aplicação e exceção).",
+    "Validador semântico canônico para detectar reformulações sem conflito conceitual real.",
+    "Cobertura obrigatória das variações conceituais: inversão de regra, exceção mal aplicada, erro de prioridade e conceito próximo confundido.",
+    "Teste de dúvida real com exigência mínima de 2 distratores plausíveis."
   ]
 }

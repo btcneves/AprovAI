@@ -40,7 +40,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0002",
@@ -81,7 +110,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0003",
@@ -122,7 +180,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0004",
@@ -163,7 +250,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0005",
@@ -204,7 +320,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0006",
@@ -245,7 +390,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0007",
@@ -286,7 +460,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0008",
@@ -327,7 +530,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0009",
@@ -368,7 +600,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0010",
@@ -409,7 +670,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0011",
@@ -450,7 +740,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0012",
@@ -491,7 +810,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0013",
@@ -501,11 +849,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "exception",
     "question": "Diante de fogo em líquido inflamável contido, qual método de extinção deve ser priorizado?",
     "options": [
-      "A) Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
-      "B) Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
+      "A) Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
+      "B) Tratar isolamento como etapa administrativa e não como método operacional de combate.",
       "C) Ajustar o método conforme a evolução da combustão, sem manter técnica única quando o comportamento do fogo muda.",
-      "D) Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
-      "E) Iniciar por ventilação forçada para só depois definir método de extinção no foco principal."
+      "D) Aplicar espuma em classe C energizada para reduzir temperatura do equipamento.",
+      "E) Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência."
     ],
     "correctAnswer": "C",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Métodos de extinção\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -532,7 +880,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Tratar isolamento como etapa administrativa e não como método operacional de combate.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Aplicar espuma em classe C energizada para reduzir temperatura do equipamento.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0014",
@@ -573,7 +950,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0015",
@@ -614,7 +1020,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0016",
@@ -655,7 +1090,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0017",
@@ -696,7 +1160,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0018",
@@ -706,11 +1199,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "definition",
     "question": "Durante progressão interna, qual interpretação de fenômenos térmicos reduz risco de evento extremo?",
     "options": [
-      "A) Assumir que ausência de chamas visíveis elimina risco de flashover em compartimentos fechados.",
-      "B) Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação.",
-      "C) Relacionar padrão de fumaça, calor e pressão para estimar fase do incêndio e modular o ataque.",
-      "D) Realizar abertura de teto sem coordenação com equipe de ataque para ganhar exaustão imediata.",
-      "E) Priorizar velocidade de entrada e deixar análise de ventilação para a equipe de retaguarda."
+      "A) Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+      "B) Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+      "C) Avaliar caminho dos gases quentes e efeitos da ventilação para prevenir aceleração súbita da combustão.",
+      "D) Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+      "E) Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação."
     ],
     "correctAnswer": "C",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Comportamento do fogo\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -737,7 +1230,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0019",
@@ -747,11 +1269,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "comparison",
     "question": "Ao identificar indícios de ventilação limitada, qual conduta sobre comportamento do fogo é mais adequada?",
     "options": [
-      "A) Cancelar leitura de ambiente ao identificar vítima potencial em outro cômodo, mantendo ventilação indiscriminada.",
-      "B) Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
-      "C) Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
-      "D) Executar leitura contínua do ambiente, aplicando pulsos de resfriamento de gases quando houver risco de transição rápida.",
-      "E) Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão."
+      "A) Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+      "B) Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+      "C) Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+      "D) Avaliar caminho dos gases quentes e efeitos da ventilação para prevenir aceleração súbita da combustão.",
+      "E) Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação."
     ],
     "correctAnswer": "D",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Comportamento do fogo\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -778,7 +1300,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0020",
@@ -819,7 +1370,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0021",
@@ -860,7 +1440,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+          "type": "erro de aplicação",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Cancelar leitura de ambiente ao identificar vítima potencial em outro cômodo, mantendo ventilação indiscriminada.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0022",
@@ -901,7 +1510,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0023",
@@ -911,11 +1549,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "scenario",
     "question": "Ao identificar indícios de ventilação limitada, qual conduta sobre comportamento do fogo é mais adequada?",
     "options": [
-      "A) Assumir que ausência de chamas visíveis elimina risco de flashover em compartimentos fechados.",
-      "B) Realizar abertura de teto sem coordenação com equipe de ataque para ganhar exaustão imediata.",
-      "C) Relacionar padrão de fumaça, calor e pressão para estimar fase do incêndio e modular o ataque.",
-      "D) Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação.",
-      "E) Priorizar velocidade de entrada e deixar análise de ventilação para a equipe de retaguarda."
+      "A) Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+      "B) Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+      "C) Avaliar caminho dos gases quentes e efeitos da ventilação para prevenir aceleração súbita da combustão.",
+      "D) Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+      "E) Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação."
     ],
     "correctAnswer": "C",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Comportamento do fogo\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -942,7 +1580,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0024",
@@ -952,11 +1619,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "procedure",
     "question": "Em ambiente confinado com aquecimento rápido, qual avaliação técnica deve preceder a abertura de compartimento?",
     "options": [
-      "A) Cancelar leitura de ambiente ao identificar vítima potencial em outro cômodo, mantendo ventilação indiscriminada.",
-      "B) Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
-      "C) Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
-      "D) Executar leitura contínua do ambiente, aplicando pulsos de resfriamento de gases quando houver risco de transição rápida.",
-      "E) Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão."
+      "A) Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+      "B) Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+      "C) Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+      "D) Avaliar caminho dos gases quentes e efeitos da ventilação para prevenir aceleração súbita da combustão.",
+      "E) Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação."
     ],
     "correctAnswer": "D",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Comportamento do fogo\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -983,7 +1650,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Interpretar fumaça escura como sinal suficiente para ataque direto contínuo sem pausas de avaliação.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar apenas percepção visual das chamas e desconsiderar pulso de fumaça ou ruído de combustão.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Abrir completamente portas e janelas no primeiro contato para liberar fumaça antes de qualquer leitura térmica.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar estratificação térmica, mantendo progressão em posição alta durante toda a aproximação.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0025",
@@ -1024,7 +1720,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter descarga aleatória sem varredura para atingir diferentes pontos da cena simultaneamente.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Acionar descarga total em jato único no topo das chamas para reduzir tempo de intervenção.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Interromper rota de fuga para sustentar aplicação contínua até vazio completo do cilindro.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Empregar espuma em equipamentos energizados por apresentar maior cobertura superficial.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0026",
@@ -1065,7 +1790,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter descarga aleatória sem varredura para atingir diferentes pontos da cena simultaneamente.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Acionar descarga total em jato único no topo das chamas para reduzir tempo de intervenção.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Interromper rota de fuga para sustentar aplicação contínua até vazio completo do cilindro.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Empregar espuma em equipamentos energizados por apresentar maior cobertura superficial.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0027",
@@ -1106,7 +1860,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter descarga aleatória sem varredura para atingir diferentes pontos da cena simultaneamente.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Acionar descarga total em jato único no topo das chamas para reduzir tempo de intervenção.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Interromper rota de fuga para sustentar aplicação contínua até vazio completo do cilindro.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Empregar espuma em equipamentos energizados por apresentar maior cobertura superficial.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0028",
@@ -1147,7 +1930,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter descarga aleatória sem varredura para atingir diferentes pontos da cena simultaneamente.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Acionar descarga total em jato único no topo das chamas para reduzir tempo de intervenção.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Interromper rota de fuga para sustentar aplicação contínua até vazio completo do cilindro.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Empregar espuma em equipamentos energizados por apresentar maior cobertura superficial.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0029",
@@ -1188,7 +2000,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter descarga aleatória sem varredura para atingir diferentes pontos da cena simultaneamente.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Interromper rota de fuga para sustentar aplicação contínua até vazio completo do cilindro.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Acionar descarga total em jato único no topo das chamas para reduzir tempo de intervenção.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Empregar espuma em equipamentos energizados por apresentar maior cobertura superficial.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0030",
@@ -1229,7 +2070,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter descarga aleatória sem varredura para atingir diferentes pontos da cena simultaneamente.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Interromper rota de fuga para sustentar aplicação contínua até vazio completo do cilindro.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Acionar descarga total em jato único no topo das chamas para reduzir tempo de intervenção.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Empregar espuma em equipamentos energizados por apresentar maior cobertura superficial.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0031",
@@ -1270,7 +2140,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter descarga aleatória sem varredura para atingir diferentes pontos da cena simultaneamente.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Acionar descarga total em jato único no topo das chamas para reduzir tempo de intervenção.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Interromper rota de fuga para sustentar aplicação contínua até vazio completo do cilindro.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Empregar espuma em equipamentos energizados por apresentar maior cobertura superficial.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0032",
@@ -1311,7 +2210,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter descarga aleatória sem varredura para atingir diferentes pontos da cena simultaneamente.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Acionar descarga total em jato único no topo das chamas para reduzir tempo de intervenção.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Interromper rota de fuga para sustentar aplicação contínua até vazio completo do cilindro.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Empregar espuma em equipamentos energizados por apresentar maior cobertura superficial.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0033",
@@ -1352,7 +2280,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar pela exposição completa e depois revisar via aérea caso surja necessidade respiratória.",
+          "type": "erro de aplicação",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar coleta administrativa de dados para completar registro antes do exame primário.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Pular circulação quando pulsos periféricos estiverem presentes na primeira checagem.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter sequência fixa sem intervenções até finalizar todas as letras do protocolo.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0034",
@@ -1393,7 +2350,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar pela exposição completa e depois revisar via aérea caso surja necessidade respiratória.",
+          "type": "erro de aplicação",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Priorizar coleta administrativa de dados para completar registro antes do exame primário.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Pular circulação quando pulsos periféricos estiverem presentes na primeira checagem.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter sequência fixa sem intervenções até finalizar todas as letras do protocolo.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0035",
@@ -1434,7 +2420,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar pela exposição completa e depois revisar via aérea caso surja necessidade respiratória.",
+          "type": "erro de aplicação",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar coleta administrativa de dados para completar registro antes do exame primário.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Pular circulação quando pulsos periféricos estiverem presentes na primeira checagem.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter sequência fixa sem intervenções até finalizar todas as letras do protocolo.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0036",
@@ -1475,7 +2490,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar coleta administrativa de dados para completar registro antes do exame primário.",
+          "type": "erro de aplicação",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar pela exposição completa e depois revisar via aérea caso surja necessidade respiratória.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Pular circulação quando pulsos periféricos estiverem presentes na primeira checagem.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter sequência fixa sem intervenções até finalizar todas as letras do protocolo.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0037",
@@ -1516,7 +2560,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Pular circulação quando pulsos periféricos estiverem presentes na primeira checagem.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar coleta administrativa de dados para completar registro antes do exame primário.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Manter sequência fixa sem intervenções até finalizar todas as letras do protocolo.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Conduzir avaliação secundária extensa antes de corrigir alterações de ventilação.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0038",
@@ -1557,7 +2630,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar pela exposição completa e depois revisar via aérea caso surja necessidade respiratória.",
+          "type": "erro de aplicação",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar coleta administrativa de dados para completar registro antes do exame primário.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Pular circulação quando pulsos periféricos estiverem presentes na primeira checagem.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter sequência fixa sem intervenções até finalizar todas as letras do protocolo.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0039",
@@ -1598,7 +2700,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar pela exposição completa e depois revisar via aérea caso surja necessidade respiratória.",
+          "type": "erro de aplicação",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Priorizar coleta administrativa de dados para completar registro antes do exame primário.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Pular circulação quando pulsos periféricos estiverem presentes na primeira checagem.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter sequência fixa sem intervenções até finalizar todas as letras do protocolo.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0040",
@@ -1639,7 +2770,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar pela exposição completa e depois revisar via aérea caso surja necessidade respiratória.",
+          "type": "erro de aplicação",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar coleta administrativa de dados para completar registro antes do exame primário.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Pular circulação quando pulsos periféricos estiverem presentes na primeira checagem.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Manter sequência fixa sem intervenções até finalizar todas as letras do protocolo.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0041",
@@ -1680,7 +2840,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
+          "type": "erro de ordem",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Interromper compressões por períodos longos para checagens frequentes de pulso.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Executar ciclos longos sem troca de compressor, mesmo com queda de desempenho.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar ventilação avançada contínua e reduzir frequência das compressões.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0042",
@@ -1690,11 +2879,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "conceptual",
     "question": "Qual estratégia em RCP aumenta probabilidade de retorno da circulação espontânea?",
     "options": [
-      "A) Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
+      "A) Executar ciclos longos sem troca de compressor, mesmo com queda de desempenho.",
       "B) Manter ritmo e profundidade adequados das compressões com revezamento de socorristas para evitar fadiga.",
-      "C) Interromper compressões por períodos longos para checagens frequentes de pulso.",
-      "D) Executar ciclos longos sem troca de compressor, mesmo com queda de desempenho.",
-      "E) Priorizar ventilação avançada contínua e reduzir frequência das compressões."
+      "C) Aguardar acesso venoso completo antes de iniciar compressões torácicas.",
+      "D) Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
+      "E) Suspender RCP assim que houver qualquer movimento involuntário isolado."
     ],
     "correctAnswer": "B",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"RCP\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -1721,7 +2910,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Executar ciclos longos sem troca de compressor, mesmo com queda de desempenho.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Aguardar acesso venoso completo antes de iniciar compressões torácicas.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Suspender RCP assim que houver qualquer movimento involuntário isolado.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0043",
@@ -1731,11 +2949,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "application",
     "question": "Durante uso do DEA, qual procedimento deve ser seguido pela equipe?",
     "options": [
-      "A) Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
-      "B) Interromper compressões por períodos longos para checagens frequentes de pulso.",
+      "A) Priorizar ventilação avançada contínua e reduzir frequência das compressões.",
+      "B) Aguardar acesso venoso completo antes de iniciar compressões torácicas.",
       "C) Garantir segurança da cena, análise do DEA sem contato com a vítima e retomada imediata das compressões.",
-      "D) Executar ciclos longos sem troca de compressor, mesmo com queda de desempenho.",
-      "E) Priorizar ventilação avançada contínua e reduzir frequência das compressões."
+      "D) Aplicar choque do DEA sem afastar equipe para reduzir tempo de pausa.",
+      "E) Suspender RCP assim que houver qualquer movimento involuntário isolado."
     ],
     "correctAnswer": "C",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"RCP\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -1762,7 +2980,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar ventilação avançada contínua e reduzir frequência das compressões.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Aguardar acesso venoso completo antes de iniciar compressões torácicas.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Aplicar choque do DEA sem afastar equipe para reduzir tempo de pausa.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Suspender RCP assim que houver qualquer movimento involuntário isolado.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0044",
@@ -1772,11 +3019,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "scenario",
     "question": "Na condução da RCP, qual erro deve ser evitado para manter qualidade?",
     "options": [
-      "A) Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
-      "B) Interromper compressões por períodos longos para checagens frequentes de pulso.",
-      "C) Executar ciclos longos sem troca de compressor, mesmo com queda de desempenho.",
+      "A) Sincronizar choque com compressões em andamento para ganhar tempo.",
+      "B) Aguardar acesso venoso completo antes de iniciar compressões torácicas.",
+      "C) Pausar RCP após cada análise do DEA por um minuto para observação.",
       "D) Organizar ciclos de RCP com pausas curtas e ventilação conforme protocolo aplicado pela equipe.",
-      "E) Priorizar ventilação avançada contínua e reduzir frequência das compressões."
+      "E) Suspender RCP assim que houver qualquer movimento involuntário isolado."
     ],
     "correctAnswer": "D",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"RCP\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -1803,7 +3050,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Sincronizar choque com compressões em andamento para ganhar tempo.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Aguardar acesso venoso completo antes de iniciar compressões torácicas.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Pausar RCP após cada análise do DEA por um minuto para observação.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Suspender RCP assim que houver qualquer movimento involuntário isolado.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0045",
@@ -1817,7 +3093,7 @@ export const cbmscQuestions: QuestionDocument[] = [
       "B) Interromper compressões por períodos longos para checagens frequentes de pulso.",
       "C) Executar ciclos longos sem troca de compressor, mesmo com queda de desempenho.",
       "D) Priorizar ventilação avançada contínua e reduzir frequência das compressões.",
-      "E) Monitorar qualidade das compressões e corrigir técnica em tempo real durante toda a reanimação."
+      "E) Iniciar compressões de alta qualidade rapidamente, minimizar interrupções e integrar DEA assim que disponível."
     ],
     "correctAnswer": "E",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"RCP\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -1844,7 +3120,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
+          "type": "erro de ordem",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Interromper compressões por períodos longos para checagens frequentes de pulso.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Executar ciclos longos sem troca de compressor, mesmo com queda de desempenho.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar ventilação avançada contínua e reduzir frequência das compressões.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0046",
@@ -1885,7 +3190,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
+          "type": "erro de ordem",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Interromper compressões por períodos longos para checagens frequentes de pulso.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Executar ciclos longos sem troca de compressor, mesmo com queda de desempenho.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar ventilação avançada contínua e reduzir frequência das compressões.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0047",
@@ -1926,7 +3260,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
+          "type": "erro de ordem",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Interromper compressões por períodos longos para checagens frequentes de pulso.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Executar ciclos longos sem troca de compressor, mesmo com queda de desempenho.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar ventilação avançada contínua e reduzir frequência das compressões.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0048",
@@ -1936,11 +3299,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "exception",
     "question": "Na condução da RCP, qual erro deve ser evitado para manter qualidade?",
     "options": [
-      "A) Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
-      "B) Interromper compressões por períodos longos para checagens frequentes de pulso.",
+      "A) Priorizar ventilação avançada contínua e reduzir frequência das compressões.",
+      "B) Aguardar acesso venoso completo antes de iniciar compressões torácicas.",
       "C) Garantir segurança da cena, análise do DEA sem contato com a vítima e retomada imediata das compressões.",
-      "D) Executar ciclos longos sem troca de compressor, mesmo com queda de desempenho.",
-      "E) Priorizar ventilação avançada contínua e reduzir frequência das compressões."
+      "D) Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
+      "E) Suspender RCP assim que houver qualquer movimento involuntário isolado."
     ],
     "correctAnswer": "C",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"RCP\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -1967,7 +3330,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar ventilação avançada contínua e reduzir frequência das compressões.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Aguardar acesso venoso completo antes de iniciar compressões torácicas.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Iniciar transporte imediato sem desfibrilação quando DEA estiver disponível na cena.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Suspender RCP assim que houver qualquer movimento involuntário isolado.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0049",
@@ -2008,7 +3400,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Imobilizar todo paciente em prancha rígida por rotina, independentemente de avaliação clínica.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Realizar tração de membro com resistência importante sem analgesia ou avaliação adicional.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Executar manipulações repetidas para confirmar dor localizada antes de estabilizar.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Remover capacete de motociclista sem controle manual cervical para agilizar acesso.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0050",
@@ -2049,7 +3470,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Imobilizar todo paciente em prancha rígida por rotina, independentemente de avaliação clínica.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Realizar tração de membro com resistência importante sem analgesia ou avaliação adicional.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Executar manipulações repetidas para confirmar dor localizada antes de estabilizar.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Remover capacete de motociclista sem controle manual cervical para agilizar acesso.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0051",
@@ -2090,7 +3540,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Imobilizar todo paciente em prancha rígida por rotina, independentemente de avaliação clínica.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Realizar tração de membro com resistência importante sem analgesia ou avaliação adicional.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Remover capacete de motociclista sem controle manual cervical para agilizar acesso.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Executar manipulações repetidas para confirmar dor localizada antes de estabilizar.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0052",
@@ -2131,7 +3610,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Imobilizar todo paciente em prancha rígida por rotina, independentemente de avaliação clínica.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Realizar tração de membro com resistência importante sem analgesia ou avaliação adicional.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Remover capacete de motociclista sem controle manual cervical para agilizar acesso.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Executar manipulações repetidas para confirmar dor localizada antes de estabilizar.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0053",
@@ -2141,11 +3649,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "definition",
     "question": "Em trauma com mecanismo de alta energia, qual abordagem inicial é mais adequada?",
     "options": [
-      "A) Realizar tração de membro com resistência importante sem analgesia ou avaliação adicional.",
-      "B) Imobilizar todo paciente em prancha rígida por rotina, independentemente de avaliação clínica.",
-      "C) Reavaliar continuamente sinais de choque e deterioração neurológica durante o atendimento.",
-      "D) Remover capacete de motociclista sem controle manual cervical para agilizar acesso.",
-      "E) Executar manipulações repetidas para confirmar dor localizada antes de estabilizar."
+      "A) Imobilizar todo paciente em prancha rígida por rotina, independentemente de avaliação clínica.",
+      "B) Realizar tração de membro com resistência importante sem analgesia ou avaliação adicional.",
+      "C) Combinar controle de ameaças imediatas com estabilização apropriada e transporte conforme gravidade.",
+      "D) Executar manipulações repetidas para confirmar dor localizada antes de estabilizar.",
+      "E) Remover capacete de motociclista sem controle manual cervical para agilizar acesso."
     ],
     "correctAnswer": "C",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Trauma\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -2172,7 +3680,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Imobilizar todo paciente em prancha rígida por rotina, independentemente de avaliação clínica.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Realizar tração de membro com resistência importante sem analgesia ou avaliação adicional.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Executar manipulações repetidas para confirmar dor localizada antes de estabilizar.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Remover capacete de motociclista sem controle manual cervical para agilizar acesso.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0054",
@@ -2213,7 +3750,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Imobilizar todo paciente em prancha rígida por rotina, independentemente de avaliação clínica.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Realizar tração de membro com resistência importante sem analgesia ou avaliação adicional.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Executar manipulações repetidas para confirmar dor localizada antes de estabilizar.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Remover capacete de motociclista sem controle manual cervical para agilizar acesso.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0055",
@@ -2254,7 +3820,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Imobilizar todo paciente em prancha rígida por rotina, independentemente de avaliação clínica.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Realizar tração de membro com resistência importante sem analgesia ou avaliação adicional.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Executar manipulações repetidas para confirmar dor localizada antes de estabilizar.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Remover capacete de motociclista sem controle manual cervical para agilizar acesso.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0056",
@@ -2295,7 +3890,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Imobilizar todo paciente em prancha rígida por rotina, independentemente de avaliação clínica.",
+          "type": "erro de aplicação",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Realizar tração de membro com resistência importante sem analgesia ou avaliação adicional.",
+          "type": "erro de conceito",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Executar manipulações repetidas para confirmar dor localizada antes de estabilizar.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Remover capacete de motociclista sem controle manual cervical para agilizar acesso.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0057",
@@ -2305,11 +3929,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "application",
     "question": "Diante de hemorragia externa grave, qual conduta inicial é prioritária?",
     "options": [
-      "A) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
-      "B) Controlar hemorragia antes de procedimentos não prioritários, preservando aquecimento e monitorização da vítima.",
-      "C) Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
-      "D) Afrouxar torniquete periodicamente na ambulância para avaliar coloração do membro.",
-      "E) Lavar amplamente o ferimento antes de iniciar qualquer tentativa de hemostasia."
+      "A) Concentrar atendimento em acesso venoso e deixar hemostasia para o hospital.",
+      "B) Utilizar curativo compressivo eficaz e reforçar medidas conforme resposta clínica do paciente.",
+      "C) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
+      "D) Evitar torniquete mesmo em sangramento exsanguinante por risco de lesão local.",
+      "E) Utilizar gelo direto como método principal para hemorragia arterial intensa."
     ],
     "correctAnswer": "B",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Hemorragias\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -2336,7 +3960,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Concentrar atendimento em acesso venoso e deixar hemostasia para o hospital.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Evitar torniquete mesmo em sangramento exsanguinante por risco de lesão local.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar gelo direto como método principal para hemorragia arterial intensa.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0058",
@@ -2346,11 +3999,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "scenario",
     "question": "Qual decisão sobre torniquete e compressão direta é tecnicamente adequada?",
     "options": [
-      "A) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
-      "B) Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
-      "C) Controlar hemorragia antes de procedimentos não prioritários, preservando aquecimento e monitorização da vítima.",
-      "D) Afrouxar torniquete periodicamente na ambulância para avaliar coloração do membro.",
-      "E) Lavar amplamente o ferimento antes de iniciar qualquer tentativa de hemostasia."
+      "A) Concentrar atendimento em acesso venoso e deixar hemostasia para o hospital.",
+      "B) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
+      "C) Utilizar curativo compressivo eficaz e reforçar medidas conforme resposta clínica do paciente.",
+      "D) Evitar torniquete mesmo em sangramento exsanguinante por risco de lesão local.",
+      "E) Utilizar gelo direto como método principal para hemorragia arterial intensa."
     ],
     "correctAnswer": "C",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Hemorragias\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -2377,7 +4030,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Concentrar atendimento em acesso venoso e deixar hemostasia para o hospital.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Evitar torniquete mesmo em sangramento exsanguinante por risco de lesão local.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar gelo direto como método principal para hemorragia arterial intensa.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0059",
@@ -2387,11 +4069,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "procedure",
     "question": "Em controle hemorrágico pré-hospitalar, qual sequência é recomendada?",
     "options": [
-      "A) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
-      "B) Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
-      "C) Afrouxar torniquete periodicamente na ambulância para avaliar coloração do membro.",
-      "D) Controlar hemorragia antes de procedimentos não prioritários, preservando aquecimento e monitorização da vítima.",
-      "E) Lavar amplamente o ferimento antes de iniciar qualquer tentativa de hemostasia."
+      "A) Concentrar atendimento em acesso venoso e deixar hemostasia para o hospital.",
+      "B) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
+      "C) Evitar torniquete mesmo em sangramento exsanguinante por risco de lesão local.",
+      "D) Utilizar curativo compressivo eficaz e reforçar medidas conforme resposta clínica do paciente.",
+      "E) Utilizar gelo direto como método principal para hemorragia arterial intensa."
     ],
     "correctAnswer": "D",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Hemorragias\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -2418,7 +4100,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Concentrar atendimento em acesso venoso e deixar hemostasia para o hospital.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Evitar torniquete mesmo em sangramento exsanguinante por risco de lesão local.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar gelo direto como método principal para hemorragia arterial intensa.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0060",
@@ -2428,10 +4139,10 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "definition",
     "question": "Na cena com sangramento arterial, qual abordagem aumenta chance de sobrevida?",
     "options": [
-      "A) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
-      "B) Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
-      "C) Afrouxar torniquete periodicamente na ambulância para avaliar coloração do membro.",
-      "D) Lavar amplamente o ferimento antes de iniciar qualquer tentativa de hemostasia.",
+      "A) Concentrar atendimento em acesso venoso e deixar hemostasia para o hospital.",
+      "B) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
+      "C) Evitar torniquete mesmo em sangramento exsanguinante por risco de lesão local.",
+      "D) Utilizar gelo direto como método principal para hemorragia arterial intensa.",
       "E) Utilizar curativo compressivo eficaz e reforçar medidas conforme resposta clínica do paciente."
     ],
     "correctAnswer": "E",
@@ -2459,7 +4170,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Concentrar atendimento em acesso venoso e deixar hemostasia para o hospital.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Evitar torniquete mesmo em sangramento exsanguinante por risco de lesão local.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar gelo direto como método principal para hemorragia arterial intensa.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0061",
@@ -2470,10 +4210,10 @@ export const cbmscQuestions: QuestionDocument[] = [
     "question": "Diante de hemorragia externa grave, qual conduta inicial é prioritária?",
     "options": [
       "A) Integrar controle de sangramento ao manejo de choque e transporte rápido para tratamento definitivo.",
-      "B) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
+      "B) Trocar curativos a cada poucos minutos para inspeção visual contínua da ferida.",
       "C) Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
       "D) Afrouxar torniquete periodicamente na ambulância para avaliar coloração do membro.",
-      "E) Lavar amplamente o ferimento antes de iniciar qualquer tentativa de hemostasia."
+      "E) Utilizar gelo direto como método principal para hemorragia arterial intensa."
     ],
     "correctAnswer": "A",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Hemorragias\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -2500,7 +4240,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Trocar curativos a cada poucos minutos para inspeção visual contínua da ferida.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Afrouxar torniquete periodicamente na ambulância para avaliar coloração do membro.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar gelo direto como método principal para hemorragia arterial intensa.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0062",
@@ -2510,11 +4279,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "exception",
     "question": "Qual decisão sobre torniquete e compressão direta é tecnicamente adequada?",
     "options": [
-      "A) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
-      "B) Controlar hemorragia antes de procedimentos não prioritários, preservando aquecimento e monitorização da vítima.",
+      "A) Trocar curativos a cada poucos minutos para inspeção visual contínua da ferida.",
+      "B) Utilizar curativo compressivo eficaz e reforçar medidas conforme resposta clínica do paciente.",
       "C) Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
-      "D) Afrouxar torniquete periodicamente na ambulância para avaliar coloração do membro.",
-      "E) Lavar amplamente o ferimento antes de iniciar qualquer tentativa de hemostasia."
+      "D) Aplicar torniquete distal ao sangramento para reduzir dor durante o transporte.",
+      "E) Utilizar gelo direto como método principal para hemorragia arterial intensa."
     ],
     "correctAnswer": "B",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Hemorragias\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -2541,7 +4310,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Trocar curativos a cada poucos minutos para inspeção visual contínua da ferida.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Aplicar torniquete distal ao sangramento para reduzir dor durante o transporte.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar gelo direto como método principal para hemorragia arterial intensa.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0063",
@@ -2551,11 +4349,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "conceptual",
     "question": "Em controle hemorrágico pré-hospitalar, qual sequência é recomendada?",
     "options": [
-      "A) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
+      "A) Trocar curativos a cada poucos minutos para inspeção visual contínua da ferida.",
       "B) Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
-      "C) Controlar hemorragia antes de procedimentos não prioritários, preservando aquecimento e monitorização da vítima.",
-      "D) Afrouxar torniquete periodicamente na ambulância para avaliar coloração do membro.",
-      "E) Lavar amplamente o ferimento antes de iniciar qualquer tentativa de hemostasia."
+      "C) Utilizar curativo compressivo eficaz e reforçar medidas conforme resposta clínica do paciente.",
+      "D) Aplicar torniquete distal ao sangramento para reduzir dor durante o transporte.",
+      "E) Utilizar gelo direto como método principal para hemorragia arterial intensa."
     ],
     "correctAnswer": "C",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Hemorragias\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -2582,7 +4380,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Trocar curativos a cada poucos minutos para inspeção visual contínua da ferida.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Aplicar torniquete distal ao sangramento para reduzir dor durante o transporte.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar gelo direto como método principal para hemorragia arterial intensa.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0064",
@@ -2592,11 +4419,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "application",
     "question": "Na cena com sangramento arterial, qual abordagem aumenta chance de sobrevida?",
     "options": [
-      "A) Priorizar analgesia e só depois iniciar compressão em sangramento ativo importante.",
+      "A) Trocar curativos a cada poucos minutos para inspeção visual contínua da ferida.",
       "B) Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
-      "C) Afrouxar torniquete periodicamente na ambulância para avaliar coloração do membro.",
-      "D) Controlar hemorragia antes de procedimentos não prioritários, preservando aquecimento e monitorização da vítima.",
-      "E) Lavar amplamente o ferimento antes de iniciar qualquer tentativa de hemostasia."
+      "C) Aplicar torniquete distal ao sangramento para reduzir dor durante o transporte.",
+      "D) Utilizar curativo compressivo eficaz e reforçar medidas conforme resposta clínica do paciente.",
+      "E) Utilizar gelo direto como método principal para hemorragia arterial intensa."
     ],
     "correctAnswer": "D",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Hemorragias\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -2623,7 +4450,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Trocar curativos a cada poucos minutos para inspeção visual contínua da ferida.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Esperar estabilização dos sinais vitais antes de controlar sangramento periférico.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Aplicar torniquete distal ao sangramento para reduzir dor durante o transporte.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar gelo direto como método principal para hemorragia arterial intensa.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0065",
@@ -2664,7 +4520,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Definir zona quente apenas após atendimento inicial das vítimas no ponto de vazamento.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar lavagem da substância com água em grande volume sem identificar reatividade.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Permitir circulação local controlada enquanto se aguarda equipe especializada.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Aproximar o recipiente para leitura direta do rótulo antes de isolar a área.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0066",
@@ -2705,7 +4590,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Definir zona quente apenas após atendimento inicial das vítimas no ponto de vazamento.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar lavagem da substância com água em grande volume sem identificar reatividade.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Permitir circulação local controlada enquanto se aguarda equipe especializada.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Aproximar o recipiente para leitura direta do rótulo antes de isolar a área.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0067",
@@ -2746,7 +4660,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Definir zona quente apenas após atendimento inicial das vítimas no ponto de vazamento.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar lavagem da substância com água em grande volume sem identificar reatividade.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Permitir circulação local controlada enquanto se aguarda equipe especializada.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Aproximar o recipiente para leitura direta do rótulo antes de isolar a área.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0068",
@@ -2787,7 +4730,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Definir zona quente apenas após atendimento inicial das vítimas no ponto de vazamento.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar lavagem da substância com água em grande volume sem identificar reatividade.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Permitir circulação local controlada enquanto se aguarda equipe especializada.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Aproximar o recipiente para leitura direta do rótulo antes de isolar a área.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0069",
@@ -2828,7 +4800,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Definir zona quente apenas após atendimento inicial das vítimas no ponto de vazamento.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar lavagem da substância com água em grande volume sem identificar reatividade.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Permitir circulação local controlada enquanto se aguarda equipe especializada.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Aproximar o recipiente para leitura direta do rótulo antes de isolar a área.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0070",
@@ -2869,7 +4870,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Definir zona quente apenas após atendimento inicial das vítimas no ponto de vazamento.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar lavagem da substância com água em grande volume sem identificar reatividade.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Permitir circulação local controlada enquanto se aguarda equipe especializada.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Aproximar o recipiente para leitura direta do rótulo antes de isolar a área.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0071",
@@ -2910,7 +4940,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Definir zona quente apenas após atendimento inicial das vítimas no ponto de vazamento.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar lavagem da substância com água em grande volume sem identificar reatividade.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Permitir circulação local controlada enquanto se aguarda equipe especializada.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Aproximar o recipiente para leitura direta do rótulo antes de isolar a área.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0072",
@@ -2951,7 +5010,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Definir zona quente apenas após atendimento inicial das vítimas no ponto de vazamento.",
+          "type": "erro de aplicação",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar lavagem da substância com água em grande volume sem identificar reatividade.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Permitir circulação local controlada enquanto se aguarda equipe especializada.",
+          "type": "erro de conceito",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Aproximar o recipiente para leitura direta do rótulo antes de isolar a área.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0073",
@@ -2961,11 +5049,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "procedure",
     "question": "Em operação de salvamento em altura, qual princípio deve orientar a montagem do sistema?",
     "options": [
-      "A) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
-      "B) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
+      "A) Posicionar vítima em transferência sem estabilização prévia do sistema principal.",
+      "B) Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
       "C) Validar ancoragens redundantes, checar equipamentos e manter comando técnico antes da progressão.",
-      "D) Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe.",
-      "E) Concentrar toda verificação em um único operador experiente sem conferência cruzada."
+      "D) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+      "E) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima."
     ],
     "correctAnswer": "C",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Salvamento em altura\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -2992,7 +5080,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Posicionar vítima em transferência sem estabilização prévia do sistema principal.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0074",
@@ -3002,11 +5119,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "definition",
     "question": "Qual decisão técnica em altura reduz risco de falha operacional?",
     "options": [
-      "A) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
-      "B) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
-      "C) Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe.",
+      "A) Posicionar vítima em transferência sem estabilização prévia do sistema principal.",
+      "B) Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+      "C) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
       "D) Montar sistema com fator de segurança adequado, inspeção cruzada e comunicação padronizada.",
-      "E) Concentrar toda verificação em um único operador experiente sem conferência cruzada."
+      "E) Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe."
     ],
     "correctAnswer": "D",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Salvamento em altura\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -3033,7 +5150,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Posicionar vítima em transferência sem estabilização prévia do sistema principal.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0075",
@@ -3043,9 +5189,9 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "comparison",
     "question": "Durante acesso por cordas, qual conduta é adequada?",
     "options": [
-      "A) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
-      "B) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
-      "C) Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe.",
+      "A) Permitir improvisos de nó em campo desde que a carga seja aplicada gradualmente.",
+      "B) Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+      "C) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
       "D) Concentrar toda verificação em um único operador experiente sem conferência cruzada.",
       "E) Executar progressão controlada com backups funcionais e gestão contínua de risco de queda."
     ],
@@ -3074,7 +5220,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Permitir improvisos de nó em campo desde que a carga seja aplicada gradualmente.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Concentrar toda verificação em um único operador experiente sem conferência cruzada.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0076",
@@ -3085,10 +5260,10 @@ export const cbmscQuestions: QuestionDocument[] = [
     "question": "Na preparação para resgate vertical, qual priorização é correta?",
     "options": [
       "A) Distribuir cargas nas ancoragens conforme projeto de resgate e condições estruturais do ponto.",
-      "B) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
-      "C) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
-      "D) Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe.",
-      "E) Concentrar toda verificação em um único operador experiente sem conferência cruzada."
+      "B) Substituir backup por comunicação verbal constante entre operador e segurança.",
+      "C) Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+      "D) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+      "E) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima."
     ],
     "correctAnswer": "A",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Salvamento em altura\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -3115,7 +5290,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Substituir backup por comunicação verbal constante entre operador e segurança.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0077",
@@ -3125,11 +5329,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "conceptual",
     "question": "Em operação de salvamento em altura, qual princípio deve orientar a montagem do sistema?",
     "options": [
-      "A) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+      "A) Dispensar proteção de borda quando o atrito parecer baixo no teste manual.",
       "B) Realizar conferência de EPIs e nós críticos por dupla antes de iniciar manobra com vítima.",
-      "C) Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe.",
-      "D) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
-      "E) Concentrar toda verificação em um único operador experiente sem conferência cruzada."
+      "C) Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+      "D) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+      "E) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima."
     ],
     "correctAnswer": "B",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Salvamento em altura\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -3156,7 +5360,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Dispensar proteção de borda quando o atrito parecer baixo no teste manual.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0078",
@@ -3166,10 +5399,10 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "application",
     "question": "Qual decisão técnica em altura reduz risco de falha operacional?",
     "options": [
-      "A) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
-      "B) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
+      "A) Montar sistema com folga excessiva para facilitar movimentação durante o resgate.",
+      "B) Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
       "C) Validar ancoragens redundantes, checar equipamentos e manter comando técnico antes da progressão.",
-      "D) Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe.",
+      "D) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
       "E) Concentrar toda verificação em um único operador experiente sem conferência cruzada."
     ],
     "correctAnswer": "C",
@@ -3197,7 +5430,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Montar sistema com folga excessiva para facilitar movimentação durante o resgate.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Concentrar toda verificação em um único operador experiente sem conferência cruzada.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0079",
@@ -3207,11 +5469,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "scenario",
     "question": "Durante acesso por cordas, qual conduta é adequada?",
     "options": [
-      "A) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
-      "B) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
-      "C) Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe.",
+      "A) Posicionar vítima em transferência sem estabilização prévia do sistema principal.",
+      "B) Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+      "C) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
       "D) Montar sistema com fator de segurança adequado, inspeção cruzada e comunicação padronizada.",
-      "E) Concentrar toda verificação em um único operador experiente sem conferência cruzada."
+      "E) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima."
     ],
     "correctAnswer": "D",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Salvamento em altura\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -3238,7 +5500,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Posicionar vítima em transferência sem estabilização prévia do sistema principal.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0080",
@@ -3248,10 +5539,10 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "procedure",
     "question": "Na preparação para resgate vertical, qual priorização é correta?",
     "options": [
-      "A) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
-      "B) Priorizar rapidez de acesso e revisar ancoragens somente após o contato com a vítima.",
-      "C) Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe.",
-      "D) Concentrar toda verificação em um único operador experiente sem conferência cruzada.",
+      "A) Permitir improvisos de nó em campo desde que a carga seja aplicada gradualmente.",
+      "B) Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+      "C) Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+      "D) Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe.",
       "E) Executar progressão controlada com backups funcionais e gestão contínua de risco de queda."
     ],
     "correctAnswer": "E",
@@ -3279,7 +5570,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Permitir improvisos de nó em campo desde que a carga seja aplicada gradualmente.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar descida antes da dupla checagem para reduzir tempo de exposição da vítima.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ponto único de ancoragem quando parecer estruturalmente robusto na inspeção visual.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Aplicar o mesmo arranjo de cordas em qualquer estrutura para manter padrão da equipe.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0081",
@@ -3320,7 +5640,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Ignorar leitura da corrente e seguir trajetória retilínea direta até o ponto de submersão.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Entrar imediatamente na água sem equipamento para reduzir tempo de contato com a vítima.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar transporte rápido em prancha sem estabilizar respiração na zona segura.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Abordar vítima em pânico de frente sem meio de flutuação para facilitar tração.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0082",
@@ -3361,7 +5710,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar transporte rápido em prancha sem estabilizar respiração na zona segura.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Abordar vítima em pânico de frente sem meio de flutuação para facilitar tração.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Entrar imediatamente na água sem equipamento para reduzir tempo de contato com a vítima.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Ignorar leitura da corrente e seguir trajetória retilínea direta até o ponto de submersão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0083",
@@ -3402,7 +5780,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar transporte rápido em prancha sem estabilizar respiração na zona segura.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Entrar imediatamente na água sem equipamento para reduzir tempo de contato com a vítima.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Abordar vítima em pânico de frente sem meio de flutuação para facilitar tração.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar leitura da corrente e seguir trajetória retilínea direta até o ponto de submersão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0084",
@@ -3443,7 +5850,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Ignorar leitura da corrente e seguir trajetória retilínea direta até o ponto de submersão.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Entrar imediatamente na água sem equipamento para reduzir tempo de contato com a vítima.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Priorizar transporte rápido em prancha sem estabilizar respiração na zona segura.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Abordar vítima em pânico de frente sem meio de flutuação para facilitar tração.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0085",
@@ -3484,7 +5920,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar transporte rápido em prancha sem estabilizar respiração na zona segura.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Abordar vítima em pânico de frente sem meio de flutuação para facilitar tração.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Entrar imediatamente na água sem equipamento para reduzir tempo de contato com a vítima.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Ignorar leitura da corrente e seguir trajetória retilínea direta até o ponto de submersão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0086",
@@ -3525,7 +5990,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Ignorar leitura da corrente e seguir trajetória retilínea direta até o ponto de submersão.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Entrar imediatamente na água sem equipamento para reduzir tempo de contato com a vítima.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar transporte rápido em prancha sem estabilizar respiração na zona segura.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Abordar vítima em pânico de frente sem meio de flutuação para facilitar tração.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0087",
@@ -3566,7 +6060,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar transporte rápido em prancha sem estabilizar respiração na zona segura.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Abordar vítima em pânico de frente sem meio de flutuação para facilitar tração.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Entrar imediatamente na água sem equipamento para reduzir tempo de contato com a vítima.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Ignorar leitura da corrente e seguir trajetória retilínea direta até o ponto de submersão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0088",
@@ -3607,7 +6130,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar transporte rápido em prancha sem estabilizar respiração na zona segura.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Entrar imediatamente na água sem equipamento para reduzir tempo de contato com a vítima.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Abordar vítima em pânico de frente sem meio de flutuação para facilitar tração.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar leitura da corrente e seguir trajetória retilínea direta até o ponto de submersão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0089",
@@ -3618,10 +6170,10 @@ export const cbmscQuestions: QuestionDocument[] = [
     "question": "Em colisão com vítima encarcerada, qual etapa deve ser priorizada antes do desencarceramento?",
     "options": [
       "A) Priorizar retirada de portas sem avaliação de pontos de alta resistência estrutural.",
-      "B) Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
-      "C) Iniciar corte da coluna A imediatamente para reduzir tempo de aprisionamento.",
+      "B) Movimentar o veículo para área ampla antes de qualquer estabilização.",
+      "C) Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
       "D) Estabilizar o veículo, gerenciar riscos e coordenar acesso à vítima antes do corte estrutural.",
-      "E) Retirar vítima por tração manual rápida quando houver deformação da cabine."
+      "E) Desconectar bateria somente após finalizar abertura total do habitáculo."
     ],
     "correctAnswer": "D",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Resgate veicular\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -3648,7 +6200,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar retirada de portas sem avaliação de pontos de alta resistência estrutural.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Movimentar o veículo para área ampla antes de qualquer estabilização.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Desconectar bateria somente após finalizar abertura total do habitáculo.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0090",
@@ -3658,10 +6239,10 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "exception",
     "question": "Qual conduta inicial em resgate veicular melhora segurança da operação?",
     "options": [
-      "A) Priorizar retirada de portas sem avaliação de pontos de alta resistência estrutural.",
-      "B) Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
-      "C) Iniciar corte da coluna A imediatamente para reduzir tempo de aprisionamento.",
-      "D) Retirar vítima por tração manual rápida quando houver deformação da cabine.",
+      "A) Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
+      "B) Movimentar o veículo para área ampla antes de qualquer estabilização.",
+      "C) Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+      "D) Definir estratégia de extração somente após início das manobras de corte.",
       "E) Executar isolamento da cena, controle de energia e proteção da vítima durante ferramentas de extricação."
     ],
     "correctAnswer": "E",
@@ -3689,7 +6270,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Movimentar o veículo para área ampla antes de qualquer estabilização.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Definir estratégia de extração somente após início das manobras de corte.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0091",
@@ -3700,10 +6310,10 @@ export const cbmscQuestions: QuestionDocument[] = [
     "question": "Durante extração de vítima presa, qual decisão técnica é correta?",
     "options": [
       "A) Planejar via de acesso e saída com equipe integrada, monitorando condição clínica continuamente.",
-      "B) Priorizar retirada de portas sem avaliação de pontos de alta resistência estrutural.",
-      "C) Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
-      "D) Iniciar corte da coluna A imediatamente para reduzir tempo de aprisionamento.",
-      "E) Retirar vítima por tração manual rápida quando houver deformação da cabine."
+      "B) Iniciar corte da coluna A imediatamente para reduzir tempo de aprisionamento.",
+      "C) Movimentar o veículo para área ampla antes de qualquer estabilização.",
+      "D) Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+      "E) Desconectar bateria somente após finalizar abertura total do habitáculo."
     ],
     "correctAnswer": "A",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Resgate veicular\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -3730,7 +6340,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar corte da coluna A imediatamente para reduzir tempo de aprisionamento.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Movimentar o veículo para área ampla antes de qualquer estabilização.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Desconectar bateria somente após finalizar abertura total do habitáculo.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0092",
@@ -3740,11 +6379,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "application",
     "question": "No gerenciamento do resgate veicular, qual sequência é mais adequada?",
     "options": [
-      "A) Priorizar retirada de portas sem avaliação de pontos de alta resistência estrutural.",
+      "A) Dispensar proteção interna da vítima para facilitar visualização da equipe.",
       "B) Priorizar segurança da equipe e da vítima com estabilização progressiva e comunicação operacional.",
-      "C) Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
-      "D) Iniciar corte da coluna A imediatamente para reduzir tempo de aprisionamento.",
-      "E) Dispensar proteção interna da vítima para facilitar visualização da equipe."
+      "C) Movimentar o veículo para área ampla antes de qualquer estabilização.",
+      "D) Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+      "E) Definir estratégia de extração somente após início das manobras de corte."
     ],
     "correctAnswer": "B",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Resgate veicular\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -3771,7 +6410,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Dispensar proteção interna da vítima para facilitar visualização da equipe.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Movimentar o veículo para área ampla antes de qualquer estabilização.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Definir estratégia de extração somente após início das manobras de corte.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0093",
@@ -3781,11 +6449,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "scenario",
     "question": "Em colisão com vítima encarcerada, qual etapa deve ser priorizada antes do desencarceramento?",
     "options": [
-      "A) Priorizar retirada de portas sem avaliação de pontos de alta resistência estrutural.",
-      "B) Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
+      "A) Dispensar proteção interna da vítima para facilitar visualização da equipe.",
+      "B) Movimentar o veículo para área ampla antes de qualquer estabilização.",
       "C) Realizar desencarceramento compatível com mecanismo e deformação, evitando manobras bruscas.",
-      "D) Iniciar corte da coluna A imediatamente para reduzir tempo de aprisionamento.",
-      "E) Retirar vítima por tração manual rápida quando houver deformação da cabine."
+      "D) Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+      "E) Desconectar bateria somente após finalizar abertura total do habitáculo."
     ],
     "correctAnswer": "C",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Resgate veicular\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -3812,7 +6480,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Dispensar proteção interna da vítima para facilitar visualização da equipe.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Movimentar o veículo para área ampla antes de qualquer estabilização.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Desconectar bateria somente após finalizar abertura total do habitáculo.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0094",
@@ -3822,11 +6519,11 @@ export const cbmscQuestions: QuestionDocument[] = [
     "questionType": "procedure",
     "question": "Qual conduta inicial em resgate veicular melhora segurança da operação?",
     "options": [
-      "A) Priorizar retirada de portas sem avaliação de pontos de alta resistência estrutural.",
-      "B) Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
-      "C) Iniciar corte da coluna A imediatamente para reduzir tempo de aprisionamento.",
+      "A) Ignorar vazamento de combustível enquanto não houver chama visível.",
+      "B) Movimentar o veículo para área ampla antes de qualquer estabilização.",
+      "C) Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
       "D) Estabilizar o veículo, gerenciar riscos e coordenar acesso à vítima antes do corte estrutural.",
-      "E) Retirar vítima por tração manual rápida quando houver deformação da cabine."
+      "E) Definir estratégia de extração somente após início das manobras de corte."
     ],
     "correctAnswer": "D",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Resgate veicular\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -3853,7 +6550,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Ignorar vazamento de combustível enquanto não houver chama visível.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Movimentar o veículo para área ampla antes de qualquer estabilização.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": true
+        },
+        {
+          "text": "Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Definir estratégia de extração somente após início das manobras de corte.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0095",
@@ -3864,9 +6590,9 @@ export const cbmscQuestions: QuestionDocument[] = [
     "question": "Durante extração de vítima presa, qual decisão técnica é correta?",
     "options": [
       "A) Priorizar retirada de portas sem avaliação de pontos de alta resistência estrutural.",
-      "B) Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
-      "C) Iniciar corte da coluna A imediatamente para reduzir tempo de aprisionamento.",
-      "D) Retirar vítima por tração manual rápida quando houver deformação da cabine.",
+      "B) Movimentar o veículo para área ampla antes de qualquer estabilização.",
+      "C) Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+      "D) Desconectar bateria somente após finalizar abertura total do habitáculo.",
       "E) Executar isolamento da cena, controle de energia e proteção da vítima durante ferramentas de extricação."
     ],
     "correctAnswer": "E",
@@ -3894,7 +6620,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Priorizar retirada de portas sem avaliação de pontos de alta resistência estrutural.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Movimentar o veículo para área ampla antes de qualquer estabilização.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Desconectar bateria somente após finalizar abertura total do habitáculo.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0096",
@@ -3905,10 +6660,10 @@ export const cbmscQuestions: QuestionDocument[] = [
     "question": "No gerenciamento do resgate veicular, qual sequência é mais adequada?",
     "options": [
       "A) Planejar via de acesso e saída com equipe integrada, monitorando condição clínica continuamente.",
-      "B) Priorizar retirada de portas sem avaliação de pontos de alta resistência estrutural.",
-      "C) Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
-      "D) Iniciar corte da coluna A imediatamente para reduzir tempo de aprisionamento.",
-      "E) Retirar vítima por tração manual rápida quando houver deformação da cabine."
+      "B) Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
+      "C) Movimentar o veículo para área ampla antes de qualquer estabilização.",
+      "D) Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+      "E) Definir estratégia de extração somente após início das manobras de corte."
     ],
     "correctAnswer": "A",
     "explanation": "A alternativa escolhida aplica o procedimento técnico prioritário do subtema \"Resgate veicular\", mantendo segurança operacional e reavaliação contínua conforme Referencial CBMSC Consolidado.",
@@ -3935,7 +6690,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Executar múltiplos cortes simultâneos sem comando único para ganhar produtividade.",
+          "type": "erro de conceito",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Movimentar o veículo para área ampla antes de qualquer estabilização.",
+          "type": "erro de ordem",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Utilizar ferramentas hidráulicas sem checagem de estabilidade do solo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Definir estratégia de extração somente após início das manobras de corte.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0097",
@@ -3976,7 +6760,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Modificar frequência de rádio sem coordenação para reduzir saturação do canal principal.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Concentrar todas as equipes no último ponto visto sem expandir perímetro progressivo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar busca noturna em terreno desconhecido sem pontos de navegação definidos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Priorizar velocidade de deslocamento em vez de leitura de indícios no terreno.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0098",
@@ -4017,7 +6830,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Modificar frequência de rádio sem coordenação para reduzir saturação do canal principal.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Concentrar todas as equipes no último ponto visto sem expandir perímetro progressivo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar busca noturna em terreno desconhecido sem pontos de navegação definidos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar velocidade de deslocamento em vez de leitura de indícios no terreno.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0099",
@@ -4058,7 +6900,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Modificar frequência de rádio sem coordenação para reduzir saturação do canal principal.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Concentrar todas as equipes no último ponto visto sem expandir perímetro progressivo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar busca noturna em terreno desconhecido sem pontos de navegação definidos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar velocidade de deslocamento em vez de leitura de indícios no terreno.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0100",
@@ -4099,7 +6970,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Modificar frequência de rádio sem coordenação para reduzir saturação do canal principal.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Concentrar todas as equipes no último ponto visto sem expandir perímetro progressivo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar busca noturna em terreno desconhecido sem pontos de navegação definidos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar velocidade de deslocamento em vez de leitura de indícios no terreno.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0101",
@@ -4140,7 +7040,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Iniciar busca noturna em terreno desconhecido sem pontos de navegação definidos.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar velocidade de deslocamento em vez de leitura de indícios no terreno.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Concentrar todas as equipes no último ponto visto sem expandir perímetro progressivo.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Distribuir equipes aleatoriamente para aumentar chance de encontro fortuito.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0102",
@@ -4181,7 +7110,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Modificar frequência de rádio sem coordenação para reduzir saturação do canal principal.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Concentrar todas as equipes no último ponto visto sem expandir perímetro progressivo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar busca noturna em terreno desconhecido sem pontos de navegação definidos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Priorizar velocidade de deslocamento em vez de leitura de indícios no terreno.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0103",
@@ -4222,7 +7180,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Modificar frequência de rádio sem coordenação para reduzir saturação do canal principal.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Concentrar todas as equipes no último ponto visto sem expandir perímetro progressivo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar busca noturna em terreno desconhecido sem pontos de navegação definidos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar velocidade de deslocamento em vez de leitura de indícios no terreno.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0104",
@@ -4263,7 +7250,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Modificar frequência de rádio sem coordenação para reduzir saturação do canal principal.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Concentrar todas as equipes no último ponto visto sem expandir perímetro progressivo.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Iniciar busca noturna em terreno desconhecido sem pontos de navegação definidos.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Priorizar velocidade de deslocamento em vez de leitura de indícios no terreno.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0105",
@@ -4304,7 +7320,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter equipe em área de risco enquanto houver progresso, mesmo sem controle de exposição.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Centralizar decisões em um operador e reduzir comunicação para evitar ruído tático.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Manter canal de rádio único para comando e logística sem disciplina de tráfego.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar sinais de fadiga porque a troca de equipe reduz velocidade da missão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0106",
@@ -4345,7 +7390,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Centralizar decisões em um operador e reduzir comunicação para evitar ruído tático.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Manter equipe em área de risco enquanto houver progresso, mesmo sem controle de exposição.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Manter canal de rádio único para comando e logística sem disciplina de tráfego.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Ignorar sinais de fadiga porque a troca de equipe reduz velocidade da missão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0107",
@@ -4386,7 +7460,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter equipe em área de risco enquanto houver progresso, mesmo sem controle de exposição.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Centralizar decisões em um operador e reduzir comunicação para evitar ruído tático.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Manter canal de rádio único para comando e logística sem disciplina de tráfego.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar sinais de fadiga porque a troca de equipe reduz velocidade da missão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0108",
@@ -4427,7 +7530,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter equipe em área de risco enquanto houver progresso, mesmo sem controle de exposição.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Centralizar decisões em um operador e reduzir comunicação para evitar ruído tático.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Manter canal de rádio único para comando e logística sem disciplina de tráfego.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar sinais de fadiga porque a troca de equipe reduz velocidade da missão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0109",
@@ -4468,7 +7600,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter equipe em área de risco enquanto houver progresso, mesmo sem controle de exposição.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Centralizar decisões em um operador e reduzir comunicação para evitar ruído tático.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Manter canal de rádio único para comando e logística sem disciplina de tráfego.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar sinais de fadiga porque a troca de equipe reduz velocidade da missão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0110",
@@ -4509,7 +7670,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter equipe em área de risco enquanto houver progresso, mesmo sem controle de exposição.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Centralizar decisões em um operador e reduzir comunicação para evitar ruído tático.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Manter canal de rádio único para comando e logística sem disciplina de tráfego.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar sinais de fadiga porque a troca de equipe reduz velocidade da missão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0111",
@@ -4550,7 +7740,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Centralizar decisões em um operador e reduzir comunicação para evitar ruído tático.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Manter equipe em área de risco enquanto houver progresso, mesmo sem controle de exposição.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Manter canal de rádio único para comando e logística sem disciplina de tráfego.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Ignorar sinais de fadiga porque a troca de equipe reduz velocidade da missão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0112",
@@ -4591,7 +7810,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Manter equipe em área de risco enquanto houver progresso, mesmo sem controle de exposição.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Centralizar decisões em um operador e reduzir comunicação para evitar ruído tático.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Manter canal de rádio único para comando e logística sem disciplina de tráfego.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar sinais de fadiga porque a troca de equipe reduz velocidade da missão.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0113",
@@ -4632,7 +7880,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Considerar conformidade presumida quando o responsável técnico possui histórico positivo.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Adotar exigências de referência antiga quando mais restritivas, mesmo revogadas.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Emitir parecer preliminar sem registrar base normativa para agilizar tramitação.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar decisões por costume local sem consulta ao texto normativo vigente.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0114",
@@ -4673,7 +7950,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Considerar conformidade presumida quando o responsável técnico possui histórico positivo.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Adotar exigências de referência antiga quando mais restritivas, mesmo revogadas.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": true
+        },
+        {
+          "text": "Emitir parecer preliminar sem registrar base normativa para agilizar tramitação.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar decisões por costume local sem consulta ao texto normativo vigente.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0115",
@@ -4714,7 +8020,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Considerar conformidade presumida quando o responsável técnico possui histórico positivo.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Adotar exigências de referência antiga quando mais restritivas, mesmo revogadas.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Emitir parecer preliminar sem registrar base normativa para agilizar tramitação.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar atualização de instruções técnicas até fechamento anual dos processos.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0116",
@@ -4755,7 +8090,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Considerar conformidade presumida quando o responsável técnico possui histórico positivo.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Emitir parecer preliminar sem registrar base normativa para agilizar tramitação.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Adotar exigências de referência antiga quando mais restritivas, mesmo revogadas.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Ignorar atualização de instruções técnicas até fechamento anual dos processos.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": true
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0117",
@@ -4796,7 +8160,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Considerar conformidade presumida quando o responsável técnico possui histórico positivo.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Emitir parecer preliminar sem registrar base normativa para agilizar tramitação.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Adotar exigências de referência antiga quando mais restritivas, mesmo revogadas.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Aplicar a mesma exigência para todas as ocupações, independentemente do risco.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0118",
@@ -4837,7 +8230,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Considerar conformidade presumida quando o responsável técnico possui histórico positivo.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Emitir parecer preliminar sem registrar base normativa para agilizar tramitação.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Adotar exigências de referência antiga quando mais restritivas, mesmo revogadas.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        },
+        {
+          "text": "Aplicar a mesma exigência para todas as ocupações, independentemente do risco.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0119",
@@ -4878,7 +8300,36 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Considerar conformidade presumida quando o responsável técnico possui histórico positivo.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": false
+        },
+        {
+          "text": "Emitir parecer preliminar sem registrar base normativa para agilizar tramitação.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Adotar exigências de referência antiga quando mais restritivas, mesmo revogadas.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": true
+        },
+        {
+          "text": "Padronizar decisões por costume local sem consulta ao texto normativo vigente.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   },
   {
     "id": "cbmsc-q-0120",
@@ -4919,6 +8370,35 @@ export const cbmscQuestions: QuestionDocument[] = [
       "manual-cbmsc-referencia-geral"
     ],
     "usedCount": 0,
-    "isActive": true
+    "isActive": true,
+    "distractorAudit": {
+      "correctType": "correta",
+      "distractors": [
+        {
+          "text": "Considerar conformidade presumida quando o responsável técnico possui histórico positivo.",
+          "type": "erro de ordem",
+          "variation": "conceito próximo confundido",
+          "plausible": true
+        },
+        {
+          "text": "Adotar exigências de referência antiga quando mais restritivas, mesmo revogadas.",
+          "type": "erro de aplicação",
+          "variation": "inversão de regra",
+          "plausible": false
+        },
+        {
+          "text": "Emitir parecer preliminar sem registrar base normativa para agilizar tramitação.",
+          "type": "exceção aplicada incorretamente",
+          "variation": "exceção mal aplicada",
+          "plausible": false
+        },
+        {
+          "text": "Padronizar decisões por costume local sem consulta ao texto normativo vigente.",
+          "type": "erro de conceito",
+          "variation": "erro de prioridade",
+          "plausible": false
+        }
+      ]
+    }
   }
 ]

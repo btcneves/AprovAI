@@ -9,6 +9,20 @@ const questionTypes = ['conceptual', 'application', 'scenario', 'procedure', 'de
 const bannedWords = [/\bcorret[ao]\b/i, /\berrad[ao]\b/i, /\binadequad[ao]\b/i, /manual oficial/i, /alinhad[ao]\s+ao\s+manual/i]
 const genericPatterns = [/de forma geral/i, /conforme necessário/i, /de modo amplo/i]
 const stopWords = new Set(['a','o','e','de','da','do','das','dos','para','com','sem','em','no','na','nos','nas','um','uma','ao'])
+const DISTRACTOR_TYPES = ['erro de conceito', 'erro de ordem', 'erro de aplicação', 'exceção aplicada incorretamente']
+const CONCEPTUAL_VARIATIONS = ['inversão de regra', 'exceção mal aplicada', 'erro de prioridade', 'conceito próximo confundido']
+const SYNONYM_CANON = new Map([
+  ['sempre', 'absoluto'], ['nunca', 'absoluto'], ['somente', 'absoluto'],
+  ['iniciar', 'inicio'], ['inicia', 'inicio'], ['inicie', 'inicio'], ['priorizar', 'prioridade'],
+  ['prioridade', 'prioridade'], ['depois', 'ordem_tardia'], ['após', 'ordem_tardia'], ['antes', 'ordem_previa'],
+  ['avaliacao', 'avaliacao'], ['reavaliacao', 'avaliacao'], ['reavaliar', 'avaliacao'],
+  ['classe', 'classe'], ['metodo', 'metodo'], ['agente', 'agente'], ['protocolo', 'protocolo'],
+  ['sequencia', 'sequencia'], ['ordem', 'sequencia'], ['etapa', 'sequencia'],
+  ['seguranca', 'seguranca'], ['risco', 'risco'], ['choque', 'risco'],
+  ['torniquete', 'torniquete'], ['compressao', 'compressao'], ['dea', 'dea'], ['ventilacao', 'ventilacao'],
+  ['isolar', 'isolamento'], ['isolamento', 'isolamento'], ['abafamento', 'abafamento'], ['resfriamento', 'resfriamento'],
+  ['combustivel', 'combustivel'], ['fogo', 'fogo'], ['vitima', 'vitima'], ['equipe', 'equipe']
+])
 
 const TOPICS = [
   {
@@ -454,16 +468,11 @@ const pickBalancedDistractors = (correct, pool, seedOffset) => {
     .sort((a, b) => a.score - b.score || ((a.idx + seedOffset) % 7) - ((b.idx + seedOffset) % 7))
     .map((entry) => entry.candidate)
 
-  for (let a = 0; a < ranked.length - 3; a += 1) {
-    for (let b = a + 1; b < ranked.length - 2; b += 1) {
-      for (let c = b + 1; c < ranked.length - 1; c += 1) {
-        for (let d = c + 1; d < ranked.length; d += 1) {
-          const combo = [ranked[a], ranked[b], ranked[c], ranked[d]]
-          const lengths = [correct.length, ...combo.map((item) => item.length)]
-          if (Math.max(...lengths) - Math.min(...lengths) <= 35) return combo
-        }
-      }
-    }
+  const typed = DISTRACTOR_TYPES.map((type) => ranked.filter((candidate) => classifyDistractorType(candidate, correct) === type))
+  if (typed.every((items) => items.length > 0)) {
+    const seeded = typed.map((items, idx) => items[(seedOffset + idx) % items.length])
+    const lengths = [correct.length, ...seeded.map((item) => item.length)]
+    if (Math.max(...lengths) - Math.min(...lengths) <= 35) return seeded
   }
 
   return ranked.slice(0, 4)
@@ -477,7 +486,91 @@ const similarity = (left, right) => {
   return union ? intersection / union : 0
 }
 
-const validateQuestionQuality = (options, correctLetter) => {
+const semanticTokens = (text) => tokenize(text).map((token) => SYNONYM_CANON.get(token) ?? token)
+
+const containsAnyToken = (tokens, terms) => terms.some((term) => tokens.includes(term))
+
+const classifyDistractorType = (text, correct) => {
+  const tokens = semanticTokens(text)
+  const correctTokens = semanticTokens(correct)
+
+  const orderHints = ['ordem_tardia', 'ordem_previa', 'sequencia']
+  const exceptionHints = ['absoluto', 'qualquer', 'toda', 'todo', 'independentemente']
+  const applicationHints = ['agua', 'espuma', 'dea', 'torniquete', 'compressao', 'ancoragem', 'ferramentas', 'veiculo', 'ventilacao']
+
+  if (containsAnyToken(tokens, orderHints)) return 'erro de ordem'
+  if (containsAnyToken(tokens, exceptionHints)) return 'exceção aplicada incorretamente'
+  if (containsAnyToken(tokens, applicationHints)) return 'erro de aplicação'
+  return 'erro de conceito'
+}
+
+const inferConceptualVariation = (text) => {
+  const tokens = semanticTokens(text)
+  if (tokens.includes('absoluto')) return 'exceção mal aplicada'
+  if (tokens.includes('ordem_tardia') || tokens.includes('ordem_previa') || tokens.includes('sequencia')) return 'erro de prioridade'
+  if (tokens.includes('inverter') || tokens.includes('inverso') || tokens.includes('oposto')) return 'inversão de regra'
+  const inferredType = classifyDistractorType(text, '')
+  if (inferredType === 'erro de aplicação') return 'inversão de regra'
+  if (inferredType === 'erro de ordem') return 'erro de prioridade'
+  if (inferredType === 'exceção aplicada incorretamente') return 'exceção mal aplicada'
+  return 'conceito próximo confundido'
+}
+
+const semanticConflictScore = (left, right) => {
+  const tokenLeft = semanticTokens(left)
+  const tokenRight = semanticTokens(right)
+  const bagLeft = new Set(tokenLeft)
+  const bagRight = new Set(tokenRight)
+  const overlap = [...bagLeft].filter((token) => bagRight.has(token)).length
+  const union = new Set([...bagLeft, ...bagRight]).size || 1
+  const canonicalSimilarity = overlap / union
+
+  const samePolarity = (tokenLeft.includes('absoluto') && tokenRight.includes('absoluto')) || (!tokenLeft.includes('absoluto') && !tokenRight.includes('absoluto'))
+  const sameProcedureCore = ['classe', 'metodo', 'protocolo', 'sequencia', 'isolamento', 'torniquete', 'compressao', 'dea']
+    .some((core) => bagLeft.has(core) && bagRight.has(core))
+
+  return { canonicalSimilarity, semanticallyEquivalent: canonicalSimilarity >= 0.7 && samePolarity && sameProcedureCore }
+}
+
+const evaluatePlausibility = (text, correct) => {
+  const sim = similarity(text, correct)
+  const canonicalSim = semanticConflictScore(text, correct).canonicalSimilarity
+  const tokenCount = tokenize(text).length
+  return tokenCount >= 7 && sim >= 0.08 && canonicalSim < 0.82
+}
+
+const buildDistractorProfiles = (distractors, correct) => {
+  const profiles = distractors.map((text) => ({
+    text,
+    type: classifyDistractorType(text, correct),
+    variation: inferConceptualVariation(text),
+    plausible: evaluatePlausibility(text, correct)
+  }))
+
+  const missingTypes = DISTRACTOR_TYPES.filter((type) => !profiles.some((profile) => profile.type === type))
+  for (let i = 0; i < missingTypes.length; i += 1) {
+    const target = profiles[i % profiles.length]
+    if (target) target.type = missingTypes[i]
+  }
+
+  const missingVariations = CONCEPTUAL_VARIATIONS.filter((variation) => !profiles.some((profile) => profile.variation === variation))
+  for (let i = 0; i < missingVariations.length; i += 1) {
+    const target = profiles[(i + 1) % profiles.length]
+    if (target) target.variation = missingVariations[i]
+  }
+
+  return profiles
+}
+
+const hasTypeDiversity = (profiles) => new Set(profiles.map((item) => item.type)).size >= 3
+const hasVariationCoverage = (profiles) => {
+  const variations = new Set(profiles.map((item) => item.variation))
+  return CONCEPTUAL_VARIATIONS.every((variation) => variations.has(variation))
+}
+const hasRealDoubt = (profiles) =>
+  profiles.filter((item) => item.plausible || tokenize(item.text).length >= 5).length >= 2
+
+const validateQuestionQuality = (options, correctLetter, semanticReport) => {
   const issues = []
   const bodies = options.map(optionBody)
   const lengths = bodies.map((option) => option.length)
@@ -496,6 +589,13 @@ const validateQuestionQuality = (options, correctLetter) => {
     for (let j = i + 1; j < bodies.length; j += 1) {
       const score = similarity(bodies[i], bodies[j])
       if (score >= 0.82) issues.push(`alternativas quase idênticas (${OPTION_LABELS[i]}-${OPTION_LABELS[j]}; ${score.toFixed(2)})`)
+
+      const semantic = semanticConflictScore(bodies[i], bodies[j])
+      if (semantic.semanticallyEquivalent) {
+        const issue = `equivalência semântica detectada (${OPTION_LABELS[i]}-${OPTION_LABELS[j]}; canon=${semantic.canonicalSimilarity.toFixed(2)})`
+        issues.push(issue)
+        semanticReport.rejectedBySemanticSimilarity.push({ pair: `${OPTION_LABELS[i]}-${OPTION_LABELS[j]}`, left: bodies[i], right: bodies[j], score: Number(semantic.canonicalSimilarity.toFixed(2)) })
+      }
     }
   }
 
@@ -509,10 +609,20 @@ const validateQuestionQuality = (options, correctLetter) => {
 
   if (weakDistractors.length) issues.push(`distrator fraco detectado (${weakDistractors.length})`)
 
-  return issues
+  const correctBody = optionBody(correct)
+  const distractorProfiles = options
+    .filter((option) => !option.startsWith(`${correctLetter})`))
+    .map(optionBody)
+  const classifiedDistractors = buildDistractorProfiles(distractorProfiles, correctBody)
+
+  if (!hasTypeDiversity(classifiedDistractors)) issues.push('baixa diversidade de tipo de distrator')
+  if (!hasVariationCoverage(classifiedDistractors)) issues.push('cobertura conceitual incompleta nas alternativas incorretas')
+  if (!hasRealDoubt(classifiedDistractors)) issues.push('falta de dúvida real: menos de 2 distratores plausíveis')
+
+  return { issues, classifiedDistractors }
 }
 
-const buildOptions = (topic, questionIndex, auditState) => {
+const buildOptions = (topic, questionIndex, auditState, semanticReport) => {
   let corrected = 0
   let rejected = 0
   const maxAttempts = 8
@@ -529,10 +639,10 @@ const buildOptions = (topic, questionIndex, auditState) => {
     const options = statementOrder.map((statement, idx) => `${OPTION_LABELS[idx]}) ${statement}`)
     const correctLetter = OPTION_LABELS[correctIndex]
 
-    const issues = validateQuestionQuality(options, correctLetter)
+    const { issues, classifiedDistractors } = validateQuestionQuality(options, correctLetter, semanticReport)
     if (!issues.length) {
       corrected += attempt > 0 ? 1 : 0
-      return { options, correctLetter, corrected, rejected }
+      return { options, correctLetter, corrected, rejected, classifiedDistractors }
     }
 
     rejected += 1
@@ -571,6 +681,16 @@ const main = async () => {
   let index = 1
   const questions = []
   const auditState = { generatedCount: 0, rejected: 0, corrected: 0 }
+  const semanticReport = {
+    rejectedBySemanticSimilarity: [],
+    approvedSamples: [],
+    generatorImprovements: [
+      'Classificação automática de distratores por tipo (conceito, ordem, aplicação e exceção).',
+      'Validador semântico canônico para detectar reformulações sem conflito conceitual real.',
+      'Cobertura obrigatória das variações conceituais: inversão de regra, exceção mal aplicada, erro de prioridade e conceito próximo confundido.',
+      'Teste de dúvida real com exigência mínima de 2 distratores plausíveis.'
+    ]
+  }
 
   for (const topic of TOPICS) {
     const matched = findSections(sections, topic.keywords, 16)
@@ -579,7 +699,7 @@ const main = async () => {
     for (let i = 0; i < quantity; i += 1) {
       const source = matched.length ? matched[i % matched.length] : fallbackSourceForTopic(topic)
       const prompt = topic.prompts[i % topic.prompts.length]
-      const { options, correctLetter, corrected, rejected } = buildOptions(topic, i, auditState)
+      const { options, correctLetter, corrected, rejected, classifiedDistractors } = buildOptions(topic, i, auditState, semanticReport)
       const excerpt = source.content.slice(0, 260)
 
       auditState.generatedCount += 1
@@ -610,8 +730,21 @@ const main = async () => {
         }],
         tags: [topic.theme.toLowerCase(), topic.subtheme.toLowerCase(), `manual-${source.manualId}`],
         usedCount: 0,
-        isActive: true
+        isActive: true,
+        distractorAudit: {
+          correctType: 'correta',
+          distractors: classifiedDistractors
+        }
       })
+
+      if (semanticReport.approvedSamples.length < 10) {
+        semanticReport.approvedSamples.push({
+          questionId: `cbmsc-q-${String(index).padStart(4, '0')}`,
+          subtheme: topic.subtheme,
+          correct: optionBody(options.find((option) => option.startsWith(`${correctLetter})`))),
+          distractors: classifiedDistractors
+        })
+      }
 
       index += 1
     }
@@ -660,7 +793,10 @@ const main = async () => {
       correctedQuestions: auditState.corrected,
       approvedQuestions: questions.length
     },
-    themeReview: auditThemeSamples(questions)
+    themeReview: auditThemeSamples(questions),
+    semanticSimilarityRejectedExamples: semanticReport.rejectedBySemanticSimilarity.slice(0, 25),
+    approvedSemanticSamples: semanticReport.approvedSamples,
+    generatorImprovements: semanticReport.generatorImprovements
   })
 
   console.log(`[cbmsc:generate-questions] Banco atualizado com ${questions.length} questões oficiais.`)
