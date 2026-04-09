@@ -91,74 +91,153 @@ const alternativesFrom = (correct: string, distractors: [string, string, string,
   }
 }
 
-const alternativeComplements = [
-  'considerando os procedimentos previstos na norma.',
-  'de acordo com a situação descrita no enunciado.',
-  'à luz dos princípios técnicos aplicáveis ao tema.',
-  'no contexto operacional apresentado.',
-  'conforme critérios recorrentes em provas oficiais.'
+const bannedTemplatePatterns = [
+  /\bno tema de\b/i,
+  /\bespecialmente em\b/i,
+  /\bde acordo com o enunciado\b/i,
+  /\bno contexto apresentado\b/i
+]
+const truncatedEndings = [
+  /\bcomp\.?$/i,
+  /\bcompleme\.?$/i,
+  /\bprocedime\.?$/i,
+  /\bcontext\.?$/i,
+  /\benunciad\.?$/i
+]
+const sentenceJoiners = [' e ', ' ou ', ' com ', ' sem ', ' para ', ' por ', ' quando ', ' enquanto ']
+
+const normalizeAlternativeText = (text: string): string =>
+  text
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/[,:;]+$/g, '')
+    .replace(/\.$/g, '')
+
+const hasSentenceStructure = (text: string): boolean =>
+  sentenceJoiners.some((joiner) => text.toLowerCase().includes(joiner)) || text.split(' ').length >= 5
+
+const formatAlternativeText = (text: string): string => {
+  const normalized = normalizeAlternativeText(text)
+  const capitalized = normalized ? `${normalized[0].toUpperCase()}${normalized.slice(1)}` : normalized
+  return capitalized.endsWith('.') ? capitalized : `${capitalized}.`
+}
+const sentenceStarters = [
+  'A conduta adequada é',
+  'A medida correta consiste em',
+  'A resposta tecnicamente defensável é',
+  'A alternativa válida estabelece'
 ] as const
 
-const normalizeAlternativeText = (text: string): string => text.trim().replace(/\.+$/g, '')
-
-const buildContextLabel = (topic: string, subtopic: string): string => {
-  const normalizedTopic = topic.toLowerCase()
-  const normalizedSubtopic = subtopic.toLowerCase()
-  return `no tema de ${normalizedTopic}, especialmente em ${normalizedSubtopic}`
+const ensureSingleSentence = (text: string, index: number): string => {
+  if (hasSentenceStructure(text)) return text
+  const starter = sentenceStarters[index % sentenceStarters.length]
+  const cleaned = text.replace(/\.$/, '').replace(/^[a-záéíóúâêôãõç]/, (ch) => ch.toLowerCase())
+  return `${starter} ${cleaned}.`
 }
 
-const balanceAlternatives = (
+const tokenize = (text: string): string[] =>
+  text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .split(/\s+/)
+    .filter((token) => token.length > 2)
+
+const jaccardSimilarity = (left: string, right: string): number => {
+  const leftTokens = new Set(tokenize(left))
+  const rightTokens = new Set(tokenize(right))
+  const intersection = [...leftTokens].filter((token) => rightTokens.has(token)).length
+  const union = new Set([...leftTokens, ...rightTokens]).size
+  return union ? intersection / union : 0
+}
+
+const validateAlternativesQuality = (
   alternatives: { id: AlternativeId; text: string }[],
-  topic: string,
-  subtopic: string
-): { id: AlternativeId; text: string }[] => {
-  const contextLabel = buildContextLabel(topic, subtopic)
+  correctAlternativeId: AlternativeId
+): string[] => {
+  const issues: string[] = []
+  const texts = alternatives.map((alternative) => alternative.text)
+  const lengths = texts.map((text) => text.length)
+  const spread = Math.max(...lengths) - Math.min(...lengths)
 
-  const enriched = alternatives.map((alternative, index) => {
-    const base = normalizeAlternativeText(alternative.text)
-    const complement = alternativeComplements[index % alternativeComplements.length]
-    return {
-      ...alternative,
-      text: `${base}, ${contextLabel}, ${complement}`
-    }
+  if (spread > 40) issues.push(`disparidade de tamanho (${spread})`)
+
+  texts.forEach((text) => {
+    const normalized = normalizeAlternativeText(text)
+    if (normalized.length < 16) issues.push('alternativa curta demais')
+    if (bannedTemplatePatterns.some((pattern) => pattern.test(normalized))) issues.push('template genérico detectado')
+    if (truncatedEndings.some((pattern) => pattern.test(normalized))) issues.push('palavra truncada detectada')
+    if (!hasSentenceStructure(normalized)) issues.push('estrutura artificial de frase')
+    if (/\b\w{1,3}\.\s*$/.test(normalized) && normalized.split(' ').length >= 4) issues.push('encerramento suspeito')
   })
 
-  const lengths = enriched.map((alternative) => alternative.text.length)
-  const target = Math.round(lengths.reduce((sum, value) => sum + value, 0) / lengths.length)
-
-  const padded = enriched.map((alternative, index) => {
-    if (alternative.text.length >= target - 8) {
-      return { ...alternative, text: `${alternative.text[0].toUpperCase()}${alternative.text.slice(1)}` }
+  for (let i = 0; i < texts.length; i += 1) {
+    for (let j = i + 1; j < texts.length; j += 1) {
+      if (jaccardSimilarity(texts[i], texts[j]) > 0.8) issues.push('alternativas muito parecidas')
     }
+  }
 
-    const complement = alternativeComplements[(index + 2) % alternativeComplements.length]
-    return {
-      ...alternative,
-      text: `${alternative.text} ${complement[0].toUpperCase()}${complement.slice(1)}`
-    }
-  })
+  const correct = alternatives.find((alternative) => alternative.id === correctAlternativeId)
+  if (correct) {
+    const ordered = [...lengths].sort((a, b) => b - a)
+    const second = ordered[1] ?? ordered[0] ?? 0
+    if (correct.text.length === ordered[0] && correct.text.length - second >= 30) issues.push('resposta óbvia por tamanho')
+  }
 
-  const equalizationSnippet = ' complemento técnico contextual.'
-  const maxLength = Math.max(...padded.map((alternative) => alternative.text.length))
+  return [...new Set(issues)]
+}
 
-  return padded.map((alternative) => {
-    const allowedMinimum = maxLength - 30
-    if (alternative.text.length >= allowedMinimum) {
-      return {
-        ...alternative,
-        text: `${alternative.text[0].toUpperCase()}${alternative.text.slice(1)}`
+const buildBalancedAlternatives = (
+  alternatives: { id: AlternativeId; text: string }[],
+  correctAlternativeId: AlternativeId
+): { alternatives: { id: AlternativeId; text: string }[]; rejectedAttempts: number } => {
+  const equalizeLengths = (items: { id: AlternativeId; text: string }[]): { id: AlternativeId; text: string }[] => {
+    const normalized = items.map((item) => ({ ...item }))
+    let lengths = normalized.map((item) => item.text.length)
+    let min = Math.min(...lengths)
+    let max = Math.max(...lengths)
+
+    normalized.forEach((item) => {
+      if (item.text.length > min + 35 && item.text.includes(',')) {
+        const shortened = item.text.split(',')[0].trim()
+        item.text = shortened.endsWith('.') ? shortened : `${shortened}.`
       }
-    }
+    })
 
-    const missing = allowedMinimum - alternative.text.length
-    const repetitions = Math.ceil(missing / equalizationSnippet.length)
-    const extra = equalizationSnippet.repeat(repetitions).slice(0, missing)
+    lengths = normalized.map((item) => item.text.length)
+    min = Math.min(...lengths)
+    max = Math.max(...lengths)
 
-    return {
-      ...alternative,
-      text: `${alternative.text}${extra}`
-    }
-  })
+    const complement = ' com base técnica.'
+    normalized.forEach((item) => {
+      while (max - item.text.length > 35) item.text = `${item.text.replace(/\.$/, '')}${complement}`
+    })
+
+    return normalized
+  }
+
+  let rejectedAttempts = 0
+  let lastIssues: string[] = []
+
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    const transformed = alternatives.map((alternative, index) => {
+      const base = ensureSingleSentence(formatAlternativeText(alternative.text), index)
+      if (attempt === 0) return { ...alternative, text: base }
+      if (attempt === 1 && index % 2 === 0) return { ...alternative, text: base.replace(' para ', ' visando ') }
+      if (attempt === 2 && base.includes(',')) return { ...alternative, text: base.replace(/,\s*/g, ' e ') }
+      if (attempt === 3 && base.includes(' e ')) return { ...alternative, text: base.replace(' e ', ' com ') }
+      return { ...alternative, text: base }
+    })
+
+    const equalized = equalizeLengths(transformed)
+    const issues = validateAlternativesQuality(equalized, correctAlternativeId)
+    if (!issues.length) return { alternatives: equalized, rejectedAttempts }
+    lastIssues = issues
+    rejectedAttempts += 1
+  }
+
+  throw new Error(`Não foi possível gerar alternativas válidas: ${lastIssues.join('; ')}`)
 }
 
 const materializeQuestions = (blueprints: Blueprint[], variants: number, prefix: string): Question[] =>
@@ -166,7 +245,7 @@ const materializeQuestions = (blueprints: Blueprint[], variants: number, prefix:
     Array.from({ length: variants }, (_, variantIndex) => {
       const rotation = (index + variantIndex) % 5
       const { alternatives, correctAlternativeId } = alternativesFrom(bp.correctConcept, bp.distractors, rotation)
-      const balancedAlternatives = balanceAlternatives(alternatives, bp.topic, bp.subtopic)
+      const { alternatives: balancedAlternatives } = buildBalancedAlternatives(alternatives, correctAlternativeId)
       const suffix = variantIndex + 1
       return {
         id: `${prefix}-${index + 1}-${suffix}`,
