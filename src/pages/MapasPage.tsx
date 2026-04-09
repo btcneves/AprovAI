@@ -108,6 +108,20 @@ export const MapasPage = () => {
   return (
     <div className="grid-2">
       <Card title="Mapa mental">
+        <div className="transformation-report">
+          <p><strong>Antes vs depois</strong></p>
+          <ul>
+            <li><strong>Antes:</strong> árvore vertical com blocos longos e pouca separação visual.</li>
+            <li><strong>Depois:</strong> canvas radial com nó central, níveis hierárquicos e foco por ramo.</li>
+            <li><strong>Depois:</strong> cores por tema, badges pedagógicos e indicadores de performance por nó.</li>
+          </ul>
+          <p><strong>Exemplo de nó transformado</strong></p>
+          <ul>
+            <li>Título curto + bullets objetivos.</li>
+            <li>Badges: 🔥 examHighlights · ❌ commonMistakes · ⚖️ criticalDifferences · 🪤 traps.</li>
+            <li>Status visual: fraco (vermelho), atenção (amarelo), forte (verde).</li>
+          </ul>
+        </div>
         <MindMapTree
           nodes={enrichedNodes}
           onOpenTopic={handleOpenTopic}

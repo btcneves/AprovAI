@@ -50,3 +50,76 @@ button.reviewed { background: #166534; }
 .feedback-warn { color: #b45309; font-weight: 700; }
 .tree-node.critical { box-shadow: inset 0 0 0 2px #dc2626; border-left-width: 4px; }
 .tree-node.critical .status-badge { border-color: #fecaca; background: #fff1f2; }
+
+.mindmap-canvas-wrap {
+  overflow: auto;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at center, #ffffff 0%, #f8fafc 42%, #eef2ff 100%);
+  margin-top: 0.7rem;
+}
+
+.mindmap-canvas {
+  position: relative;
+  min-width: 100%;
+  min-height: 860px;
+}
+
+.mindmap-links {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.center-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  padding: 0.75rem;
+  border-radius: 16px;
+  border: 2px solid #1d4ed8;
+  background: linear-gradient(160deg, #dbeafe, #eff6ff);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  z-index: 2;
+}
+
+.radial-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  max-width: 280px;
+  border: 2px solid #cbd5e1;
+  border-radius: 14px;
+  background: #ffffffee;
+  backdrop-filter: blur(2px);
+  padding: 0.6rem 0.7rem;
+  z-index: 3;
+}
+
+.radial-node.level-1 { width: 300px; }
+.radial-node.level-2 { width: 270px; }
+.radial-node.level-3, .radial-node.level-4 { width: 248px; }
+.radial-node ul { margin: 0.35rem 0 0.4rem; padding-left: 1rem; }
+.radial-node li { margin-bottom: 0.2rem; font-size: 0.84rem; }
+
+.pedagogy-row { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-bottom: 0.3rem; }
+.ped-tag {
+  font-size: 0.72rem;
+  padding: 0.14rem 0.38rem;
+  border-radius: 999px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+}
+
+.transformation-report {
+  border: 1px dashed #93c5fd;
+  background: #eff6ff;
+  border-radius: 12px;
+  padding: 0.7rem 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.transformation-report ul { margin: 0.3rem 0 0.5rem; }
