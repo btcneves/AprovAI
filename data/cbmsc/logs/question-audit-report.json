@@ -1,0 +1,176 @@
+{
+  "generatedAt": "2026-04-09T10:44:00.192Z",
+  "questionCount": 120,
+  "gabaritoDistribution": {
+    "A": 24,
+    "B": 24,
+    "C": 24,
+    "D": 24,
+    "E": 24
+  },
+  "sizeAudit": {
+    "passed": 120,
+    "failed": 0
+  },
+  "semanticAudit": {
+    "passed": 120,
+    "failed": 0
+  },
+  "correctionStats": {
+    "rejectedAttempts": 8,
+    "correctedQuestions": 6,
+    "approvedQuestions": 120
+  },
+  "themeReview": [
+    {
+      "theme": "Incêndio",
+      "subtheme": "Classes de incêndio",
+      "sampleQuestionIds": [
+        "cbmsc-q-0001",
+        "cbmsc-q-0002"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "Incêndio",
+      "subtheme": "Métodos de extinção",
+      "sampleQuestionIds": [
+        "cbmsc-q-0009",
+        "cbmsc-q-0010"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "Incêndio",
+      "subtheme": "Comportamento do fogo",
+      "sampleQuestionIds": [
+        "cbmsc-q-0017",
+        "cbmsc-q-0018"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "Incêndio",
+      "subtheme": "Extintores",
+      "sampleQuestionIds": [
+        "cbmsc-q-0025",
+        "cbmsc-q-0026"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "APH",
+      "subtheme": "ABCDE",
+      "sampleQuestionIds": [
+        "cbmsc-q-0033",
+        "cbmsc-q-0034"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "APH",
+      "subtheme": "RCP",
+      "sampleQuestionIds": [
+        "cbmsc-q-0041",
+        "cbmsc-q-0042"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "APH",
+      "subtheme": "Trauma",
+      "sampleQuestionIds": [
+        "cbmsc-q-0049",
+        "cbmsc-q-0050"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "APH",
+      "subtheme": "Hemorragias",
+      "sampleQuestionIds": [
+        "cbmsc-q-0057",
+        "cbmsc-q-0058"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "Produtos perigosos",
+      "subtheme": "Reconhecimento e isolamento",
+      "sampleQuestionIds": [
+        "cbmsc-q-0065",
+        "cbmsc-q-0066"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "Salvamento",
+      "subtheme": "Salvamento em altura",
+      "sampleQuestionIds": [
+        "cbmsc-q-0073",
+        "cbmsc-q-0074"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "Salvamento",
+      "subtheme": "Salvamento aquático",
+      "sampleQuestionIds": [
+        "cbmsc-q-0081",
+        "cbmsc-q-0082"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "Salvamento",
+      "subtheme": "Resgate veicular",
+      "sampleQuestionIds": [
+        "cbmsc-q-0089",
+        "cbmsc-q-0090"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "Salvamento",
+      "subtheme": "Busca terrestre",
+      "sampleQuestionIds": [
+        "cbmsc-q-0097",
+        "cbmsc-q-0098"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "Operações",
+      "subtheme": "Segurança operacional",
+      "sampleQuestionIds": [
+        "cbmsc-q-0105",
+        "cbmsc-q-0106"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    },
+    {
+      "theme": "Normas",
+      "subtheme": "Legislação e atividade técnica",
+      "sampleQuestionIds": [
+        "cbmsc-q-0113",
+        "cbmsc-q-0114"
+      ],
+      "reviewed": true,
+      "note": "Distratores focados em confusões técnicas recorrentes do subtema."
+    }
+  ]
+}
