@@ -71,8 +71,19 @@ const nodes: MindMapNode[] = [
   }
 ]
 
+const clickExpandInsideCard = (title: string) => {
+  const titleNode = screen.getAllByText(title).find((node) => node.tagName.toLowerCase() === 'h4') as HTMLElement
+  const card = titleNode.closest('article') as HTMLElement
+  fireEvent.click(within(card).getByRole('button', { name: /expandir|recolher/i }))
+}
+
+const clickTopbarButton = (name: string) => {
+  const topbar = document.querySelector('.mindmap-topbar') as HTMLElement
+  fireEvent.click(within(topbar).getByRole('button', { name }))
+}
+
 describe('MindMapTree interactions', () => {
-  it('renderiza raízes e primeiro nível por padrão, e expande/recolhe subníveis', () => {
+  it('renderiza estado inicial didático com raiz e blocos, e expande/recolhe subníveis', () => {
     render(
       <MindMapTree
         nodes={nodes}
@@ -86,14 +97,16 @@ describe('MindMapTree interactions', () => {
     )
 
     expect(screen.getByRole('button', { name: 'Língua Portuguesa' })).toBeTruthy()
-    expect(screen.getByText('Sintaxe')).toBeTruthy()
+    expect(screen.queryByText('Sintaxe')).toBeNull()
     expect(screen.queryByText('Concordância')).toBeNull()
 
-    fireEvent.click(screen.getAllByRole('button', { name: 'Expandir' })[0])
+    clickExpandInsideCard('Língua Portuguesa')
+    expect(screen.getByText('Sintaxe')).toBeTruthy()
+
+    clickExpandInsideCard('Sintaxe')
     expect(screen.getByText('Concordância')).toBeTruthy()
 
-    const sintaxeCard = screen.getByText('Sintaxe').closest('article') as HTMLElement
-    fireEvent.click(within(sintaxeCard).getByRole('button', { name: 'Recolher' }))
+    clickExpandInsideCard('Sintaxe')
     expect(screen.queryByText('Concordância')).toBeNull()
   })
 
@@ -112,7 +125,8 @@ describe('MindMapTree interactions', () => {
       />
     )
 
-    fireEvent.click(screen.getAllByRole('button', { name: 'Expandir' })[0])
+    clickExpandInsideCard('Língua Portuguesa')
+    clickExpandInsideCard('Sintaxe')
     expect(screen.getByText('Concordância')).toBeTruthy()
 
     fireEvent.click(screen.getAllByRole('button', { name: 'Detalhar' })[0])
@@ -136,12 +150,32 @@ describe('MindMapTree interactions', () => {
       />
     )
 
-    fireEvent.click(screen.getByRole('button', { name: 'Língua Portuguesa' }))
+    clickTopbarButton('Língua Portuguesa')
     expect(screen.getByText('Sintaxe')).toBeTruthy()
     expect(screen.queryByText('APH / ABCDE')).toBeNull()
 
-    fireEvent.click(screen.getByRole('button', { name: 'Mapa completo' }))
+    clickTopbarButton('Mapa completo')
+    clickExpandInsideCard('Conhecimentos Específicos')
     expect(screen.getByText('APH / ABCDE')).toBeTruthy()
     expect(screen.getByRole('button', { name: 'Conteúdos CBMSC' })).toBeTruthy()
+  })
+
+  it('recolher tudo restaura o estado inicial coerente', () => {
+    render(
+      <MindMapTree
+        nodes={nodes}
+        onOpenTopic={() => {}}
+        onTrainNode={() => {}}
+        onToggleReviewed={() => {}}
+        reviewedNodeIds={new Set()}
+        performanceByNode={new Map()}
+        nodeLearningById={{}}
+      />
+    )
+
+    clickExpandInsideCard('Língua Portuguesa')
+    expect(screen.getByText('Sintaxe')).toBeTruthy()
+    fireEvent.click(screen.getByRole('button', { name: 'Recolher tudo' }))
+    expect(screen.queryByText('Sintaxe')).toBeNull()
   })
 })

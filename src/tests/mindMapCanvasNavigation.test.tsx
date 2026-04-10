@@ -24,6 +24,7 @@ const baseLayout = (): LayoutResult => ({
   canvasSize: 1200,
   center: 500,
   branchBounds: new Map([['branch-a', { minX: 120, minY: 130, maxX: 540, maxY: 560 }]]),
+  subtreeBounds: new Map([['branch-a', { minX: 120, minY: 130, maxX: 540, maxY: 560 }]]),
   collisionReport: { initialCollisions: 0, resolvedCollisions: 0, remainingCollisions: 0, passes: 0 }
 })
 
@@ -101,14 +102,14 @@ describe('MindMapCanvas navigation', () => {
     expect(afterWorldY).toBeCloseTo(beforeWorldY, 6)
 
     const clamped = computeZoomViewport({ offsetX: 0, offsetY: 0, scale: 2.4 }, mouseX, mouseY, 1.2)
-    expect(clamped.scale).toBe(2.5)
+    expect(clamped.scale).toBe(2.1)
   })
 
   it('inicia drag, move e finaliza sem quebrar em pointermove após pointerup', async () => {
     const { viewport, canvas } = renderCanvas()
 
     await waitFor(() => {
-      expect(parseTransform(canvas.style.transform).scale).toBeCloseTo(0.82, 2)
+      expect(parseTransform(canvas.style.transform).scale).toBeCloseTo(0.9, 2)
     })
     const before = parseTransform(canvas.style.transform)
 
@@ -130,7 +131,7 @@ describe('MindMapCanvas navigation', () => {
     const { viewport, canvas } = renderCanvas()
 
     await waitFor(() => {
-      expect(parseTransform(canvas.style.transform).scale).toBeCloseTo(0.82, 2)
+      expect(parseTransform(canvas.style.transform).scale).toBeCloseTo(0.9, 2)
     })
 
     fireEvent.wheel(viewport, { deltaY: -120, clientX: 500, clientY: 400 })
@@ -151,6 +152,6 @@ describe('MindMapCanvas navigation', () => {
 
     fireEvent.click(screen.getByRole('button', { name: 'Reset view' }))
     const reset = parseTransform(canvas.style.transform)
-    expect(reset.scale).toBeCloseTo(0.82, 2)
+    expect(reset.scale).toBeCloseTo(0.9, 2)
   })
 })

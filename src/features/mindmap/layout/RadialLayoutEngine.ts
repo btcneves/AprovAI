@@ -41,6 +41,7 @@ export type LayoutResult = {
   canvasSize: number
   center: number
   branchBounds: Map<string, { minX: number; minY: number; maxX: number; maxY: number }>
+  subtreeBounds: Map<string, { minX: number; minY: number; maxX: number; maxY: number }>
   collisionReport: CollisionReport
 }
 
@@ -130,7 +131,7 @@ export const buildRadialLayout = (
   config: LayoutConfig = {}
 ): LayoutResult => {
   const baseRadius = config.baseRadius ?? 220
-  const ringGap = Math.max(320, config.ringGap ?? 360)
+  const ringGap = Math.max(360, config.ringGap ?? 420)
   const minNodeArc = Math.max(220, config.minNodeArc ?? 240)
   const minNodeSpacing = Math.max(220, config.minNodeSpacing ?? 220)
   const nodePadding = Math.max(24, config.nodePadding ?? 32)
@@ -319,7 +320,7 @@ export const buildRadialLayout = (
     return Math.max(acc, extX, extY)
   }, centerSize)
 
-  const center = Math.max(900, maxExtent + centerSize / 2)
+  const center = Math.max(980, maxExtent + centerSize / 2)
   nodes.forEach((item) => {
     item.x += center
     item.y += center
@@ -359,6 +360,49 @@ export const buildRadialLayout = (
     })
   })
 
+  const positionedChildrenByParent = new Map<string, string[]>()
+  nodes.forEach((entry) => {
+    if (!entry.node.parentId || !map.has(entry.node.parentId)) return
+    const children = positionedChildrenByParent.get(entry.node.parentId) ?? []
+    children.push(entry.node.id)
+    positionedChildrenByParent.set(entry.node.parentId, children)
+  })
+
+  type Bounds = { minX: number; minY: number; maxX: number; maxY: number }
+  const subtreeBounds = new Map<string, Bounds>()
+  const computeSubtreeBounds = (nodeId: string): Bounds | null => {
+    const layoutNode = map.get(nodeId)
+    if (!layoutNode) return null
+
+    const ownBounds: Bounds = {
+      minX: layoutNode.x - layoutNode.width / 2 - 70,
+      minY: layoutNode.y - layoutNode.height / 2 - 70,
+      maxX: layoutNode.x + layoutNode.width / 2 + 70,
+      maxY: layoutNode.y + layoutNode.height / 2 + 70
+    }
+
+    const children = positionedChildrenByParent.get(nodeId) ?? []
+    const merged = children.reduce<Bounds>((acc, childId) => {
+      const childBounds = computeSubtreeBounds(childId)
+      if (!childBounds) return acc
+      return {
+        minX: Math.min(acc.minX, childBounds.minX),
+        minY: Math.min(acc.minY, childBounds.minY),
+        maxX: Math.max(acc.maxX, childBounds.maxX),
+        maxY: Math.max(acc.maxY, childBounds.maxY)
+      }
+    }, ownBounds)
+
+    subtreeBounds.set(nodeId, merged)
+    return merged
+  }
+
+  nodes
+    .filter((entry) => !entry.node.parentId || !map.has(entry.node.parentId))
+    .forEach((entry) => {
+      computeSubtreeBounds(entry.node.id)
+    })
+
   const clusters: LayoutCluster[] = Array.from(new Set(nodes.map((node) => node.branchId))).map((branchId) => {
     const branchNodes = nodes.filter((node) => node.branchId === branchId)
     const span = circularSpan(branchNodes.map((node) => node.theta))
@@ -381,6 +425,7 @@ export const buildRadialLayout = (
     canvasSize: center * 2,
     center,
     branchBounds,
+    subtreeBounds,
     collisionReport: {
       initialCollisions,
       resolvedCollisions: Math.max(0, initialCollisions - remainingCollisions),
