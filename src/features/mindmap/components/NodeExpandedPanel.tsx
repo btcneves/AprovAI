@@ -1,9 +1,17 @@
+import type { NodeLearningStats } from '@/domain/nodeLearningService'
 import type { MindMapNode as MindMapNodeType } from '@/domain/types'
+import type { CollisionReport } from '@/features/mindmap/layout/RadialLayoutEngine'
+
+type NodeStatus = 'forte' | 'atencao' | 'fraco' | 'sem-dados'
 
 type Props = {
-  node: MindMapNodeType
+  node: MindMapNodeType | null
+  learning?: NodeLearningStats
+  status: NodeStatus
+  collisions: CollisionReport
   onOpenTopic: (id: string) => void
   onTrainNode: (id: string) => void
+  onFocusBranch: (id: string) => void
 }
 
 const renderList = (title: string, values?: string[]) => {
@@ -16,17 +24,42 @@ const renderList = (title: string, values?: string[]) => {
   )
 }
 
-export const NodeExpandedPanel = ({ node, onOpenTopic, onTrainNode }: Props) => (
-  <aside className="node-expanded-panel">
-    <h4>{node.title}</h4>
-    <p>{node.descriptionDetailed}</p>
-    {renderList('O que mais cai', node.examHighlights)}
-    {renderList('Erros comuns', node.commonMistakes)}
-    {renderList('Diferenças críticas', node.criticalDifferences)}
-    {renderList('Pegadinhas', node.traps)}
-    <div className="actions-row" style={{ justifyContent: 'flex-start' }}>
-      <button onClick={() => onOpenTopic(node.id)}>Revisar</button>
-      <button onClick={() => onTrainNode(node.id)}>Treinar</button>
+export const NodeExpandedPanel = ({ node, learning, status, collisions, onOpenTopic, onTrainNode, onFocusBranch }: Props) => (
+  <aside className="node-expanded-panel docked">
+    {node ? (
+      <>
+        <h4>{node.title}</h4>
+        <p>{node.descriptionDetailed}</p>
+        <p><strong>Status:</strong> {status}</p>
+        <p>
+          <strong>Métricas:</strong>{' '}
+          {learning
+            ? `views ${learning.viewCount} · revisões ${learning.reviewCount} · acurácia ${learning.accuracyRate}%`
+            : 'sem histórico'}
+        </p>
+        {renderList('Resumo de estudo', node.summary ? [node.summary] : undefined)}
+        {renderList('O que mais cai', node.examHighlights)}
+        {renderList('Erros comuns', node.commonMistakes)}
+        {renderList('Diferenças críticas', node.criticalDifferences)}
+        {renderList('Pegadinhas', node.traps)}
+        <div className="actions-row panel-actions">
+          <button onClick={() => onOpenTopic(node.id)}>Revisar</button>
+          <button onClick={() => onTrainNode(node.id)}>Treinar</button>
+          <button onClick={() => onFocusBranch(node.id)}>Focar ramo</button>
+        </div>
+      </>
+    ) : (
+      <>
+        <h4>Painel de estudo</h4>
+        <p>Selecione um nó no canvas para abrir resumo pedagógico, métricas e ações.</p>
+      </>
+    )}
+
+    <div className="collision-report">
+      <h5>QA layout</h5>
+      <p>Colisões iniciais: {collisions.initialCollisions}</p>
+      <p>Evitadas: {collisions.resolvedCollisions}</p>
+      <p>Restantes: {collisions.remainingCollisions}</p>
     </div>
   </aside>
 )

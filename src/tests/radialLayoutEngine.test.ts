@@ -68,10 +68,10 @@ describe('radialLayoutEngine', () => {
     expect(span(clusterA!.startTheta, clusterA!.endTheta)).toBeGreaterThan(span(clusterB!.startTheta, clusterB!.endTheta))
   })
 
-  it('mantém legibilidade em cenário grande sem sobreposição crítica', () => {
-    const roots = Array.from({ length: 5 }, (_, index) => makeNode(`r-${index}`, null, Array.from({ length: 10 }, (_, c) => `r-${index}-c-${c}`)))
+  it('mantém collisions = 0 em cenário denso e gera relatório técnico', () => {
+    const roots = Array.from({ length: 6 }, (_, index) => makeNode(`r-${index}`, null, Array.from({ length: 12 }, (_, c) => `r-${index}-c-${c}`)))
     const children = roots.flatMap((root) =>
-      root.childrenIds.map((childId) => makeNode(childId, root.id, Array.from({ length: 2 }, (_, i) => `${childId}-d-${i}`)))
+      root.childrenIds.map((childId) => makeNode(childId, root.id, Array.from({ length: 3 }, (_, i) => `${childId}-d-${i}`)))
     )
     const leaves = children.flatMap((child) => child.childrenIds.map((leafId) => makeNode(leafId, child.id)))
 
@@ -94,7 +94,7 @@ describe('radialLayoutEngine', () => {
       branchId: node.parentId ? node.parentId.split('-c-')[0] : node.id
     }))
 
-    const layout = buildRadialLayout(visible, { maxIterations: 24 })
+    const layout = buildRadialLayout(visible, { maxIterations: 40 })
 
     let collisions = 0
     for (let i = 0; i < layout.nodes.length; i += 1) {
@@ -105,5 +105,8 @@ describe('radialLayoutEngine', () => {
 
     expect(layout.nodes.length).toBe(all.length)
     expect(collisions).toBe(0)
+    expect(layout.collisionReport.initialCollisions).toBeGreaterThanOrEqual(layout.collisionReport.resolvedCollisions)
+    expect(layout.collisionReport.remainingCollisions).toBe(0)
+    expect(layout.branchBounds.size).toBeGreaterThan(0)
   })
 })

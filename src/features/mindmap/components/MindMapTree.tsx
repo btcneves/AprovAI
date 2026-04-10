@@ -39,15 +39,15 @@ export const MindMapTree = ({
     const result = new Map<string, string>()
     const roots = nodes.filter((node) => node.parentId === null)
 
-    const traverse = (node: MindMapNodeType, rootId: string) => {
+    const walk = (node: MindMapNodeType, rootId: string) => {
       result.set(node.id, rootId)
       node.childrenIds.forEach((childId) => {
         const child = nodeMap.get(childId)
-        if (child) traverse(child, rootId)
+        if (child) walk(child, rootId)
       })
     }
 
-    roots.forEach((root) => traverse(root, root.id))
+    roots.forEach((root) => walk(root, root.id))
     return result
   }, [nodeMap, nodes])
 
@@ -56,12 +56,7 @@ export const MindMapTree = ({
     return new Map(rootIds.map((id, index) => [id, themePalette[index % themePalette.length]]))
   }, [rootByNodeId])
 
-  const roots = useMemo(() => {
-    if (!focusedBranchId) return nodes.filter((node) => node.parentId === null)
-    const focused = nodeMap.get(focusedBranchId)
-    return focused ? [focused] : nodes.filter((node) => node.parentId === null)
-  }, [focusedBranchId, nodeMap, nodes])
-
+  const roots = useMemo(() => nodes.filter((node) => node.parentId === null), [nodes])
   const loweredQuery = query.trim().toLowerCase()
 
   const visible = useMemo(() => {
@@ -79,7 +74,6 @@ export const MindMapTree = ({
     const visit = (node: MindMapNodeType, depth: number, branchId: string) => {
       if (loweredQuery && !nodeMatches(node) && !descendantsMatch(node)) return
       list.push({ node, depth, branchId })
-
       const expanded = expandedMap[node.id] ?? true
       if (!expanded) return
 
@@ -93,30 +87,31 @@ export const MindMapTree = ({
     return list
   }, [expandedMap, loweredQuery, nodeMap, roots])
 
-  const layout = useMemo(() => buildRadialLayout(visible, { ringGap: 220, minNodeArc: 200, nodePadding: 24 }), [visible])
+  const layout = useMemo(
+    () => buildRadialLayout(visible, { ringGap: 320, minNodeArc: 240, nodePadding: 28, maxIterations: 36 }),
+    [visible]
+  )
 
   const selectedNode = selectedNodeId ? nodeMap.get(selectedNodeId) ?? null : null
-  const focusedBranchNode = focusedBranchId ? nodeMap.get(focusedBranchId) ?? null : null
 
   return (
-    <div>
-      <input
-        placeholder="Buscar tópico, tag ou termo"
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        className="input"
-      />
-
-      <div className="actions-row mindmap-toolbar">
-        <button onClick={() => setFocusedBranchId(null)} disabled={!focusedBranchId}>Voltar para mapa completo</button>
-        <button onClick={() => selectedNodeId && setFocusedBranchId(selectedNodeId)} disabled={!selectedNodeId}>Focar ramo</button>
-        <button onClick={() => setExpandedMap({})}>Expandir todos</button>
-        <button onClick={() => setExpandedMap(Object.fromEntries(nodes.map((node) => [node.id, false])))}>Recolher todos</button>
-        {selectedNodeId ? (
-          <button className={reviewedNodeIds.has(selectedNodeId) ? 'reviewed' : ''} onClick={() => onToggleReviewed(selectedNodeId)}>
-            {reviewedNodeIds.has(selectedNodeId) ? 'Revisado ✓' : 'Marcar revisado'}
-          </button>
-        ) : null}
+    <div className="mindmap-fullscreen-layout">
+      <div className="mindmap-topbar">
+        <input
+          placeholder="Buscar tópico, tag ou termo"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          className="input"
+        />
+        <div className="actions-row mindmap-toolbar">
+          <button onClick={() => setExpandedMap({})}>Expandir todos</button>
+          <button onClick={() => setExpandedMap(Object.fromEntries(nodes.map((node) => [node.id, false])))}>Recolher todos</button>
+          {selectedNodeId ? (
+            <button className={reviewedNodeIds.has(selectedNodeId) ? 'reviewed' : ''} onClick={() => onToggleReviewed(selectedNodeId)}>
+              {reviewedNodeIds.has(selectedNodeId) ? 'Revisado ✓' : 'Marcar revisado'}
+            </button>
+          ) : null}
+        </div>
       </div>
 
       <MindMapCanvas
@@ -125,13 +120,15 @@ export const MindMapTree = ({
         performanceByNode={performanceByNode}
         reviewedNodeIds={reviewedNodeIds}
         nodeLearningById={nodeLearningById}
-        focusedBranchNode={focusedBranchNode}
+        focusedBranchId={focusedBranchId}
         selectedNode={selectedNode}
         hoveredNodeId={hoveredNodeId}
         onHoverNode={setHoveredNodeId}
         onExpandNode={setSelectedNodeId}
         onOpenTopic={onOpenTopic}
         onTrainNode={onTrainNode}
+        onFocusBranch={setFocusedBranchId}
+        onResetFocus={() => setFocusedBranchId(null)}
       />
     </div>
   )
