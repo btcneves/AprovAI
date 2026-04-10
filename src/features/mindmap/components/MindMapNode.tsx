@@ -24,7 +24,7 @@ const statusLabel: Record<NodeStatus, string> = {
   forte: 'Forte',
   atencao: 'Atenção',
   fraco: 'Fraco',
-  'sem-dados': 'Sem dados'
+  'sem-dados': 'Sem histórico'
 }
 
 export const MindMapNode = memo(({
@@ -41,48 +41,48 @@ export const MindMapNode = memo(({
   onToggleExpand,
   onDetail
 }: Props) => {
-  const compactBullets = [entry.node.summary, ...(entry.node.examHighlights ?? []), ...(entry.node.commonMistakes ?? [])].filter(Boolean).slice(0, 2)
+  const compactBullets = [entry.node.summary, entry.node.descriptionShort, ...(entry.node.examHighlights ?? []), ...(entry.node.studyChecklist ?? [])]
+    .filter(Boolean)
+    .slice(0, 2)
 
   return (
     <article
-      className={`study-tree-node ${selected ? 'is-selected' : ''} ${activeBranch ? 'is-active-branch' : ''}`}
-      style={{
-        left: entry.x,
-        top: entry.y,
-        borderColor: branchColor,
-        '--branch-color': branchColor
-      } as CSSProperties}
+      className={`study-node-card depth-${entry.depth} ${selected ? 'is-selected' : ''} ${activeBranch ? 'is-active-branch' : 'is-muted'}`}
+      style={{ left: entry.x, top: entry.y, '--branch-color': branchColor } as CSSProperties}
       onClick={() => onSelect(entry.node.id)}
+      data-node-depth={entry.depth}
     >
       <header>
         <h4>{entry.node.title}</h4>
-        <span className={`status-pill status-${status}`}>{statusLabel[status]}</span>
+        <span className={`node-status node-status-${status}`}>{statusLabel[status]}</span>
       </header>
       <ul>
         {compactBullets.map((item) => (
           <li key={`${entry.node.id}-${item}`}>{item}</li>
         ))}
       </ul>
+
       <footer>
         {reviewed ? <small>Revisado</small> : null}
-        {learning ? <small>Acurácia: {learning.accuracyRate}%</small> : <small>Sem histórico</small>}
+        <small>{learning ? `Acurácia ${learning.accuracyRate}%` : 'Sem treino'}</small>
       </footer>
+
       <div className="node-card-actions">
         {hasChildren ? (
           <button
             type="button"
-            className="expand-node-btn secondary"
+            className="ghost-btn"
             onClick={(event) => {
               event.stopPropagation()
               onToggleExpand(entry.node.id)
             }}
           >
-            {expanded ? 'Recolher' : 'Expandir'}
+            {expanded ? 'Recolher ramo' : 'Expandir ramo'}
           </button>
         ) : null}
         <button
           type="button"
-          className="expand-node-btn"
+          className="primary-btn"
           onClick={(event) => {
             event.stopPropagation()
             onDetail(entry.node.id)

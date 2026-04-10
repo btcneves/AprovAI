@@ -1,4 +1,4 @@
-import { memo } from 'react'
+import { memo, useMemo, useState } from 'react'
 import type { MindMapNode as MindMapNodeType } from '@/domain/types'
 import type { NodeLearningMap } from '@/domain/nodeLearningService'
 import { MindMapEdge } from '@/features/mindmap/components/MindMapEdge'
@@ -25,7 +25,10 @@ type Props = {
   onTrainNode: (id: string) => void
   onResetFocus: () => void
   onFocusRoot: (id: string) => void
+  onCollapseAll: () => void
 }
+
+const INITIAL_VIEW = { scale: 0.42, x: -830, y: -1320 }
 
 export const MindMapCanvas = memo(({
   layout,
@@ -43,31 +46,71 @@ export const MindMapCanvas = memo(({
   onOpenTopic,
   onTrainNode,
   onResetFocus,
-  onFocusRoot
+  onFocusRoot,
+  onCollapseAll
 }: Props) => {
+  const [view, setView] = useState(INITIAL_VIEW)
+
+  const selectedBranchId = selectedNodeId ? layout.map.get(selectedNodeId)?.branchId ?? null : null
+
+  const handleZoom = (delta: number) => {
+    setView((prev) => ({ ...prev, scale: Math.min(1.15, Math.max(0.3, prev.scale + delta)) }))
+  }
+
+  const moveCanvas = (dx: number, dy: number) => {
+    setView((prev) => ({ ...prev, x: prev.x + dx, y: prev.y + dy }))
+  }
+
+  const fitBranch = useMemo(() => {
+    if (!selectedBranchId) return null
+    const bounds = layout.branchBounds.get(selectedBranchId)
+    if (!bounds) return null
+    return () => {
+      const scale = 0.52
+      const x = -(bounds.minX - 240)
+      const y = -(bounds.minY - 240)
+      setView({ scale, x, y })
+    }
+  }, [layout.branchBounds, selectedBranchId])
+
   return (
     <div className="mindmap-experience">
       <div className="mindmap-stage tree-stage">
         <div className="mindmap-controls modern">
           <button type="button" onClick={onResetFocus} className={!focusedRootId ? 'is-active' : ''}>Mapa completo</button>
-          {focusedRootId ? <small>Filtro ativo: ramo específico</small> : <small>Visualização em árvore progressiva</small>}
+          <button type="button" onClick={onCollapseAll}>Recolher tudo</button>
+          <button type="button" onClick={() => handleZoom(0.08)}>Zoom +</button>
+          <button type="button" onClick={() => handleZoom(-0.08)}>Zoom -</button>
+          <button type="button" onClick={() => setView(INITIAL_VIEW)}>Reset visão</button>
+          <button type="button" disabled={!fitBranch} onClick={() => fitBranch?.()}>Ajustar ramo</button>
+          {focusedRootId ? <small>Filtro ativo</small> : <small>Núcleo central + ramificações progressivas</small>}
         </div>
 
-        <div className="mindmap-viewport fullscreen">
-          <div className="mindmap-canvas tree-canvas" style={{ width: layout.canvasSize, height: layout.canvasSize }}>
+        <div className="study-map-board">
+          <div className="nav-pad">
+            <button onClick={() => moveCanvas(0, 160)}>↑</button>
+            <div>
+              <button onClick={() => moveCanvas(160, 0)}>←</button>
+              <button onClick={() => moveCanvas(-160, 0)}>→</button>
+            </div>
+            <button onClick={() => moveCanvas(0, -160)}>↓</button>
+          </div>
+          <div className="mindmap-canvas tree-canvas" style={{ width: layout.canvasSize, height: layout.canvasSize, transform: `translate(${view.x}px, ${view.y}px) scale(${view.scale})` }}>
             <svg width={layout.canvasSize} height={layout.canvasSize} className="mindmap-links" aria-hidden>
               {layout.edges.map((edge) => {
                 const from = layout.map.get(edge.sourceId)
                 const to = layout.map.get(edge.targetId)
                 if (!from || !to) return null
                 const color = branchColorById.get(to.branchId) ?? '#64748b'
-                return <MindMapEdge key={edge.id} from={from} to={to} color={color} highlighted={selectedNodeId === to.node.id} />
+                const highlighted = selectedNodeId === to.node.id || selectedNodeId === from.node.id
+                const muted = !!selectedBranchId && to.branchId !== selectedBranchId
+                return <MindMapEdge key={edge.id} from={from} to={to} color={color} highlighted={highlighted} muted={muted} />
               })}
             </svg>
 
-            <div className="center-node study-center-node" style={{ left: 180, top: layout.canvasSize / 2 }}>
+            <div className="study-center-node" style={{ left: layout.center, top: layout.center }}>
               <strong>Mapa Mental AprovAI</strong>
-              <small>Comece pelos blocos principais e expanda por níveis para estudar.</small>
+              <small>Parta do centro, expanda os blocos e avance por níveis.</small>
             </div>
 
             {layout.nodes.map((entry) => (
@@ -80,7 +123,7 @@ export const MindMapCanvas = memo(({
                 branchColor={branchColorById.get(entry.branchId) ?? '#64748b'}
                 selected={selectedNodeId === entry.node.id}
                 expanded={expandedNodeIds.has(entry.node.id)}
-                activeBranch={!focusedRootId || focusedRootId === entry.branchId}
+                activeBranch={!selectedBranchId || selectedBranchId === entry.branchId}
                 hasChildren={entry.node.childrenIds.length > 0}
                 onSelect={onSelectNode}
                 onToggleExpand={onToggleExpandNode}

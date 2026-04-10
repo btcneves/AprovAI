@@ -109,10 +109,9 @@ export const MindMapTree = ({
 
   const handleSetFocusedRoot = (rootId: string | null) => {
     setFocusedRootId(rootId)
-    if (!rootId) return
     setExpandedNodeIds((prev) => {
       const next = new Set(prev)
-      next.add(rootId)
+      if (rootId) next.add(rootId)
       return next
     })
   }
@@ -170,6 +169,7 @@ export const MindMapTree = ({
         onTrainNode={onTrainNode}
         onFocusRoot={(nodeId) => handleSetFocusedRoot(rootByNodeId.get(nodeId) ?? null)}
         onResetFocus={() => handleSetFocusedRoot(null)}
+        onCollapseAll={collapseAll}
       />
     </div>
   )
