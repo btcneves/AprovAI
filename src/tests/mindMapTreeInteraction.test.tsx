@@ -182,7 +182,7 @@ describe('MindMapTree interactions', () => {
 
     clickExpandInsideCard('Língua Portuguesa')
     expect(screen.getByText('Sintaxe')).toBeTruthy()
-    fireEvent.click(screen.getByRole('button', { name: 'Recolher tudo' }))
+    clickTopbarButton('Recolher tudo')
     expect(screen.queryByText('Sintaxe')).toBeNull()
   })
 })

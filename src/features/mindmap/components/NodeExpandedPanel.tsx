@@ -15,7 +15,7 @@ type Props = {
 const renderList = (title: string, values?: string[]) => {
   if (!values?.length) return null
   return (
-    <section>
+    <section className="panel-section">
       <h5>{title}</h5>
       <ul>{values.map((item) => <li key={`${title}-${item}`}>{item}</li>)}</ul>
     </section>
@@ -23,32 +23,34 @@ const renderList = (title: string, values?: string[]) => {
 }
 
 export const NodeExpandedPanel = ({ node, learning, status, onOpenTopic, onTrainNode, onFocusBranch }: Props) => (
-  <aside className="node-expanded-panel docked">
+  <aside className="node-expanded-panel docked premium">
     {node ? (
       <>
-        <header className="panel-header">
+        <header className="panel-hero-header">
+          <small>Trilha de estudo</small>
           <h4>{node.title}</h4>
-          <p className="panel-subtitle">{node.descriptionShort}</p>
+          <p>{node.descriptionShort}</p>
         </header>
-        <section>
-          <h5>Resumo</h5>
+        <section className="panel-section">
+          <h5>Resumo didático</h5>
           <p>{node.descriptionDetailed}</p>
         </section>
-        {renderList('Bullets principais', node.studyChecklist?.slice(0, 6))}
+        {renderList('Bullets principais', node.studyChecklist?.slice(0, 8))}
         {renderList('Exam highlights', node.examHighlights)}
         {renderList('Erros comuns', node.commonMistakes)}
         {renderList('Diferenças críticas', node.criticalDifferences)}
         {renderList('Pegadinhas', node.traps)}
-        <section className="learning-status-card">
+
+        <section className="learning-metrics">
           <h5>Métricas de aprendizagem</h5>
-          <p><strong>Status:</strong> {status}</p>
-          <p>
-            <strong>Histórico:</strong>{' '}
-            {learning
-              ? `visualizações ${learning.viewCount} · revisões ${learning.reviewCount} · acurácia ${learning.accuracyRate}%`
-              : 'sem histórico'}
-          </p>
+          <div className="metric-grid">
+            <p><strong>Status:</strong> {status}</p>
+            <p><strong>Visualizações:</strong> {learning?.viewCount ?? 0}</p>
+            <p><strong>Revisões:</strong> {learning?.reviewCount ?? 0}</p>
+            <p><strong>Acurácia:</strong> {learning?.accuracyRate ?? 0}%</p>
+          </div>
         </section>
+
         <div className="actions-row panel-actions">
           <button onClick={() => onOpenTopic(node.id)}>Revisar</button>
           <button onClick={() => onTrainNode(node.id)}>Treinar</button>
@@ -58,7 +60,7 @@ export const NodeExpandedPanel = ({ node, learning, status, onOpenTopic, onTrain
     ) : (
       <>
         <h4>Painel de estudo</h4>
-        <p>Selecione “Detalhar” em qualquer nó para ver o conteúdo completo, métricas e ações de estudo.</p>
+        <p>Selecione um nó para abrir o modo detalhe com resumo, pontos de prova e ações de revisão.</p>
       </>
     )}
   </aside>

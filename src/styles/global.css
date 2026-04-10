@@ -573,3 +573,240 @@ button.reviewed { background: #166534; }
   .mindmap-experience { grid-template-columns: 1fr; }
   .node-expanded-panel.docked { max-height: none; }
 }
+
+/* Study MindMap reconstruction */
+.mapas-fullscreen-page {
+  background: radial-gradient(circle at 42% 24%, #f8fbff 0%, #eef3ff 40%, #e2ebff 100%);
+}
+
+.mindmap-fullscreen-layout {
+  padding: 0.85rem;
+  gap: 0.75rem;
+}
+
+.mindmap-topbar {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d7e4ff;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.08);
+}
+
+.mindmap-experience {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 0.85rem;
+  min-height: calc(100vh - 180px);
+}
+
+.tree-stage {
+  border-radius: 20px;
+  border: 1px solid #cfe0ff;
+  background: linear-gradient(180deg, #fdfefe, #f7faff);
+}
+
+.mindmap-controls.modern {
+  position: sticky;
+  top: 0;
+  z-index: 14;
+  gap: 0.35rem;
+}
+
+.mindmap-controls button {
+  background: #f1f5ff;
+  color: #1e3a8a;
+  border: 1px solid #c7d7ff;
+  border-radius: 999px;
+  padding: 0.42rem 0.7rem;
+  font-size: 0.78rem;
+}
+
+.study-map-board {
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 250px);
+  min-height: 620px;
+}
+
+.tree-canvas {
+  transform-origin: top left;
+  transition: transform 220ms ease;
+}
+
+.study-center-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 340px;
+  min-height: 160px;
+  padding: 1.2rem;
+  border-radius: 26px;
+  border: 2px solid #2563eb;
+  box-shadow: 0 24px 42px rgba(37, 99, 235, 0.24);
+  background: linear-gradient(140deg, #dbeafe, #f1f7ff);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  z-index: 6;
+}
+
+.study-node-card {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 252px;
+  min-height: 126px;
+  border-left: 6px solid var(--branch-color);
+  border-radius: 16px;
+  background: #fff;
+  padding: 0.72rem;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.09);
+  transition: box-shadow 200ms ease, opacity 200ms ease, transform 200ms ease;
+}
+
+.study-node-card.is-selected {
+  box-shadow: 0 18px 34px rgba(15, 23, 42, 0.17);
+  transform: translate(-50%, -50%) scale(1.03);
+}
+
+.study-node-card.is-muted {
+  opacity: 0.45;
+}
+
+.study-node-card h4 {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.28;
+}
+
+.study-node-card ul {
+  margin: 0.4rem 0;
+  padding-left: 1rem;
+}
+
+.study-node-card li {
+  font-size: 0.78rem;
+  line-height: 1.32;
+  margin-bottom: 0.16rem;
+}
+
+.study-node-card footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.32rem;
+}
+
+.study-node-card footer small {
+  border: 1px solid #dbeafe;
+  background: #f8fbff;
+  border-radius: 999px;
+  padding: 0 0.34rem;
+  font-size: 0.7rem;
+}
+
+.node-status {
+  font-size: 0.62rem;
+  border-radius: 999px;
+  padding: 0.12rem 0.3rem;
+  text-transform: uppercase;
+}
+
+.node-status-forte { background: #dcfce7; color: #166534; }
+.node-status-atencao { background: #fef3c7; color: #92400e; }
+.node-status-fraco { background: #fee2e2; color: #991b1b; }
+.node-status-sem-dados { background: #e2e8f0; color: #334155; }
+
+.node-card-actions {
+  display: flex;
+  gap: 0.28rem;
+  margin-top: 0.42rem;
+}
+
+.node-card-actions button {
+  flex: 1;
+  border-radius: 10px;
+  font-size: 0.74rem;
+  padding: 0.32rem 0.45rem;
+}
+
+.ghost-btn {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.primary-btn {
+  background: #1d4ed8;
+}
+
+.mindmap-links .mindmap-edge.is-muted {
+  stroke-opacity: 0.1;
+}
+
+.nav-pad {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 20;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 0.4rem;
+  background: rgba(255, 255, 255, 0.92);
+  display: grid;
+  gap: 0.3rem;
+}
+
+.nav-pad div {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.nav-pad button {
+  width: 42px;
+  height: 34px;
+  background: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #dbeafe;
+}
+
+.node-expanded-panel.premium {
+  border: 1px solid #cfe0ff;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.1);
+}
+
+.panel-hero-header {
+  border-bottom: 1px solid #dbeafe;
+  margin-bottom: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.panel-hero-header small {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #64748b;
+}
+
+.panel-section {
+  margin-bottom: 0.7rem;
+}
+
+.learning-metrics {
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  background: #f8fbff;
+  padding: 0.65rem;
+  margin-bottom: 0.7rem;
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+@media (max-width: 1180px) {
+  .mindmap-experience {
+    grid-template-columns: 1fr;
+  }
+
+  .study-map-board {
+    height: 72vh;
+  }
+}

@@ -60,6 +60,7 @@ describe('MindMapCanvas study tree', () => {
         onTrainNode={() => {}}
         onResetFocus={() => {}}
         onFocusRoot={() => {}}
+        onCollapseAll={() => {}}
       />
     )
 
