@@ -45,3 +45,46 @@ Isso permite navegar os mapas gerados na mesma árvore dos mapas curados.
 - Se atualizar `TOPICS` no script, validar impacto em `knowledge_map.json` e navegação da página de mapas.
 - Se houver fontes sem `sourceUrl`, a UI ainda renderiza mapa, mas perde link externo de referência.
 - Sempre versionar os JSONs gerados quando houver regeneração oficial de conteúdo.
+
+## Experiência fullscreen (v3)
+
+A visualização do mapa mental foi refatorada para um modo fullscreen navegável, com viewport desacoplado do mundo lógico do grafo.
+
+### Arquitetura
+
+- `MindMapTree`: orquestra filtros, busca, foco de ramo e expansão/recolhimento.
+- `MindMapCanvas`: controla viewport (`offsetX`, `offsetY`, `scale`), zoom no cursor, pan por drag, reset e foco por ramo.
+- `NodeExpandedPanel`: painel lateral fixo para detalhes pedagógicos (resumo, highlights, erros, diferenças, pegadinhas, métricas e ações).
+- `RadialLayoutEngine`: calcula distribuição angular por peso de subárvore, ring gaps progressivos e anti-colisão multipasso.
+
+### Viewport / Zoom / Pan
+
+- Mundo virtual maior que a área visível.
+- Transformação aplicada por `translate + scale`.
+- Zoom com scroll centrado no cursor quando possível.
+- Drag para pan com cursores `grab/grabbing`.
+- Reset de vista centraliza novamente na raiz.
+
+### Layout radial por peso
+
+- Utiliza 360° completos.
+- Cada subárvore recebe faixa angular proporcional ao `subtreeWeight`.
+- Ramos de nível 1 possuem maior isolamento visual.
+- Distância entre níveis usa `ringGap >= 300px` para leitura.
+
+### Anti-colisão
+
+- Bounding boxes reais com padding.
+- Múltiplos passes de ajuste angular intra-nível.
+- Expansão radial em colisões inter-nível.
+- Fallback final para cenários extremos.
+- `collisionReport` retorna `initialCollisions`, `resolvedCollisions`, `remainingCollisions` e número de passes.
+
+### Integração com aprendizado por nó
+
+Fluxos de analytics e aprendizagem permanecem ativos:
+
+- `registerNodeView` ao abrir revisão do nó.
+- `registerNodeReview` ao marcar revisado.
+- Ação de treino mantém roteamento por `topic/subtopic`.
+- Painel mostra métricas por nó (`viewCount`, `reviewCount`, `accuracyRate`).

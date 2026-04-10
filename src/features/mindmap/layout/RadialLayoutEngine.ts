@@ -26,6 +26,13 @@ export type LayoutCluster = {
   outerRadius: number
 }
 
+export type CollisionReport = {
+  initialCollisions: number
+  resolvedCollisions: number
+  remainingCollisions: number
+  passes: number
+}
+
 export type LayoutResult = {
   nodes: LayoutNode[]
   edges: LayoutEdge[]
@@ -33,6 +40,8 @@ export type LayoutResult = {
   map: Map<string, LayoutNode>
   canvasSize: number
   center: number
+  branchBounds: Map<string, { minX: number; minY: number; maxX: number; maxY: number }>
+  collisionReport: CollisionReport
 }
 
 export type LayoutConfig = {
@@ -44,19 +53,24 @@ export type LayoutConfig = {
   maxIterations?: number
 }
 
-const NODE_WIDTH = 260
-const NODE_MIN_HEIGHT = 122
+const NODE_WIDTH = 264
+const NODE_MIN_HEIGHT = 120
 const TAU = Math.PI * 2
 
+const normalizeAngle = (angle: number) => {
+  const normalized = angle % TAU
+  return normalized >= 0 ? normalized : normalized + TAU
+}
+
+const shortestAngularDistance = (from: number, to: number) => {
+  const delta = normalizeAngle(to - from)
+  return delta > Math.PI ? delta - TAU : delta
+}
+
 const estimateNodeHeight = (node: MindMapNodeType, depth: number) => {
-  const bulletSource = [
-    node.summary ?? node.descriptionShort,
-    ...(node.examHighlights ?? []),
-    ...(node.commonMistakes ?? [])
-  ]
-  const bulletCount = Math.min(3, bulletSource.filter(Boolean).length)
-  const densityPenalty = Math.min(26, depth * 6)
-  return NODE_MIN_HEIGHT + bulletCount * 18 + densityPenalty
+  const bullets = [node.summary ?? node.descriptionShort, ...(node.examHighlights ?? []), ...(node.commonMistakes ?? [])]
+  const score = Math.min(4, bullets.filter(Boolean).length)
+  return NODE_MIN_HEIGHT + score * 14 + Math.min(20, depth * 4)
 }
 
 const intersects = (a: LayoutNode, b: LayoutNode, padding: number) => {
@@ -73,14 +87,14 @@ const intersects = (a: LayoutNode, b: LayoutNode, padding: number) => {
   return ax1 < bx2 && ax2 > bx1 && ay1 < by2 && ay2 > by1
 }
 
-const normalizeAngle = (angle: number) => {
-  const normalized = angle % TAU
-  return normalized >= 0 ? normalized : normalized + TAU
-}
-
-const shortestAngularDistance = (from: number, to: number) => {
-  const delta = normalizeAngle(to - from)
-  return delta > Math.PI ? delta - TAU : delta
+const countCollisions = (nodes: LayoutNode[], padding: number) => {
+  let collisions = 0
+  for (let i = 0; i < nodes.length; i += 1) {
+    for (let j = i + 1; j < nodes.length; j += 1) {
+      if (intersects(nodes[i], nodes[j], padding)) collisions += 1
+    }
+  }
+  return collisions
 }
 
 const circularSpan = (angles: number[]) => {
@@ -114,12 +128,12 @@ export const buildRadialLayout = (
   visibleNodes: Array<{ node: MindMapNodeType; depth: number; branchId: string }>,
   config: LayoutConfig = {}
 ): LayoutResult => {
-  const baseRadius = config.baseRadius ?? 180
-  const ringGap = Math.max(220, config.ringGap ?? 220)
-  const minNodeArc = Math.max(200, config.minNodeArc ?? 200)
-  const nodePadding = Math.max(24, config.nodePadding ?? 24)
-  const centerSize = config.centerSize ?? 280
-  const maxIterations = Math.max(12, config.maxIterations ?? 20)
+  const baseRadius = config.baseRadius ?? 220
+  const ringGap = Math.max(300, config.ringGap ?? 320)
+  const minNodeArc = Math.max(220, config.minNodeArc ?? 240)
+  const nodePadding = Math.max(24, config.nodePadding ?? 28)
+  const centerSize = config.centerSize ?? 340
+  const maxIterations = Math.max(20, config.maxIterations ?? 30)
 
   const levels = new Map<number, Array<{ node: MindMapNodeType; branchId: string }>>()
   visibleNodes.forEach(({ node, depth, branchId }) => {
@@ -131,25 +145,23 @@ export const buildRadialLayout = (
   const levelRadius = new Map<number, number>()
   let previousRingRadius = 0
 
-  Array.from(levels.keys())
-    .sort((a, b) => a - b)
-    .forEach((depth) => {
-      const count = Math.max(1, levels.get(depth)?.length ?? 1)
-      const rByDepth = baseRadius + (depth - 1) * ringGap
-      const rByDensity = (count * minNodeArc) / TAU
-      const chosen = Math.max(rByDepth, rByDensity, previousRingRadius + ringGap)
-      levelRadius.set(depth, chosen)
-      previousRingRadius = chosen
-    })
+  Array.from(levels.keys()).sort((a, b) => a - b).forEach((depth) => {
+    const count = Math.max(1, levels.get(depth)?.length ?? 1)
+    const rByDepth = baseRadius + (depth - 1) * ringGap
+    const rByDensity = (count * minNodeArc) / TAU
+    const chosen = Math.max(rByDepth, rByDensity, previousRingRadius + ringGap)
+    levelRadius.set(depth, chosen)
+    previousRingRadius = chosen
+  })
 
   const visibleById = new Map(visibleNodes.map(({ node, depth, branchId }) => [node.id, { node, depth, branchId }]))
   const childrenByParent = new Map<string, string[]>()
 
   visibleNodes.forEach(({ node }) => {
     if (!node.parentId || !visibleById.has(node.parentId)) return
-    const list = childrenByParent.get(node.parentId) ?? []
-    list.push(node.id)
-    childrenByParent.set(node.parentId, list)
+    const children = childrenByParent.get(node.parentId) ?? []
+    children.push(node.id)
+    childrenByParent.set(node.parentId, children)
   })
 
   const subtreeMemo = new Map<string, number>()
@@ -168,15 +180,16 @@ export const buildRadialLayout = (
     if (!entry) return
 
     const { node, depth, branchId } = entry
-    const radius = levelRadius.get(depth) ?? baseRadius + depth * ringGap
     const theta = thetaStart + shortestAngularDistance(thetaStart, thetaEnd) / 2
+    const r = levelRadius.get(depth) ?? baseRadius + depth * ringGap
+
     nodes.push({
       node,
       depth,
       theta,
-      r: radius,
-      x: radius * Math.cos(theta),
-      y: radius * Math.sin(theta),
+      r,
+      x: r * Math.cos(theta),
+      y: r * Math.sin(theta),
       width: NODE_WIDTH,
       height: estimateNodeHeight(node, depth),
       branchId
@@ -185,14 +198,15 @@ export const buildRadialLayout = (
     const children = childrenByParent.get(nodeId) ?? []
     if (!children.length) return
 
-    const span = Math.max(0.24, Math.abs(shortestAngularDistance(thetaStart, thetaEnd)))
-    const dynamicPadding = Math.min(0.28, 0.06 + children.length * 0.01)
-    const usableSpan = Math.max(0.16, span - dynamicPadding * 2)
+    const angularSpan = Math.max(0.2, Math.abs(shortestAngularDistance(thetaStart, thetaEnd)))
+    const clusterGap = Math.min(0.3, 0.08 + children.length * 0.012)
+    const usableSpan = Math.max(0.18, angularSpan - clusterGap * 2)
     const totalWeight = children.reduce((acc, childId) => acc + subtreeWeight(childId), 0) || 1
 
     let cursor = theta - usableSpan / 2
     children.forEach((childId) => {
-      const childSpan = usableSpan * (subtreeWeight(childId) / totalWeight)
+      const childWeight = subtreeWeight(childId)
+      const childSpan = usableSpan * (childWeight / totalWeight)
       placeNode(childId, cursor, cursor + childSpan)
       cursor += childSpan
     })
@@ -202,84 +216,76 @@ export const buildRadialLayout = (
     .filter(({ node }) => !node.parentId || !visibleById.has(node.parentId))
     .map(({ node }) => node.id)
 
-  const rootWeight = roots.reduce((acc, rootId) => acc + subtreeWeight(rootId), 0) || 1
+  const totalRootWeight = roots.reduce((acc, rootId) => acc + subtreeWeight(rootId), 0) || 1
   let rootCursor = -Math.PI / 2
+
   roots.forEach((rootId) => {
-    const span = TAU * (subtreeWeight(rootId) / rootWeight)
-    const branchGap = Math.min(0.2, span * 0.12)
+    const span = TAU * (subtreeWeight(rootId) / totalRootWeight)
+    const branchGap = Math.min(0.22, span * 0.1)
     placeNode(rootId, rootCursor + branchGap / 2, rootCursor + span - branchGap / 2)
     rootCursor += span
   })
 
+  const initialCollisions = countCollisions(nodes, nodePadding)
+
+  let passUsed = 0
   for (let pass = 0; pass < maxIterations; pass += 1) {
-    let collisions = 0
+    passUsed = pass + 1
+    let collisionsInPass = 0
 
     for (let i = 0; i < nodes.length; i += 1) {
       for (let j = i + 1; j < nodes.length; j += 1) {
         const a = nodes[i]
         const b = nodes[j]
         if (!intersects(a, b, nodePadding)) continue
+        collisionsInPass += 1
 
-        collisions += 1
-        if (a.depth === b.depth) {
+        const sameDepth = a.depth === b.depth
+        const sameBranch = a.branchId === b.branchId
+
+        if (sameDepth) {
           const sign = shortestAngularDistance(a.theta, b.theta) >= 0 ? 1 : -1
-          const push = 0.024 + pass * 0.006
-          a.theta -= push * sign
-          b.theta += push * sign
-        } else {
-          const deeper = a.depth > b.depth ? a : b
-          deeper.r += 16 + pass * 5
+          const angularPush = (sameBranch ? 0.018 : 0.028) + pass * 0.0012
+          a.theta -= angularPush * sign
+          b.theta += angularPush * sign
+        }
+
+        if (!sameDepth || sameBranch) {
+          const deeper = a.depth >= b.depth ? a : b
+          deeper.r += 22 + pass * 1.4
         }
       }
     }
 
-    if (collisions > 0) {
-      const grouped = new Map<string, LayoutNode[]>()
-      nodes.forEach((entry) => {
-        const list = grouped.get(entry.branchId) ?? []
-        list.push(entry)
-        grouped.set(entry.branchId, list)
-      })
-
-      const compression = Math.max(0.84, 1 - pass * 0.01)
-      grouped.forEach((branchNodes) => {
-        const meanX = branchNodes.reduce((acc, entry) => acc + Math.cos(entry.theta), 0) / branchNodes.length
-        const meanY = branchNodes.reduce((acc, entry) => acc + Math.sin(entry.theta), 0) / branchNodes.length
-        const anchor = Math.atan2(meanY, meanX)
-
-        branchNodes.forEach((entry) => {
-          const delta = shortestAngularDistance(anchor, entry.theta)
-          entry.theta = anchor + delta * compression
-        })
-      })
-    }
-
-    nodes.forEach((entry) => {
-      entry.x = entry.r * Math.cos(entry.theta)
-      entry.y = entry.r * Math.sin(entry.theta)
+    const branchGroups = new Map<string, LayoutNode[]>()
+    nodes.forEach((item) => {
+      const list = branchGroups.get(item.branchId) ?? []
+      list.push(item)
+      branchGroups.set(item.branchId, list)
     })
 
-    if (collisions === 0) break
+    branchGroups.forEach((branchNodes) => {
+      if (branchNodes.length < 3) return
+      const meanX = branchNodes.reduce((acc, item) => acc + Math.cos(item.theta), 0) / branchNodes.length
+      const meanY = branchNodes.reduce((acc, item) => acc + Math.sin(item.theta), 0) / branchNodes.length
+      const anchor = Math.atan2(meanY, meanX)
 
-    if (pass === maxIterations - 1) {
-      for (let i = 0; i < nodes.length; i += 1) {
-        for (let j = i + 1; j < nodes.length; j += 1) {
-          const a = nodes[i]
-          const b = nodes[j]
-          if (!intersects(a, b, nodePadding)) continue
-          const target = a.depth >= b.depth ? a : b
-          target.r += 140
-        }
-      }
-
-      nodes.forEach((entry) => {
-        entry.x = entry.r * Math.cos(entry.theta)
-        entry.y = entry.r * Math.sin(entry.theta)
+      branchNodes.forEach((item) => {
+        const delta = shortestAngularDistance(anchor, item.theta)
+        item.theta = anchor + delta * 0.98
       })
-    }
+    })
+
+    nodes.forEach((item) => {
+      item.x = item.r * Math.cos(item.theta)
+      item.y = item.r * Math.sin(item.theta)
+    })
+
+    if (collisionsInPass === 0) break
   }
 
-  for (let pass = 0; pass < 60; pass += 1) {
+  // fallback definitivo para cenários extremos
+  for (let pass = 0; pass < 80; pass += 1) {
     let collisions = 0
     for (let i = 0; i < nodes.length; i += 1) {
       for (let j = i + 1; j < nodes.length; j += 1) {
@@ -287,36 +293,34 @@ export const buildRadialLayout = (
         const b = nodes[j]
         if (!intersects(a, b, nodePadding)) continue
         collisions += 1
-
-        const distance = shortestAngularDistance(a.theta, b.theta)
-        const sign = distance >= 0 ? 1 : -1
-        const anglePush = 0.01 + pass * 0.0008
-        a.theta -= anglePush * sign
-        b.theta += anglePush * sign
-        a.r += 18
-        b.r += 18
+        const sign = shortestAngularDistance(a.theta, b.theta) >= 0 ? 1 : -1
+        a.theta -= (0.008 + pass * 0.0004) * sign
+        b.theta += (0.008 + pass * 0.0004) * sign
+        const deeper = a.depth >= b.depth ? a : b
+        deeper.r += 18
       }
     }
-
-    nodes.forEach((entry) => {
-      entry.x = entry.r * Math.cos(entry.theta)
-      entry.y = entry.r * Math.sin(entry.theta)
+    nodes.forEach((item) => {
+      item.x = item.r * Math.cos(item.theta)
+      item.y = item.r * Math.sin(item.theta)
     })
-
     if (collisions === 0) break
   }
 
-  const maxExtent = nodes.reduce((acc, item) => {
-    const extentX = Math.abs(item.x) + item.width / 2 + 140
-    const extentY = Math.abs(item.y) + item.height / 2 + 140
-    return Math.max(acc, extentX, extentY)
+  const remainingCollisions = countCollisions(nodes, nodePadding)
+  const maxExtent = nodes.reduce((acc, node) => {
+    const extX = Math.abs(node.x) + node.width / 2 + 180
+    const extY = Math.abs(node.y) + node.height / 2 + 180
+    return Math.max(acc, extX, extY)
   }, centerSize)
 
-  const center = Math.max(700, maxExtent + centerSize / 2)
-  nodes.forEach((entry) => {
-    entry.x += center
-    entry.y += center
+  const center = Math.max(900, maxExtent + centerSize / 2)
+  nodes.forEach((item) => {
+    item.x += center
+    item.y += center
   })
+
+  const map = new Map(nodes.map((node) => [node.node.id, node]))
 
   const edges = nodes
     .filter((entry) => entry.node.parentId)
@@ -326,18 +330,41 @@ export const buildRadialLayout = (
       targetId: entry.node.id
     }))
 
-  const map = new Map(nodes.map((entry) => [entry.node.id, entry]))
-  const clusters: LayoutCluster[] = Array.from(new Set(nodes.map((entry) => entry.branchId))).map((branchId) => {
-    const branchNodes = nodes.filter((entry) => entry.branchId === branchId)
-    const span = circularSpan(branchNodes.map((entry) => entry.theta))
-    const maxRadius = Math.max(...branchNodes.map((entry) => entry.r + entry.height / 2))
+  const branchBounds = new Map<string, { minX: number; minY: number; maxX: number; maxY: number }>()
+
+  nodes.forEach((entry) => {
+    const current = branchBounds.get(entry.branchId)
+    const bounds = {
+      minX: entry.x - entry.width / 2 - 90,
+      minY: entry.y - entry.height / 2 - 90,
+      maxX: entry.x + entry.width / 2 + 90,
+      maxY: entry.y + entry.height / 2 + 90
+    }
+
+    if (!current) {
+      branchBounds.set(entry.branchId, bounds)
+      return
+    }
+
+    branchBounds.set(entry.branchId, {
+      minX: Math.min(current.minX, bounds.minX),
+      minY: Math.min(current.minY, bounds.minY),
+      maxX: Math.max(current.maxX, bounds.maxX),
+      maxY: Math.max(current.maxY, bounds.maxY)
+    })
+  })
+
+  const clusters: LayoutCluster[] = Array.from(new Set(nodes.map((node) => node.branchId))).map((branchId) => {
+    const branchNodes = nodes.filter((node) => node.branchId === branchId)
+    const span = circularSpan(branchNodes.map((node) => node.theta))
+    const maxRadius = Math.max(...branchNodes.map((node) => node.r + node.height / 2))
 
     return {
       branchId,
       startTheta: span.start,
       endTheta: span.end,
-      innerRadius: Math.max(140, baseRadius - 40),
-      outerRadius: maxRadius + 150
+      innerRadius: Math.max(170, baseRadius - 30),
+      outerRadius: maxRadius + 180
     }
   })
 
@@ -347,6 +374,13 @@ export const buildRadialLayout = (
     clusters,
     map,
     canvasSize: center * 2,
-    center
+    center,
+    branchBounds,
+    collisionReport: {
+      initialCollisions,
+      resolvedCollisions: Math.max(0, initialCollisions - remainingCollisions),
+      remainingCollisions,
+      passes: passUsed
+    }
   }
 }

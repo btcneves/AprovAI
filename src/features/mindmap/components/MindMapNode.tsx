@@ -13,6 +13,7 @@ type Props = {
   branchColor: string
   hovered: boolean
   selected: boolean
+  deemphasized: boolean
   onHover: (nodeId: string | null) => void
   onExpand: (nodeId: string) => void
 }
@@ -26,20 +27,20 @@ const statusPillClass = {
 
 const truncate = (text: string, max: number) => (text.length > max ? `${text.slice(0, max).trimEnd()}…` : text)
 
-export const MindMapNode = memo(({ entry, status, reviewed, learning, branchColor, hovered, selected, onHover, onExpand }: Props) => {
+export const MindMapNode = memo(({ entry, status, reviewed, learning, branchColor, hovered, selected, deemphasized, onHover, onExpand }: Props) => {
   const node: MindMapNodeType = entry.node
   const compactBullets = [node.summary ?? node.descriptionShort, ...(node.examHighlights ?? []), ...(node.commonMistakes ?? [])]
     .filter(Boolean)
     .slice(0, 3)
-    .map((item) => truncate(item, 88))
+    .map((item) => truncate(item, 84))
 
   const critical = isCriticalNode(learning)
   const neglected = isNeglectedNode(learning)
 
   return (
     <article
-      className={`mindmap-node-card depth-${Math.min(entry.depth, 3)} ${hovered ? 'is-hovered' : ''} ${selected ? 'is-selected' : ''}`}
-      style={{ left: entry.x, top: entry.y, borderColor: branchColor, boxShadow: `0 10px 28px ${branchColor}22` }}
+      className={`mindmap-node-card depth-${Math.min(entry.depth, 3)} ${hovered ? 'is-hovered' : ''} ${selected ? 'is-selected' : ''} ${deemphasized ? 'is-deemphasized' : ''}`}
+      style={{ left: entry.x, top: entry.y, borderColor: branchColor, boxShadow: `0 12px 26px ${branchColor}20` }}
       onMouseEnter={() => onHover(node.id)}
       onMouseLeave={() => onHover(null)}
     >
@@ -49,11 +50,11 @@ export const MindMapNode = memo(({ entry, status, reviewed, learning, branchColo
       </header>
       <ul>{compactBullets.map((item) => <li key={`${node.id}-${item}`}>{item}</li>)}</ul>
       <footer>
-        {reviewed ? <small>✅ revisado</small> : null}
-        {critical ? <small>⚠️ crítico</small> : null}
-        {neglected ? <small>🕒 negligenciado</small> : null}
+        {reviewed ? <small>Revisado</small> : null}
+        {critical ? <small>Crítico</small> : null}
+        {neglected ? <small>Negligenciado</small> : null}
       </footer>
-      <button className="expand-node-btn" onClick={() => onExpand(node.id)}>Expandir</button>
+      <button className="expand-node-btn" onClick={() => onExpand(node.id)}>Detalhar</button>
     </article>
   )
 })

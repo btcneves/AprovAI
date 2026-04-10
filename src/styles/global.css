@@ -304,3 +304,115 @@ button.reviewed { background: #166534; }
   }
   .mindmap-node-card h4 { font-size: 0.9rem; }
 }
+
+/* Mindmap fullscreen v3 */
+.app-shell.map-mode {
+  grid-template-columns: 220px 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main.main-map {
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header.header-map {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #dbe4ff;
+  background: #f8fbff;
+}
+
+.header.header-map h1 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.mapas-fullscreen-page,
+.mindmap-fullscreen-layout {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mindmap-topbar {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  padding: 0.65rem 0.8rem;
+  border-bottom: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+.mindmap-topbar .input { margin: 0; max-width: 360px; }
+
+.mindmap-experience {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr minmax(300px, 360px);
+  background: #eef2ff;
+}
+
+.mindmap-stage { display: flex; flex-direction: column; min-width: 0; }
+
+.mindmap-controls.modern {
+  border-bottom: 1px solid #dbe4ff;
+  padding: 0.55rem;
+  background: #f8fbff;
+}
+
+.mindmap-viewport.fullscreen {
+  position: relative;
+  flex: 1;
+  overflow: hidden;
+  max-height: none;
+  cursor: grab;
+  background: radial-gradient(circle at 50% 48%, #ffffff 0%, #f8fbff 56%, #eef2ff 100%);
+}
+
+.mindmap-canvas { position: absolute; inset: 0 auto auto 0; min-width: auto; min-height: auto; will-change: transform; }
+
+.center-node.modern {
+  width: 320px;
+  border: 2px solid #60a5fa;
+  box-shadow: 0 26px 52px rgba(37, 99, 235, 0.25);
+}
+
+.mindmap-cluster-bg { opacity: 0.6; }
+
+.mindmap-node-card {
+  width: 264px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.mindmap-node-card.depth-1 { transform: translate(-50%, -50%) scale(1.2); }
+.mindmap-node-card.depth-2 { transform: translate(-50%, -50%) scale(1.05); }
+.mindmap-node-card.depth-3 { transform: translate(-50%, -50%) scale(0.96); }
+.mindmap-node-card.is-deemphasized { opacity: 0.24; filter: saturate(0.45); }
+
+.node-expanded-panel.docked {
+  position: relative;
+  margin: 0;
+  width: auto;
+  max-width: none;
+  height: 100%;
+  overflow: auto;
+  border-radius: 0;
+  border-top: 0;
+  border-right: 0;
+}
+
+.panel-actions { flex-wrap: wrap; }
+.collision-report { margin-top: 1rem; padding-top: 0.7rem; border-top: 1px dashed #cbd5e1; }
+
+@media (max-width: 1120px) {
+  .mindmap-experience { grid-template-columns: 1fr; }
+  .node-expanded-panel.docked { height: 340px; border-top: 1px solid #dbeafe; }
+}
