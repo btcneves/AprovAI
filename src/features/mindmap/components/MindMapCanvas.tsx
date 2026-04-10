@@ -27,6 +27,13 @@ type Props = {
 }
 
 type ViewportState = { offsetX: number; offsetY: number; scale: number }
+type DragState = {
+  isDragging: boolean
+  startClientX: number
+  startClientY: number
+  originOffsetX: number
+  originOffsetY: number
+} | null
 
 const MIN_SCALE = 0.4
 const MAX_SCALE = 2.4
@@ -79,9 +86,9 @@ export const MindMapCanvas = memo(({
   onFocusBranch
 }: Props) => {
   const viewportRef = useRef<HTMLDivElement | null>(null)
-  const [dragging, setDragging] = useState(false)
   const [viewportState, setViewportState] = useState<ViewportState>({ offsetX: 0, offsetY: 0, scale: 1 })
-  const dragStartRef = useRef<{ x: number; y: number; offsetX: number; offsetY: number } | null>(null)
+  const [dragState, setDragState] = useState<DragState>(null)
+  const dragStateRef = useRef<DragState>(null)
 
   const activeId = hoveredNodeId ?? selectedNode?.id ?? null
 
@@ -97,26 +104,30 @@ export const MindMapCanvas = memo(({
     centerCanvas(0.82)
   }, [layout.center, centerCanvas])
 
+  useEffect(() => {
+    dragStateRef.current = dragState
+  }, [dragState])
+
   const zoomAtPoint = useCallback((nextScale: number, clientX?: number, clientY?: number) => {
     const viewport = viewportRef.current
     if (!viewport) return
 
     const clamped = Math.min(MAX_SCALE, Math.max(MIN_SCALE, nextScale))
-    if (Math.abs(clamped - viewportState.scale) < 0.0001) return
-
     const rect = viewport.getBoundingClientRect()
     const px = (clientX ?? rect.left + rect.width / 2) - rect.left
     const py = (clientY ?? rect.top + rect.height / 2) - rect.top
 
-    const worldX = (px - viewportState.offsetX) / viewportState.scale
-    const worldY = (py - viewportState.offsetY) / viewportState.scale
-
-    setViewportState({
-      scale: clamped,
-      offsetX: px - worldX * clamped,
-      offsetY: py - worldY * clamped
+    setViewportState((current) => {
+      if (Math.abs(clamped - current.scale) < 0.0001) return current
+      const worldX = (px - current.offsetX) / current.scale
+      const worldY = (py - current.offsetY) / current.scale
+      return {
+        scale: clamped,
+        offsetX: px - worldX * clamped,
+        offsetY: py - worldY * clamped
+      }
     })
-  }, [viewportState.offsetX, viewportState.offsetY, viewportState.scale])
+  }, [])
 
   const fitToBranch = useCallback((branchId: string) => {
     const viewport = viewportRef.current
@@ -162,26 +173,36 @@ export const MindMapCanvas = memo(({
   }, [viewportState.scale, zoomAtPoint])
 
   const onPointerDown = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
-    if (event.button !== 0) return
-    setDragging(true)
-    dragStartRef.current = {
-      x: event.clientX,
-      y: event.clientY,
-      offsetX: viewportState.offsetX,
-      offsetY: viewportState.offsetY
+    if (event.button !== 0 || !viewportRef.current) return
+    if ('setPointerCapture' in event.currentTarget) {
+      event.currentTarget.setPointerCapture(event.pointerId)
     }
+    setDragState({
+      isDragging: true,
+      startClientX: event.clientX,
+      startClientY: event.clientY,
+      originOffsetX: viewportState.offsetX,
+      originOffsetY: viewportState.offsetY
+    })
   }, [viewportState.offsetX, viewportState.offsetY])
 
   const onPointerMove = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
-    if (!dragStartRef.current) return
-    const deltaX = event.clientX - dragStartRef.current.x
-    const deltaY = event.clientY - dragStartRef.current.y
-    setViewportState((current) => ({ ...current, offsetX: dragStartRef.current!.offsetX + deltaX, offsetY: dragStartRef.current!.offsetY + deltaY }))
+    const activeDrag = dragStateRef.current
+    if (!activeDrag || !activeDrag.isDragging) return
+    const deltaX = event.clientX - activeDrag.startClientX
+    const deltaY = event.clientY - activeDrag.startClientY
+    setViewportState((current) => ({
+      ...current,
+      offsetX: activeDrag.originOffsetX + deltaX,
+      offsetY: activeDrag.originOffsetY + deltaY
+    }))
   }, [])
 
-  const onPointerUp = useCallback(() => {
-    dragStartRef.current = null
-    setDragging(false)
+  const onPointerUp = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
+    if ('hasPointerCapture' in event.currentTarget && event.currentTarget.hasPointerCapture(event.pointerId)) {
+      event.currentTarget.releasePointerCapture(event.pointerId)
+    }
+    setDragState(null)
   }, [])
 
   const transformedStyle = useMemo(() => ({
@@ -205,12 +226,12 @@ export const MindMapCanvas = memo(({
 
         <div
           ref={viewportRef}
-          className={`mindmap-viewport fullscreen ${dragging ? 'is-dragging' : ''}`}
+          className={`mindmap-viewport fullscreen ${dragState?.isDragging ? 'is-dragging' : ''}`}
           onWheel={onWheel}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={onPointerUp}
-          onPointerLeave={onPointerUp}
+          onPointerCancel={onPointerUp}
         >
           <div className="mindmap-canvas" style={transformedStyle}>
             <svg width={layout.canvasSize} height={layout.canvasSize} className="mindmap-links" aria-hidden>

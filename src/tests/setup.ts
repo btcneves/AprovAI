@@ -1,1 +1,6 @@
-// setup para testes futuros de componentes
+import { afterEach } from 'vitest'
+import { cleanup } from '@testing-library/react'
+
+afterEach(() => {
+  cleanup()
+})
