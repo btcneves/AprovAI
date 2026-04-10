@@ -53,6 +53,7 @@ const renderCanvas = () => {
       selectedNodeId={baseNode.id}
       detailPanelNode={baseNode}
       hoveredNodeId={null}
+      expandedNodeIds={new Set()}
       onHoverNode={() => {}}
       onSelectNode={() => {}}
       onToggleExpandNode={() => {}}

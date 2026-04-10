@@ -183,6 +183,21 @@ button.reviewed { background: #166534; }
   opacity: 0.9;
 }
 
+
+.mindmap-links path {
+  stroke-width: 2.2;
+  opacity: 0.95;
+}
+
+.mindmap-node-card.is-deemphasized {
+  opacity: 0.48;
+  filter: saturate(0.85);
+}
+
+.mindmap-node-card.depth-1 {
+  border-width: 2px;
+}
+
 .center-node.modern {
   width: 300px;
   min-height: 132px;
