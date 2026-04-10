@@ -73,7 +73,7 @@ export const MindMapNode = memo(({
 }: Props) => {
   const node: MindMapNodeType = entry.node
   const compactBullets = dedupeText([node.summary ?? node.descriptionShort, ...(node.examHighlights ?? []), ...(node.commonMistakes ?? [])])
-    .slice(0, 3)
+    .slice(0, 2)
     .map((item) => truncate(item, 84))
 
   const critical = isCriticalNode(learning)

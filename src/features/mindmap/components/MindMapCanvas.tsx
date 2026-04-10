@@ -39,8 +39,9 @@ type DragState = {
   originOffsetY: number
 } | null
 
-const MIN_SCALE = 0.4
-const MAX_SCALE = 2.5
+const MIN_SCALE = 0.45
+const MAX_SCALE = 2.1
+const DEFAULT_SCALE = 0.9
 const TAU = Math.PI * 2
 
 const normalizeAngle = (angle: number) => {
@@ -129,7 +130,7 @@ export const MindMapCanvas = memo(({
   }, [layout.center, viewportState.scale])
 
   useEffect(() => {
-    centerCanvas(0.82)
+    centerCanvas(DEFAULT_SCALE)
   }, [layout.center, centerCanvas])
 
   useEffect(() => {
@@ -149,12 +150,12 @@ export const MindMapCanvas = memo(({
 
   const fitToBranch = useCallback((branchId: string) => {
     const viewport = viewportRef.current
-    const bounds = layout.branchBounds.get(branchId)
+    const bounds = layout.subtreeBounds.get(branchId) ?? layout.branchBounds.get(branchId)
     if (!viewport || !bounds) return
 
     const contentWidth = bounds.maxX - bounds.minX
     const contentHeight = bounds.maxY - bounds.minY
-    const padding = 120
+    const padding = 180
     const fitScale = Math.min(
       MAX_SCALE,
       Math.max(
@@ -174,11 +175,11 @@ export const MindMapCanvas = memo(({
       offsetX: viewport.clientWidth / 2 - centerX * fitScale,
       offsetY: viewport.clientHeight / 2 - centerY * fitScale
     })
-  }, [layout.branchBounds])
+  }, [layout.branchBounds, layout.subtreeBounds])
 
   useEffect(() => {
     if (!focusedRootId) {
-      centerCanvas(0.82)
+      centerCanvas(DEFAULT_SCALE)
       return
     }
     fitToBranch(focusedRootId)
@@ -238,7 +239,7 @@ export const MindMapCanvas = memo(({
         <div className="mindmap-controls modern">
           <button type="button" onClick={() => zoomAtPoint(1.12)}>+</button>
           <button type="button" onClick={() => zoomAtPoint(0.88)}>-</button>
-          <button type="button" onClick={() => centerCanvas(0.82)}>Reset view</button>
+          <button type="button" onClick={() => centerCanvas(DEFAULT_SCALE)}>Reset view</button>
           <button type="button" onClick={onResetFocus} disabled={!focusedRootId}>Mapa completo</button>
           {detailPanelNode ? <button type="button" onClick={() => onFocusRoot(detailPanelNode.id)}>Focar ramo</button> : null}
           <small>Zoom {Math.round(viewportState.scale * 100)}% · Drag para pan · Scroll para zoom</small>

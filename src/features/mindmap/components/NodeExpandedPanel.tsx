@@ -36,7 +36,7 @@ export const NodeExpandedPanel = ({ node, learning, status, collisions, onOpenTo
           <h5>Resumo pedagógico</h5>
           <p>{node.descriptionDetailed}</p>
         </section>
-        <section>
+        <section className="learning-status-card">
           <h5>Status de aprendizagem</h5>
           <p><strong>Status atual:</strong> {status}</p>
           <p>
