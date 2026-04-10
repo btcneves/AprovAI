@@ -476,3 +476,100 @@ button.reviewed { background: #166534; }
 
 .mindmap-edge { transition: stroke-opacity 160ms ease, stroke-width 160ms ease; }
 .mindmap-edge.is-highlighted { stroke-opacity: 0.64; }
+
+/* Study Tree v3 */
+.mindmap-fullscreen-layout {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.mindmap-topbar {
+  background: #fff;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  padding: 0.75rem;
+}
+
+.mindmap-toolbar {
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+}
+
+.root-filter-btn.is-active {
+  background: #1d4ed8;
+  color: #fff;
+}
+
+.mindmap-experience {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  gap: 1rem;
+}
+
+.tree-stage {
+  border: 1px solid #dbeafe;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  overflow: hidden;
+}
+
+.mindmap-stage .mindmap-controls {
+  border-bottom: 1px solid #dbeafe;
+  background: #f8fbff;
+}
+
+.tree-canvas {
+  position: relative;
+  min-height: 760px;
+}
+
+.study-center-node {
+  width: 220px;
+  border: 1px solid #2563eb;
+  background: linear-gradient(145deg, #dbeafe, #eff6ff);
+  box-shadow: 0 12px 26px rgba(37, 99, 235, 0.2);
+  z-index: 4;
+}
+
+.study-tree-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  min-height: 130px;
+  border: 1px solid #cbd5e1;
+  border-left-width: 5px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+  padding: 0.7rem 0.8rem;
+  z-index: 5;
+}
+
+.study-tree-node header { display: flex; justify-content: space-between; gap: 0.45rem; }
+.study-tree-node h4 { margin: 0; font-size: 0.95rem; line-height: 1.25; }
+.study-tree-node ul { margin: 0.35rem 0; padding-left: 1rem; }
+.study-tree-node li { font-size: 0.82rem; margin-bottom: 0.15rem; }
+.study-tree-node footer { display: flex; gap: 0.35rem; flex-wrap: wrap; }
+.study-tree-node footer small { background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 999px; padding: 0.04rem 0.4rem; }
+
+.study-tree-node.is-selected {
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.16);
+  transform: translate(-50%, -50%) scale(1.01);
+}
+
+.node-expanded-panel.docked {
+  position: sticky;
+  top: 1rem;
+  margin: 0;
+  width: 100%;
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+}
+
+.panel-actions { justify-content: flex-start; }
+
+@media (max-width: 1200px) {
+  .mindmap-experience { grid-template-columns: 1fr; }
+  .node-expanded-panel.docked { max-height: none; }
+}

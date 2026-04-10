@@ -82,6 +82,13 @@ const clickTopbarButton = (name: string) => {
   fireEvent.click(within(topbar).getByRole('button', { name }))
 }
 
+const clickDetailInsideCard = (title: string) => {
+  const titleNode = screen.getAllByText(title).find((node) => node.tagName.toLowerCase() === 'h4') as HTMLElement
+  const card = titleNode.closest('article') as HTMLElement
+  fireEvent.click(within(card).getByRole('button', { name: 'Detalhar' }))
+}
+
+
 describe('MindMapTree interactions', () => {
   it('renderiza estado inicial didático com raiz e blocos, e expande/recolhe subníveis', () => {
     render(
@@ -129,7 +136,7 @@ describe('MindMapTree interactions', () => {
     clickExpandInsideCard('Sintaxe')
     expect(screen.getByText('Concordância')).toBeTruthy()
 
-    fireEvent.click(screen.getAllByRole('button', { name: 'Detalhar' })[0])
+    clickDetailInsideCard('Língua Portuguesa')
     expect(screen.getByText('Detalhes português')).toBeTruthy()
     expect(screen.getByText('Concordância')).toBeTruthy()
 
