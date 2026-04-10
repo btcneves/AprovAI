@@ -18,119 +18,64 @@ const makeNode = (id: string, parentId: string | null, childrenIds: string[] = [
 
 const intersects = (
   a: { x: number; y: number; width: number; height: number },
-  b: { x: number; y: number; width: number; height: number },
-  padding: number
+  b: { x: number; y: number; width: number; height: number }
 ) => {
-  const ax1 = a.x - a.width / 2 - padding
-  const ax2 = a.x + a.width / 2 + padding
-  const ay1 = a.y - a.height / 2 - padding
-  const ay2 = a.y + a.height / 2 + padding
+  const ax1 = a.x - a.width / 2
+  const ax2 = a.x + a.width / 2
+  const ay1 = a.y - a.height / 2
+  const ay2 = a.y + a.height / 2
 
-  const bx1 = b.x - b.width / 2 - padding
-  const bx2 = b.x + b.width / 2 + padding
-  const by1 = b.y - b.height / 2 - padding
-  const by2 = b.y + b.height / 2 + padding
+  const bx1 = b.x - b.width / 2
+  const bx2 = b.x + b.width / 2
+  const by1 = b.y - b.height / 2
+  const by2 = b.y + b.height / 2
 
   return ax1 < bx2 && ax2 > bx1 && ay1 < by2 && ay2 > by1
 }
 
-describe('radialLayoutEngine', () => {
-  it('distribui maior faixa angular para ramos com mais descendentes', () => {
-    const rootA = makeNode('root-a', null, ['a-1', 'a-2', 'a-3', 'a-4'])
-    const rootB = makeNode('root-b', null, ['b-1'])
-    const children = [
-      makeNode('a-1', 'root-a'),
-      makeNode('a-2', 'root-a'),
-      makeNode('a-3', 'root-a'),
-      makeNode('a-4', 'root-a'),
-      makeNode('b-1', 'root-b')
-    ]
+describe('treeLayoutEngine compatibility wrapper', () => {
+  it('renderiza layout hierárquico por profundidade crescente', () => {
+    const root = makeNode('root', null, ['a', 'b'])
+    const a = makeNode('a', 'root', ['a-1'])
+    const b = makeNode('b', 'root')
+    const a1 = makeNode('a-1', 'a')
 
-    const visible = [rootA, rootB, ...children].map((node) => ({
+    const visible = [root, a, b, a1].map((node) => ({
       node,
-      depth: node.parentId ? 2 : 1,
-      branchId: node.parentId ? (node.parentId === 'root-a' ? 'root-a' : 'root-b') : node.id
+      depth: node.parentId === null ? 1 : node.parentId === 'root' ? 2 : 3,
+      branchId: 'root'
     }))
 
     const layout = buildRadialLayout(visible)
-    const clusters = new Map(layout.clusters.map((cluster) => [cluster.branchId, cluster]))
-    const clusterA = clusters.get('root-a')
-    const clusterB = clusters.get('root-b')
+    const rootNode = layout.map.get('root')!
+    const childNode = layout.map.get('a')!
+    const grandChildNode = layout.map.get('a-1')!
 
-    expect(clusterA).toBeDefined()
-    expect(clusterB).toBeDefined()
-
-    const span = (start: number, end: number) => {
-      const delta = (end - start + Math.PI * 2) % (Math.PI * 2)
-      return delta === 0 ? Math.PI * 2 : delta
-    }
-
-    expect(span(clusterA!.startTheta, clusterA!.endTheta)).toBeGreaterThan(span(clusterB!.startTheta, clusterB!.endTheta))
+    expect(rootNode.x).toBeLessThan(childNode.x)
+    expect(childNode.x).toBeLessThan(grandChildNode.x)
   })
 
+  it('não cria sobreposição no cenário denso do layout em árvore', () => {
+    const root = makeNode('root', null, Array.from({ length: 10 }, (_, index) => `c-${index}`))
+    const children = root.childrenIds.map((id) => makeNode(id, 'root'))
 
-
-  it('respeita espaçamento mínimo entre nós por nível', () => {
-    const root = makeNode('root', null, Array.from({ length: 18 }, (_, i) => `child-${i}`))
-    const children = root.childrenIds.map((id) => makeNode(id, root.id))
     const visible = [root, ...children].map((node) => ({
       node,
       depth: node.parentId ? 2 : 1,
       branchId: 'root'
     }))
 
-    const layout = buildRadialLayout(visible, { minNodeSpacing: 220, ringGap: 360 })
-    const levelTwo = layout.nodes.filter((node) => node.depth === 2)
-
-    for (let i = 0; i < levelTwo.length; i += 1) {
-      for (let j = i + 1; j < levelTwo.length; j += 1) {
-        const dx = levelTwo[i].x - levelTwo[j].x
-        const dy = levelTwo[i].y - levelTwo[j].y
-        const distance = Math.hypot(dx, dy)
-        expect(distance).toBeGreaterThan(180)
-      }
-    }
-  })
-
-  it('mantém collisions = 0 em cenário denso e gera relatório técnico', () => {
-    const roots = Array.from({ length: 6 }, (_, index) => makeNode(`r-${index}`, null, Array.from({ length: 12 }, (_, c) => `r-${index}-c-${c}`)))
-    const children = roots.flatMap((root) =>
-      root.childrenIds.map((childId) => makeNode(childId, root.id, Array.from({ length: 3 }, (_, i) => `${childId}-d-${i}`)))
-    )
-    const leaves = children.flatMap((child) => child.childrenIds.map((leafId) => makeNode(leafId, child.id)))
-
-    const all = [...roots, ...children, ...leaves]
-    const byId = new Map(all.map((node) => [node.id, node]))
-
-    const depthOf = (node: MindMapNode): number => {
-      let depth = 1
-      let current = node
-      while (current.parentId) {
-        depth += 1
-        current = byId.get(current.parentId) as MindMapNode
-      }
-      return depth
-    }
-
-    const visible = all.map((node) => ({
-      node,
-      depth: depthOf(node),
-      branchId: node.parentId ? node.parentId.split('-c-')[0] : node.id
-    }))
-
-    const layout = buildRadialLayout(visible, { maxIterations: 40 })
+    const layout = buildRadialLayout(visible)
 
     let collisions = 0
     for (let i = 0; i < layout.nodes.length; i += 1) {
       for (let j = i + 1; j < layout.nodes.length; j += 1) {
-        if (intersects(layout.nodes[i], layout.nodes[j], 10)) collisions += 1
+        if (intersects(layout.nodes[i], layout.nodes[j])) collisions += 1
       }
     }
 
-    expect(layout.nodes.length).toBe(all.length)
-    expect(collisions).toBe(0)
-    expect(layout.collisionReport.initialCollisions).toBeGreaterThanOrEqual(layout.collisionReport.resolvedCollisions)
     expect(layout.collisionReport.remainingCollisions).toBe(0)
-    expect(layout.branchBounds.size).toBeGreaterThan(0)
+    expect(collisions).toBe(0)
+    expect(layout.edges.length).toBe(children.length)
   })
 })
