@@ -16,10 +16,11 @@ export const MindMapEdge = memo(({ from, to, color, highlighted }: Props) => {
 
   return (
     <path
+      className={`mindmap-edge ${highlighted ? "is-highlighted" : ""}`}
       d={`M ${from.x} ${from.y} C ${cx1} ${cy1}, ${cx2} ${cy2}, ${to.x} ${to.y}`}
       stroke={color}
-      strokeOpacity={highlighted ? 0.42 : 0.25}
-      strokeWidth={highlighted ? 2.2 : 1.4}
+      strokeOpacity={highlighted ? 0.56 : 0.2}
+      strokeWidth={highlighted ? 2.6 : 1.35}
       fill="none"
     />
   )

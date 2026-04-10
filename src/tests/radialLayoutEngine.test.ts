@@ -68,6 +68,30 @@ describe('radialLayoutEngine', () => {
     expect(span(clusterA!.startTheta, clusterA!.endTheta)).toBeGreaterThan(span(clusterB!.startTheta, clusterB!.endTheta))
   })
 
+
+
+  it('respeita espaçamento mínimo entre nós por nível', () => {
+    const root = makeNode('root', null, Array.from({ length: 18 }, (_, i) => `child-${i}`))
+    const children = root.childrenIds.map((id) => makeNode(id, root.id))
+    const visible = [root, ...children].map((node) => ({
+      node,
+      depth: node.parentId ? 2 : 1,
+      branchId: 'root'
+    }))
+
+    const layout = buildRadialLayout(visible, { minNodeSpacing: 220, ringGap: 360 })
+    const levelTwo = layout.nodes.filter((node) => node.depth === 2)
+
+    for (let i = 0; i < levelTwo.length; i += 1) {
+      for (let j = i + 1; j < levelTwo.length; j += 1) {
+        const dx = levelTwo[i].x - levelTwo[j].x
+        const dy = levelTwo[i].y - levelTwo[j].y
+        const distance = Math.hypot(dx, dy)
+        expect(distance).toBeGreaterThan(180)
+      }
+    }
+  })
+
   it('mantém collisions = 0 em cenário denso e gera relatório técnico', () => {
     const roots = Array.from({ length: 6 }, (_, index) => makeNode(`r-${index}`, null, Array.from({ length: 12 }, (_, c) => `r-${index}-c-${c}`)))
     const children = roots.flatMap((root) =>

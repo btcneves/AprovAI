@@ -40,12 +40,32 @@ type DragState = {
 } | null
 
 const MIN_SCALE = 0.4
-const MAX_SCALE = 2.4
+const MAX_SCALE = 2.5
 const TAU = Math.PI * 2
 
 const normalizeAngle = (angle: number) => {
   const normalized = angle % TAU
   return normalized >= 0 ? normalized : normalized + TAU
+}
+
+
+export const computeZoomViewport = (
+  current: ViewportState,
+  mouseX: number,
+  mouseY: number,
+  zoomFactor: number
+): ViewportState => {
+  const worldX = (mouseX - current.offsetX) / current.scale
+  const worldY = (mouseY - current.offsetY) / current.scale
+  const nextScale = Math.min(MAX_SCALE, Math.max(MIN_SCALE, current.scale * zoomFactor))
+
+  if (Math.abs(nextScale - current.scale) < 0.0001) return current
+
+  return {
+    scale: nextScale,
+    offsetX: mouseX - worldX * nextScale,
+    offsetY: mouseY - worldY * nextScale
+  }
 }
 
 const clusterArcPath = (cluster: LayoutCluster, center: number) => {
@@ -116,25 +136,15 @@ export const MindMapCanvas = memo(({
     dragStateRef.current = dragState
   }, [dragState])
 
-  const zoomAtPoint = useCallback((nextScale: number, clientX?: number, clientY?: number) => {
+  const zoomAtPoint = useCallback((zoomFactor: number, clientX?: number, clientY?: number) => {
     const viewport = viewportRef.current
     if (!viewport) return
 
-    const clamped = Math.min(MAX_SCALE, Math.max(MIN_SCALE, nextScale))
     const rect = viewport.getBoundingClientRect()
-    const px = (clientX ?? rect.left + rect.width / 2) - rect.left
-    const py = (clientY ?? rect.top + rect.height / 2) - rect.top
+    const mouseX = (clientX ?? rect.left + rect.width / 2) - rect.left
+    const mouseY = (clientY ?? rect.top + rect.height / 2) - rect.top
 
-    setViewportState((current) => {
-      if (Math.abs(clamped - current.scale) < 0.0001) return current
-      const worldX = (px - current.offsetX) / current.scale
-      const worldY = (py - current.offsetY) / current.scale
-      return {
-        scale: clamped,
-        offsetX: px - worldX * clamped,
-        offsetY: py - worldY * clamped
-      }
-    })
+    setViewportState((current) => computeZoomViewport(current, mouseX, mouseY, zoomFactor))
   }, [])
 
   const fitToBranch = useCallback((branchId: string) => {
@@ -176,9 +186,11 @@ export const MindMapCanvas = memo(({
 
   const onWheel = useCallback((event: ReactWheelEvent<HTMLDivElement>) => {
     event.preventDefault()
-    const ratio = event.deltaY > 0 ? 0.92 : 1.08
-    zoomAtPoint(viewportState.scale * ratio, event.clientX, event.clientY)
-  }, [viewportState.scale, zoomAtPoint])
+    const direction = Math.sign(event.deltaY) || 1
+    const intensity = Math.min(0.24, Math.abs(event.deltaY) * 0.0015)
+    const zoomFactor = direction > 0 ? 1 - intensity : 1 + intensity
+    zoomAtPoint(zoomFactor, event.clientX, event.clientY)
+  }, [zoomAtPoint])
 
   const onPointerDown = useCallback((event: ReactPointerEvent<HTMLDivElement>) => {
     if (event.button !== 0 || !viewportRef.current) return
@@ -224,8 +236,8 @@ export const MindMapCanvas = memo(({
     <div className="mindmap-experience">
       <div className="mindmap-stage">
         <div className="mindmap-controls modern">
-          <button type="button" onClick={() => zoomAtPoint(viewportState.scale * 1.14)}>+</button>
-          <button type="button" onClick={() => zoomAtPoint(viewportState.scale * 0.88)}>-</button>
+          <button type="button" onClick={() => zoomAtPoint(1.12)}>+</button>
+          <button type="button" onClick={() => zoomAtPoint(0.88)}>-</button>
           <button type="button" onClick={() => centerCanvas(0.82)}>Reset view</button>
           <button type="button" onClick={onResetFocus} disabled={!focusedRootId}>Mapa completo</button>
           {detailPanelNode ? <button type="button" onClick={() => onFocusRoot(detailPanelNode.id)}>Focar ramo</button> : null}

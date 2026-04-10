@@ -124,7 +124,7 @@ export const MindMapTree = ({
   }, [childrenByParent, expandedNodeIds, focusedRootId, loweredQuery, rootNodes])
 
   const layout = useMemo(
-    () => buildRadialLayout(visible, { ringGap: 320, minNodeArc: 240, nodePadding: 28, maxIterations: 36 }),
+    () => buildRadialLayout(visible, { ringGap: 360, minNodeArc: 250, minNodeSpacing: 220, nodePadding: 32, maxIterations: 40 }),
     [visible]
   )
 

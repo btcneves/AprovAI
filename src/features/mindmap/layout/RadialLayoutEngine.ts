@@ -48,6 +48,7 @@ export type LayoutConfig = {
   baseRadius?: number
   ringGap?: number
   minNodeArc?: number
+  minNodeSpacing?: number
   nodePadding?: number
   centerSize?: number
   maxIterations?: number
@@ -129,9 +130,10 @@ export const buildRadialLayout = (
   config: LayoutConfig = {}
 ): LayoutResult => {
   const baseRadius = config.baseRadius ?? 220
-  const ringGap = Math.max(300, config.ringGap ?? 320)
+  const ringGap = Math.max(320, config.ringGap ?? 360)
   const minNodeArc = Math.max(220, config.minNodeArc ?? 240)
-  const nodePadding = Math.max(24, config.nodePadding ?? 28)
+  const minNodeSpacing = Math.max(220, config.minNodeSpacing ?? 220)
+  const nodePadding = Math.max(24, config.nodePadding ?? 32)
   const centerSize = config.centerSize ?? 340
   const maxIterations = Math.max(20, config.maxIterations ?? 30)
 
@@ -149,7 +151,8 @@ export const buildRadialLayout = (
     const count = Math.max(1, levels.get(depth)?.length ?? 1)
     const rByDepth = baseRadius + (depth - 1) * ringGap
     const rByDensity = (count * minNodeArc) / TAU
-    const chosen = Math.max(rByDepth, rByDensity, previousRingRadius + ringGap)
+    const rBySpacing = (count * minNodeSpacing) / TAU
+    const chosen = Math.max(rByDepth, rByDensity, rBySpacing, previousRingRadius + ringGap)
     levelRadius.set(depth, chosen)
     previousRingRadius = chosen
   })
@@ -199,16 +202,18 @@ export const buildRadialLayout = (
     if (!children.length) return
 
     const angularSpan = Math.max(0.2, Math.abs(shortestAngularDistance(thetaStart, thetaEnd)))
-    const clusterGap = Math.min(0.3, 0.08 + children.length * 0.012)
-    const usableSpan = Math.max(0.18, angularSpan - clusterGap * 2)
+    const clusterGap = Math.min(0.34, 0.09 + children.length * 0.014)
+    const usableSpan = Math.max(0.2, angularSpan - clusterGap * 2)
     const totalWeight = children.reduce((acc, childId) => acc + subtreeWeight(childId), 0) || 1
 
     let cursor = theta - usableSpan / 2
     children.forEach((childId) => {
       const childWeight = subtreeWeight(childId)
       const childSpan = usableSpan * (childWeight / totalWeight)
-      placeNode(childId, cursor, cursor + childSpan)
-      cursor += childSpan
+      const minChildAngle = Math.max(0.16, minNodeSpacing / Math.max(1, (levelRadius.get(depth + 1) ?? r + ringGap)))
+      const allocatedSpan = Math.max(minChildAngle, childSpan)
+      placeNode(childId, cursor, cursor + allocatedSpan)
+      cursor += allocatedSpan
     })
   }
 
@@ -245,14 +250,14 @@ export const buildRadialLayout = (
 
         if (sameDepth) {
           const sign = shortestAngularDistance(a.theta, b.theta) >= 0 ? 1 : -1
-          const angularPush = (sameBranch ? 0.018 : 0.028) + pass * 0.0012
+          const angularPush = (sameBranch ? 0.022 : 0.034) + pass * 0.0014
           a.theta -= angularPush * sign
           b.theta += angularPush * sign
         }
 
         if (!sameDepth || sameBranch) {
           const deeper = a.depth >= b.depth ? a : b
-          deeper.r += 22 + pass * 1.4
+          deeper.r += 30 + pass * 1.8
         }
       }
     }
@@ -294,10 +299,10 @@ export const buildRadialLayout = (
         if (!intersects(a, b, nodePadding)) continue
         collisions += 1
         const sign = shortestAngularDistance(a.theta, b.theta) >= 0 ? 1 : -1
-        a.theta -= (0.008 + pass * 0.0004) * sign
-        b.theta += (0.008 + pass * 0.0004) * sign
+        a.theta -= (0.011 + pass * 0.0005) * sign
+        b.theta += (0.011 + pass * 0.0005) * sign
         const deeper = a.depth >= b.depth ? a : b
-        deeper.r += 18
+        deeper.r += 24
       }
     }
     nodes.forEach((item) => {

@@ -1,7 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import type { MindMapNode } from '@/domain/types'
-import { MindMapCanvas } from '@/features/mindmap/components/MindMapCanvas'
+import { computeZoomViewport, MindMapCanvas } from '@/features/mindmap/components/MindMapCanvas'
 import type { LayoutResult } from '@/features/mindmap/layout/RadialLayoutEngine'
 
 const parseTransform = (transform: string) => {
@@ -86,6 +86,24 @@ const renderCanvas = () => {
 }
 
 describe('MindMapCanvas navigation', () => {
+  it('mantém ponto do cursor estável na transformação de zoom e aplica clamp', () => {
+    const state = { offsetX: 120, offsetY: -80, scale: 1 }
+    const mouseX = 420
+    const mouseY = 320
+
+    const zoomed = computeZoomViewport(state, mouseX, mouseY, 1.4)
+    const beforeWorldX = (mouseX - state.offsetX) / state.scale
+    const beforeWorldY = (mouseY - state.offsetY) / state.scale
+    const afterWorldX = (mouseX - zoomed.offsetX) / zoomed.scale
+    const afterWorldY = (mouseY - zoomed.offsetY) / zoomed.scale
+
+    expect(afterWorldX).toBeCloseTo(beforeWorldX, 6)
+    expect(afterWorldY).toBeCloseTo(beforeWorldY, 6)
+
+    const clamped = computeZoomViewport({ offsetX: 0, offsetY: 0, scale: 2.4 }, mouseX, mouseY, 1.2)
+    expect(clamped.scale).toBe(2.5)
+  })
+
   it('inicia drag, move e finaliza sem quebrar em pointermove após pointerup', async () => {
     const { viewport, canvas } = renderCanvas()
 
@@ -115,11 +133,11 @@ describe('MindMapCanvas navigation', () => {
       expect(parseTransform(canvas.style.transform).scale).toBeCloseTo(0.82, 2)
     })
 
-    viewport.dispatchEvent(new WheelEvent('wheel', { bubbles: true, cancelable: true, deltaY: -120, clientX: 500, clientY: 400 }))
+    fireEvent.wheel(viewport, { deltaY: -120, clientX: 500, clientY: 400 })
     const zoomedIn = parseTransform(canvas.style.transform)
     expect(Number.isFinite(zoomedIn.scale)).toBe(true)
 
-    viewport.dispatchEvent(new WheelEvent('wheel', { bubbles: true, cancelable: true, deltaY: 120, clientX: 500, clientY: 400 }))
+    fireEvent.wheel(viewport, { deltaY: 120, clientX: 500, clientY: 400 })
     const zoomedOut = parseTransform(canvas.style.transform)
     expect(Number.isFinite(zoomedOut.scale)).toBe(true)
 
