@@ -28,16 +28,26 @@ export const NodeExpandedPanel = ({ node, learning, status, collisions, onOpenTo
   <aside className="node-expanded-panel docked">
     {node ? (
       <>
-        <h4>{node.title}</h4>
-        <p>{node.descriptionDetailed}</p>
-        <p><strong>Status:</strong> {status}</p>
-        <p>
-          <strong>Métricas:</strong>{' '}
-          {learning
-            ? `views ${learning.viewCount} · revisões ${learning.reviewCount} · acurácia ${learning.accuracyRate}%`
-            : 'sem histórico'}
-        </p>
+        <header className="panel-header">
+          <h4>{node.title}</h4>
+          <p className="panel-subtitle">{node.descriptionShort}</p>
+        </header>
+        <section>
+          <h5>Resumo pedagógico</h5>
+          <p>{node.descriptionDetailed}</p>
+        </section>
+        <section>
+          <h5>Status de aprendizagem</h5>
+          <p><strong>Status atual:</strong> {status}</p>
+          <p>
+            <strong>Métricas:</strong>{' '}
+            {learning
+              ? `views ${learning.viewCount} · revisões ${learning.reviewCount} · acurácia ${learning.accuracyRate}%`
+              : 'sem histórico'}
+          </p>
+        </section>
         {renderList('Resumo de estudo', node.summary ? [node.summary] : undefined)}
+        {renderList('Pontos principais', node.studyChecklist)}
         {renderList('O que mais cai', node.examHighlights)}
         {renderList('Erros comuns', node.commonMistakes)}
         {renderList('Diferenças críticas', node.criticalDifferences)}
@@ -51,7 +61,7 @@ export const NodeExpandedPanel = ({ node, learning, status, collisions, onOpenTo
     ) : (
       <>
         <h4>Painel de estudo</h4>
-        <p>Selecione um nó no canvas para abrir resumo pedagógico, métricas e ações.</p>
+        <p>Selecione um tópico e use “Expandir” para abrir subníveis ou “Detalhar” para ver o conteúdo completo.</p>
       </>
     )}
 
