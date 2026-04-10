@@ -146,11 +146,41 @@ button.reviewed { background: #166534; }
 .mindmap-toolbar { justify-content: flex-start; flex-wrap: wrap; margin-bottom: 0.7rem; }
 
 .mindmap-canvas-wrap.modern {
-  overflow: auto;
+  overflow: hidden;
   border: 1px solid #dbe4ff;
   border-radius: 16px;
   background: radial-gradient(circle at center, #ffffff 0%, #f8fbff 45%, #eef2ff 100%);
   max-height: 78vh;
+}
+
+.mindmap-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  padding: 0.55rem 0.65rem;
+  border-bottom: 1px solid #dbe4ff;
+  background: #f8fbff;
+}
+
+.mindmap-controls small {
+  color: #334155;
+  margin-left: 0.3rem;
+}
+
+.mindmap-viewport {
+  overflow: auto;
+  max-height: calc(78vh - 58px);
+  cursor: grab;
+}
+
+.mindmap-viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.mindmap-cluster-bg {
+  transition: opacity 180ms ease;
+  opacity: 0.9;
 }
 
 .center-node.modern {
