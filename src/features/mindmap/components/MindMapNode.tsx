@@ -14,8 +14,12 @@ type Props = {
   hovered: boolean
   selected: boolean
   deemphasized: boolean
+  expanded: boolean
+  hasChildren: boolean
   onHover: (nodeId: string | null) => void
-  onExpand: (nodeId: string) => void
+  onSelect: (nodeId: string) => void
+  onToggleExpand: (nodeId: string) => void
+  onDetail: (nodeId: string) => void
 }
 
 const statusPillClass = {
@@ -27,7 +31,22 @@ const statusPillClass = {
 
 const truncate = (text: string, max: number) => (text.length > max ? `${text.slice(0, max).trimEnd()}…` : text)
 
-export const MindMapNode = memo(({ entry, status, reviewed, learning, branchColor, hovered, selected, deemphasized, onHover, onExpand }: Props) => {
+export const MindMapNode = memo(({
+  entry,
+  status,
+  reviewed,
+  learning,
+  branchColor,
+  hovered,
+  selected,
+  deemphasized,
+  expanded,
+  hasChildren,
+  onHover,
+  onSelect,
+  onToggleExpand,
+  onDetail
+}: Props) => {
   const node: MindMapNodeType = entry.node
   const compactBullets = [node.summary ?? node.descriptionShort, ...(node.examHighlights ?? []), ...(node.commonMistakes ?? [])]
     .filter(Boolean)
@@ -43,6 +62,7 @@ export const MindMapNode = memo(({ entry, status, reviewed, learning, branchColo
       style={{ left: entry.x, top: entry.y, borderColor: branchColor, boxShadow: `0 12px 26px ${branchColor}20` }}
       onMouseEnter={() => onHover(node.id)}
       onMouseLeave={() => onHover(null)}
+      onClick={() => onSelect(node.id)}
     >
       <header>
         <h4>{node.title}</h4>
@@ -54,7 +74,30 @@ export const MindMapNode = memo(({ entry, status, reviewed, learning, branchColo
         {critical ? <small>Crítico</small> : null}
         {neglected ? <small>Negligenciado</small> : null}
       </footer>
-      <button className="expand-node-btn" onClick={() => onExpand(node.id)}>Detalhar</button>
+      <div className="node-card-actions">
+        {hasChildren ? (
+          <button
+            type="button"
+            className="expand-node-btn secondary"
+            onClick={(event) => {
+              event.stopPropagation()
+              onToggleExpand(node.id)
+            }}
+          >
+            {expanded ? 'Recolher' : 'Expandir'}
+          </button>
+        ) : null}
+        <button
+          type="button"
+          className="expand-node-btn"
+          onClick={(event) => {
+            event.stopPropagation()
+            onDetail(node.id)
+          }}
+        >
+          Detalhar
+        </button>
+      </div>
     </article>
   )
 })

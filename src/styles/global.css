@@ -260,6 +260,17 @@ button.reviewed { background: #166534; }
   padding: 0.42rem 0.6rem;
 }
 
+.node-card-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.expand-node-btn.secondary {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
 .status-pill {
   font-size: 0.68rem;
   text-transform: uppercase;
@@ -291,6 +302,15 @@ button.reviewed { background: #166534; }
 .node-expanded-panel h5 { margin: 0.2rem 0 0.35rem; }
 .node-expanded-panel p { margin: 0.2rem 0 0.6rem; }
 .node-expanded-panel ul { margin: 0 0 0.6rem; padding-left: 1rem; }
+.panel-header {
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 0.75rem;
+}
+
+.panel-subtitle {
+  color: #475569;
+}
 
 @media (max-width: 880px) {
   .center-node.modern { width: min(280px, 72vw); }
@@ -350,6 +370,15 @@ button.reviewed { background: #166534; }
 }
 
 .mindmap-topbar .input { margin: 0; max-width: 360px; }
+.root-filter-btn {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.root-filter-btn.is-active {
+  background: #1d4ed8;
+  color: #fff;
+}
 
 .mindmap-experience {
   flex: 1;

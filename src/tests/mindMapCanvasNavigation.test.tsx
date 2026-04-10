@@ -49,15 +49,18 @@ const renderCanvas = () => {
       performanceByNode={new Map()}
       reviewedNodeIds={new Set()}
       nodeLearningById={{}}
-      focusedBranchId={null}
-      selectedNode={baseNode}
+      focusedRootId={null}
+      selectedNodeId={baseNode.id}
+      detailPanelNode={baseNode}
       hoveredNodeId={null}
       onHoverNode={() => {}}
-      onExpandNode={() => {}}
+      onSelectNode={() => {}}
+      onToggleExpandNode={() => {}}
+      onDetailNode={() => {}}
       onOpenTopic={() => {}}
       onTrainNode={() => {}}
       onResetFocus={() => {}}
-      onFocusBranch={() => {}}
+      onFocusRoot={() => {}}
     />
   )
 

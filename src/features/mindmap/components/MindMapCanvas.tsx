@@ -15,15 +15,18 @@ type Props = {
   performanceByNode: Map<string, NodeStatus>
   reviewedNodeIds: Set<string>
   nodeLearningById: NodeLearningMap
-  focusedBranchId: string | null
-  selectedNode: MindMapNodeType | null
+  focusedRootId: string | null
+  selectedNodeId: string | null
+  detailPanelNode: MindMapNodeType | null
   hoveredNodeId: string | null
   onHoverNode: (id: string | null) => void
-  onExpandNode: (id: string) => void
+  onSelectNode: (id: string) => void
+  onToggleExpandNode: (id: string) => void
+  onDetailNode: (id: string) => void
   onOpenTopic: (id: string) => void
   onTrainNode: (id: string) => void
   onResetFocus: () => void
-  onFocusBranch: (id: string) => void
+  onFocusRoot: (id: string) => void
 }
 
 type ViewportState = { offsetX: number; offsetY: number; scale: number }
@@ -75,22 +78,25 @@ export const MindMapCanvas = memo(({
   performanceByNode,
   reviewedNodeIds,
   nodeLearningById,
-  focusedBranchId,
-  selectedNode,
+  focusedRootId,
+  selectedNodeId,
+  detailPanelNode,
   hoveredNodeId,
   onHoverNode,
-  onExpandNode,
+  onSelectNode,
+  onToggleExpandNode,
+  onDetailNode,
   onOpenTopic,
   onTrainNode,
   onResetFocus,
-  onFocusBranch
+  onFocusRoot
 }: Props) => {
   const viewportRef = useRef<HTMLDivElement | null>(null)
   const [viewportState, setViewportState] = useState<ViewportState>({ offsetX: 0, offsetY: 0, scale: 1 })
   const [dragState, setDragState] = useState<DragState>(null)
   const dragStateRef = useRef<DragState>(null)
 
-  const activeId = hoveredNodeId ?? selectedNode?.id ?? null
+  const activeId = hoveredNodeId ?? selectedNodeId ?? detailPanelNode?.id ?? null
 
   const centerCanvas = useCallback((scale = viewportState.scale) => {
     const viewport = viewportRef.current
@@ -159,12 +165,12 @@ export const MindMapCanvas = memo(({
   }, [layout.branchBounds])
 
   useEffect(() => {
-    if (!focusedBranchId) {
+    if (!focusedRootId) {
       centerCanvas(0.82)
       return
     }
-    fitToBranch(focusedBranchId)
-  }, [centerCanvas, fitToBranch, focusedBranchId])
+    fitToBranch(focusedRootId)
+  }, [centerCanvas, fitToBranch, focusedRootId])
 
   const onWheel = useCallback((event: ReactWheelEvent<HTMLDivElement>) => {
     event.preventDefault()
@@ -219,8 +225,8 @@ export const MindMapCanvas = memo(({
           <button type="button" onClick={() => zoomAtPoint(viewportState.scale * 1.14)}>+</button>
           <button type="button" onClick={() => zoomAtPoint(viewportState.scale * 0.88)}>-</button>
           <button type="button" onClick={() => centerCanvas(0.82)}>Reset view</button>
-          <button type="button" onClick={onResetFocus} disabled={!focusedBranchId}>Mapa completo</button>
-          {selectedNode ? <button type="button" onClick={() => onFocusBranch(selectedNode.id)}>Focar ramo</button> : null}
+          <button type="button" onClick={onResetFocus} disabled={!focusedRootId}>Mapa completo</button>
+          {detailPanelNode ? <button type="button" onClick={() => onFocusRoot(detailPanelNode.id)}>Focar ramo</button> : null}
           <small>Zoom {Math.round(viewportState.scale * 100)}% · Drag para pan · Scroll para zoom</small>
         </div>
 
@@ -237,7 +243,7 @@ export const MindMapCanvas = memo(({
             <svg width={layout.canvasSize} height={layout.canvasSize} className="mindmap-links" aria-hidden>
               {layout.clusters.map((cluster) => {
                 const color = branchColorById.get(cluster.branchId) ?? '#94a3b8'
-                const faded = focusedBranchId && cluster.branchId !== focusedBranchId
+                const faded = focusedRootId && cluster.branchId !== focusedRootId
                 return (
                   <path
                     key={`cluster-${cluster.branchId}`}
@@ -266,7 +272,7 @@ export const MindMapCanvas = memo(({
 
             {layout.nodes.map((entry) => {
               const status = performanceByNode.get(entry.node.id) ?? 'sem-dados'
-              const deemphasized = focusedBranchId !== null && entry.branchId !== focusedBranchId
+              const deemphasized = focusedRootId !== null && entry.branchId !== focusedRootId
               return (
                 <MindMapNode
                   key={entry.node.id}
@@ -276,10 +282,14 @@ export const MindMapCanvas = memo(({
                   learning={nodeLearningById[entry.node.id]}
                   branchColor={branchColorById.get(entry.branchId) ?? '#64748b'}
                   hovered={hoveredNodeId === entry.node.id}
-                  selected={selectedNode?.id === entry.node.id}
+                  selected={selectedNodeId === entry.node.id}
                   deemphasized={deemphasized}
+                  expanded={entry.node.childrenIds.length > 0 && layout.map.has(entry.node.childrenIds[0])}
+                  hasChildren={entry.node.childrenIds.length > 0}
                   onHover={onHoverNode}
-                  onExpand={onExpandNode}
+                  onSelect={onSelectNode}
+                  onToggleExpand={onToggleExpandNode}
+                  onDetail={onDetailNode}
                 />
               )
             })}
@@ -288,13 +298,13 @@ export const MindMapCanvas = memo(({
       </div>
 
       <NodeExpandedPanel
-        node={selectedNode}
-        learning={selectedNode ? nodeLearningById[selectedNode.id] : undefined}
-        status={selectedNode ? performanceByNode.get(selectedNode.id) ?? 'sem-dados' : 'sem-dados'}
+        node={detailPanelNode}
+        learning={detailPanelNode ? nodeLearningById[detailPanelNode.id] : undefined}
+        status={detailPanelNode ? performanceByNode.get(detailPanelNode.id) ?? 'sem-dados' : 'sem-dados'}
         collisions={layout.collisionReport}
         onOpenTopic={onOpenTopic}
         onTrainNode={onTrainNode}
-        onFocusBranch={onFocusBranch}
+        onFocusBranch={onFocusRoot}
       />
     </div>
   )
