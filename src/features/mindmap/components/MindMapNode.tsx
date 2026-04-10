@@ -1,4 +1,5 @@
 import { memo } from 'react'
+import type { CSSProperties } from 'react'
 import type { MindMapNode as MindMapNodeType } from '@/domain/types'
 import { isCriticalNode, isNeglectedNode, type NodeLearningMap } from '@/domain/nodeLearningService'
 import type { LayoutNode } from '@/features/mindmap/layout/RadialLayoutEngine'
@@ -31,6 +32,29 @@ const statusPillClass = {
 
 const truncate = (text: string, max: number) => (text.length > max ? `${text.slice(0, max).trimEnd()}…` : text)
 
+const dedupeText = (lines: Array<string | null | undefined>) => {
+  const seen = new Set<string>()
+  const unique: string[] = []
+
+  lines.forEach((line) => {
+    const cleaned = line?.trim()
+    if (!cleaned) return
+    const key = cleaned.toLowerCase()
+    if (seen.has(key)) return
+    seen.add(key)
+    unique.push(cleaned)
+  })
+
+  return unique
+}
+
+const scaleNodeByDepth = (depth: number) => {
+  if (depth <= 1) return 1.2
+  if (depth === 2) return 1
+  if (depth === 3) return 0.9
+  return 0.8
+}
+
 export const MindMapNode = memo(({
   entry,
   status,
@@ -48,8 +72,7 @@ export const MindMapNode = memo(({
   onDetail
 }: Props) => {
   const node: MindMapNodeType = entry.node
-  const compactBullets = [node.summary ?? node.descriptionShort, ...(node.examHighlights ?? []), ...(node.commonMistakes ?? [])]
-    .filter(Boolean)
+  const compactBullets = dedupeText([node.summary ?? node.descriptionShort, ...(node.examHighlights ?? []), ...(node.commonMistakes ?? [])])
     .slice(0, 3)
     .map((item) => truncate(item, 84))
 
@@ -58,8 +81,14 @@ export const MindMapNode = memo(({
 
   return (
     <article
-      className={`mindmap-node-card depth-${Math.min(entry.depth, 3)} ${hovered ? 'is-hovered' : ''} ${selected ? 'is-selected' : ''} ${deemphasized ? 'is-deemphasized' : ''}`}
-      style={{ left: entry.x, top: entry.y, borderColor: branchColor, boxShadow: `0 12px 26px ${branchColor}20` }}
+      className={`mindmap-node-card depth-${Math.min(entry.depth, 4)} ${hovered ? 'is-hovered' : ''} ${selected ? 'is-selected' : ''} ${deemphasized ? 'is-deemphasized' : ''}`}
+      style={{
+        left: entry.x,
+        top: entry.y,
+        borderColor: branchColor,
+        boxShadow: `0 12px 26px ${branchColor}20`,
+        '--node-scale': scaleNodeByDepth(entry.depth)
+      } as CSSProperties}
       onMouseEnter={() => onHover(node.id)}
       onMouseLeave={() => onHover(null)}
       onClick={() => onSelect(node.id)}
