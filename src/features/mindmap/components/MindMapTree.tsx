@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { MindMapNode as MindMapNodeType } from '@/domain/types'
 import type { NodeLearningMap } from '@/domain/nodeLearningService'
 import { MindMapCanvas } from '@/features/mindmap/components/MindMapCanvas'
@@ -18,6 +18,33 @@ type Props = {
 
 const themePalette = ['#2563eb', '#7c3aed', '#db2777', '#ea580c', '#0891b2', '#16a34a', '#4f46e5', '#be123c']
 
+const getRootNodes = (nodes: MindMapNodeType[]) => nodes.filter((node) => node.parentId === null)
+
+const getChildrenByParent = (nodes: MindMapNodeType[]) => {
+  const map = new Map<string, MindMapNodeType[]>()
+  nodes.forEach((node) => {
+    if (!node.parentId) return
+    const current = map.get(node.parentId) ?? []
+    current.push(node)
+    map.set(node.parentId, current)
+  })
+  return map
+}
+
+const getDescendants = (nodeId: string, childrenByParent: Map<string, MindMapNodeType[]>) => {
+  const descendants: string[] = []
+  const stack = [...(childrenByParent.get(nodeId) ?? []).map((child) => child.id)]
+
+  while (stack.length) {
+    const currentId = stack.pop() as string
+    descendants.push(currentId)
+    const children = childrenByParent.get(currentId) ?? []
+    children.forEach((child) => stack.push(child.id))
+  }
+
+  return descendants
+}
+
 export const MindMapTree = ({
   nodes,
   onOpenTopic,
@@ -27,7 +54,6 @@ export const MindMapTree = ({
   performanceByNode,
   nodeLearningById
 }: Props) => {
-  const [expandedNodeIds, setExpandedNodeIds] = useState<Set<string>>(() => new Set())
   const [query, setQuery] = useState('')
   const [focusedRootId, setFocusedRootId] = useState<string | null>(null)
   const [selectedNodeId, setSelectedNodeId] = useState<string | null>(null)
@@ -35,73 +61,104 @@ export const MindMapTree = ({
   const [hoveredNodeId, setHoveredNodeId] = useState<string | null>(null)
 
   const nodeMap = useMemo(() => new Map(nodes.map((node) => [node.id, node])), [nodes])
+  const rootNodes = useMemo(() => getRootNodes(nodes), [nodes])
+  const childrenByParent = useMemo(() => getChildrenByParent(nodes), [nodes])
+
+  const [expandedNodeIds, setExpandedNodeIds] = useState<Set<string>>(() => new Set())
+
+  useEffect(() => {
+    setExpandedNodeIds(new Set(rootNodes.map((node) => node.id)))
+  }, [rootNodes])
 
   const rootByNodeId = useMemo(() => {
     const result = new Map<string, string>()
-    const roots = nodes.filter((node) => node.parentId === null)
 
     const walk = (node: MindMapNodeType, rootId: string) => {
       result.set(node.id, rootId)
-      node.childrenIds.forEach((childId) => {
-        const child = nodeMap.get(childId)
-        if (child) walk(child, rootId)
-      })
+      const children = childrenByParent.get(node.id) ?? []
+      children.forEach((child) => walk(child, rootId))
     }
 
-    roots.forEach((root) => walk(root, root.id))
+    rootNodes.forEach((root) => walk(root, root.id))
     return result
-  }, [nodeMap, nodes])
+  }, [childrenByParent, rootNodes])
 
   const branchColorById = useMemo(() => {
     const rootIds = Array.from(new Set(rootByNodeId.values()))
     return new Map(rootIds.map((id, index) => [id, themePalette[index % themePalette.length]]))
   }, [rootByNodeId])
 
-  const roots = useMemo(() => nodes.filter((node) => node.parentId === null), [nodes])
   const loweredQuery = query.trim().toLowerCase()
 
-  const rootNodes = useMemo(
-    () => roots.filter((node) => (focusedRootId ? node.id === focusedRootId : true)),
-    [focusedRootId, roots]
+  const searchableContent = (node: MindMapNodeType) =>
+    [node.title, node.descriptionShort, node.summary ?? '', ...node.tags].join(' ').toLowerCase()
+
+  const visible = useMemo(() => {
+    const list: Array<{ node: MindMapNodeType; depth: number; branchId: string }> = []
+    const allowedRootIds = new Set((focusedRootId ? rootNodes.filter((node) => node.id === focusedRootId) : rootNodes).map((node) => node.id))
+
+    const nodeMatches = (node: MindMapNodeType) => searchableContent(node).includes(loweredQuery)
+
+    const descendantsMatch = (nodeId: string): boolean => {
+      const children = childrenByParent.get(nodeId) ?? []
+      return children.some((child) => nodeMatches(child) || descendantsMatch(child.id))
+    }
+
+    const visit = (node: MindMapNodeType, depth: number, branchId: string) => {
+      if (loweredQuery && !nodeMatches(node) && !descendantsMatch(node.id)) return
+      list.push({ node, depth, branchId })
+
+      const shouldExpand = loweredQuery ? true : expandedNodeIds.has(node.id)
+      if (!shouldExpand) return
+
+      const children = childrenByParent.get(node.id) ?? []
+      children.forEach((child) => visit(child, depth + 1, branchId))
+    }
+
+    rootNodes.forEach((root) => {
+      if (!allowedRootIds.has(root.id)) return
+      visit(root, 1, root.id)
+    })
+
+    return list
+  }, [childrenByParent, expandedNodeIds, focusedRootId, loweredQuery, rootNodes])
+
+  const layout = useMemo(
+    () => buildRadialLayout(visible, { ringGap: 320, minNodeArc: 240, nodePadding: 28, maxIterations: 36 }),
+    [visible]
   )
 
-  const buildPathToRoot = (nodeId: string): string[] => {
-    const path: string[] = []
-    let current: MindMapNodeType | undefined = nodeMap.get(nodeId)
-    while (current) {
-      path.unshift(current.id)
-      if (!current.parentId) break
-      current = nodeMap.get(current.parentId)
-    }
-    return path
-  }
-
-  const collapseToPath = (nodeId: string): Set<string> => {
-    const path = new Set(buildPathToRoot(nodeId))
-    const rootId = rootByNodeId.get(nodeId)
-    const next = new Set<string>()
-    for (const expandedId of expandedNodeIds) {
-      const expandedRootId = rootByNodeId.get(expandedId)
-      if (!expandedRootId || expandedRootId !== rootId) {
-        next.add(expandedId)
-        continue
-      }
-      if (path.has(expandedId)) next.add(expandedId)
-    }
-    return next
-  }
+  const detailPanelNode = detailPanelNodeId ? nodeMap.get(detailPanelNodeId) ?? null : null
 
   const handleToggleExpand = (nodeId: string) => {
     setSelectedNodeId(nodeId)
     setExpandedNodeIds((prev) => {
-      const current = new Set(prev)
-      if (current.has(nodeId)) {
-        current.delete(nodeId)
-        return current
+      const next = new Set(prev)
+      if (next.has(nodeId)) {
+        next.delete(nodeId)
+        getDescendants(nodeId, childrenByParent).forEach((descendantId) => next.delete(descendantId))
+        return next
       }
-      const collapsed = collapseToPath(nodeId)
-      collapsed.add(nodeId)
-      return collapsed
+
+      next.add(nodeId)
+      return next
+    })
+  }
+
+  const handleSetFocusedRoot = (nodeId: string | null) => {
+    if (!nodeId) {
+      setFocusedRootId(null)
+      return
+    }
+
+    const rootId = rootByNodeId.get(nodeId)
+    if (!rootId) return
+
+    setFocusedRootId(rootId)
+    setExpandedNodeIds((prev) => {
+      const next = new Set(prev)
+      next.add(rootId)
+      return next
     })
   }
 
@@ -110,41 +167,6 @@ export const MindMapTree = ({
     setDetailPanelNodeId(nodeId)
     onOpenTopic(nodeId)
   }
-
-  const visible = useMemo(() => {
-    const list: Array<{ node: MindMapNodeType; depth: number; branchId: string }> = []
-
-    const nodeMatches = (node: MindMapNodeType) =>
-      [node.title, node.descriptionShort, node.summary ?? '', ...node.tags].join(' ').toLowerCase().includes(loweredQuery)
-
-    const descendantsMatch = (node: MindMapNodeType): boolean =>
-      node.childrenIds.some((childId) => {
-        const child = nodeMap.get(childId)
-        return child ? nodeMatches(child) || descendantsMatch(child) : false
-      })
-
-    const visit = (node: MindMapNodeType, depth: number, branchId: string) => {
-      if (loweredQuery && !nodeMatches(node) && !descendantsMatch(node)) return
-      list.push({ node, depth, branchId })
-      const expanded = expandedNodeIds.has(node.id) || Boolean(loweredQuery)
-      if (!expanded) return
-
-      node.childrenIds.forEach((childId) => {
-        const child = nodeMap.get(childId)
-        if (child) visit(child, depth + 1, branchId)
-      })
-    }
-
-    rootNodes.forEach((root) => visit(root, 1, root.id))
-    return list
-  }, [expandedNodeIds, loweredQuery, nodeMap, rootNodes])
-
-  const layout = useMemo(
-    () => buildRadialLayout(visible, { ringGap: 320, minNodeArc: 240, nodePadding: 28, maxIterations: 36 }),
-    [visible]
-  )
-
-  const detailPanelNode = detailPanelNodeId ? nodeMap.get(detailPanelNodeId) ?? null : null
 
   return (
     <div className="mindmap-fullscreen-layout">
@@ -156,16 +178,16 @@ export const MindMapTree = ({
           className="input"
         />
         <div className="actions-row mindmap-toolbar">
-          {roots.map((root) => (
+          {rootNodes.map((root) => (
             <button
               key={root.id}
               className={`root-filter-btn ${focusedRootId === root.id ? 'is-active' : ''}`}
-              onClick={() => setFocusedRootId((current) => (current === root.id ? null : root.id))}
+              onClick={() => handleSetFocusedRoot(focusedRootId === root.id ? null : root.id)}
             >
               {root.title === 'Conhecimentos Específicos' ? 'Conteúdos CBMSC' : root.title}
             </button>
           ))}
-          <button onClick={() => setExpandedNodeIds(new Set())}>Recolher tudo</button>
+          <button onClick={() => setExpandedNodeIds(new Set(rootNodes.map((node) => node.id)))}>Recolher tudo</button>
           {selectedNodeId ? (
             <button className={reviewedNodeIds.has(selectedNodeId) ? 'reviewed' : ''} onClick={() => onToggleReviewed(selectedNodeId)}>
               {reviewedNodeIds.has(selectedNodeId) ? 'Revisado ✓' : 'Marcar revisado'}
@@ -184,14 +206,15 @@ export const MindMapTree = ({
         selectedNodeId={selectedNodeId}
         detailPanelNode={detailPanelNode}
         hoveredNodeId={hoveredNodeId}
+        expandedNodeIds={expandedNodeIds}
         onHoverNode={setHoveredNodeId}
         onSelectNode={setSelectedNodeId}
         onToggleExpandNode={handleToggleExpand}
         onDetailNode={handleDetailNode}
         onOpenTopic={handleDetailNode}
         onTrainNode={onTrainNode}
-        onFocusRoot={(nodeId) => setFocusedRootId(rootByNodeId.get(nodeId) ?? null)}
-        onResetFocus={() => setFocusedRootId(null)}
+        onFocusRoot={(nodeId) => handleSetFocusedRoot(nodeId)}
+        onResetFocus={() => handleSetFocusedRoot(null)}
       />
     </div>
   )

@@ -19,6 +19,7 @@ type Props = {
   selectedNodeId: string | null
   detailPanelNode: MindMapNodeType | null
   hoveredNodeId: string | null
+  expandedNodeIds: Set<string>
   onHoverNode: (id: string | null) => void
   onSelectNode: (id: string) => void
   onToggleExpandNode: (id: string) => void
@@ -82,6 +83,7 @@ export const MindMapCanvas = memo(({
   selectedNodeId,
   detailPanelNode,
   hoveredNodeId,
+  expandedNodeIds,
   onHoverNode,
   onSelectNode,
   onToggleExpandNode,
@@ -284,7 +286,7 @@ export const MindMapCanvas = memo(({
                   hovered={hoveredNodeId === entry.node.id}
                   selected={selectedNodeId === entry.node.id}
                   deemphasized={deemphasized}
-                  expanded={entry.node.childrenIds.length > 0 && layout.map.has(entry.node.childrenIds[0])}
+                  expanded={expandedNodeIds.has(entry.node.id)}
                   hasChildren={entry.node.childrenIds.length > 0}
                   onHover={onHoverNode}
                   onSelect={onSelectNode}

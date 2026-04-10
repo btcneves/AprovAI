@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import type { MindMapNode } from '@/domain/types'
 import { MindMapTree } from '@/features/mindmap/components/MindMapTree'
@@ -24,9 +24,22 @@ const nodes: MindMapNode[] = [
     descriptionShort: 'Sintaxe base',
     descriptionDetailed: 'Detalhes sintaxe',
     parentId: 'root-portugues',
-    childrenIds: [],
+    childrenIds: ['pt-concordancia'],
     tags: [],
     editalReference: '1.1',
+    relatedQuestionIds: [],
+    priority: 'media'
+  },
+  {
+    id: 'pt-concordancia',
+    title: 'Concordância',
+    discipline: 'portugues',
+    descriptionShort: 'Concordância nominal',
+    descriptionDetailed: 'Detalhes concordância',
+    parentId: 'pt-sintaxe',
+    childrenIds: [],
+    tags: [],
+    editalReference: '1.1.1',
     relatedQuestionIds: [],
     priority: 'media'
   },
@@ -59,7 +72,7 @@ const nodes: MindMapNode[] = [
 ]
 
 describe('MindMapTree interactions', () => {
-  it('expande e recolhe ramos por etapas', () => {
+  it('renderiza raízes e primeiro nível por padrão, e expande/recolhe subníveis', () => {
     render(
       <MindMapTree
         nodes={nodes}
@@ -72,16 +85,19 @@ describe('MindMapTree interactions', () => {
       />
     )
 
-    expect(screen.queryByText('Sintaxe')).toBeNull()
+    expect(screen.getByRole('button', { name: 'Língua Portuguesa' })).toBeTruthy()
+    expect(screen.getByText('Sintaxe')).toBeTruthy()
+    expect(screen.queryByText('Concordância')).toBeNull()
 
     fireEvent.click(screen.getAllByRole('button', { name: 'Expandir' })[0])
-    expect(screen.getByText('Sintaxe')).toBeTruthy()
+    expect(screen.getByText('Concordância')).toBeTruthy()
 
-    fireEvent.click(screen.getAllByRole('button', { name: 'Recolher' })[0])
-    expect(screen.queryByText('Sintaxe')).toBeNull()
+    const sintaxeCard = screen.getByText('Sintaxe').closest('article') as HTMLElement
+    fireEvent.click(within(sintaxeCard).getByRole('button', { name: 'Recolher' }))
+    expect(screen.queryByText('Concordância')).toBeNull()
   })
 
-  it('detalhar abre painel correto e treinar permanece funcional', () => {
+  it('detalhar abre painel correto e não conflita com expansão', () => {
     const onTrainNode = vi.fn()
 
     render(
@@ -96,8 +112,12 @@ describe('MindMapTree interactions', () => {
       />
     )
 
+    fireEvent.click(screen.getAllByRole('button', { name: 'Expandir' })[0])
+    expect(screen.getByText('Concordância')).toBeTruthy()
+
     fireEvent.click(screen.getAllByRole('button', { name: 'Detalhar' })[0])
     expect(screen.getByText('Detalhes português')).toBeTruthy()
+    expect(screen.getByText('Concordância')).toBeTruthy()
 
     fireEvent.click(screen.getByRole('button', { name: 'Treinar' }))
     expect(onTrainNode).toHaveBeenCalledWith('root-portugues')
@@ -116,7 +136,12 @@ describe('MindMapTree interactions', () => {
       />
     )
 
-    expect(screen.getByRole('button', { name: 'Língua Portuguesa' })).toBeTruthy()
+    fireEvent.click(screen.getByRole('button', { name: 'Língua Portuguesa' }))
+    expect(screen.getByText('Sintaxe')).toBeTruthy()
+    expect(screen.queryByText('APH / ABCDE')).toBeNull()
+
+    fireEvent.click(screen.getByRole('button', { name: 'Mapa completo' }))
+    expect(screen.getByText('APH / ABCDE')).toBeTruthy()
     expect(screen.getByRole('button', { name: 'Conteúdos CBMSC' })).toBeTruthy()
   })
 })

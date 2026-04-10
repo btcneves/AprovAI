@@ -323,7 +323,7 @@ export const buildRadialLayout = (
   const map = new Map(nodes.map((node) => [node.node.id, node]))
 
   const edges = nodes
-    .filter((entry) => entry.node.parentId)
+    .filter((entry) => entry.node.parentId && map.has(entry.node.parentId))
     .map((entry) => ({
       id: `${entry.node.parentId}-${entry.node.id}`,
       sourceId: entry.node.parentId as string,
