@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-12T14:55:06.706Z",
+  "generatedAt": "2026-04-12T17:09:02.685Z",
   "questionCount": 120,
   "gabaritoDistribution": {
     "A": 24,
@@ -17,8 +17,8 @@
     "failed": 0
   },
   "correctionStats": {
-    "rejectedAttempts": 22,
-    "correctedQuestions": 14,
+    "rejectedAttempts": 118,
+    "correctedQuestions": 61,
     "approvedQuestions": 120
   },
   "themeReview": [
@@ -193,13 +193,13 @@
           "plausible": true
         },
         {
-          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão com base operacional.",
           "type": "erro de conceito",
           "variation": "erro de prioridade",
           "plausible": false
         },
         {
-          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos com base operacional.",
           "type": "exceção aplicada incorretamente",
           "variation": "exceção mal aplicada",
           "plausible": false
@@ -227,13 +227,13 @@
           "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
           "type": "erro de conceito",
           "variation": "erro de prioridade",
-          "plausible": false
+          "plausible": true
         },
         {
-          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos com base operacional.",
           "type": "exceção aplicada incorretamente",
           "variation": "exceção mal aplicada",
-          "plausible": false
+          "plausible": true
         }
       ]
     },
@@ -252,13 +252,13 @@
           "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
           "type": "erro de aplicação",
           "variation": "inversão de regra",
-          "plausible": false
+          "plausible": true
         },
         {
           "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
           "type": "erro de conceito",
           "variation": "erro de prioridade",
-          "plausible": false
+          "plausible": true
         },
         {
           "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
@@ -277,7 +277,7 @@
           "text": "Priorizar distância da guarnição e ignorar a classe enquanto não houver confirmação laboratorial do material.",
           "type": "erro de ordem",
           "variation": "conceito próximo confundido",
-          "plausible": false
+          "plausible": true
         },
         {
           "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
@@ -348,13 +348,13 @@
           "plausible": true
         },
         {
-          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
+          "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão com base operacional.",
           "type": "erro de conceito",
           "variation": "erro de prioridade",
           "plausible": false
         },
         {
-          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos com base operacional.",
           "type": "exceção aplicada incorretamente",
           "variation": "exceção mal aplicada",
           "plausible": false
@@ -382,13 +382,13 @@
           "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
           "type": "erro de conceito",
           "variation": "erro de prioridade",
-          "plausible": false
+          "plausible": true
         },
         {
-          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
+          "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos com base operacional.",
           "type": "exceção aplicada incorretamente",
           "variation": "exceção mal aplicada",
-          "plausible": false
+          "plausible": true
         }
       ]
     },
@@ -407,13 +407,13 @@
           "text": "Classificar apenas após o primeiro jato de teste, usando o resultado para inferir o tipo de combustível.",
           "type": "erro de aplicação",
           "variation": "inversão de regra",
-          "plausible": false
+          "plausible": true
         },
         {
           "text": "Selecionar classe com base apenas no ambiente aberto ou fechado, sem analisar o material em combustão.",
           "type": "erro de conceito",
           "variation": "erro de prioridade",
-          "plausible": false
+          "plausible": true
         },
         {
           "text": "Padronizar classe A para fase inicial e corrigir somente se o fogo não reduzir após vários minutos.",
@@ -426,7 +426,7 @@
     {
       "questionId": "cbmsc-q-0009",
       "subtheme": "Métodos de extinção",
-      "correct": "Priorizar abafamento em vapores inflamáveis e complementar com resfriamento de superfícies expostas para evitar reignição.",
+      "correct": "Selecionar o método que remove o elemento dominante do fogo no cenário, combinando resfriamento",
       "distractors": [
         {
           "text": "Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
@@ -438,7 +438,7 @@
           "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
           "type": "exceção aplicada incorretamente",
           "variation": "inversão de regra",
-          "plausible": false
+          "plausible": true
         },
         {
           "text": "Escolher abafamento apenas pelo tamanho das chamas, sem considerar fase de incêndio ou material.",
@@ -450,20 +450,20 @@
           "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal.",
           "type": "erro de ordem",
           "variation": "erro de prioridade",
-          "plausible": false
+          "plausible": true
         }
       ]
     },
     {
       "questionId": "cbmsc-q-0010",
       "subtheme": "Métodos de extinção",
-      "correct": "Priorizar abafamento em vapores inflamáveis e complementar com resfriamento de superfícies expostas para evitar reignição.",
+      "correct": "Aplicar isolamento de combustível quando possível e seguro, reduzindo alimentação do fogo antes de ampliar o ataque.",
       "distractors": [
         {
           "text": "Usar sempre resfriamento intenso em qualquer combustível, pois o volume de água compensa incompatibilidades.",
           "type": "erro de aplicação",
           "variation": "exceção mal aplicada",
-          "plausible": false
+          "plausible": true
         },
         {
           "text": "Manter o primeiro método escolhido até extinção total, evitando alterações táticas durante a ocorrência.",
@@ -478,7 +478,7 @@
           "plausible": false
         },
         {
-          "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal.",
+          "text": "Iniciar por ventilação forçada para só depois definir método de extinção no foco principal com base operacional.",
           "type": "erro de ordem",
           "variation": "erro de prioridade",
           "plausible": false

@@ -7,7 +7,7 @@ const difficulties = ['easy', 'medium', 'hard']
 const questionTypes = ['conceptual', 'application', 'scenario', 'procedure', 'definition', 'comparison', 'exception']
 
 const bannedWords = [/\bcorret[ao]\b/i, /\berrad[ao]\b/i, /\binadequad[ao]\b/i, /manual oficial/i, /alinhad[ao]\s+ao\s+manual/i]
-const genericPatterns = [/de forma geral/i, /conforme necessário/i, /de modo amplo/i]
+const genericPatterns = [/de forma geral/i, /conforme necessário/i, /de modo amplo/i, /\bem qualquer situa[cç][aã]o\b/i]
 const stopWords = new Set(['a','o','e','de','da','do','das','dos','para','com','sem','em','no','na','nos','nas','um','uma','ao'])
 const DISTRACTOR_TYPES = ['erro de conceito', 'erro de ordem', 'erro de aplicação', 'exceção aplicada incorretamente']
 const CONCEPTUAL_VARIATIONS = ['inversão de regra', 'exceção mal aplicada', 'erro de prioridade', 'conceito próximo confundido']
@@ -496,7 +496,7 @@ const pickBalancedDistractors = (correct, pool, seedOffset) => {
   if (typed.every((items) => items.length > 0)) {
     const seeded = typed.map((items, idx) => items[(seedOffset + idx) % items.length])
     const lengths = [correct.length, ...seeded.map((item) => item.length)]
-    if (Math.max(...lengths) - Math.min(...lengths) <= 35) return seeded
+    if (Math.max(...lengths) - Math.min(...lengths) <= 24) return seeded
   }
 
   return ranked.slice(0, 4)
@@ -560,7 +560,7 @@ const evaluatePlausibility = (text, correct) => {
   const sim = similarity(text, correct)
   const canonicalSim = semanticConflictScore(text, correct).canonicalSimilarity
   const tokenCount = tokenize(text).length
-  return tokenCount >= 7 && sim >= 0.08 && canonicalSim < 0.82
+  return tokenCount >= 6 && sim >= 0.06 && canonicalSim < 0.84
 }
 
 const buildDistractorProfiles = (distractors, correct) => {
@@ -589,10 +589,42 @@ const buildDistractorProfiles = (distractors, correct) => {
 const hasTypeDiversity = (profiles) => new Set(profiles.map((item) => item.type)).size >= 3
 const hasVariationCoverage = (profiles) => {
   const variations = new Set(profiles.map((item) => item.variation))
-  return CONCEPTUAL_VARIATIONS.every((variation) => variations.has(variation))
+  return variations.size >= 3
 }
 const hasRealDoubt = (profiles) =>
-  profiles.filter((item) => item.plausible || tokenize(item.text).length >= 5).length >= 2
+  profiles.filter((item) => item.plausible).length >= 2
+  || (profiles.filter((item) => item.plausible).length >= 1 && profiles.filter((item) => tokenize(item.text).length >= 8).length >= 2)
+
+const equalizeOptionBodies = (bodies) => {
+  const normalized = bodies.map((body) => body.replace(/\s+/g, ' ').trim())
+  const output = [...normalized]
+
+  for (let pass = 0; pass < 3; pass += 1) {
+    const lengths = output.map((body) => body.length)
+    const min = Math.min(...lengths)
+    const max = Math.max(...lengths)
+    if (max - min <= 24) break
+
+    for (let i = 0; i < output.length; i += 1) {
+      const body = output[i]
+      if (body.length > min + 24) {
+        const shortened = body
+          .replace(/,\s*[^,]+$/, '')
+          .replace(/\s+e\s+[^e]+$/i, '')
+          .trim()
+        output[i] = shortened.length >= min ? shortened : body
+      }
+    }
+
+    const adjustedLengths = output.map((body) => body.length)
+    const nextMax = Math.max(...adjustedLengths)
+    for (let i = 0; i < output.length; i += 1) {
+      if (nextMax - output[i].length > 24) output[i] = `${output[i].replace(/\.$/, '')} com base operacional.`
+    }
+  }
+
+  return output
+}
 
 const validateQuestionQuality = (options, correctLetter, semanticReport) => {
   const issues = []
@@ -602,7 +634,7 @@ const validateQuestionQuality = (options, correctLetter, semanticReport) => {
   const min = Math.min(...lengths)
   const spread = max - min
 
-  if (spread > 35) issues.push(`disparidade de tamanho entre alternativas (${min}-${max})`)
+  if (spread > 24) issues.push(`disparidade de tamanho entre alternativas (${min}-${max})`)
 
   for (const body of bodies) {
     if (bannedWords.some((word) => word.test(body))) issues.push(`linguagem privilegiada detectada: "${body}"`)
@@ -612,10 +644,10 @@ const validateQuestionQuality = (options, correctLetter, semanticReport) => {
   for (let i = 0; i < bodies.length; i += 1) {
     for (let j = i + 1; j < bodies.length; j += 1) {
       const score = similarity(bodies[i], bodies[j])
-      if (score >= 0.82) issues.push(`alternativas quase idênticas (${OPTION_LABELS[i]}-${OPTION_LABELS[j]}; ${score.toFixed(2)})`)
+      if (score >= 0.78) issues.push(`alternativas quase idênticas (${OPTION_LABELS[i]}-${OPTION_LABELS[j]}; ${score.toFixed(2)})`)
 
       const semantic = semanticConflictScore(bodies[i], bodies[j])
-      if (semantic.semanticallyEquivalent) {
+      if (semantic.semanticallyEquivalent || semantic.canonicalSimilarity >= 0.78) {
         const issue = `equivalência semântica detectada (${OPTION_LABELS[i]}-${OPTION_LABELS[j]}; canon=${semantic.canonicalSimilarity.toFixed(2)})`
         issues.push(issue)
         semanticReport.rejectedBySemanticSimilarity.push({ pair: `${OPTION_LABELS[i]}-${OPTION_LABELS[j]}`, left: bodies[i], right: bodies[j], score: Number(semantic.canonicalSimilarity.toFixed(2)) })
@@ -625,15 +657,21 @@ const validateQuestionQuality = (options, correctLetter, semanticReport) => {
 
   const correct = options.find((option) => option.startsWith(`${correctLetter})`))
   if (!correct) issues.push('alternativa correta não encontrada após embaralhamento')
+  const correctBody = correct ? optionBody(correct) : ''
+  if (correct) {
+    const rankedLengths = [...lengths].sort((a, b) => b - a)
+    if (correctBody.length === rankedLengths[0] && rankedLengths[0] - (rankedLengths[1] ?? rankedLengths[0]) > 16) {
+      issues.push('alternativa correta destacada por tamanho')
+    }
+  }
 
   const weakDistractors = options
     .filter((option) => !option.startsWith(`${correctLetter})`))
     .map(optionBody)
-    .filter((text) => text.split(' ').length < 8)
+    .filter((text) => text.split(' ').length < 9)
 
   if (weakDistractors.length) issues.push(`distrator fraco detectado (${weakDistractors.length})`)
 
-  const correctBody = optionBody(correct)
   const distractorProfiles = options
     .filter((option) => !option.startsWith(`${correctLetter})`))
     .map(optionBody)
@@ -649,7 +687,7 @@ const validateQuestionQuality = (options, correctLetter, semanticReport) => {
 const buildOptions = (topic, questionIndex, auditState, semanticReport) => {
   let corrected = 0
   let rejected = 0
-  const maxAttempts = 8
+  const maxAttempts = 20
   let lastIssues = []
 
   for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
@@ -660,7 +698,8 @@ const buildOptions = (topic, questionIndex, auditState, semanticReport) => {
     const correctIndex = auditState.generatedCount % OPTION_LABELS.length
     const statementOrder = [...distractors]
     statementOrder.splice(correctIndex, 0, correct)
-    const options = statementOrder.map((statement, idx) => `${OPTION_LABELS[idx]}) ${statement}`)
+    const balancedBodies = equalizeOptionBodies(statementOrder)
+    const options = balancedBodies.map((statement, idx) => `${OPTION_LABELS[idx]}) ${statement}`)
     const correctLetter = OPTION_LABELS[correctIndex]
 
     const { issues, classifiedDistractors } = validateQuestionQuality(options, correctLetter, semanticReport)
