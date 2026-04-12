@@ -1,29 +1,83 @@
 {
   "id": "cbmsc-hemorragias",
   "title": "Hemorragias",
-  "summary": "APH: Controle de sangramento. Revisão em tópicos curtos para estudo rápido.",
+  "summary": "APH: Controle de sangramento. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.",
   "nodes": [
     {
       "id": "cbmsc-hemorragias-n1",
-      "label": "APH / ABCDE",
+      "label": "Controle imediato",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-hemorragias-n1-a",
-          "label": "comando de incidentes",
+          "label": "Compressão direta como primeira medida.",
           "type": "child"
         },
         {
           "id": "cbmsc-hemorragias-n1-b",
-          "label": "Controle de hemorragia com compressão direta imediata.",
+          "label": "Curativo compressivo mantém hemostasia.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-hemorragias-n1-c",
+          "label": "Escalonar rápido quando sangramento persiste.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-hemorragias-n2",
+      "label": "Uso de torniquete",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-hemorragias-n2-a",
+          "label": "Indicado em hemorragia grave de extremidades.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-hemorragias-n2-b",
+          "label": "Posicionamento proximal ao ferimento.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-hemorragias-n2-c",
+          "label": "Registrar horário de aplicação para continuidade do cuidado.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-hemorragias-n3",
+      "label": "Condutas de segurança",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-hemorragias-n3-a",
+          "label": "Não atrasar controle hemorrágico por procedimentos secundários.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-hemorragias-n3-b",
+          "label": "Prevenir choque com aquecimento e monitorização.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-hemorragias-n3-c",
+          "label": "Transporte rápido para tratamento definitivo.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "comando de incidentes",
-    "Controle de hemorragia com compressão direta imediata."
+    "Compressão direta como primeira medida.",
+    "Curativo compressivo mantém hemostasia.",
+    "Escalonar rápido quando sangramento persiste.",
+    "Indicado em hemorragia grave de extremidades.",
+    "Posicionamento proximal ao ferimento.",
+    "Registrar horário de aplicação para continuidade do cuidado.",
+    "Não atrasar controle hemorrágico por procedimentos secundários."
   ],
   "commonMistakes": [
     "Confundir conceitos de hemorragias.",
@@ -57,7 +111,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-a7eb9e35",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.. comando de incidentes. Controle de hemorragia com compressão direta imediata.. A: via aérea com proteção cer",
       "pageStart": 12,
       "pageEnd": 12
     },
@@ -67,7 +121,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-atendimento-pre-hospitalar-no-cbmsc-2022-sec-99e7d76d",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=900:aph-ti-atendimento-pre-hospitalar-no-cbmsc-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.. comando de incidentes. Controle de hemorragia com compressão direta imediata.. A: via aérea com proteção cer",
       "pageStart": 30,
       "pageEnd": 30
     },
@@ -77,7 +131,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-e9ab0b70",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.. comando de incidentes. Controle de hemorragia com compressão direta imediata.. A: via aérea com proteção cer",
       "pageStart": 75,
       "pageEnd": 75
     },
@@ -87,7 +141,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-b65ccd27",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "excerpt": "Foco: abcde. Foco: airway. Foco: breathing. comando de incidentes.. comando de incidentes.. compressão direta.. comando de incidentes. Controle de hemorragia com compressão direta imediata.. A: via aérea com proteção cer",
       "pageStart": 9,
       "pageEnd": 9
     },
@@ -97,7 +151,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.. comando de incidentes. Controle de hemorragia com compressão direta imediata.. A: via aérea",
       "pageStart": 118,
       "pageEnd": 118
     },
@@ -107,7 +161,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.. comando de incidentes. Controle de hemorragia com compressão direta imediata.. A: via aérea",
       "pageStart": 11,
       "pageEnd": 11
     },
@@ -117,7 +171,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-b65f1def",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.. comando de incidentes. Controle de hemorragia com compressão direta imediata.. A: via aérea",
       "pageStart": 43,
       "pageEnd": 43
     },
@@ -127,7 +181,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-10e40126",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.",
+      "excerpt": "Foco: hemorragia. Foco: torniquete. Foco: compressão direta. comando de incidentes.. comando de incidentes.. compressão direta.. comando de incidentes. Controle de hemorragia com compressão direta imediata.. A: via aérea",
       "pageStart": 49,
       "pageEnd": 49
     }

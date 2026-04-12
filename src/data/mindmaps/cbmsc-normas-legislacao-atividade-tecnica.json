@@ -1,42 +1,83 @@
 {
   "id": "cbmsc-normas-legislacao-atividade-tecnica",
   "title": "Normas / legislação / atividade técnica",
-  "summary": "Normas e Legislação: Base normativa CBMSC. Revisão em tópicos curtos para estudo rápido.",
+  "summary": "Normas e Legislação: Base normativa CBMSC. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.",
   "nodes": [
     {
       "id": "cbmsc-normas-legislacao-atividade-tecnica-n1",
-      "label": "Normas / legislação / atividade técnica",
+      "label": "Base normativa CBMSC",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-normas-legislacao-atividade-tecnica-n1-a",
-          "label": "FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso...",
+          "label": "Aplicar instruções e normas vigentes ao caso concreto.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n1-b",
+          "label": "Registrar fundamentação técnica das decisões.",
           "type": "child"
         },
         {
           "id": "cbmsc-normas-legislacao-atividade-tecnica-n1-c",
-          "label": "CTB e IG - -BM aparecem recorrentemente em provas",
+          "label": "Atualização normativa contínua reduz não conformidades.",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-normas-legislacao-atividade-tecnica-n4",
-      "label": "Normas e legislação básica",
+      "id": "cbmsc-normas-legislacao-atividade-tecnica-n2",
+      "label": "Atividade técnica",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-normas-legislacao-atividade-tecnica-n4-b",
-          "label": "Cumprimento de POP e ICS reduz erro operacional",
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n2-a",
+          "label": "Compatibilizar exigências com risco da ocupação.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n2-b",
+          "label": "Rastreabilidade documental em vistorias e pareceres.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n2-c",
+          "label": "Padronização de critérios melhora segurança jurídica.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-normas-legislacao-atividade-tecnica-n3",
+      "label": "Foco de prova",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n3-a",
+          "label": "Diferença entre competência legal e procedimento técnico.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n3-b",
+          "label": "Leitura atenta de termos obrigatórios da norma.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-normas-legislacao-atividade-tecnica-n3-c",
+          "label": "Evitar decisões por costume sem respaldo documental.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "FATORES CRÍTICOS DE SUCESSO CORPORATIVOS A definição mais clássica para fatores críticos de sucesso...",
-    "CTB e IG - -BM aparecem recorrentemente em provas",
-    "Cumprimento de POP e ICS reduz erro operacional"
+    "Aplicar instruções e normas vigentes ao caso concreto.",
+    "Registrar fundamentação técnica das decisões.",
+    "Atualização normativa contínua reduz não conformidades.",
+    "Compatibilizar exigências com risco da ocupação.",
+    "Rastreabilidade documental em vistorias e pareceres.",
+    "Padronização de critérios melhora segurança jurídica.",
+    "Diferença entre competência legal e procedimento técnico."
   ],
   "commonMistakes": [
     "Confundir conceitos de normas / legislação / atividade técnica.",

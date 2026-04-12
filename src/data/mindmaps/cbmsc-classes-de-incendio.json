@@ -1,60 +1,83 @@
 {
   "id": "cbmsc-classes-de-incendio",
   "title": "Classes de incêndio",
-  "summary": "Incêndio: Classificação e agentes extintores. Revisão em tópicos curtos para estudo rápido.",
+  "summary": "Incêndio: Classificação e agentes extintores. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.",
   "nodes": [
     {
       "id": "cbmsc-classes-de-incendio-n1",
-      "label": "Classes de incêndio",
+      "label": "Fundamentos da classificação",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-classes-de-incendio-n1-a",
-          "label": "Produtos da combustão: gases, chama, calor e fumaça.",
+          "label": "Classe A: sólidos combustíveis com formação de brasas.",
           "type": "child"
         },
         {
           "id": "cbmsc-classes-de-incendio-n1-b",
-          "label": "Gases da combustão",
+          "label": "Classe B: líquidos e gases inflamáveis com fogo em superfície.",
           "type": "child"
         },
         {
           "id": "cbmsc-classes-de-incendio-n1-c",
-          "label": "Fumaça",
+          "label": "Classe C: equipamentos energizados exigem agente não condutor.",
           "type": "child"
         }
       ]
     },
     {
-      "id": "cbmsc-classes-de-incendio-n4",
-      "label": "Extintores",
+      "id": "cbmsc-classes-de-incendio-n2",
+      "label": "Compatibilidade de agentes",
       "type": "main",
       "children": [
         {
-          "id": "cbmsc-classes-de-incendio-n4-a",
-          "label": "Classe C: material e agente extintor compatível.",
+          "id": "cbmsc-classes-de-incendio-n2-a",
+          "label": "Água pressurizada: indicada para classe A em foco inicial.",
           "type": "child"
         },
         {
-          "id": "cbmsc-classes-de-incendio-n4-b",
-          "label": "Usar agentes extintores não condutores em materiais energizados.",
+          "id": "cbmsc-classes-de-incendio-n2-b",
+          "label": "Espuma mecânica: controle de vapores e superfície em classe B.",
           "type": "child"
         },
         {
-          "id": "cbmsc-classes-de-incendio-n4-c",
-          "label": "Produtos da combu",
+          "id": "cbmsc-classes-de-incendio-n2-c",
+          "label": "PQS e CO2: aplicação conforme risco elétrico e ambiente.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-classes-de-incendio-n3",
+      "label": "Erros cobrados em prova",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-classes-de-incendio-n3-a",
+          "label": "Não iniciar combate sem confirmar classe predominante.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-classes-de-incendio-n3-b",
+          "label": "Não aplicar água em equipamento energizado.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-classes-de-incendio-n3-c",
+          "label": "Reavaliar classe após corte de energia ou mudança do material.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "Produtos da combustão: gases, chama, calor e fumaça.",
-    "Gases da combustão",
-    "Fumaça",
-    "Classe C: material e agente extintor compatível.",
-    "Usar agentes extintores não condutores em materiais energizados.",
-    "Produtos da combu"
+    "Classe A: sólidos combustíveis com formação de brasas.",
+    "Classe B: líquidos e gases inflamáveis com fogo em superfície.",
+    "Classe C: equipamentos energizados exigem agente não condutor.",
+    "Água pressurizada: indicada para classe A em foco inicial.",
+    "Espuma mecânica: controle de vapores e superfície em classe B.",
+    "PQS e CO2: aplicação conforme risco elétrico e ambiente.",
+    "Não iniciar combate sem confirmar classe predominante."
   ],
   "commonMistakes": [
     "Confundir conceitos de classes de incêndio.",

@@ -1,80 +1,103 @@
 {
-  "generatedAt": "2026-04-08T19:10:49.852Z",
+  "generatedAt": "2026-04-12T14:55:03.696Z",
   "sourceMode": "fallback-existing-mindmaps",
   "totals": {
-    "sectionsProcessed": 119,
+    "sectionsProcessed": 122,
     "mapsGenerated": 15,
     "linesRemovedNoise": 0,
     "linesRemovedShort": 0,
     "linesRemovedBroken": 0,
-    "linesKept": 119,
-    "duplicatesExact": 3889,
-    "duplicatesSimilar": 35,
+    "linesKept": 122,
+    "duplicatesExact": 4173,
+    "duplicatesSimilar": 25,
     "duplicatesHash": 0,
-    "qualityPruned": 54
+    "qualityPruned": 0
   },
   "beforeAfterSample": {
     "topic": "Extintores",
-    "before": "COMBATE A INCÊNDIO CLASSE C MATERIAIS ENERGIZADOS incêndio pode ser extinto após....",
-    "after": "Produtos da combustão: gases, chama, calor e fumaça."
+    "before": "Extintores de água, espuma, PQS e CO2.",
+    "after": "Extintores de água, espuma, PQS e CO2."
   },
   "finalMapExample": {
     "id": "cbmsc-extintores",
     "title": "Extintores",
-    "summary": "Incêndio: Tipos, uso e limitações. Revisão em tópicos curtos para estudo rápido.",
+    "summary": "Incêndio: Tipos, uso e limitações. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.",
     "nodes": [
       {
         "id": "cbmsc-extintores-n1",
-        "label": "Classes de incêndio",
+        "label": "Tipos e agentes",
         "type": "main",
         "children": [
           {
             "id": "cbmsc-extintores-n1-a",
-            "label": "Produtos da combustão: gases, chama, calor e fumaça.",
+            "label": "Extintores de água, espuma, PQS e CO2.",
             "type": "child"
           },
           {
             "id": "cbmsc-extintores-n1-b",
-            "label": "Gases da combustão",
+            "label": "Escolha deve seguir classe do incêndio e ambiente.",
             "type": "child"
           },
           {
             "id": "cbmsc-extintores-n1-c",
-            "label": "Fumaça",
+            "label": "Verificar pressão, lacre e estado do equipamento antes do uso.",
             "type": "child"
           }
         ]
       },
       {
-        "id": "cbmsc-extintores-n4",
-        "label": "Extintores",
+        "id": "cbmsc-extintores-n2",
+        "label": "Técnica de aplicação",
         "type": "main",
         "children": [
           {
-            "id": "cbmsc-extintores-n4-a",
-            "label": "Classe C: material e agente extintor compatível.",
+            "id": "cbmsc-extintores-n2-a",
+            "label": "Manter rota de fuga e distância segura.",
             "type": "child"
           },
           {
-            "id": "cbmsc-extintores-n4-b",
-            "label": "Usar agentes extintores não condutores em materiais energizados.",
+            "id": "cbmsc-extintores-n2-b",
+            "label": "Aplicar na base do fogo com movimento de varredura.",
             "type": "child"
           },
           {
-            "id": "cbmsc-extintores-n4-c",
-            "label": "Produtos da combu",
+            "id": "cbmsc-extintores-n2-c",
+            "label": "Substituir equipamento descarregado imediatamente.",
+            "type": "child"
+          }
+        ]
+      },
+      {
+        "id": "cbmsc-extintores-n3",
+        "label": "Limitações e segurança",
+        "type": "main",
+        "children": [
+          {
+            "id": "cbmsc-extintores-n3-a",
+            "label": "Extintor portátil é indicado para princípio de incêndio.",
+            "type": "child"
+          },
+          {
+            "id": "cbmsc-extintores-n3-b",
+            "label": "Em material energizado, priorizar agente não condutor.",
+            "type": "child"
+          },
+          {
+            "id": "cbmsc-extintores-n3-c",
+            "label": "Após extinção, monitorar foco para prevenir reignição.",
             "type": "child"
           }
         ]
       }
     ],
     "examHighlights": [
-      "Produtos da combustão: gases, chama, calor e fumaça.",
-      "Gases da combustão",
-      "Fumaça",
-      "Classe C: material e agente extintor compatível.",
-      "Usar agentes extintores não condutores em materiais energizados.",
-      "Produtos da combu"
+      "Extintores de água, espuma, PQS e CO2.",
+      "Escolha deve seguir classe do incêndio e ambiente.",
+      "Verificar pressão, lacre e estado do equipamento antes do uso.",
+      "Manter rota de fuga e distância segura.",
+      "Aplicar na base do fogo com movimento de varredura.",
+      "Substituir equipamento descarregado imediatamente.",
+      "Extintor portátil é indicado para princípio de incêndio."
     ],
     "commonMistakes": [
       "Confundir conceitos de extintores.",

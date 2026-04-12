@@ -29,6 +29,84 @@ const TOPICS = [
   { title: 'Normas / legislação / atividade técnica', theme: 'Normas e Legislação', subtheme: 'Base normativa CBMSC', keywords: ['ig', 'norma', 'legislação', 'atividade técnica', 'responsabilidade'], dependencies: [] }
 ]
 
+const STUDY_BLUEPRINTS = {
+  'Classes de incêndio': [
+    { label: 'Fundamentos da classificação', points: ['Classe A: sólidos combustíveis com formação de brasas.', 'Classe B: líquidos e gases inflamáveis com fogo em superfície.', 'Classe C: equipamentos energizados exigem agente não condutor.'] },
+    { label: 'Compatibilidade de agentes', points: ['Água pressurizada: indicada para classe A em foco inicial.', 'Espuma mecânica: controle de vapores e superfície em classe B.', 'PQS e CO2: aplicação conforme risco elétrico e ambiente.'] },
+    { label: 'Erros cobrados em prova', points: ['Não iniciar combate sem confirmar classe predominante.', 'Não aplicar água em equipamento energizado.', 'Reavaliar classe após corte de energia ou mudança do material.'] }
+  ],
+  'Métodos de extinção': [
+    { label: 'Resfriamento', points: ['Reduz temperatura abaixo do ponto de ignição.', 'Aplicação controlada evita choque térmico e projeção de material.', 'Monitorar reignição durante rescaldo.'] },
+    { label: 'Abafamento', points: ['Diminui contato do combustível com o comburente.', 'Uso frequente com espuma e tampa em recipientes pequenos.', 'Evitar ventilação descoordenada durante o abafamento.'] },
+    { label: 'Isolamento e quebra da reação', points: ['Retira combustível do processo de combustão.', 'Controle de válvulas e vazamentos reduz propagação.', 'Métodos podem ser combinados conforme tetraedro do fogo.'] }
+  ],
+  'Comportamento do fogo': [
+    { label: 'Leitura de ambiente', points: ['Cor, volume e velocidade da fumaça orientam risco.', 'Calor acumulado indica potencial de transição rápida.', 'Ventilação influencia intensidade e direção das chamas.'] },
+    { label: 'Fenômenos críticos', points: ['Flashover: ignição generalizada por alta temperatura.', 'Backdraft: risco de explosão com entrada súbita de oxigênio.', 'Reconhecimento precoce reduz exposição da guarnição.'] },
+    { label: 'Conduta operacional', points: ['Progressão com linha pronta e comunicação ativa.', 'Controle de abertura de portas e janelas.', 'Pulsos de resfriamento de gases quando tecnicamente indicados.'] }
+  ],
+  'Extintores': [
+    { label: 'Tipos e agentes', points: ['Extintores de água, espuma, PQS e CO2.', 'Escolha deve seguir classe do incêndio e ambiente.', 'Verificar pressão, lacre e estado do equipamento antes do uso.'] },
+    { label: 'Técnica de aplicação', points: ['Manter rota de fuga e distância segura.', 'Aplicar na base do fogo com movimento de varredura.', 'Substituir equipamento descarregado imediatamente.'] },
+    { label: 'Limitações e segurança', points: ['Extintor portátil é indicado para princípio de incêndio.', 'Em material energizado, priorizar agente não condutor.', 'Após extinção, monitorar foco para prevenir reignição.'] }
+  ],
+  'APH / ABCDE': [
+    { label: 'Sequência primária', points: ['A: via aérea com proteção cervical quando necessário.', 'B: avaliar ventilação e suporte respiratório.', 'C: controle circulatório e hemorragias graves.'] },
+    { label: 'Avaliação contínua', points: ['D: estado neurológico com reavaliação frequente.', 'E: exposição controlada com prevenção de hipotermia.', 'Tratar achados críticos durante a própria sequência.'] },
+    { label: 'Erros frequentes', points: ['Não inverter ordem por achado isolado.', 'Não atrasar intervenção crítica para exame secundário.', 'Repetir ABCDE em qualquer piora clínica.'] }
+  ],
+  'RCP': [
+    { label: 'Início da reanimação', points: ['Reconhecer PCR e iniciar compressões sem demora.', 'Minimizar interrupções entre ciclos.', 'DEA deve ser integrado assim que disponível.'] },
+    { label: 'Qualidade da manobra', points: ['Compressões com profundidade e frequência adequadas.', 'Troca de compressor evita fadiga e perda de qualidade.', 'Ventilações conforme protocolo vigente da equipe.'] },
+    { label: 'Segurança e coordenação', points: ['Afastar equipe durante análise e choque do DEA.', 'Retomar compressões imediatamente após orientação do DEA.', 'Comunicação clara aumenta eficiência da equipe.'] }
+  ],
+  'Trauma': [
+    { label: 'Abordagem inicial', points: ['Priorizar ameaças imediatas à vida.', 'Relacionar mecanismo de trauma com suspeitas clínicas.', 'Avaliação rápida orienta estratégia de transporte.'] },
+    { label: 'Estabilização', points: ['Restrição de movimento quando indicada.', 'Controle de hemorragia e perfusão são prioridades.', 'Evitar manipulações desnecessárias no cenário.'] },
+    { label: 'Transporte e reavaliação', points: ['Definir destino conforme gravidade e tempo-resposta.', 'Monitorar deterioração neurológica e sinais de choque.', 'Reavaliar intervenções durante todo atendimento.'] }
+  ],
+  'Hemorragias': [
+    { label: 'Controle imediato', points: ['Compressão direta como primeira medida.', 'Curativo compressivo mantém hemostasia.', 'Escalonar rápido quando sangramento persiste.'] },
+    { label: 'Uso de torniquete', points: ['Indicado em hemorragia grave de extremidades.', 'Posicionamento proximal ao ferimento.', 'Registrar horário de aplicação para continuidade do cuidado.'] },
+    { label: 'Condutas de segurança', points: ['Não atrasar controle hemorrágico por procedimentos secundários.', 'Prevenir choque com aquecimento e monitorização.', 'Transporte rápido para tratamento definitivo.'] }
+  ],
+  'Produtos perigosos': [
+    { label: 'Reconhecimento inicial', points: ['Identificar painéis de segurança e número ONU.', 'Aproximação cautelosa, preferencialmente a barlavento.', 'Avaliar risco antes de qualquer contato com produto.'] },
+    { label: 'Isolamento de área', points: ['Estabelecer zona quente, morna e fria.', 'Controlar acesso e fluxo de pessoas.', 'Acionar recursos especializados conforme risco.'] },
+    { label: 'Segurança da equipe', points: ['Selecionar EPI compatível com o cenário químico.', 'Evitar ações ofensivas sem identificação mínima do agente.', 'Comunicar riscos à rede de resposta.'] }
+  ],
+  'Salvamento em altura': [
+    { label: 'Planejamento técnico', points: ['Definir sistema com redundância e fator de segurança.', 'Escolher pontos de ancoragem com avaliação estrutural.', 'Briefing de função e comunicação antes da manobra.'] },
+    { label: 'Execução da manobra', points: ['Dupla checagem de nós e equipamentos.', 'Progressão controlada com sistema principal e backup.', 'Proteção de borda reduz desgaste da corda.'] },
+    { label: 'Gestão de risco', points: ['Interromper operação se risco superar benefício.', 'Revisar sistema após mudanças de carga.', 'Padronizar comandos para evitar erro operacional.'] }
+  ],
+  'Salvamento aquático': [
+    { label: 'Abordagem inicial', points: ['Priorizar alcance e lançamento antes da entrada na água.', 'Analisar corrente, vento e ponto de retorno.', 'Entrada só com técnica e equipamento compatíveis.'] },
+    { label: 'Retirada da vítima', points: ['Controle de aproximação para reduzir submersão secundária.', 'Condução para zona segura com flutuabilidade.', 'Iniciar avaliação primária imediatamente após retirada.'] },
+    { label: 'Segurança operacional', points: ['Trabalhar com cobertura e comunicação de equipe.', 'Delimitar área de resgate e controlar curiosos.', 'Revezar equipes em cenário de esforço prolongado.'] }
+  ],
+  'Resgate veicular': [
+    { label: 'Estabilização da cena', points: ['Sinalizar, isolar e eliminar riscos adicionais.', 'Estabilizar veículo antes de corte ou expansão.', 'Gerenciar vidros, airbags e fontes de energia.'] },
+    { label: 'Desencarceramento', points: ['Definir acesso conforme cinemática e lesões.', 'Empregar ferramentas com proteção da vítima.', 'Coordenar comando técnico e equipe de APH.'] },
+    { label: 'Extração segura', points: ['Movimentação alinhada com condição clínica.', 'Evitar tração inadequada em suspeita de trauma grave.', 'Preparar transporte com reavaliação contínua.'] }
+  ],
+  'Busca terrestre': [
+    { label: 'Planejamento de busca', points: ['Setorizar área com base no último ponto visto.', 'Definir equipes, rotas e frequência de comunicação.', 'Registrar progressão para evitar lacunas de cobertura.'] },
+    { label: 'Execução em campo', points: ['Aplicar técnicas de varredura e marcação.', 'Manter segurança da equipe conforme relevo e clima.', 'Atualizar comando com evidências encontradas.'] },
+    { label: 'Comando e controle', points: ['Replanejar busca com novas informações.', 'Controlar entrada e saída de equipes no perímetro.', 'Encerrar setor somente após confirmação de cobertura.'] }
+  ],
+  'Segurança operacional': [
+    { label: 'Gestão de risco', points: ['Avaliar risco-benefício antes de cada ação.', 'Revisar riscos dinâmicos durante a ocorrência.', 'Adotar medidas de controle para exposição da guarnição.'] },
+    { label: 'Comando e comunicação', points: ['Estruturar comando com funções claras.', 'Garantir comunicação objetiva entre equipes.', 'Briefing e debriefing reforçam aprendizagem operacional.'] },
+    { label: 'Disciplina de segurança', points: ['Trabalho em duplas e controle de pessoal.', 'Monitorar fadiga, hidratação e tempo de exposição.', 'Interromper operação insegura para reposicionamento.'] }
+  ],
+  'Normas / legislação / atividade técnica': [
+    { label: 'Base normativa CBMSC', points: ['Aplicar instruções e normas vigentes ao caso concreto.', 'Registrar fundamentação técnica das decisões.', 'Atualização normativa contínua reduz não conformidades.'] },
+    { label: 'Atividade técnica', points: ['Compatibilizar exigências com risco da ocupação.', 'Rastreabilidade documental em vistorias e pareceres.', 'Padronização de critérios melhora segurança jurídica.'] },
+    { label: 'Foco de prova', points: ['Diferença entre competência legal e procedimento técnico.', 'Leitura atenta de termos obrigatórios da norma.', 'Evitar decisões por costume sem respaldo documental.'] }
+  ]
+}
+
 const MIN_MEANINGFUL_CHARS = 18
 const MAX_SUBTHEMES = 4
 const MAX_POINTS_PER_SUBTHEME = 3
@@ -373,6 +451,7 @@ const validateAndPruneNodes = (nodes, counters) => {
 
 const buildMindMap = (topic, matches, counters) => {
   const id = `cbmsc-${slugify(topic.title)}`
+  const blueprint = STUDY_BLUEPRINTS[topic.title] ?? []
 
   const synthesized = matches
     .map((section) => summarizeSection(section, counters))
@@ -389,11 +468,11 @@ const buildMindMap = (topic, matches, counters) => {
     })
     .slice(0, MAX_SUBTHEMES)
 
-  let nodes = subthemes.map((item, index) => ({
+  let nodes = (blueprint.length ? blueprint : subthemes).map((item, index) => ({
     id: `${id}-n${index + 1}`,
-    label: item.subtheme,
+    label: item.subtheme ?? item.label,
     type: 'main',
-    children: item.points.slice(0, MAX_POINTS_PER_SUBTHEME).map((point, pointIndex) => ({
+    children: (item.points ?? []).slice(0, MAX_POINTS_PER_SUBTHEME).map((point, pointIndex) => ({
       id: `${id}-n${index + 1}-${String.fromCharCode(97 + pointIndex)}`,
       label: point,
       type: 'child'
@@ -415,7 +494,7 @@ const buildMindMap = (topic, matches, counters) => {
     }]
   }
 
-  const highlights = dedupeStrings(nodes.flatMap((node) => (node.children ?? []).map((child) => child.label)), counters).slice(0, 6)
+  const highlights = dedupeStrings(nodes.flatMap((node) => (node.children ?? []).map((child) => child.label)), counters).slice(0, 7)
 
   const uniqueSources = dedupeStrings(matches.map((item) => `${item.manualId}::${item.sectionId}`), counters)
     .map((compound) => {
@@ -428,7 +507,7 @@ const buildMindMap = (topic, matches, counters) => {
   return {
     id,
     title: topic.title,
-    summary: `${topic.theme}: ${topic.subtheme}. Revisão em tópicos curtos para estudo rápido.`,
+    summary: `${topic.theme}: ${topic.subtheme}. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.`,
     nodes,
     examHighlights: highlights,
     commonMistakes: [`Confundir conceitos de ${topic.title.toLowerCase()}.`, 'Ignorar sequência operacional prevista em manual.'],

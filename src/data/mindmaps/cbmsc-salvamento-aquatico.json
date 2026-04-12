@@ -1,35 +1,83 @@
 {
   "id": "cbmsc-salvamento-aquatico",
   "title": "Salvamento aquático",
-  "summary": "Salvamento: Guarda-vidas e abordagem. Revisão em tópicos curtos para estudo rápido.",
+  "summary": "Salvamento: Guarda-vidas e abordagem. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.",
   "nodes": [
     {
       "id": "cbmsc-salvamento-aquatico-n1",
-      "label": "Guarda-vidas e abordagem",
+      "label": "Abordagem inicial",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-salvamento-aquatico-n1-a",
-          "label": "Foco: salvamento aquático",
+          "label": "Priorizar alcance e lançamento antes da entrada na água.",
           "type": "child"
         },
         {
           "id": "cbmsc-salvamento-aquatico-n1-b",
-          "label": "Foco: afogamento",
+          "label": "Analisar corrente, vento e ponto de retorno.",
           "type": "child"
         },
         {
           "id": "cbmsc-salvamento-aquatico-n1-c",
-          "label": "Foco: praia",
+          "label": "Entrada só com técnica e equipamento compatíveis.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-salvamento-aquatico-n2",
+      "label": "Retirada da vítima",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-aquatico-n2-a",
+          "label": "Controle de aproximação para reduzir submersão secundária.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-aquatico-n2-b",
+          "label": "Condução para zona segura com flutuabilidade.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-aquatico-n2-c",
+          "label": "Iniciar avaliação primária imediatamente após retirada.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-salvamento-aquatico-n3",
+      "label": "Segurança operacional",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-salvamento-aquatico-n3-a",
+          "label": "Trabalhar com cobertura e comunicação de equipe.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-aquatico-n3-b",
+          "label": "Delimitar área de resgate e controlar curiosos.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-salvamento-aquatico-n3-c",
+          "label": "Revezar equipes em cenário de esforço prolongado.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "Foco: salvamento aquático",
-    "Foco: afogamento",
-    "Foco: praia"
+    "Priorizar alcance e lançamento antes da entrada na água.",
+    "Analisar corrente, vento e ponto de retorno.",
+    "Entrada só com técnica e equipamento compatíveis.",
+    "Controle de aproximação para reduzir submersão secundária.",
+    "Condução para zona segura com flutuabilidade.",
+    "Iniciar avaliação primária imediatamente após retirada.",
+    "Trabalhar com cobertura e comunicação de equipe."
   ],
   "commonMistakes": [
     "Confundir conceitos de salvamento aquático.",
@@ -64,7 +112,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-70d92952",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
+      "excerpt": "Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. F",
       "pageStart": 50,
       "pageEnd": 50
     },
@@ -104,7 +152,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-af217067",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Pr",
       "pageStart": 603,
       "pageEnd": 604
     },
@@ -114,7 +162,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-d907a1cf",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Pr",
       "pageStart": 606,
       "pageEnd": 606
     },
@@ -124,7 +172,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-87318f38",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Pr",
       "pageStart": 609,
       "pageEnd": 609
     },
@@ -134,7 +182,7 @@
       "sectionId": "normas-legislacao-atividade-tecnica-formacao-militar-compendio-de-turma-cfc-2020-sec-993bb80e",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/104-normas-legislacao-atividade-tecnica-formacao-militar?download=793:compendio-de-turma-cfc-2020",
       "category": "Normas, Legislação, Atividade Técnica & Formação Militar",
-      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia",
+      "excerpt": "Foco: altura. Foco: corda. Foco: ancoragem. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Foco: salvamento aquático. Foco: afogamento. Foco: praia. Pr",
       "pageStart": 612,
       "pageEnd": 612
     }

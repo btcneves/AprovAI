@@ -1,23 +1,83 @@
 {
   "id": "cbmsc-rcp",
   "title": "RCP",
-  "summary": "APH: Parada cardiorrespiratória. Revisão em tópicos curtos para estudo rápido.",
+  "summary": "APH: Parada cardiorrespiratória. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.",
   "nodes": [
     {
-      "id": "cbmsc-rcp-n3",
-      "label": "APH / ABCDE",
+      "id": "cbmsc-rcp-n1",
+      "label": "Início da reanimação",
       "type": "main",
       "children": [
         {
+          "id": "cbmsc-rcp-n1-a",
+          "label": "Reconhecer PCR e iniciar compressões sem demora.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-rcp-n1-b",
+          "label": "Minimizar interrupções entre ciclos.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-rcp-n1-c",
+          "label": "DEA deve ser integrado assim que disponível.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-rcp-n2",
+      "label": "Qualidade da manobra",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-rcp-n2-a",
+          "label": "Compressões com profundidade e frequência adequadas.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-rcp-n2-b",
+          "label": "Troca de compressor evita fadiga e perda de qualidade.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-rcp-n2-c",
+          "label": "Ventilações conforme protocolo vigente da equipe.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-rcp-n3",
+      "label": "Segurança e coordenação",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-rcp-n3-a",
+          "label": "Afastar equipe durante análise e choque do DEA.",
+          "type": "child"
+        },
+        {
           "id": "cbmsc-rcp-n3-b",
-          "label": "Controle de hemorragia com compressão direta imediata.",
+          "label": "Retomar compressões imediatamente após orientação do DEA.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-rcp-n3-c",
+          "label": "Comunicação clara aumenta eficiência da equipe.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "Controle de hemorragia com compressão direta imediata."
+    "Reconhecer PCR e iniciar compressões sem demora.",
+    "Minimizar interrupções entre ciclos.",
+    "DEA deve ser integrado assim que disponível.",
+    "Compressões com profundidade e frequência adequadas.",
+    "Troca de compressor evita fadiga e perda de qualidade.",
+    "Ventilações conforme protocolo vigente da equipe.",
+    "Afastar equipe durante análise e choque do DEA."
   ],
   "commonMistakes": [
     "Confundir conceitos de rcp.",
@@ -52,7 +112,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-90a9ec98",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.. Controle de hemorragia com compressão direta imediata.. Reconhecer PCR e iniciar compressões sem",
       "pageStart": 53,
       "pageEnd": 53
     },
@@ -62,7 +122,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-suporte-basico-a-vida-2022-sec-61b5b954",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=902:aph-ti-suporte-basico-a-vida-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.. Controle de hemorragia com compressão direta imediata.. Reconhecer PCR e iniciar compressões sem",
       "pageStart": 56,
       "pageEnd": 56
     },
@@ -92,7 +152,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-manual-de-capacitacao-em-atendimento-basico-a-emergencias-sec-8ab1b82c",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=751:manual-de-capacitacao-em-atendimento-basico-a-emergencias",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.. Controle de hemorragia com compressão direta imediata.. Reconhecer PCR e iniciar compressões sem",
       "pageStart": 118,
       "pageEnd": 118
     },
@@ -102,7 +162,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-5fa2fa32",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.. Controle de hemorragia com compressão direta imediata.. Reconhecer PCR e iniciar compressões sem",
       "pageStart": 11,
       "pageEnd": 11
     },
@@ -112,7 +172,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-b65f1def",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.. Controle de hemorragia com compressão direta imediata.. Reconhecer PCR e iniciar compressões sem",
       "pageStart": 43,
       "pageEnd": 43
     },
@@ -122,7 +182,7 @@
       "sectionId": "atendimento-pre-hospitalar-primeiros-socorros-aph-topicos-introdutorios-emergencias-traumaticas-2022-sec-10e40126",
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/99-manuais-teoricos-de-pesquisa?download=901:aph-ti-emergencias-traumaticas-2022",
       "category": "Atendimento Pré-Hospitalar & Primeiros Socorros",
-      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.",
+      "excerpt": "Foco: rcp. Foco: compressão. Foco: desfibrilação. Foco: rcp. Foco: compressão. Foco: desfibrilação. comando de incidentes.. Controle de hemorragia com compressão direta imediata.. Reconhecer PCR e iniciar compressões sem",
       "pageStart": 49,
       "pageEnd": 49
     }

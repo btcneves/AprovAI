@@ -1,35 +1,83 @@
 {
   "id": "cbmsc-metodos-de-extincao",
   "title": "Métodos de extinção",
-  "summary": "Incêndio: Resfriamento, abafamento e isolamento. Revisão em tópicos curtos para estudo rápido.",
+  "summary": "Incêndio: Resfriamento, abafamento e isolamento. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.",
   "nodes": [
     {
       "id": "cbmsc-metodos-de-extincao-n1",
-      "label": "Métodos de extinção",
+      "label": "Resfriamento",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-metodos-de-extincao-n1-a",
-          "label": "informações e orientações gerais",
+          "label": "Reduz temperatura abaixo do ponto de ignição.",
           "type": "child"
         },
         {
           "id": "cbmsc-metodos-de-extincao-n1-b",
-          "label": "produtos perigosos em ordem numérica e crescente",
+          "label": "Aplicação controlada evita choque térmico e projeção de material.",
           "type": "child"
         },
         {
           "id": "cbmsc-metodos-de-extincao-n1-c",
-          "label": "produtos em ordem alfabética",
+          "label": "Monitorar reignição durante rescaldo.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-metodos-de-extincao-n2",
+      "label": "Abafamento",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-metodos-de-extincao-n2-a",
+          "label": "Diminui contato do combustível com o comburente.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-metodos-de-extincao-n2-b",
+          "label": "Uso frequente com espuma e tampa em recipientes pequenos.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-metodos-de-extincao-n2-c",
+          "label": "Evitar ventilação descoordenada durante o abafamento.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-metodos-de-extincao-n3",
+      "label": "Isolamento e quebra da reação",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-metodos-de-extincao-n3-a",
+          "label": "Retira combustível do processo de combustão.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-metodos-de-extincao-n3-b",
+          "label": "Controle de válvulas e vazamentos reduz propagação.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-metodos-de-extincao-n3-c",
+          "label": "Métodos podem ser combinados conforme tetraedro do fogo.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "informações e orientações gerais",
-    "produtos perigosos em ordem numérica e crescente",
-    "produtos em ordem alfabética"
+    "Reduz temperatura abaixo do ponto de ignição.",
+    "Aplicação controlada evita choque térmico e projeção de material.",
+    "Monitorar reignição durante rescaldo.",
+    "Diminui contato do combustível com o comburente.",
+    "Uso frequente com espuma e tampa em recipientes pequenos.",
+    "Evitar ventilação descoordenada durante o abafamento.",
+    "Retira combustível do processo de combustão."
   ],
   "commonMistakes": [
     "Confundir conceitos de métodos de extinção.",

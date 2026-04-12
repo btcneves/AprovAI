@@ -1,35 +1,83 @@
 {
   "id": "cbmsc-produtos-perigosos",
   "title": "Produtos perigosos",
-  "summary": "Produtos Perigosos: Reconhecimento e isolamento. Revisão em tópicos curtos para estudo rápido.",
+  "summary": "Produtos Perigosos: Reconhecimento e isolamento. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.",
   "nodes": [
     {
       "id": "cbmsc-produtos-perigosos-n1",
-      "label": "Métodos de extinção",
+      "label": "Reconhecimento inicial",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-produtos-perigosos-n1-a",
-          "label": "informações e orientações gerais",
+          "label": "Identificar painéis de segurança e número ONU.",
           "type": "child"
         },
         {
           "id": "cbmsc-produtos-perigosos-n1-b",
-          "label": "produtos perigosos em ordem numérica e crescente",
+          "label": "Aproximação cautelosa, preferencialmente a barlavento.",
           "type": "child"
         },
         {
           "id": "cbmsc-produtos-perigosos-n1-c",
-          "label": "produtos em ordem alfabética",
+          "label": "Avaliar risco antes de qualquer contato com produto.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-produtos-perigosos-n2",
+      "label": "Isolamento de área",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-produtos-perigosos-n2-a",
+          "label": "Estabelecer zona quente, morna e fria.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-produtos-perigosos-n2-b",
+          "label": "Controlar acesso e fluxo de pessoas.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-produtos-perigosos-n2-c",
+          "label": "Acionar recursos especializados conforme risco.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-produtos-perigosos-n3",
+      "label": "Segurança da equipe",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-produtos-perigosos-n3-a",
+          "label": "Selecionar EPI compatível com o cenário químico.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-produtos-perigosos-n3-b",
+          "label": "Evitar ações ofensivas sem identificação mínima do agente.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-produtos-perigosos-n3-c",
+          "label": "Comunicar riscos à rede de resposta.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "informações e orientações gerais",
-    "produtos perigosos em ordem numérica e crescente",
-    "produtos em ordem alfabética"
+    "Identificar painéis de segurança e número ONU.",
+    "Aproximação cautelosa, preferencialmente a barlavento.",
+    "Avaliar risco antes de qualquer contato com produto.",
+    "Estabelecer zona quente, morna e fria.",
+    "Controlar acesso e fluxo de pessoas.",
+    "Acionar recursos especializados conforme risco.",
+    "Selecionar EPI compatível com o cenário químico."
   ],
   "commonMistakes": [
     "Confundir conceitos de produtos perigosos.",
