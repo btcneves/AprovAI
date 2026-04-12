@@ -1,35 +1,83 @@
 {
   "id": "cbmsc-busca-terrestre",
   "title": "Busca terrestre",
-  "summary": "Salvamento: Busca, orientação e comando. Revisão em tópicos curtos para estudo rápido.",
+  "summary": "Salvamento: Busca, orientação e comando. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.",
   "nodes": [
     {
       "id": "cbmsc-busca-terrestre-n1",
-      "label": "Busca terrestre",
+      "label": "Planejamento de busca",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-busca-terrestre-n1-a",
-          "label": "Marcação de ambientes evita duplicidade e áreas não varridas",
+          "label": "Setorizar área com base no último ponto visto.",
           "type": "child"
         },
         {
           "id": "cbmsc-busca-terrestre-n1-b",
-          "label": "Controle de tempo/ar no ambiente hostil é obrigatório",
+          "label": "Definir equipes, rotas e frequência de comunicação.",
           "type": "child"
         },
         {
           "id": "cbmsc-busca-terrestre-n1-c",
-          "label": "Controle de tempo/ar no ambiente ho",
+          "label": "Registrar progressão para evitar lacunas de cobertura.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-busca-terrestre-n2",
+      "label": "Execução em campo",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-busca-terrestre-n2-a",
+          "label": "Aplicar técnicas de varredura e marcação.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-busca-terrestre-n2-b",
+          "label": "Manter segurança da equipe conforme relevo e clima.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-busca-terrestre-n2-c",
+          "label": "Atualizar comando com evidências encontradas.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-busca-terrestre-n3",
+      "label": "Comando e controle",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-busca-terrestre-n3-a",
+          "label": "Replanejar busca com novas informações.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-busca-terrestre-n3-b",
+          "label": "Controlar entrada e saída de equipes no perímetro.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-busca-terrestre-n3-c",
+          "label": "Encerrar setor somente após confirmação de cobertura.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "Marcação de ambientes evita duplicidade e áreas não varridas",
-    "Controle de tempo/ar no ambiente hostil é obrigatório",
-    "Controle de tempo/ar no ambiente ho"
+    "Setorizar área com base no último ponto visto.",
+    "Definir equipes, rotas e frequência de comunicação.",
+    "Registrar progressão para evitar lacunas de cobertura.",
+    "Aplicar técnicas de varredura e marcação.",
+    "Manter segurança da equipe conforme relevo e clima.",
+    "Atualizar comando com evidências encontradas.",
+    "Replanejar busca com novas informações."
   ],
   "commonMistakes": [
     "Confundir conceitos de busca terrestre.",
@@ -53,7 +101,9 @@
     "Técnicas de arraste",
     "Proteção de via aérea da vítima",
     "Comando",
-    "Prestação de contas (PAR)"
+    "Prestação de contas (PAR)",
+    "extintor",
+    "pqs"
   ],
   "sources": [
     {
@@ -111,6 +161,26 @@
       "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc",
       "category": "Atendimento Pré-Hospitalar",
       "excerpt": "Marcação de ambientes evita duplicidade e áreas não varridas.. Controle de tempo/ar no ambiente hostil é obrigatório.. Marcação de ambientes evita duplicidade e áreas não varridas... Controle de tempo/ar no ambiente host"
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "manualTitle": "CURSO DE ATENDIMENTO A EMERGÊNCIA COM PRODUTOS PERIGOSOS",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-curso-de-atendimento-a-emergencia-com-produtos-perigosos-sec-3fbcecfa",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=778:curso-de-atendimento-a-emergencia-com-produtos-perigosos",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "3.5 Produtos da combustão Se classificam em quatro categorias :  Gases da combustão;  Chama;  Calor;  Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, em : CURSO DE ATENDIMENT",
+      "pageStart": 13,
+      "pageEnd": 14
+    },
+    {
+      "manualId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "manualTitle": "MANUAL DE CAPACITAÇÃO EM COMBATE A INCÊNDIO ESTRUTURAL",
+      "sectionId": "incendios-produtos-perigosos-defesa-civil-manual-de-capacitacao-em-combate-a-incendio-estrutural-sec-a1af9389",
+      "sourceUrl": "https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc/category/101-incendios-produtos-perigosos-defesa-civil?download=754:manual-de-capacitacao-em-combate-a-incendio-estrutural",
+      "category": "Incêndios, Produtos Perigosos & Defesa Civil",
+      "excerpt": "Foco: classe a. Foco: classe b. Foco: classe c. Produtos da combustão Se classificam em quatro categorias :. Gases da combustão. Fumaça. 3.6 Classificação dos Incêndios Se classificam, segundo o material que se queima, e",
+      "pageStart": 16,
+      "pageEnd": 16
     }
   ]
 }

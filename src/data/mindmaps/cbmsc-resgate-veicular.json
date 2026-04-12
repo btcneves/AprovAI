@@ -1,35 +1,83 @@
 {
   "id": "cbmsc-resgate-veicular",
   "title": "Resgate veicular",
-  "summary": "Salvamento: Desencarceramento e estabilização. Revisão em tópicos curtos para estudo rápido.",
+  "summary": "Salvamento: Desencarceramento e estabilização. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.",
   "nodes": [
     {
       "id": "cbmsc-resgate-veicular-n1",
-      "label": "Resgate veicular",
+      "label": "Estabilização da cena",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-resgate-veicular-n1-a",
-          "label": "desencarceramento",
+          "label": "Sinalizar, isolar e eliminar riscos adicionais.",
           "type": "child"
         },
         {
           "id": "cbmsc-resgate-veicular-n1-b",
-          "label": "comando de incidentes",
+          "label": "Estabilizar veículo antes de corte ou expansão.",
           "type": "child"
         },
         {
           "id": "cbmsc-resgate-veicular-n1-c",
-          "label": "FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são",
+          "label": "Gerenciar vidros, airbags e fontes de energia.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-resgate-veicular-n2",
+      "label": "Desencarceramento",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-resgate-veicular-n2-a",
+          "label": "Definir acesso conforme cinemática e lesões.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-resgate-veicular-n2-b",
+          "label": "Empregar ferramentas com proteção da vítima.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-resgate-veicular-n2-c",
+          "label": "Coordenar comando técnico e equipe de APH.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-resgate-veicular-n3",
+      "label": "Extração segura",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-resgate-veicular-n3-a",
+          "label": "Movimentação alinhada com condição clínica.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-resgate-veicular-n3-b",
+          "label": "Evitar tração inadequada em suspeita de trauma grave.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-resgate-veicular-n3-c",
+          "label": "Preparar transporte com reavaliação contínua.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "desencarceramento",
-    "comando de incidentes",
-    "FENÔMENOS DE INCÊNDIOS INTERIORES Os termos utilizados em inglês (doutrina originária) são"
+    "Sinalizar, isolar e eliminar riscos adicionais.",
+    "Estabilizar veículo antes de corte ou expansão.",
+    "Gerenciar vidros, airbags e fontes de energia.",
+    "Definir acesso conforme cinemática e lesões.",
+    "Empregar ferramentas com proteção da vítima.",
+    "Coordenar comando técnico e equipe de APH.",
+    "Movimentação alinhada com condição clínica."
   ],
   "commonMistakes": [
     "Confundir conceitos de resgate veicular.",

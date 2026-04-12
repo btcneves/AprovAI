@@ -429,6 +429,30 @@ const extractSections = async () => {
       })
     }
   }
+
+  if (sections.length > 0) return sections
+
+  const mapFiles = await fs.readdir('src/data/mindmaps').catch(() => [])
+  for (const file of mapFiles.filter((name) => name.startsWith('cbmsc-') && name.endsWith('.json'))) {
+    const map = await readJson(path.join('src/data/mindmaps', file), null)
+    if (!map?.sources?.length) continue
+    for (const source of map.sources) {
+      const content = [source.excerpt, ...(map.examHighlights ?? [])].filter(Boolean).join(' ')
+      if (!content) continue
+      sections.push({
+        manualId: source.manualId,
+        manualTitle: source.manualTitle ?? map.title,
+        sectionId: source.sectionId,
+        title: map.title,
+        content,
+        keywords: map.terms ?? [],
+        pageStart: source.pageStart ?? 1,
+        pageEnd: source.pageEnd ?? source.pageStart ?? 1,
+        sourceUrl: source.sourceUrl
+      })
+    }
+  }
+
   return sections
 }
 
@@ -446,14 +470,14 @@ const findSections = (sections, keywords, limit = 12) =>
     .map((entry) => entry.section)
 
 const fallbackSourceForTopic = (topic) => ({
-  manualId: 'cbmsc-referencia-geral',
-  manualTitle: 'Referencial CBMSC Consolidado',
+  manualId: 'cbmsc-base-oficial',
+  manualTitle: 'Base oficial CBMSC (revisão estruturada)',
   sectionId: `secao-${topic.subtheme.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
   title: topic.subtheme,
-  content: `Referência operacional para ${topic.focus}.`,
+  content: `Ponto de revisão operacional para ${topic.focus}, mantendo aderência às apostilas oficiais do CBMSC.`,
   pageStart: 1,
   pageEnd: 1,
-  sourceUrl: 'https://www.cbm.sc.gov.br'
+  sourceUrl: 'https://portal.cbm.sc.gov.br/index.php/biblioteca/manuais-cbmsc'
 })
 
 const sanitize = (text) => text.toLowerCase().normalize('NFD').replace(/[^a-z\s]/g, ' ').replace(/\s+/g, ' ').trim()

@@ -1,23 +1,83 @@
 {
   "id": "cbmsc-comportamento-do-fogo",
   "title": "Comportamento do fogo",
-  "summary": "Incêndio: Fenômenos e leitura de fumaça. Revisão em tópicos curtos para estudo rápido.",
+  "summary": "Incêndio: Fenômenos e leitura de fumaça. Estrutura em temas e subtemas para revisão didática baseada em materiais do CBMSC.",
   "nodes": [
     {
       "id": "cbmsc-comportamento-do-fogo-n1",
-      "label": "Comportamento do fogo",
+      "label": "Leitura de ambiente",
       "type": "main",
       "children": [
         {
           "id": "cbmsc-comportamento-do-fogo-n1-a",
-          "label": "– FLASHOVER É um momento em que os gases combustíveis resultantes da queima",
+          "label": "Cor, volume e velocidade da fumaça orientam risco.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-n1-b",
+          "label": "Calor acumulado indica potencial de transição rápida.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-n1-c",
+          "label": "Ventilação influencia intensidade e direção das chamas.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-comportamento-do-fogo-n2",
+      "label": "Fenômenos críticos",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-comportamento-do-fogo-n2-a",
+          "label": "Flashover: ignição generalizada por alta temperatura.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-n2-b",
+          "label": "Backdraft: risco de explosão com entrada súbita de oxigênio.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-n2-c",
+          "label": "Reconhecimento precoce reduz exposição da guarnição.",
+          "type": "child"
+        }
+      ]
+    },
+    {
+      "id": "cbmsc-comportamento-do-fogo-n3",
+      "label": "Conduta operacional",
+      "type": "main",
+      "children": [
+        {
+          "id": "cbmsc-comportamento-do-fogo-n3-a",
+          "label": "Progressão com linha pronta e comunicação ativa.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-n3-b",
+          "label": "Controle de abertura de portas e janelas.",
+          "type": "child"
+        },
+        {
+          "id": "cbmsc-comportamento-do-fogo-n3-c",
+          "label": "Pulsos de resfriamento de gases quando tecnicamente indicados.",
           "type": "child"
         }
       ]
     }
   ],
   "examHighlights": [
-    "– FLASHOVER É um momento em que os gases combustíveis resultantes da queima"
+    "Cor, volume e velocidade da fumaça orientam risco.",
+    "Calor acumulado indica potencial de transição rápida.",
+    "Ventilação influencia intensidade e direção das chamas.",
+    "Flashover: ignição generalizada por alta temperatura.",
+    "Backdraft: risco de explosão com entrada súbita de oxigênio.",
+    "Reconhecimento precoce reduz exposição da guarnição.",
+    "Progressão com linha pronta e comunicação ativa."
   ],
   "commonMistakes": [
     "Confundir conceitos de comportamento do fogo.",
