@@ -35,8 +35,8 @@ export const NodeExpandedPanel = ({ node, learning, status, onOpenTopic, onTrain
           <h5>Resumo didático</h5>
           <p>{node.descriptionDetailed}</p>
         </section>
-        {renderList('Bullets principais', node.studyChecklist?.slice(0, 8))}
-        {renderList('Exam highlights', node.examHighlights)}
+        {renderList('Roteiro de revisão rápida', node.studyChecklist?.slice(0, 8))}
+        {renderList('Pontos-chave de prova', node.examHighlights)}
         {renderList('Erros comuns', node.commonMistakes)}
         {renderList('Diferenças críticas', node.criticalDifferences)}
         {renderList('Pegadinhas', node.traps)}
