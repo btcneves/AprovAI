@@ -26,6 +26,28 @@ describe('simuladoService', () => {
     expect(treino.every((question) => question.difficulty === 'dificil')).toBe(true)
   })
 
+  it('gera modo adaptativo priorizando dificuldade e temas com maior erro recente', () => {
+    const sampled = activeQuestions.slice(0, 12)
+    const adaptiveAttempts = [
+      {
+        id: 'attempt-1',
+        createdAt: new Date().toISOString(),
+        questionIds: sampled.map((q) => q.id),
+        answers: sampled.map((q, index) => ({ questionId: q.id, selectedAlternativeId: q.alternatives[0]?.id ?? null, isCorrect: index % 3 === 0 })),
+        score: 1.2,
+        correctCount: 4,
+        wrongCount: 8,
+        portugueseCorrect: 2,
+        specificCorrect: 2
+      }
+    ]
+
+    const treino = buildSimulado(adaptiveAttempts, { mode: 'adaptive', questionCount: 15 })
+    expect(treino.length).toBeGreaterThan(0)
+    expect(treino.length).toBeLessThanOrEqual(15)
+    expect(treino.every((question) => question.difficulty === 'dificil')).toBe(true)
+  })
+
   it('avalia nota com pesos oficiais 0.2 e 0.3', () => {
     const simulado = [...activeQuestions.filter((q) => q.discipline === 'portugues').slice(0, 5), ...activeQuestions.filter((q) => q.discipline === 'especificos').slice(0, 30)]
 

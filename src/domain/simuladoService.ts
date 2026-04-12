@@ -5,7 +5,7 @@ import { loadNodeLearning, rankNodeRecommendations } from './nodeLearningService
 const HISTORY_KEY = 'imarui_simulados'
 const BLOCK_WINDOW = 5
 
-export type StudyMode = 'full' | 'weak-topics' | 'topic' | 'subtopic' | 'difficulty' | 'recent-wrong'
+export type StudyMode = 'full' | 'weak-topics' | 'topic' | 'subtopic' | 'difficulty' | 'recent-wrong' | 'adaptive'
 
 export type BuildSimuladoOptions = {
   mode?: StudyMode
@@ -154,6 +154,38 @@ const buildStudyPool = (attempts: SimuladoAttempt[], options: BuildSimuladoOptio
     const worst = [...wrongBySubtopic.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([key]) => key)
     if (!worst.length) return activeQuestions
     return activeQuestions.filter((question) => worst.includes(`${question.topic}::${question.subtopic ?? ''}`))
+  }
+
+  if (mode === 'adaptive') {
+    const lastAttempts = attempts.slice(-6)
+    const total = lastAttempts.reduce((acc, attempt) => acc + attempt.answers.length, 0)
+    const wrong = lastAttempts.reduce((acc, attempt) => acc + attempt.answers.filter((answer) => !answer.isCorrect).length, 0)
+    const wrongRate = total > 0 ? wrong / total : 0
+
+    const adaptiveDifficulty: Difficulty = wrongRate >= 0.35 ? 'dificil' : wrongRate >= 0.2 ? 'media' : 'facil'
+
+    const wrongBySubtopic = new Map<string, number>()
+    for (const attempt of lastAttempts) {
+      for (const answer of attempt.answers.filter((item) => !item.isCorrect)) {
+        const question = questionMap.get(answer.questionId)
+        if (!question) continue
+        const key = `${question.topic}::${question.subtopic ?? ''}`
+        wrongBySubtopic.set(key, (wrongBySubtopic.get(key) ?? 0) + 1)
+      }
+    }
+
+    const weakKeys = [...wrongBySubtopic.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 4)
+      .map(([key]) => key)
+
+    const weakPool = activeQuestions.filter(
+      (question) => question.difficulty === adaptiveDifficulty && weakKeys.includes(`${question.topic}::${question.subtopic ?? ''}`)
+    )
+    if (weakPool.length >= 8) return weakPool
+
+    const fallback = activeQuestions.filter((question) => question.difficulty === adaptiveDifficulty)
+    return fallback.length ? fallback : activeQuestions
   }
 
   return activeQuestions
