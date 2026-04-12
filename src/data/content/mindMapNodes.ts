@@ -3,7 +3,7 @@ import { generatedMindMapNodes } from './generatedMindMapNodes'
 
 const createNode = (node: MindMapNode): MindMapNode => node
 
-export const mindMapNodes: MindMapNode[] = [
+const baseMindMapNodes: MindMapNode[] = [
   createNode({ id: 'root-portugues', title: 'Língua Portuguesa', discipline: 'portugues', descriptionShort: 'Base linguística para interpretação e norma padrão.', descriptionDetailed: 'Reúne leitura, gramática e expressão para resolver questões objetivas com precisão.', studyChecklist: ['Concluir leitura completa da Apostila CBAE 2025/2026 de Português.', 'Resolver bloco de interpretação + gramática em sequência (tempo cronometrado).', 'Revisar erros por tema para reforço semanal.'], studyReferences: [{ label: 'Edital 001/2026 — Anexo I, item 1.1.1', type: 'edital' }, { label: 'CBAE 2025/2026 — Apostila de Língua Portuguesa', type: 'cbae' }], parentId: null, childrenIds: ['pt-interp', 'pt-escrita', 'pt-estrutura', 'pt-semantica', 'pt-sintaxe', 'pt-expressividade', 'pt-literatura'], tags: ['português', 'edital', 'cbae-2025-2026'], editalReference: 'Anexo I - 1.1.1', relatedQuestionIds: [], priority: 'alta' }),
   createNode({ id: 'pt-interp', title: 'Interpretação de texto', discipline: 'portugues', descriptionShort: 'Compreensão explícita e inferencial.', descriptionDetailed: 'Identificar ideias centrais, inferências, efeito de sentido e intenção comunicativa no texto.', parentId: 'root-portugues', childrenIds: ['pt-vocab', 'pt-funcoes'], tags: ['interpretação', 'texto'], editalReference: 'Item 1.1', relatedQuestionIds: [], priority: 'alta' }),
   createNode({ id: 'pt-vocab', title: 'Vocabulário e níveis de linguagem', discipline: 'portugues', descriptionShort: 'Léxico contextual e adequação de registro.', descriptionDetailed: 'Reconhece formalidade, variações linguísticas e escolha lexical adequada ao gênero textual.', parentId: 'pt-interp', childrenIds: [], tags: ['vocabulário', 'registro'], editalReference: 'Item 1.1', relatedQuestionIds: [], priority: 'media' }),
@@ -47,3 +47,137 @@ export const mindMapNodes: MindMapNode[] = [
   createNode({ id: 'esp-disciplina', title: 'Deveres, disciplina e relacionamento institucional', discipline: 'especificos', descriptionShort: 'Conduta ética e rotinas.', descriptionDetailed: 'Normas de disciplina, hierarquia e relacionamento com a comunidade e corporação.', parentId: 'esp-servico', childrenIds: [], tags: ['disciplina', 'conduta'], editalReference: 'IG 10-03-BM', relatedQuestionIds: [], priority: 'media' }),
   ...generatedMindMapNodes.map((node) => createNode(node))
 ]
+
+const cognitiveEnhancements: Partial<Record<string, Pick<MindMapNode, 'summary' | 'examHighlights' | 'commonMistakes' | 'criticalDifferences' | 'traps' | 'studyChecklist'>>> = {
+  'root-portugues': {
+    summary: 'Português para prova: priorize interpretação, sintaxe normativa e ortografia em ciclos curtos de revisão.',
+    examHighlights: [
+      'Interpretação + gramática integrada é mais cobrada do que teoria isolada.',
+      'Sintaxe normativa (regência, concordância, crase) costuma decidir desempate.',
+      'Literatura e estilística aparecem em menor volume, mas geram pegadinhas conceituais.'
+    ],
+    commonMistakes: [
+      'Estudar regras sem resolver itens de banca no mesmo bloco.',
+      'Confundir variação linguística com erro gramatical obrigatório.',
+      'Revisar apenas conteúdo “difícil” e negligenciar ortografia recorrente.'
+    ],
+    criticalDifferences: [
+      'Compreensão literal x inferência contextual.',
+      'Norma padrão x adequação ao gênero textual.',
+      'Função da linguagem x figura de linguagem.'
+    ],
+    traps: [
+      'Alternativas com termo absoluto (“sempre”, “nunca”) em interpretação.',
+      'Troca entre crase por regência verbal e por locução prepositiva.'
+    ],
+    studyChecklist: [
+      'Rodar ciclo 24h/7d/30d: interpretação, sintaxe e ortografia.',
+      'Registrar erro por microtema e revisitar até 80%+ de acerto.',
+      'Finalizar cada sessão com 5 questões de revisão ativa.'
+    ]
+  },
+  'root-especificos': {
+    summary: 'Eixo central do CBMSC: trânsito, incêndio, ABE e serviço comunitário, com foco em decisão operacional.',
+    examHighlights: [
+      'Questões cobram conduta operacional correta antes de definições longas.',
+      'Edital exige integração entre doutrina, legislação e segurança da cena.',
+      'Termos parecidos entre incêndio/APH geram erro por associação superficial.'
+    ],
+    commonMistakes: [
+      'Memorizar somente conceitos sem sequência de atendimento.',
+      'Ignorar exceções e limites de atuação operacional.',
+      'Não relacionar item do edital com manual de referência.'
+    ],
+    criticalDifferences: [
+      'Prioridade tática x prioridade clínica.',
+      'Atribuição do bombeiro comunitário x atribuição privativa da corporação.',
+      'Classe de incêndio x método de extinção.'
+    ],
+    traps: [
+      'Troca entre protocolo ideal e conduta possível em cenário de risco.',
+      'Alternativas com termos técnicos corretos, mas em ordem operacional errada.'
+    ],
+    studyChecklist: [
+      'Executar revisão por trilha: Trânsito → Incêndio → ABE → Serviço Comunitário.',
+      'Treinar 15 itens por bloco com correção comentada e mapa de erro.',
+      'Consolidar resumo de 1 página por disciplina específica.'
+    ]
+  },
+  'esp-transito': {
+    summary: 'Trânsito para concurso: legislação aplicada + conduta segura em situações-problema.',
+    examHighlights: [
+      'Competências dos órgãos do SNT aparecem com frequência.',
+      'Sinalização e prioridade de passagem exigem leitura de cenário.',
+      'Infração, penalidade e medida administrativa não são sinônimos.'
+    ],
+    criticalDifferences: [
+      'Infração x crime de trânsito.',
+      'Penalidade x medida administrativa.',
+      'Direção defensiva preventiva x conduta reativa.'
+    ],
+    traps: ['Questão troca “dever do condutor” por “faculdade do condutor”.']
+  },
+  'esp-incendio': {
+    summary: 'Combate a incêndio estrutural orientado por leitura de risco, tática e segurança da guarnição.',
+    examHighlights: [
+      'Classe do incêndio define agente e método de extinção.',
+      'Fenômenos térmicos (flashover/backdraft) mudam decisão tática.',
+      'Progressão e ventilação inadequadas elevam risco de colapso.'
+    ],
+    commonMistakes: [
+      'Escolher agente extintor sem considerar material energizado.',
+      'Desconsiderar rota de fuga e controle de equipe.',
+      'Confundir ventilação ofensiva com ventilação de segurança.'
+    ],
+    traps: ['Enunciado descreve classe C e alternativa indica agente condutor.']
+  },
+  'esp-emerg': {
+    summary: 'ABE com lógica ABCDE, segurança da cena e transporte apropriado ao quadro clínico-traumático.',
+    examHighlights: [
+      'Cena segura e biossegurança vêm antes do contato clínico.',
+      'A prioridade do ABCDE é dinâmica e depende de risco imediato.',
+      'Controle de hemorragia crítica precede etapas secundárias.'
+    ],
+    criticalDifferences: [
+      'Avaliação primária x secundária.',
+      'Suporte básico x suporte avançado.',
+      'Imobilização necessária x imobilização excessiva.'
+    ],
+    traps: ['Alternativa tecnicamente correta, mas fora da ordem ABCDE.']
+  },
+  'esp-servico': {
+    summary: 'IG 10-03-BM aplicada: escopo, limites, disciplina e integração institucional.',
+    examHighlights: [
+      'Conhecer limites de atuação evita extrapolação de competência.',
+      'Hierarquia e disciplina são cobradas em cenários práticos.',
+      'Relacionamento comunitário deve seguir protocolo institucional.'
+    ],
+    commonMistakes: [
+      'Confundir apoio comunitário com comando operacional.',
+      'Desconsiderar formalidades de comunicação e registro.'
+    ],
+    traps: ['Questão usa linguagem de “boa prática” para mascarar conduta proibida.']
+  },
+  'esp-extincao': {
+    examHighlights: [
+      'Métodos: resfriamento, abafamento, isolamento e quebra da reação em cadeia.',
+      'A escolha depende de classe de incêndio + ambiente + risco elétrico.'
+    ],
+    criticalDifferences: [
+      'Resfriamento (reduz temperatura) x abafamento (retira comburente).',
+      'Isolamento do combustível x interrupção da reação química.'
+    ]
+  },
+  'esp-abc': {
+    examHighlights: [
+      'A (vias aéreas) e C (hemorragia crítica) concentram maior impacto em sobrevida.',
+      'Reavaliação contínua é parte do protocolo, não etapa final.'
+    ],
+    commonMistakes: ['Executar exame secundário sem estabilizar prioridades primárias.']
+  }
+}
+
+export const mindMapNodes: MindMapNode[] = baseMindMapNodes.map((node) => {
+  const enhancement = cognitiveEnhancements[node.id]
+  return enhancement ? createNode({ ...node, ...enhancement }) : node
+})
