@@ -1,6 +1,6 @@
-# Bombeiro Imaruí 2026
+# AprovAI — Bombeiro Imaruí 2026
 
-Plataforma web de estudo para o Concurso Público nº 001/2026 (Bombeiro Comunitário de Imaruí/SC), com foco em três frentes: revisão de conteúdo, simulados com correção detalhada e ciclo de estudo orientado por dados.
+O **AprovAI** é uma plataforma web de estudo para o Concurso Público nº 001/2026 (Bombeiro Comunitário de Imaruí/SC), com foco em três frentes: revisão de conteúdo, simulados com correção detalhada e ciclo de estudo orientado por dados.
 
 ## Estado atual do projeto
 
